@@ -430,6 +430,39 @@ server.get('Show', function (req, res, next) {
 
 ---
 
+## 🔗 Tài liệu tham khảo
+
+### Official Documentation
+- **[B2C Commerce InfoCenter](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)**
+- **[Script API Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/index.html)**
+- **[OCAPI Shop API](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/shop/Resources/index.html)**
+- **[OCAPI Data API](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/data/Resources/index.html)**
+
+### Practice Resources
+- **[Focus on Force](https://focusonforce.com/)** - Practice exams (paid)
+- **[Quizlet Flashcards](https://quizlet.com/search?query=salesforce%20b2c%20commerce)** - Community flashcards
+- **[Week 5 Exercises](../Practice/Week5/)**
+
+### Video Tutorials
+- **[B2C Commerce Fast Path Videos](https://help.salesforce.com/s/articleView?id=cc.b2c_fast_path_training.htm)**
+
+---
+
+## 📋 Checklist tuần 5
+
+- [ ] Học Performance Best Practices
+- [ ] Hiểu Transaction patterns (begin/commit/rollback)
+- [ ] Hoàn thành Code Review exercises
+- [ ] Xem Fast Path Videos
+- [ ] Ôn tập Domain 1 - Digital Applications (27%)
+- [ ] Ôn tập Domain 2 - Customization (36%)
+- [ ] Ôn tập Domain 3 - System & Data (30%)
+- [ ] Ôn tập Domain 4 - Maintenance (7%)
+- [ ] Thi thử lần 1 (target 80%+)
+- [ ] Phân tích kết quả và xác định lỗ hổng
+
+---
+
 ## 🔗 Navigation
 
 - ⬅️ [Tuần 4 - Forms+Hooks](../Week4/)

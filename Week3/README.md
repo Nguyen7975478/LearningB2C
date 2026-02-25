@@ -194,6 +194,40 @@ server.post('AddProduct', function (req, res, next) {
 
 ---
 
+## 🔗 Tài liệu tham khảo
+
+### Official Documentation
+- **[ISML Reference](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/ISML/ISMLReference.html)**
+- **[SFRA Controllers](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture/tree/master/cartridges/app_storefront_base/cartridge/controllers)**
+- **[Server Module](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/module_server.html)**
+- **[B2C Commerce for Developers Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-for-developers)**
+- **[SFRA Repository](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)**
+
+### Video Tutorials
+- **[B2C Commerce Fast Path Videos](https://help.salesforce.com/s/articleView?id=cc.b2c_fast_path_training.htm)**
+- **[SFRA Deep Dive](https://www.youtube.com/results?search_query=sfra+salesforce)**
+
+### Practice
+- **[Week 3 Exercises](../Practice/Week3/)**
+- **[SFRA Source Code](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)**
+
+---
+
+## 📋 Checklist tuần 3
+
+- [ ] Nắm vững ISML cơ bản (isif, isloop, isinclude)
+- [ ] Hiểu ISML nâng cao (iscache, isslot, isdecorate)
+- [ ] Sử dụng được Resource Bundles
+- [ ] Viết được SFRA Controllers (server.get, server.post)
+- [ ] Hiểu Controller Middleware
+- [ ] Thực hiện được Transaction management
+- [ ] Đọc và hiểu SFRA source code
+- [ ] Hiểu Models trong SFRA
+- [ ] Làm 20 câu hỏi ôn tập trong Practice/Week3/
+- [ ] Review lại notes và code examples
+
+---
+
 ## 🔗 Navigation
 
 - ⬅️ [Tuần 2 - Dữ liệu và Business Manager](../Week2/)

@@ -136,6 +136,39 @@ CustomObjectMgr.remove(obj);
 
 ---
 
+## 🔗 Tài liệu tham khảo
+
+### Official Documentation
+- **[B2C Commerce InfoCenter](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)**
+- **[OCAPI Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/usage/OpenCommerceAPI.html)**
+- **[Script API Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/index.html)**
+- **[B2C Commerce Search Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-search)**
+- **[B2C Commerce Order Management Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-order-management)**
+
+### Video Tutorials
+- **[B2C Commerce Fast Path Videos](https://help.salesforce.com/s/articleView?id=cc.b2c_fast_path_training.htm)**
+- **[OCAPI Tutorials](https://www.youtube.com/results?search_query=salesforce+b2c+ocapi)**
+
+### Practice
+- **[Week 2 Exercises](../Practice/Week2/)**
+- **[OCAPI Postman Collection](https://github.com/SalesforceCommerceCloud/ocapi-postman)**
+
+---
+
+## 📋 Checklist tuần 2
+
+- [ ] Biết cấu hình Search refinements và sorting
+- [ ] Sử dụng được Logging trong code
+- [ ] Hiểu System Objects (Customer, Order, Basket, Product)
+- [ ] Thực hiện được CRUD với Custom Objects
+- [ ] Nắm vững Caching strategies
+- [ ] Sử dụng được OCAPI với Postman
+- [ ] Hoàn thành bài tập thực hành
+- [ ] Làm 30 câu hỏi ôn tập trong Practice/Week2/
+- [ ] Review lại notes và code examples
+
+---
+
 ## 🔗 Navigation
 
 - ⬅️ [Tuần 1 - Cài đặt + KT](../Week1/)

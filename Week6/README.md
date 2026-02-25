@@ -533,6 +533,38 @@ A: begin() requires manual commit/rollback, wrap() handles automatically
 
 ---
 
+## 🔗 Tài liệu tham khảo
+
+### Official Documentation
+- **[Exam Guide](https://trailhead.salesforce.com/credentials/b2ccommercedeveloper)**
+- **[Schedule Exam](https://www.webassessor.com/salesforce)**
+- **[B2C Commerce InfoCenter](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)**
+
+### Practice Resources
+- **[Focus on Force](https://focusonforce.com/)** - Practice exams (paid)
+- **[Udemy Practice Tests](https://www.udemy.com/topic/salesforce-b2c-commerce/)** - Various practice tests
+- **[Quizlet Flashcards](https://quizlet.com/search?query=salesforce%20b2c%20commerce)** - Community flashcards
+- **[Mock Exams](../Practice/MockExams/)**
+
+### Community
+- **[Trailblazer Community](https://trailblazers.salesforce.com/)** - Ask questions
+- **[Salesforce Stack Exchange](https://salesforce.stackexchange.com/questions/tagged/commerce-cloud)**
+
+---
+
+## 📋 Checklist tuần 6
+
+- [ ] Thi thử lần 2 (target 80%+)
+- [ ] Phân tích kết quả Mock 2 và ôn điểm yếu
+- [ ] Thi thử lần 3 (target 85%+)
+- [ ] Review flashcards toàn bộ
+- [ ] Chuẩn bị kỹ thuật (máy tính, internet, webcam)
+- [ ] Chuẩn bị tâm lý và ngủ đủ giấc
+- [ ] THI CHÍNH THỨC
+- [ ] ĐẬU CHỨNG CHỈ! 🎉
+
+---
+
 ## 🔗 Navigation
 
 - ⬅️ [Tuần 5 - Ôn tập](../Week5/)
