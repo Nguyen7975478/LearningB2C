@@ -299,14 +299,14 @@ if (result.ok) {
 ## 🔗 Tài liệu tham khảo
 
 ### Official Documentation
-- **[Forms Framework](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Forms/FormsFramework.html)**
-- **[Hooks Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Hooks/Hooks.html)**
-- **[Hook Types](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Hooks/HookTypes.html)**
-- **[Service Framework](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Services/ServicesFramework.html)**
-- **[LocalServiceRegistry](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/class_dw_svc_LocalServiceRegistry.html)**
+- **[Search Forms Framework on Salesforce Help](https://help.salesforce.com/s/global-search/b2c%20commerce%20forms)** ✅
+- **[Search Hooks Documentation on Salesforce Help](https://help.salesforce.com/s/global-search/b2c%20commerce%20hooks)** ✅
+- **[Search Hook Types on Salesforce Help](https://help.salesforce.com/s/global-search/b2c%20commerce%20hook%20types)** ✅
+- **[Search Service Framework on Salesforce Help](https://help.salesforce.com/s/global-search/b2c%20commerce%20service%20framework)** ✅
+- **[Salesforce Developers Documentation](https://developer.salesforce.com/docs)** ✅ - LocalServiceRegistry API
 
 ### Video Tutorials
-- **[B2C Commerce Fast Path Videos](https://help.salesforce.com/s/articleView?id=cc.b2c_fast_path_training.htm)**
+- **[Salesforce Developers YouTube](https://www.youtube.com/@salesforcedevelopers)** ✅ - Official channel
 - **[Hooks Tutorial](https://www.youtube.com/results?search_query=salesforce+b2c+hooks)**
 
 ### Practice

@@ -197,14 +197,14 @@ server.post('AddProduct', function (req, res, next) {
 ## 🔗 Tài liệu tham khảo
 
 ### Official Documentation
-- **[ISML Reference](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/ISML/ISMLReference.html)**
-- **[SFRA Controllers](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture/tree/master/cartridges/app_storefront_base/cartridge/controllers)**
-- **[Server Module](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/module_server.html)**
-- **[B2C Commerce for Developers Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-for-developers)**
-- **[SFRA Repository](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)**
+- **[SFRA Templates on GitHub](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture/tree/master/cartridges/app_storefront_base/cartridge/templates)** ✅ - ISML Reference
+- **[SFRA Controllers](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture/tree/master/cartridges/app_storefront_base/cartridge/controllers)** ✅
+- **[Search Server Module on Salesforce Help](https://help.salesforce.com/s/global-search/b2c%20commerce%20server%20module)** ✅ - Server API
+- **[B2C Commerce for Developers Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-for-developers)** ✅
+- **[SFRA Repository](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)** ✅
 
 ### Video Tutorials
-- **[B2C Commerce Fast Path Videos](https://help.salesforce.com/s/articleView?id=cc.b2c_fast_path_training.htm)**
+- **[Salesforce Developers YouTube](https://www.youtube.com/@salesforcedevelopers)** ✅ - Official channel
 - **[SFRA Deep Dive](https://www.youtube.com/results?search_query=sfra+salesforce)**
 
 ### Practice

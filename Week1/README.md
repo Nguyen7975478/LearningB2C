@@ -27,7 +27,7 @@
 - 🏗️ Kiến trúc hệ thống SFCC (Storefront, Business Manager, WebDAV)
 
 **🔗 Links:**
-- [Exam Guide](https://trailhead.salesforce.com/credentials/b2ccommercedeveloper)
+- [Exam Guide](https://trailhead.salesforce.com/credentials)
 - [B2C Commerce Basics Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-basics)
 
 ---
@@ -150,14 +150,14 @@
 ## 🔗 Tài liệu tham khảo
 
 ### Official Documentation
-- **[B2C Commerce InfoCenter](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)**
-- **[Exam Guide](https://trailhead.salesforce.com/credentials/b2ccommercedeveloper)**
-- **[B2C Commerce Basics Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-basics)**
-- **[VS Code Prophet Extension](https://marketplace.visualstudio.com/items?itemName=SqrTT.prophet)**
-- **[Script API Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/index.html)**
+- **[Salesforce Help Center](https://help.salesforce.com/)** ✅
+- **[Salesforce Credentials](https://trailhead.salesforce.com/credentials)** ✅ - Exam Guide
+- **[B2C Commerce Basics Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-basics)** ✅
+- **[VS Code Marketplace](https://marketplace.visualstudio.com/)** ✅ - Search "Prophet Debugger"
+- **[Salesforce Developers Documentation](https://developer.salesforce.com/docs)** ✅ - Script API Reference
 
 ### Video Tutorials
-- **[B2C Commerce Fast Path Videos](https://help.salesforce.com/s/articleView?id=cc.b2c_fast_path_training.htm)**
+- **[Salesforce Developers YouTube](https://www.youtube.com/@salesforcedevelopers)** ✅ - Official channel
 - **[Setup IDE Tutorial](https://www.youtube.com/results?search_query=salesforce+b2c+prophet+debugger)**
 
 ### Practice

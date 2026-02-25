@@ -54,7 +54,7 @@ Hoàn thành chứng chỉ Salesforce B2C Commerce Developer với điểm số 
 
 ## 📚 External Resources
 
-- **[Trailhead](https://trailhead.salesforce.com/credentials/b2ccommercedeveloper)** - Official learning
-- **[Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)** - B2C Commerce docs
-- **[SFRA GitHub](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)** - Reference architecture
-- **[Stack Exchange](https://salesforce.stackexchange.com/questions/tagged/commerce-cloud)** - Community Q&A
+- **[Trailhead](https://trailhead.salesforce.com/)** ✅ - Official learning
+- **[Salesforce Help Center](https://help.salesforce.com/)** ✅ - B2C Commerce docs
+- **[SFRA GitHub](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)** ✅ - Reference architecture
+- **[Stack Exchange](https://salesforce.stackexchange.com/questions/tagged/commerce-cloud)** ✅ - Community Q&A

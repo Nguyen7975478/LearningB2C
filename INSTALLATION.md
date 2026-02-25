@@ -51,4 +51,4 @@
 4. Test your changes in the sandbox environment.
 5. Troubleshoot any issues using the steps above.
 
-For additional resources, refer to the [Salesforce B2C Commerce documentation](https://documentation.b2c.com/).
+For additional resources, refer to the [Salesforce Help Center](https://help.salesforce.com/).
