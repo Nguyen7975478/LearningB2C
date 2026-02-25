@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+npm-debug.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cartridge
+*.log
+*.zip
+.dw/
+
+# Personal notes
+notes.txt
+personal/
