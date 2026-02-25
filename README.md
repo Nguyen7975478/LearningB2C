@@ -40,3 +40,21 @@ Hoàn thành chứng chỉ Salesforce B2C Commerce Developer với điểm số 
 ---
 
 **Bắt đầu học**: [Tuần 1 - Cài đặt + KT](./Week1/)
+
+## 🔗 Quick Links
+
+- **[Week 1 - Setup + Basics](./Week1/)** - Cài đặt môi trường
+- **[Week 2 - Data + BM](./Week2/)** - Dữ liệu và Business Manager
+- **[Week 3 - ISML + Controllers](./Week3/)** - Templates và Controllers
+- **[Week 4 - Forms + Hooks](./Week4/)** - Forms và Hooks System
+- **[Week 5 - Review](./Week5/)** - Ôn tập tổng hợp
+- **[Week 6 - Exam](./Week6/)** - Thi thử và thi chính thức
+- **[Practice Exercises](./Practice/)** - Bài tập thực hành
+- **[Resources](./Resources/)** - Tài nguyên và links
+
+## 📚 External Resources
+
+- **[Trailhead](https://trailhead.salesforce.com/credentials/b2ccommercedeveloper)** - Official learning
+- **[Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)** - B2C Commerce docs
+- **[SFRA GitHub](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)** - Reference architecture
+- **[Stack Exchange](https://salesforce.stackexchange.com/questions/tagged/commerce-cloud)** - Community Q&A

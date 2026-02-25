@@ -296,6 +296,40 @@ if (result.ok) {
 
 ---
 
+## 🔗 Tài liệu tham khảo
+
+### Official Documentation
+- **[Forms Framework](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Forms/FormsFramework.html)**
+- **[Hooks Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Hooks/Hooks.html)**
+- **[Hook Types](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Hooks/HookTypes.html)**
+- **[Service Framework](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Services/ServicesFramework.html)**
+- **[LocalServiceRegistry](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/class_dw_svc_LocalServiceRegistry.html)**
+
+### Video Tutorials
+- **[B2C Commerce Fast Path Videos](https://help.salesforce.com/s/articleView?id=cc.b2c_fast_path_training.htm)**
+- **[Hooks Tutorial](https://www.youtube.com/results?search_query=salesforce+b2c+hooks)**
+
+### Practice
+- **[Week 4 Exercises](../Practice/Week4/)**
+- **[SFRA Plugin Examples](https://github.com/SalesforceCommerceCloud?q=plugin&type=all)**
+
+---
+
+## 📋 Checklist tuần 4
+
+- [ ] Nắm vững Forms Framework
+- [ ] Tạo được Form XML với validation
+- [ ] Hiểu CSRF protection
+- [ ] Xử lý form submission trong Controller
+- [ ] Tạo được Page Designer Components
+- [ ] Setup hooks.json và viết Hook scripts
+- [ ] Implement được Service Framework với mock
+- [ ] Hiểu OCAPI advanced topics
+- [ ] Làm 40 câu hỏi ôn tập trong Practice/Week4/
+- [ ] Review lại notes và code examples
+
+---
+
 ## 🔗 Navigation
 
 - ⬅️ [Tuần 3 - ISML+Ctil](../Week3/)

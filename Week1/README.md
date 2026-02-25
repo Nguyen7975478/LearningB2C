@@ -147,6 +147,40 @@
 
 ---
 
+## 🔗 Tài liệu tham khảo
+
+### Official Documentation
+- **[B2C Commerce InfoCenter](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)**
+- **[Exam Guide](https://trailhead.salesforce.com/credentials/b2ccommercedeveloper)**
+- **[B2C Commerce Basics Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-basics)**
+- **[VS Code Prophet Extension](https://marketplace.visualstudio.com/items?itemName=SqrTT.prophet)**
+- **[Script API Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/index.html)**
+
+### Video Tutorials
+- **[B2C Commerce Fast Path Videos](https://help.salesforce.com/s/articleView?id=cc.b2c_fast_path_training.htm)**
+- **[Setup IDE Tutorial](https://www.youtube.com/results?search_query=salesforce+b2c+prophet+debugger)**
+
+### Practice
+- **[Trailhead Practice](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-for-developers)**
+- **[Week 1 Exercises](../Practice/Week1/)**
+
+---
+
+## 📋 Checklist tuần 1
+
+- [ ] Đọc xong Exam Guide
+- [ ] Hoàn thành B2C Commerce Basics Trailhead
+- [ ] Cài đặt VS Code + Prophet Debugger
+- [ ] Kết nối WebDAV thành công
+- [ ] Biết cách Import/Export dữ liệu trong BM
+- [ ] Hiểu Product Data Model (Product, Variant, Set, Bundle)
+- [ ] Tạo được Content Assets + Slots
+- [ ] Hoàn thành Trailhead modules (3 modules)
+- [ ] Làm 20 câu hỏi ôn tập trong Practice/Week1/
+- [ ] Review lại notes và code examples
+
+---
+
 ## ➡️ Tuần tiếp theo
 
-[Tuần 2: Dữ liệu và Business Manager →](../Week2/README.md)
+[Tuần 2 - Dữ liệu và Business Manager](../Week2/) →
