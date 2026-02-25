@@ -433,18 +433,18 @@ server.get('Show', function (req, res, next) {
 ## 🔗 Tài liệu tham khảo
 
 ### Official Documentation
-- **[B2C Commerce InfoCenter](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)**
-- **[Script API Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/index.html)**
-- **[OCAPI Shop API](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/shop/Resources/index.html)**
-- **[OCAPI Data API](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/data/Resources/index.html)**
+- **[Salesforce Help Center](https://help.salesforce.com/)** ✅
+- **[Salesforce Developers Documentation](https://developer.salesforce.com/docs)** ✅ - Script API Reference
+- **[Search OCAPI Shop API on Salesforce Help](https://help.salesforce.com/s/global-search/OCAPI%20shop%20API)** ✅
+- **[Search OCAPI Data API on Salesforce Help](https://help.salesforce.com/s/global-search/OCAPI%20data%20API)** ✅
 
 ### Practice Resources
-- **[Focus on Force](https://focusonforce.com/)** - Practice exams (paid)
-- **[Quizlet Flashcards](https://quizlet.com/search?query=salesforce%20b2c%20commerce)** - Community flashcards
+- **[Focus on Force](https://focusonforce.com/)** ✅ - Search "Salesforce B2C Commerce" (paid)
+- **[Quizlet](https://quizlet.com/)** ✅ - Search "Salesforce B2C Commerce Developer" (community flashcards)
 - **[Week 5 Exercises](../Practice/Week5/)**
 
 ### Video Tutorials
-- **[B2C Commerce Fast Path Videos](https://help.salesforce.com/s/articleView?id=cc.b2c_fast_path_training.htm)**
+- **[Salesforce Developers YouTube](https://www.youtube.com/@salesforcedevelopers)** ✅ - Official channel
 
 ---
 

@@ -536,14 +536,14 @@ A: begin() requires manual commit/rollback, wrap() handles automatically
 ## 🔗 Tài liệu tham khảo
 
 ### Official Documentation
-- **[Exam Guide](https://trailhead.salesforce.com/credentials/b2ccommercedeveloper)**
-- **[Schedule Exam](https://www.webassessor.com/salesforce)**
-- **[B2C Commerce InfoCenter](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)**
+- **[Salesforce Credentials](https://trailhead.salesforce.com/credentials)** ✅ - Exam Guide
+- **[Schedule Exam](https://www.webassessor.com/salesforce)** ✅
+- **[Salesforce Help Center](https://help.salesforce.com/)** ✅
 
 ### Practice Resources
-- **[Focus on Force](https://focusonforce.com/)** - Practice exams (paid)
-- **[Udemy Practice Tests](https://www.udemy.com/topic/salesforce-b2c-commerce/)** - Various practice tests
-- **[Quizlet Flashcards](https://quizlet.com/search?query=salesforce%20b2c%20commerce)** - Community flashcards
+- **[Focus on Force](https://focusonforce.com/)** ✅ - Search "Salesforce B2C Commerce" (paid)
+- **[Udemy](https://www.udemy.com/)** ✅ - Search "Salesforce B2C Commerce" (various practice tests)
+- **[Quizlet](https://quizlet.com/)** ✅ - Search "Salesforce B2C Commerce Developer" (community flashcards)
 - **[Mock Exams](../Practice/MockExams/)**
 
 ### Community

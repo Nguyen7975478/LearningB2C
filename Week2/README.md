@@ -139,14 +139,14 @@ CustomObjectMgr.remove(obj);
 ## 🔗 Tài liệu tham khảo
 
 ### Official Documentation
-- **[B2C Commerce InfoCenter](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)**
-- **[OCAPI Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/usage/OpenCommerceAPI.html)**
-- **[Script API Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/index.html)**
-- **[B2C Commerce Search Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-search)**
-- **[B2C Commerce Order Management Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-order-management)**
+- **[Salesforce Help Center](https://help.salesforce.com/)** ✅
+- **[Search OCAPI Documentation](https://help.salesforce.com/s/global-search/OCAPI)** ✅ - Open Commerce API
+- **[Salesforce Developers Documentation](https://developer.salesforce.com/docs)** ✅ - Script API Reference
+- **[B2C Commerce Search Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-search)** ✅
+- **[B2C Commerce Order Management Trailhead](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-order-management)** ✅
 
 ### Video Tutorials
-- **[B2C Commerce Fast Path Videos](https://help.salesforce.com/s/articleView?id=cc.b2c_fast_path_training.htm)**
+- **[Salesforce Developers YouTube](https://www.youtube.com/@salesforcedevelopers)** ✅ - Official channel
 - **[OCAPI Tutorials](https://www.youtube.com/results?search_query=salesforce+b2c+ocapi)**
 
 ### Practice

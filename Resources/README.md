@@ -1,46 +1,82 @@
 # 📚 Tài nguyên tham khảo
 
+> **⚠️ Lưu ý:** Salesforce đã thay đổi cấu trúc documentation. Một số links cũ không còn hoạt động.
+> Tài liệu này đã được cập nhật với links mới và hướng dẫn tìm kiếm tài liệu.
+> Cập nhật lần cuối: 2025
+
 Tổng hợp các tài liệu, links, và resources quan trọng cho việc học và thi chứng chỉ Salesforce B2C Commerce Developer.
+
+---
+
+## 🔍 Cách Tìm Tài Liệu Khi Links Thay Đổi
+
+### Trailhead Modules
+1. Vào <a href="https://trailhead.salesforce.com/">https://trailhead.salesforce.com/</a>
+2. Click vào Search (🔍)
+3. Nhập: "B2C Commerce [topic]"
+4. Filter: Modules, Trails, hoặc Projects
+
+### Official Documentation
+1. Vào <a href="https://help.salesforce.com/">https://help.salesforce.com/</a>
+2. Search: "Commerce Cloud [topic]"
+3. Hoặc browse: Products → Commerce Cloud
+
+### Code Examples & APIs
+1. Vào <a href="https://github.com/SalesforceCommerceCloud">https://github.com/SalesforceCommerceCloud</a>
+2. Browse repositories
+3. SFRA là repository chính cho reference code
+
+### Community Help
+1. <a href="https://trailblazers.salesforce.com/">Trailblazer Community</a> - đặt câu hỏi
+2. <a href="https://salesforce.stackexchange.com/">Stack Exchange</a> - tag: commerce-cloud
+3. <a href="https://github.com/SalesforceCommerceCloud/storefront-reference-architecture/issues">GitHub Issues</a>
 
 ---
 
 ## 📖 Official Documentation
 
 ### Salesforce B2C Commerce
-- **[B2C Commerce InfoCenter](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)** - Tài liệu chính thức
-- **[SFRA Documentation](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)** - Storefront Reference Architecture
-- **[B2C Commerce API Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/)** - API docs
-- **[OCAPI Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/usage/OpenCommerceAPI.html)** - Open Commerce API
+- **[Salesforce Help Center](https://help.salesforce.com/)** ✅ - Tài liệu chính thức
+- **[Search Commerce Cloud Documentation](https://help.salesforce.com/s/global-search/b2c%20commerce)** ✅ - Tìm kiếm tài liệu
+- **[SFRA Documentation](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)** ✅ - Storefront Reference Architecture
+- **[Salesforce Developers](https://developer.salesforce.com/)** ✅ - Developer portal
+- **[Developer Documentation](https://developer.salesforce.com/docs)** ✅ - API docs
+- **[OCAPI Postman Collection](https://github.com/SalesforceCommerceCloud/ocapi-postman)** ✅ - Open Commerce API examples
 
 ### Script API
-- **[Script API (dw)](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/index.html)** - JavaScript API Reference
-- **[Class List](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/allclasses-frame.html)** - All Classes
+- **[Salesforce Developers Documentation](https://developer.salesforce.com/docs)** ✅ - JavaScript API Reference
+- **[SalesforceCommerceCloud GitHub Org](https://github.com/SalesforceCommerceCloud)** ✅ - All repositories and code references
 
 ---
 
 ## 🎓 Trailhead Modules
 
+**Tìm trên Trailhead:**
+1. Vào <a href="https://trailhead.salesforce.com/">Trailhead</a>
+2. Search: "B2C Commerce [topic]"
+3. Filter by: Modules/Trails
+
 ### Required Modules
-1. **[B2C Commerce Basics](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-basics)** (~1h)
-2. **[B2C Commerce for Developers](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-for-developers)** (~2h)
-3. **[Get Started with B2C Commerce Development](https://trailhead.salesforce.com/content/learn/modules/get-started-with-b2c-commerce-development)** (~1.5h)
+1. **[B2C Commerce Basics](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-basics)** ✅ (~1h)
+2. **[B2C Commerce for Developers](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-for-developers)** ✅ (~2h)
+3. **[Get Started with B2C Commerce Development](https://trailhead.salesforce.com/content/learn/modules/get-started-with-b2c-commerce-development)** ✅ (~1.5h)
 
 ### Recommended Modules
-4. **[B2C Commerce Search](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-search)** (~45min)
-5. **[B2C Commerce Order Management](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-order-management)** (~1h)
-6. **[B2C Commerce Site Setup](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-site-setup)** (~1h)
+4. **[B2C Commerce Search](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-search)** ✅ (~45min)
+5. **[B2C Commerce Order Management](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-order-management)** ✅ (~1h)
+6. **[B2C Commerce Site Setup](https://trailhead.salesforce.com/content/learn/modules/b2c-commerce-site-setup)** ✅ (~1h)
 
 ### Trail
-- **[B2C Commerce Developer Trail](https://trailhead.salesforce.com/content/learn/trails/build-for-commerce-cloud)** - Complete learning path
+- **[Search B2C Commerce on Trailhead](https://trailhead.salesforce.com/search?keywords=b2c%20commerce)** ✅ - Complete learning path
 
 ---
 
 ## 🎯 Certification
 
 ### Exam Information
-- **[Exam Guide](https://trailhead.salesforce.com/credentials/b2ccommercedeveloper)** - Official exam guide
-- **[Schedule Exam](https://www.webassessor.com/salesforce)** - Book your exam
-- **[Certification Overview](https://trailhead.salesforce.com/credentials/b2ccommercedeveloper)** - Requirements và details
+- **[Salesforce Credentials](https://trailhead.salesforce.com/credentials)** ✅ - Official exam guide
+- **[Schedule Exam](https://www.webassessor.com/salesforce)** ✅ - Book your exam
+- **[Trailhead Help](https://trailhead.salesforce.com/help)** ✅ - Requirements và details
 
 ### Exam Structure
 - **Questions:** 60 multiple choice/multiple select
@@ -62,9 +98,9 @@ Tổng hợp các tài liệu, links, và resources quan trọng cho việc họ
 ## 🛠️ Development Tools
 
 ### IDE & Extensions
-- **[Visual Studio Code](https://code.visualstudio.com/)** - Recommended IDE
-- **[Prophet Debugger Extension](https://marketplace.visualstudio.com/items?itemName=SqrTT.prophet)** - VS Code extension for SFCC
-- **[Prophet Uploader](https://github.com/SqrTT/prophet)** - CLI tool
+- **[Visual Studio Code](https://code.visualstudio.com/)** ✅ - Recommended IDE
+- **[VS Code Marketplace](https://marketplace.visualstudio.com/)** ✅ - Search "Prophet Debugger"
+- **[Prophet Uploader](https://github.com/SqrTT/prophet)** ✅ - CLI tool
 
 ### Testing Tools
 - **[Postman](https://www.postman.com/)** - API testing
@@ -79,8 +115,11 @@ Tổng hợp các tài liệu, links, và resources quan trọng cho việc họ
 ## 📹 Video Resources
 
 ### Official Salesforce
-- **[Salesforce Developers YouTube](https://www.youtube.com/c/SalesforceDevelopers)** - Official channel
-- **[B2C Commerce Fast Path](https://help.salesforce.com/s/articleView?id=cc.b2c_fast_path_training.htm)** - Quick training videos
+- **[Salesforce Developers YouTube](https://www.youtube.com/@salesforcedevelopers)** ✅ - Official channel
+
+**Tìm Video Tutorials:**
+1. Vào [Salesforce Developers YouTube](https://www.youtube.com/@salesforcedevelopers)
+2. Search: "B2C Commerce [topic]"
 
 ### Community Videos
 - **[B2C Commerce Developer Tutorials](https://www.youtube.com/results?search_query=salesforce+b2c+commerce+developer)** - Community tutorials
@@ -91,23 +130,22 @@ Tổng hợp các tài liệu, links, và resources quan trọng cho việc họ
 ## 📝 Study Materials
 
 ### Documentation Sites
-- **[B2C Commerce Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC1/)** - Main docs
-- **[LINK Marketplace](https://xchange.demandware.com/)** - Community and resources
+- **[Salesforce Help Center](https://help.salesforce.com/)** ✅ - Main docs
+- **[Search Commerce Cloud Documentation](https://help.salesforce.com/s/global-search/b2c%20commerce)** ✅ - Commerce Cloud docs
 - **[Salesforce Partners](https://partners.salesforce.com/)** - Partner resources
 
 ### Community Forums
-- **[Salesforce Stack Exchange](https://salesforce.stackexchange.com/questions/tagged/commerce-cloud)** - Q&A community
-- **[Trailblazer Community](https://trailblazers.salesforce.com/)** - Official community
-- **[B2C Commerce Slack](https://sfcc-unofficial.slack.com/)** - Unofficial Slack channel
+- **[Salesforce Stack Exchange](https://salesforce.stackexchange.com/questions/tagged/commerce-cloud)** ✅ - Q&A community
+- **[Trailblazer Community](https://trailblazers.salesforce.com/)** ✅ - Official community
 
 ---
 
 ## 📊 Practice Resources
 
 ### Mock Exams
-- **[Focus on Force](https://focusonforce.com/)** - Practice exams (paid)
-- **[Udemy Practice Tests](https://www.udemy.com/topic/salesforce-b2c-commerce/)** - Various practice tests
-- **[Quizlet Flashcards](https://quizlet.com/search?query=salesforce%20b2c%20commerce)** - Community flashcards
+- **[Focus on Force](https://focusonforce.com/)** ✅ - Search "Salesforce B2C Commerce" (paid)
+- **[Udemy](https://www.udemy.com/)** ✅ - Search "Salesforce B2C Commerce" (various practice tests)
+- **[Quizlet](https://quizlet.com/)** ✅ - Search "Salesforce B2C Commerce Developer" (community flashcards)
 
 ### Code Examples
 - **[SFRA Cartridges](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)** - Reference code
@@ -118,30 +156,46 @@ Tổng hợp các tài liệu, links, và resources quan trọng cho việc họ
 
 ## 🔗 Important Links by Topic
 
-### ISML
-- **[ISML Reference](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/ISML/ISMLReference.html)** - ISML tags
-- **[Template Guide](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Frames/ISMLTemplates.html)** - Template best practices
+### ISML & Templates
+**Tài liệu chính:**
+- **[SFRA Templates on GitHub](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture/tree/master/cartridges/app_storefront_base/cartridge/templates)** ✅
+- **[Search ISML on Salesforce Help](https://help.salesforce.com/s/global-search/ISML)** ✅
+
+**Cách tìm ISML Documentation:**
+1. Vào [Salesforce Help](https://help.salesforce.com/)
+2. Search: "ISML templates" hoặc "B2C Commerce ISML"
+3. Hoặc xem examples trực tiếp trong [SFRA GitHub](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)
 
 ### Controllers
-- **[SFRA Controllers](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture/tree/master/cartridges/app_storefront_base/cartridge/controllers)** - Example controllers
-- **[Server Module](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/module_server.html)** - Server API
+- **[SFRA Controllers](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture/tree/master/cartridges/app_storefront_base/cartridge/controllers)** ✅ - Example controllers
+- **[Search Server Module on Salesforce Help](https://help.salesforce.com/s/global-search/b2c%20commerce%20server%20module)** ✅ - Server API
 
 ### Forms
-- **[Forms Framework](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Forms/FormsFramework.html)** - Forms documentation
-- **[Form XML Schema](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/XML/XMLformattingguide.html)** - XML definitions
+**Cách tìm Forms Documentation:**
+1. Vào [Salesforce Help](https://help.salesforce.com/)
+2. Search: "B2C Commerce forms framework"
+3. Hoặc xem examples trong [SFRA GitHub](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)
 
 ### Hooks
-- **[Hooks Documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Hooks/Hooks.html)** - Hooks system
-- **[Hook Types](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Hooks/HookTypes.html)** - Available hooks
+**Cách tìm Hooks Documentation:**
+1. Vào [Salesforce Help](https://help.salesforce.com/)
+2. Search: "B2C Commerce hooks"
+3. Hoặc xem examples trong [SFRA GitHub](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)
 
 ### Services
-- **[Service Framework](https://documentation.b2c.commercecloud.salesforce.com/DOC1/topic/com.demandware.dochelp/Services/ServicesFramework.html)** - Service guide
-- **[LocalServiceRegistry](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/DWAPI/scriptapi/html/api/class_dw_svc_LocalServiceRegistry.html)** - Service API
+**Cách tìm Services Documentation:**
+1. Vào [Salesforce Help](https://help.salesforce.com/)
+2. Search: "B2C Commerce service framework"
+3. Hoặc xem examples trong [SFRA GitHub](https://github.com/SalesforceCommerceCloud/storefront-reference-architecture)
 
 ### OCAPI
-- **[OCAPI Overview](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/usage/OpenCommerceAPI.html)** - OCAPI intro
-- **[Shop API](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/shop/Resources/index.html)** - Shop API endpoints
-- **[Data API](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/data/Resources/index.html)** - Data API endpoints
+- **[OCAPI Postman Collection](https://github.com/SalesforceCommerceCloud/ocapi-postman)** ✅ - OCAPI examples
+- **[SalesforceCommerceCloud GitHub](https://github.com/SalesforceCommerceCloud)** ✅ - All repositories
+
+**Cách tìm OCAPI Documentation:**
+1. Vào [Salesforce Help](https://help.salesforce.com/)
+2. Search: "OCAPI" hoặc "Open Commerce API"
+3. Hoặc tìm trên [Salesforce Developers](https://developer.salesforce.com/)
 
 ---
 
