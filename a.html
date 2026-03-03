@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #000;
+            margin: 20px;
+            line-height: 1.45;
+        }
+
+        .md-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 14px;
+        }
+
+        .md-title code {
+            font-size: .95em;
+            background: #f2f2f2;
+            padding: 1px 6px;
+            border-radius: 6px;
+        }
+
+        .question {
+            margin: 18px 0 26px;
+        }
+
+        .question h2 {
+            font-size: 16px;
+            margin: 0 0 10px;
+        }
+
+        /* Auto A/B/C/D using CSS counter */
+        .options {
+            counter-reset: opt;
+            margin: 0;
+            padding: 0;
+        }
+
+        .options li {
+            list-style: none;
+            margin: 6px 0;
+        }
+
+        .options label {
+            display: block;
+            cursor: pointer;
+        }
+
+        .options label::before {
+            counter-increment: opt;
+            content: counter(opt, upper-alpha) " ";
+            font-weight: 700;
+            display: inline-block;
+            width: 22px;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        code {
+            background: #f2f2f2;
+            padding: 1px 6px;
+            border-radius: 6px;
+        }
+
+        details {
+            margin-top: 10px;
+        }
+
+        .answer {
+            margin-top: 8px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            background: #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+
+<details>
+    <summary><strong>Configure Storefront Search Redirects</strong></summary>
+
+    <div>
+        <div class="question" id="q1">
+        <h2>
+            1) Brandon wants to configure a search redirect that applies to <strong>"mens shoes"</strong> and
+            <strong>"cheap shoes for men"</strong> but excludes results containing <strong>"used."</strong><br/>
+            How should he configure the keywords?
+        </h2>
+
+        <ol class="options" aria-label="Question 1 options">
+            <li><label><input type="radio" name="q1" value="A"><code>-used, mens shoes</code></label></li>
+            <li><label><input type="radio" name="q1" value="B"><code>mens shoes, -used</code></label></li>
+            <li><label><input type="radio" name="q1" value="C"><code>"mens shoes", -used</code></label></li>
+            <li><label><input type="radio" name="q1" value="D"><code>mens shoes, used</code></label></li>
+        </ol>
+
+        <details>
+            <summary>Answer</summary>
+            <div class="answer">✅ Correct: <strong>B</strong> — <code>mens shoes, -used</code></div>
+        </details>
+    </div>
+
+        <div class="question" id="q2">
+            <h2>2) Which of the following statements about search redirects is true?</h2>
+
+            <ol class="options" aria-label="Question 2 options">
+                <li><label><input type="radio" name="q2" value="A">They allow merchandisers to direct shoppers to a specific
+                    page or URL based on their search terms.</label></li>
+                <li><label><input type="radio" name="q2" value="B">They are primarily used to prevent shoppers from finding
+                    specific product pages.</label></li>
+                <li><label><input type="radio" name="q2" value="C">They increase the likelihood that shoppers will browse
+                    more products without making a purchase.</label></li>
+                <li><label><input type="radio" name="q2" value="D">They are configured to bypass the standard search
+                    function even if no redirect keyword is matched.</label></li>
+            </ol>
+
+            <details>
+                <summary>Answer</summary>
+                <div class="answer">✅ Correct: <strong>A</strong></div>
+            </details>
+        </div>
+    </div>
+</details>
+</body>
+</html>
