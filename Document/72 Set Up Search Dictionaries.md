@@ -9,7 +9,7 @@
 
 ---
 
-# 🇬🇧 English (EN)
+# English (EN)
 
 ## Learning Objectives
 
@@ -123,7 +123,7 @@ In the next unit of this module, the merchant implements **Einstein Search Recom
 
 ---
 
-# 🇻🇳 Tiếng Việt (VI)
+# Tiếng Việt (VI)
 
 ## Mục Tiêu Học Tập
 

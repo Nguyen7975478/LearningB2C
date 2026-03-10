@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Quiz</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,32 +13,45 @@
             line-height: 1.45;
         }
 
-        .md-title {
-            font-size: 22px;
-            font-weight: 700;
-            margin: 0 0 14px;
+        /* ===== Auto numbering for TOPIC list (1., 2., 3., ...) ===== */
+        ol.topics {
+            margin: 0;
+            padding-left: 22px; /* room for numbers */
         }
 
-        .md-title code {
-            font-size: .95em;
-            background: #f2f2f2;
-            padding: 1px 6px;
-            border-radius: 6px;
+        ol.topics > li {
+            margin: 0 0 10px 0;
+        }
+
+        ol.topics > li::marker {
+            font-weight: 700; /* bold number like summary */
+        }
+
+        /* Hide default disclosure marker so we don't get bullet + triangle */
+        ol.topics details.topic > summary {
+            list-style: none;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        ol.topics details.topic > summary::-webkit-details-marker {
+            display: none;
         }
 
         .question {
-            margin: 18px 0 26px;
+            margin: 18px 15px 26px;
         }
 
         .question h2 {
             font-size: 16px;
             margin: 0 0 10px;
+            font-weight: 700;
         }
 
-        /* Auto A/B/C/D using CSS counter */
+        /* Auto A/B/C/D... for options */
         .options {
             counter-reset: opt;
-            margin: 0;
+            margin: 0 15px;
             padding: 0;
         }
 
@@ -63,12 +77,6 @@
             margin-right: 8px;
         }
 
-        code {
-            background: #f2f2f2;
-            padding: 1px 6px;
-            border-radius: 6px;
-        }
-
         details {
             margin-top: 10px;
         }
@@ -78,55 +86,3227 @@
             padding: 8px;
             border: 1px solid #ccc;
             background: #f7f7f7;
+            border-radius: 6px;
+        }
+
+        details.topic > div {
+            padding: 10px 0 0;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e5e7eb;
+            margin: 18px 0;
+        }
+
+        code {
+            background: #f2f2f2;
+            padding: 1px 6px;
+            border-radius: 6px;
         }
     </style>
 </head>
 <body>
 
-<details>
-    <summary><strong>Configure Storefront Search Redirects</strong></summary>
+<ol class="topics">
+    <li>
+        <details class="topic">
+            <summary>Learn About B2C Commerce</summary>
+            <div>
+                <div class="question">
+                    <h2>B2C Commerce:</h2>
+                    <ol class="options" aria-label="Learn About B2C Commerce - Question 1 options">
+                        <li><label><input type="radio" name="lab2c_q1" value="A">Has rich features to allow customers to
+                            customize their stores to be on brand</label></li>
+                        <li><label><input type="radio" name="lab2c_q1" value="B">Is in English only</label></li>
+                        <li><label><input type="radio" name="lab2c_q1" value="C">Offers a single look and feel for all
+                            websites</label></li>
+                        <li><label><input type="radio" name="lab2c_q1" value="D">Is all-inclusive and therefore not
+                            intended to work with outside applications</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
 
-    <div>
-        <div class="question" id="q1">
-        <h2>
-            1) Brandon wants to configure a search redirect that applies to <strong>"mens shoes"</strong> and
-            <strong>"cheap shoes for men"</strong> but excludes results containing <strong>"used."</strong><br/>
-            How should he configure the keywords?
-        </h2>
-
-        <ol class="options" aria-label="Question 1 options">
-            <li><label><input type="radio" name="q1" value="A"><code>-used, mens shoes</code></label></li>
-            <li><label><input type="radio" name="q1" value="B"><code>mens shoes, -used</code></label></li>
-            <li><label><input type="radio" name="q1" value="C"><code>"mens shoes", -used</code></label></li>
-            <li><label><input type="radio" name="q1" value="D"><code>mens shoes, used</code></label></li>
-        </ol>
-
-        <details>
-            <summary>Answer</summary>
-            <div class="answer">✅ Correct: <strong>B</strong> — <code>mens shoes, -used</code></div>
+                <div class="question">
+                    <h2>Through the power of AI and machine learning, the Merchandising and Marketing feature enables
+                        retailers to:</h2>
+                    <ol class="options" aria-label="Learn About B2C Commerce - Question 2 options">
+                        <li><label><input type="radio" name="lab2c_q2" value="A">Predict what customers buy, based on
+                            their public records from the courthouse</label></li>
+                        <li><label><input type="radio" name="lab2c_q2" value="B">Perform automated search engine
+                            optimization on sites and content</label></li>
+                        <li><label><input type="radio" name="lab2c_q2" value="C">Personalize their engagement with
+                            customers through offers and product recommendations</label></li>
+                        <li><label><input type="radio" name="lab2c_q2" value="D">Create geo-specific websites featuring
+                            different languages and currencies</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
         </details>
-    </div>
+        <hr/>
+    </li>
 
-        <div class="question" id="q2">
-            <h2>2) Which of the following statements about search redirects is true?</h2>
+    <li>
+        <details class="topic">
+            <summary>Learn About Einstein for Commerce</summary>
+            <div>
+                <div class="question">
+                    <h2>With Einstein for B2C Commerce:</h2>
+                    <ol class="options" aria-label="Learn About Einstein for Commerce - Question 1 options">
+                        <li><label><input type="radio" name="lae_q1" value="A">Data scientists send reports to our
+                            customers every week, detailing product and consumer insights.</label></li>
+                        <li><label><input type="radio" name="lae_q1" value="B">Additional data integration is required
+                            to get the most out of the machine-learning algorithms.</label></li>
+                        <li><label><input type="radio" name="lae_q1" value="C">Personalization is supercharged, using a
+                            retailer’s own commerce data.</label></li>
+                        <li><label><input type="radio" name="lae_q1" value="D">Personalization is available for
+                            websites, but not in-store or on mobile devices.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
 
-            <ol class="options" aria-label="Question 2 options">
-                <li><label><input type="radio" name="q2" value="A">They allow merchandisers to direct shoppers to a specific
-                    page or URL based on their search terms.</label></li>
-                <li><label><input type="radio" name="q2" value="B">They are primarily used to prevent shoppers from finding
-                    specific product pages.</label></li>
-                <li><label><input type="radio" name="q2" value="C">They increase the likelihood that shoppers will browse
-                    more products without making a purchase.</label></li>
-                <li><label><input type="radio" name="q2" value="D">They are configured to bypass the standard search
-                    function even if no redirect keyword is matched.</label></li>
-            </ol>
+                <div class="question">
+                    <h2>What do Einstein Product Recommendations do?</h2>
+                    <ol class="options" aria-label="Learn About Einstein for Commerce - Question 2 options">
+                        <li><label><input type="radio" name="lae_q2" value="A">They suggest relevant products during a
+                            consumer’s shopping journey.</label></li>
+                        <li><label><input type="radio" name="lae_q2" value="B">They suggest the best size and color
+                            combinations for each shopper.</label></li>
+                        <li><label><input type="radio" name="lae_q2" value="C">They help in-store sales associates
+                            arrange related merchandise to maximize sales.</label></li>
+                        <li><label><input type="radio" name="lae_q2" value="D">They suggest to retailers relevant
+                            products to add to their inventory.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
 
-            <details>
-                <summary>Answer</summary>
-                <div class="answer">✅ Correct: <strong>A</strong></div>
-            </details>
-        </div>
-    </div>
-</details>
+    <li>
+        <details class="topic">
+            <summary>Learn About B2B Commerce</summary>
+            <div>
+                <div class="question">
+                    <h2>Which functionality is specific to B2B Commerce?</h2>
+
+                    <ol class="options" aria-label="Learn About B2B Commerce - Question 1 options">
+                        <li><label><input type="radio" name="lab2b_q1" value="A">Descriptive product pages</label></li>
+                        <li><label><input type="radio" name="lab2b_q1" value="B">Contract pricing by account</label>
+                        </li>
+                        <li><label><input type="radio" name="lab2b_q1" value="C">Personalized product
+                            recommendations</label></li>
+                        <li><label><input type="radio" name="lab2b_q1" value="D">Industry-leading ecommerce
+                            sites</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What’s a benefit of combining B2B Commerce and CRM Data?</h2>
+
+                    <ol class="options" aria-label="Learn About B2B Commerce - Question 2 options">
+                        <li><label><input type="radio" name="lab2b_q2" value="A">Businesses can sell their products at a
+                            discount.</label></li>
+                        <li><label><input type="radio" name="lab2b_q2" value="B">Customer sites look more flashy thanks
+                            to more data.</label></li>
+                        <li><label><input type="radio" name="lab2b_q2" value="C">Sites can host a larger product
+                            catalog.</label></li>
+                        <li><label><input type="radio" name="lab2b_q2" value="D">Sales reps can see relevant customer
+                            data in one place.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Get Started with Unified Commerce</summary>
+            <div>
+                <div class="question">
+                    <h2>What is unified commerce?</h2>
+
+                    <ol class="options" aria-label="Get Started with Unified Commerce - Question 1 options">
+                        <li><label><input type="radio" name="gsuc_q1" value="A">A way to connect the shopper's entire
+                            commerce experience</label></li>
+                        <li><label><input type="radio" name="gsuc_q1" value="B">Consistent products and merchandising in
+                            stores worldwide</label></li>
+                        <li><label><input type="radio" name="gsuc_q1" value="C">An integral part of the Salesforce
+                            Customer Success Platform</label></li>
+                        <li><label><input type="radio" name="gsuc_q1" value="D">Both A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What percent of in-store purchases are influenced beforehand by digital behaviors?</h2>
+
+                    <ol class="options" aria-label="Get Started with Unified Commerce - Question 2 options">
+                        <li><label><input type="radio" name="gsuc_q2" value="A">20%</label></li>
+                        <li><label><input type="radio" name="gsuc_q2" value="B">30%</label></li>
+                        <li><label><input type="radio" name="gsuc_q2" value="C">50%</label></li>
+                        <li><label><input type="radio" name="gsuc_q2" value="D">99%</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Connect Marketing and Commerce</summary>
+            <div>
+                <div class="question">
+                    <h2>Which types of messages are considered behavioral messages?</h2>
+                    <ol class="options" aria-label="Connect Marketing and Commerce - Question 1 options">
+                        <li><label><input type="radio" name="cmc_q1" value="A">Order confirmation emails</label></li>
+                        <li><label><input type="radio" name="cmc_q1" value="B">Abandoned cart emails</label></li>
+                        <li><label><input type="radio" name="cmc_q1" value="C">Password reset emails</label></li>
+                        <li><label><input type="radio" name="cmc_q1" value="D">Order status emails</label></li>
+                        <li><label><input type="radio" name="cmc_q1" value="E">Welcome emails</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>How can a brand or retailer use Instagram with Commerce Cloud?</h2>
+                    <ol class="options" aria-label="Connect Marketing and Commerce - Question 2 options">
+                        <li><label><input type="radio" name="cmc_q2" value="A">Post photos of products that link to the
+                            brand’s product page.</label></li>
+                        <li><label><input type="radio" name="cmc_q2" value="B">Create an entire brand experience with
+                            curated media that directs shoppers to their Commerce Cloud site.</label></li>
+                        <li><label><input type="radio" name="cmc_q2" value="C">Post a page that describes their
+                            corporate culture.</label></li>
+                        <li><label><input type="radio" name="cmc_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="cmc_q2" value="E">B and C</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Connect Customer Service</summary>
+            <div>
+                <div class="question">
+                    <h2>What should a "complete view of the consumer across commerce and service" include?</h2>
+
+                    <ol class="options" aria-label="Connect Customer Service - Question 1 options">
+                        <li><label><input type="radio" name="ccs_q1" value="A">Access to customer credit scores</label>
+                        </li>
+                        <li><label><input type="radio" name="ccs_q1" value="B">Customer order data, profile data, and
+                            case history</label></li>
+                        <li><label><input type="radio" name="ccs_q1" value="C">Detailed information about the purchases
+                            customers have made on other websites</label></li>
+                        <li><label><input type="radio" name="ccs_q1" value="D">Access to a list of every customer's
+                            Facebook friends</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>How can agents become a selling channel?</h2>
+
+                    <ol class="options" aria-label="Connect Customer Service - Question 2 options">
+                        <li><label><input type="radio" name="ccs_q2" value="A">Add product recommendations to closed
+                            case emails</label></li>
+                        <li><label><input type="radio" name="ccs_q2" value="B">Leverage Trailhead to learn cross-selling
+                            skills</label></li>
+                        <li><label><input type="radio" name="ccs_q2" value="C">Help customers exchange a product for a
+                            different size</label></li>
+                        <li><label><input type="radio" name="ccs_q2" value="D">Use "order on behalf of"
+                            capabilities</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Learn About Importing and Exporting Data</summary>
+            <div>
+                <div class="question">
+                    <h2>Why is an import and export schema important?</h2>
+                    <ol class="options" aria-label="Learn About Importing and Exporting Data - Question 1 options">
+                        <li><label><input type="radio" name="laied_q1" value="A">It helps you export coupon codes in XML
+                            format.</label></li>
+                        <li><label><input type="radio" name="laied_q1" value="B">To enable your digital storefronts to
+                            use the documents.</label></li>
+                        <li><label><input type="radio" name="laied_q1" value="C">Using import and export is optional
+                            with B2C Commerce.</label></li>
+                        <li><label><input type="radio" name="laied_q1" value="D">Schema files specify the file structure
+                            expected by B2C Commerce import and export.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these data types do you usually import?</h2>
+                    <ol class="options" aria-label="Learn About Importing and Exporting Data - Question 2 options">
+                        <li><label><input type="radio" name="laied_q2" value="A">Returns data</label></li>
+                        <li><label><input type="radio" name="laied_q2" value="B">Coupon codes</label></li>
+                        <li><label><input type="radio" name="laied_q2" value="C">Coupon redemptions</label></li>
+                        <li><label><input type="radio" name="laied_q2" value="D">Product and content data</label></li>
+                        <li><label><input type="radio" name="laied_q2" value="E">Contract Data</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Get Started Configuring Your B2C Commerce Sites</summary>
+            <div>
+                <div class="question">
+                    <h2>What are the B2C Commerce instance types on a PIG?</h2>
+                    <ol class="options"
+                        aria-label="Get Started Configuring Your B2C Commerce Sites - Question 1 options">
+                        <li><label><input type="radio" name="gscyb2c_q1" value="A">Sandbox, staging, and
+                            production</label></li>
+                        <li><label><input type="radio" name="gscyb2c_q1" value="B">Sandbox, staging, development, and
+                            production</label></li>
+                        <li><label><input type="radio" name="gscyb2c_q1" value="C">Development, staging, and production</label>
+                        </li>
+                        <li><label><input type="radio" name="gscyb2c_q1" value="D">Sandbox, staging, and
+                            development</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>How do sites and organizations relate to instances?</h2>
+                    <ol class="options"
+                        aria-label="Get Started Configuring Your B2C Commerce Sites - Question 2 options">
+                        <li><label><input type="radio" name="gscyb2c_q2" value="A">The multiple sites on an instance are
+                            an organization.</label></li>
+                        <li><label><input type="radio" name="gscyb2c_q2" value="B">A site contains a PIG and a
+                            SIG.</label></li>
+                        <li><label><input type="radio" name="gscyb2c_q2" value="C">An organization is a realm containing
+                            sites.</label></li>
+                        <li><label><input type="radio" name="gscyb2c_q2" value="D">A site relates to a PIG and a SIG,
+                            while an organization relates to a realm.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- NEW SECTION: Learn About B2C Commerce Replication -->
+    <li>
+        <details class="topic">
+            <summary>Learn About B2C Commerce Replication</summary>
+            <div>
+                <div class="question">
+                    <h2>The replication goes from a staging instance to what other instance?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Replication - Question 1 options">
+                        <li><label><input type="radio" name="lab2cr_q1" value="A">Sandbox</label></li>
+                        <li><label><input type="radio" name="lab2cr_q1" value="B">Production and Development</label>
+                        </li>
+                        <li><label><input type="radio" name="lab2cr_q1" value="C">Development</label></li>
+                        <li><label><input type="radio" name="lab2cr_q1" value="D">Production</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>How does the import and export process differ from data replication?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Replication - Question 2 options">
+                        <li><label><input type="radio" name="lab2cr_q2" value="A">Import and export moves data from one
+                            instance to another, after it's already in a B2C Commerce database. Replication moves data
+                            to and from external systems.</label></li>
+                        <li><label><input type="radio" name="lab2cr_q2" value="B">After your data is in a B2C Commerce
+                            database, import and export moves data to and from external systems, replication moves data
+                            from one instance to another.</label></li>
+                        <li><label><input type="radio" name="lab2cr_q2" value="C">Export creates a copy of the data from
+                            the originating instance database at a new location in the target instance database, without
+                            replacing the original data. Replication replaces the data.</label></li>
+                        <li><label><input type="radio" name="lab2cr_q2" value="D">The replication process changes a site
+                            automatically and instantaneously, rather than gradually.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Get to Know Headless Commerce</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: With headless commerce, the front-end and back-end portions of a commerce system
+                        communicate with web APIs.</h2>
+                    <ol class="options" aria-label="Get to Know Headless Commerce - Question 1 options">
+                        <li><label><input type="radio" name="gtnhc_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="gtnhc_q1" value="B">False</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What are the features of headless commerce that distinguish it from traditional commerce?</h2>
+                    <ol class="options" aria-label="Get to Know Headless Commerce - Question 2 options">
+                        <li><label><input type="radio" name="gtnhc_q2" value="A">Developers can use different
+                            programming languages for front-end and back-end development.</label></li>
+                        <li><label><input type="radio" name="gtnhc_q2" value="B">Developers can use AI.</label></li>
+                        <li><label><input type="radio" name="gtnhc_q2" value="C">Developers can deploy front- and
+                            back-end systems independently.</label></li>
+                        <li><label><input type="radio" name="gtnhc_q2" value="D">B and C</label></li>
+                        <li><label><input type="radio" name="gtnhc_q2" value="E">A and C</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Plan Your Headless Commerce Implementation</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these are potential headless tools?</h2>
+
+                    <ol class="options" aria-label="Plan Your Headless Commerce Implementation - Question 1 options">
+                        <li><label><input type="radio" name="pyhci_q1" value="A">Proprietary tax software</label></li>
+                        <li><label><input type="radio" name="pyhci_q1" value="B">Code editing tools</label></li>
+                        <li><label><input type="radio" name="pyhci_q1" value="C">RESTful APIs</label></li>
+                        <li><label><input type="radio" name="pyhci_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="pyhci_q1" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: The headless approach is a great fit if your company has a solid IT department
+                        with a strong do-it-yourself attitude and want faster delivery of front-end changes on many
+                        devices and viewing formats.</h2>
+
+                    <ol class="options" aria-label="Plan Your Headless Commerce Implementation - Question 2 options">
+                        <li><label><input type="radio" name="pyhci_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="pyhci_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Discover PWA Kit and Managed Runtime</summary>
+            <div>
+                <div class="question">
+                    <h2>What specific resources does the PWA Kit provide to developers to accelerate the build
+                        process?</h2>
+
+                    <ol class="options" aria-label="Discover PWA Kit and Managed Runtime - Question 1 options">
+                        <li><label><input type="radio" name="dpwakmr_q1" value="A">A proprietary database management
+                            system.</label></li>
+                        <li><label><input type="radio" name="dpwakmr_q1" value="B">A drag-and-drop interface for
+                            non-technical users.</label></li>
+                        <li><label><input type="radio" name="dpwakmr_q1" value="C">Project templates and a routing
+                            system.</label></li>
+                        <li><label><input type="radio" name="dpwakmr_q1" value="D">A monolithic server
+                            architecture.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which metric highlights the reliability benefit of using the Managed Runtime for store
+                        operations?</h2>
+
+                    <ol class="options" aria-label="Discover PWA Kit and Managed Runtime - Question 2 options">
+                        <li><label><input type="radio" name="dpwakmr_q2" value="A">Unlimited storage capacity for all
+                            media assets.</label></li>
+                        <li><label><input type="radio" name="dpwakmr_q2" value="B">Support for unlimited concurrent
+                            developer user accounts.</label></li>
+                        <li><label><input type="radio" name="dpwakmr_q2" value="C">Guaranteed 100 millisecond page loads
+                            on 3G networks.</label></li>
+                        <li><label><input type="radio" name="dpwakmr_q2" value="D">A historical 99.99% uptime
+                            record.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Navigate the Salesforce Trust Site</summary>
+            <div>
+                <div class="question">
+                    <h2>Which page has links to help you check the health of your B2C Commerce POD?</h2>
+
+                    <ol class="options" aria-label="Navigate the Salesforce Trust Site - Question 1 options">
+                        <li><label><input type="radio" name="nsts_q1" value="A">Security page</label></li>
+                        <li><label><input type="radio" name="nsts_q1" value="B">Status page</label></li>
+                        <li><label><input type="radio" name="nsts_q1" value="C">Compliance page</label></li>
+                        <li><label><input type="radio" name="nsts_q1" value="D">Database page</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which page contains best practices for keeping your system instance secure?</h2>
+
+                    <ol class="options" aria-label="Navigate the Salesforce Trust Site - Question 2 options">
+                        <li><label><input type="radio" name="nsts_q2" value="A">Status page</label></li>
+                        <li><label><input type="radio" name="nsts_q2" value="B">Compliance page</label></li>
+                        <li><label><input type="radio" name="nsts_q2" value="C">Security page</label></li>
+                        <li><label><input type="radio" name="nsts_q2" value="D">Trust page</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Check Your B2C Commerce Status</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of the following can you use to find your B2C Commerce Instance status?</h2>
+
+                    <ol class="options" aria-label="Check Your B2C Commerce Status - Question 1 options">
+                        <li><label><input type="radio" name="cyb2c_q1" value="A">Org ID</label></li>
+                        <li><label><input type="radio" name="cyb2c_q1" value="B">Node ID</label></li>
+                        <li><label><input type="radio" name="cyb2c_q1" value="C">POD number</label></li>
+                        <li><label><input type="radio" name="cyb2c_q1" value="D">Database ID</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which status color indicates that a POD is currently undergoing maintenance?</h2>
+
+                    <ol class="options" aria-label="Check Your B2C Commerce Status - Question 2 options">
+                        <li><label><input type="radio" name="cyb2c_q2" value="A">Blue</label></li>
+                        <li><label><input type="radio" name="cyb2c_q2" value="B">Purple</label></li>
+                        <li><label><input type="radio" name="cyb2c_q2" value="C">Orange</label></li>
+                        <li><label><input type="radio" name="cyb2c_q2" value="D">Red</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Explore Admin Tasks for B2C Commerce</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these tasks does a Salesforce B2C Commerce administrator regularly perform?</h2>
+                    <ol class="options" aria-label="Explore Admin Tasks for B2C Commerce - Question 1 options">
+                        <li><label><input type="radio" name="eatb2c_q1" value="A">Create promotions.</label></li>
+                        <li><label><input type="radio" name="eatb2c_q1" value="B">Import storefront data.</label></li>
+                        <li><label><input type="radio" name="eatb2c_q1" value="C">Remove all passwords.</label></li>
+                        <li><label><input type="radio" name="eatb2c_q1" value="D">Perform regular backups.</label></li>
+                        <li><label><input type="radio" name="eatb2c_q1" value="E">B and D.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: When you assign roles to Business Manager users, you can restrict module and
+                        functional access by job scope.</h2>
+                    <ol class="options" aria-label="Explore Admin Tasks for B2C Commerce - Question 2 options">
+                        <li><label><input type="radio" name="eatb2c_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="eatb2c_q2" value="B">False</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Set Up Business Manager Users</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: Account Manager is the tool for creating and managing Business Manager
+                        users.</h2>
+                    <ol class="options" aria-label="Set Up Business Manager Users - Question 1 options">
+                        <li><label><input type="radio" name="submu_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="submu_q1" value="B">False</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Why is it important to add password protection to a B2C Commerce site that's under
+                        development?</h2>
+                    <ol class="options" aria-label="Set Up Business Manager Users - Question 2 options">
+                        <li><label><input type="radio" name="submu_q2" value="A">You want potential shoppers to find it
+                            through a search engine before it's ready.</label></li>
+                        <li><label><input type="radio" name="submu_q2" value="B">You want to surprise everyone on launch
+                            day.</label></li>
+                        <li><label><input type="radio" name="submu_q2" value="C">You want to give site access to only
+                            the people working on it and no one else.</label></li>
+                        <li><label><input type="radio" name="submu_q2" value="D">A and B.</label></li>
+                        <li><label><input type="radio" name="submu_q2" value="E">A and C.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Roles and Permissions</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these are types of permissions that you can grant in Business Manager?</h2>
+
+                    <ol class="options" aria-label="Configure Roles and Permissions - Question 1 options">
+                        <li><label><input type="radio" name="crp_q1" value="A">Add-On and Functional</label></li>
+                        <li><label><input type="radio" name="crp_q1" value="B">Functional and WebDAV</label></li>
+                        <li><label><input type="radio" name="crp_q1" value="C">WebDAV and Seasonal</label></li>
+                        <li><label><input type="radio" name="crp_q1" value="D">WebDAV and Add-On</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: You must specify a permitted language for a role.</h2>
+
+                    <ol class="options" aria-label="Configure Roles and Permissions - Question 2 options">
+                        <li><label><input type="radio" name="crp_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="crp_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADDED BACK: Explore On-Demand Sandboxes -->
+    <li>
+        <details class="topic">
+            <summary>Explore On-Demand Sandboxes</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: On-demand sandboxes allow you to dispose of environments when the work completes.</h2>
+
+                    <ol class="options" aria-label="Explore On-Demand Sandboxes - Question 1 options">
+                        <li><label><input type="radio" name="eods_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="eods_q1" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which is true about credit consumption?</h2>
+
+                    <ol class="options" aria-label="Explore On-Demand Sandboxes - Question 2 options">
+                        <li><label><input type="radio" name="eods_q2" value="A">Credits are consumed based on the number of sandwiches counted.</label></li>
+                        <li><label><input type="radio" name="eods_q2" value="B">Credits are consumed based on usage.</label></li>
+                        <li><label><input type="radio" name="eods_q2" value="C">Deleted sandboxes consume credits.</label></li>
+                        <li><label><input type="radio" name="eods_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="eods_q2" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADDED BACK: Configure an On-Demand Sandbox -->
+    <li>
+        <details class="topic">
+            <summary>Configure an On-Demand Sandbox</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these steps would a developer include in an automated process?</h2>
+
+                    <ol class="options" aria-label="Configure an On-Demand Sandbox - Question 1 options">
+                        <li><label><input type="radio" name="coods_q1" value="A">Calculate actual cash value (ACV) for a time period.</label></li>
+                        <li><label><input type="radio" name="coods_q1" value="B">Perform a site data audit.</label></li>
+                        <li><label><input type="radio" name="coods_q1" value="C">Deploy code to the sandbox.</label></li>
+                        <li><label><input type="radio" name="coods_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="coods_q1" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: The OCAPI and WebDAV Client Permissions settings in Business Manager are required for API client access to on-demand sandboxes.</h2>
+
+                    <ol class="options" aria-label="Configure an On-Demand Sandbox - Question 2 options">
+                        <li><label><input type="radio" name="coods_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="coods_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Create and Monitor an On-Demand Sandbox</summary>
+            <div>
+                <div class="question">
+                    <h2>What can you use to access an On-Demand Sandbox?</h2>
+
+                    <ol class="options" aria-label="Create and Monitor an On-Demand Sandbox - Question 1 options">
+                        <li><label><input type="radio" name="cmods_q1" value="A">HTML</label></li>
+                        <li><label><input type="radio" name="cmods_q1" value="B">B2C Commerce Cloud Developer Sandbox REST API</label></li>
+                        <li><label><input type="radio" name="cmods_q1" value="C">The command line interface (CLI)</label></li>
+                        <li><label><input type="radio" name="cmods_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="cmods_q1" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: The API client ID is optional for accessing the On-Demand Sandbox API.</h2>
+
+                    <ol class="options" aria-label="Create and Monitor an On-Demand Sandbox - Question 2 options">
+                        <li><label><input type="radio" name="cmods_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="cmods_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Explore Business Manager Import and Export</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: Schema files provide the file structure for the XML files that you import into a B2C Commerce system.</h2>
+
+                    <ol class="options" aria-label="Explore Business Manager Import and Export - Question 1 options">
+                        <li><label><input type="radio" name="ebmie_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="ebmie_q1" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>You generally import catalog files from an external system into which instance?</h2>
+
+                    <ol class="options" aria-label="Explore Business Manager Import and Export - Question 2 options">
+                        <li><label><input type="radio" name="ebmie_q2" value="A">Development</label></li>
+                        <li><label><input type="radio" name="ebmie_q2" value="B">Production</label></li>
+                        <li><label><input type="radio" name="ebmie_q2" value="C">Sandbox</label></li>
+                        <li><label><input type="radio" name="ebmie_q2" value="D">Staging</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Understand Import Modes</summary>
+            <div>
+                <div class="question">
+                    <h2>Which modes add objects via import?</h2>
+
+                    <ol class="options" aria-label="Understand Import Modes - Question 1 options">
+                        <li><label><input type="radio" name="uim_q1" value="A">Merge and Replace</label></li>
+                        <li><label><input type="radio" name="uim_q1" value="B">Merge and Update</label></li>
+                        <li><label><input type="radio" name="uim_q1" value="C">Update and Replace</label></li>
+                        <li><label><input type="radio" name="uim_q1" value="D">Delete and Replace</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What is a recommended way to delete data using import?</h2>
+
+                    <ol class="options" aria-label="Understand Import Modes - Question 2 options">
+                        <li><label><input type="radio" name="uim_q2" value="A">Update mode.</label></li>
+                        <li><label><input type="radio" name="uim_q2" value="B">Delete mode for a file that only contains objects to be deleted.</label></li>
+                        <li><label><input type="radio" name="uim_q2" value="C">Merge mode.</label></li>
+                        <li><label><input type="radio" name="uim_q2" value="D">Delete mode at the object level.</label></li>
+                        <li><label><input type="radio" name="uim_q2" value="E">B and D</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Import and Export</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: To import a catalog, you must create a pdf file on the external system, upload the file to B2C Commerce, and then compress the file.</h2>
+
+                    <ol class="options" aria-label="Configure Import and Export - Question 1 options">
+                        <li><label><input type="radio" name="cie_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="cie_q1" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: Site import lets you save the configuration and data on one instance and restore it on another.</h2>
+
+                    <ol class="options" aria-label="Configure Import and Export - Question 2 options">
+                        <li><label><input type="radio" name="cie_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="cie_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Learn About B2C Commerce Product Data</summary>
+            <div>
+                <div class="question">
+                    <h2>What's the difference between a storefront catalog and a product catalog?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Product Data - Question 1 options">
+                        <li><label><input type="radio" name="lab2cpd_q1" value="A">Storefront catalogs are mailed while product catalogs are not.</label></li>
+                        <li><label><input type="radio" name="lab2cpd_q1" value="B">Storefront catalogs are where you edit products. You can't edit products in a product catalog.</label></li>
+                        <li><label><input type="radio" name="lab2cpd_q1" value="C">The category structure of a storefront catalog drives storefront navigation, while a product catalog mirrors an external database.</label></li>
+                        <li><label><input type="radio" name="lab2cpd_q1" value="D">Storefront catalogs offer steep discounts, while product catalogs contain list prices.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What types of products can you display on a B2C Commerce storefront?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Product Data - Question 2 options">
+                        <li><label><input type="radio" name="lab2cpd_q2" value="A">Base, variation, bundle, set, and standard</label></li>
+                        <li><label><input type="radio" name="lab2cpd_q2" value="B">Base, variation, and favorites</label></li>
+                        <li><label><input type="radio" name="lab2cpd_q2" value="C">Apparel, electronics, furniture, and food</label></li>
+                        <li><label><input type="radio" name="lab2cpd_q2" value="D">Multiple, orderable, and set</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Learn About B2C Commerce Search</summary>
+            <div>
+                <div class="question">
+                    <h2>How can you increase search hits from external search engines?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Search - Question 1 options">
+                        <li><label><input type="radio" name="lab2cs_q1" value="A">Leave HTML page metatags blank.</label></li>
+                        <li><label><input type="radio" name="lab2cs_q1" value="B">Add standard content to all metatags.</label></li>
+                        <li><label><input type="radio" name="lab2cs_q1" value="C">Streamline URLs and eliminate irrelevant keywords.</label></li>
+                        <li><label><input type="radio" name="lab2cs_q1" value="D">Ignore 404 errors.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>How do search redirects benefit shoppers?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Search - Question 2 options">
+                        <li><label><input type="radio" name="lab2cs_q2" value="A">Shoppers are sent automatically to the page they're interested in.</label></li>
+                        <li><label><input type="radio" name="lab2cs_q2" value="B">Shoppers are more willing to spend money.</label></li>
+                        <li><label><input type="radio" name="lab2cs_q2" value="C">Shoppers find unexpected products they weren't looking for.</label></li>
+                        <li><label><input type="radio" name="lab2cs_q2" value="D">Shoppers get to buy products at a discount.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What can you include in a search index?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Search - Question 3 options">
+                        <li><label><input type="radio" name="lab2cs_q3" value="A">Categories, search redirects</label></li>
+                        <li><label><input type="radio" name="lab2cs_q3" value="B">Stock market data</label></li>
+                        <li><label><input type="radio" name="lab2cs_q3" value="C">Antonyms, metaphors, rhyming words</label></li>
+                        <li><label><input type="radio" name="lab2cs_q3" value="D">Synonyms, stop words, word stems</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What feature can you use to keep the search index up to date?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Search - Question 4 options">
+                        <li><label><input type="radio" name="lab2cs_q4" value="A">Automatic Rebuild</label></li>
+                        <li><label><input type="radio" name="lab2cs_q4" value="B">Incremental Indexing</label></li>
+                        <li><label><input type="radio" name="lab2cs_q4" value="C">Index Changeover</label></li>
+                        <li><label><input type="radio" name="lab2cs_q4" value="D">Automatic Updates</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What's an example of merchant-directed search sorting by a dynamic attribute?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Search - Question 5 options">
+                        <li><label><input type="radio" name="lab2cs_q5" value="A">Search results sort based on the text a shopper enters into the search field.</label></li>
+                        <li><label><input type="radio" name="lab2cs_q5" value="B">Search results sort by color after the shopper selects Blue from a menu on the search results page.</label></li>
+                        <li><label><input type="radio" name="lab2cs_q5" value="C">Search results sort by price after the shopper selects Low to High from a dropdown list on the search results page.</label></li>
+                        <li><label><input type="radio" name="lab2cs_q5" value="D">Search results sort by product availability.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What can Einstein Search Dictionaries do?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Search - Question 6 options">
+                        <li><label><input type="radio" name="lab2cs_q6" value="A">Detect relationships between search terms and generate recommendations</label></li>
+                        <li><label><input type="radio" name="lab2cs_q6" value="B">Collect data from inventory updates</label></li>
+                        <li><label><input type="radio" name="lab2cs_q6" value="C">Find search terms that are already in your dictionaries</label></li>
+                        <li><label><input type="radio" name="lab2cs_q6" value="D">Detect relationships between products</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Learn About B2C Commerce Campaigns and Promotions</summary>
+            <div>
+                <div class="question">
+                    <h2>How do campaigns relate to promotions?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Campaigns and Promotions - Question 1 options">
+                        <li><label><input type="radio" name="lab2ccp_q1" value="A">Promotions can contain one or more campaigns.</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q1" value="B">Campaigns can contain only one promotion.</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q1" value="C">Campaigns can contain one or more promotion experiences.</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q1" value="D">Campaigns and promotions are the same thing.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What is the promotion class in this promotion? Buy 3 dresses, get 50% off on a sweater.</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Campaigns and Promotions - Question 2 options">
+                        <li><label><input type="radio" name="lab2ccp_q2" value="A">Order</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q2" value="B">Product</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q2" value="C">Shipping</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q2" value="D">BOGO</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What qualifiers are available in B2C Commerce?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Campaigns and Promotions - Question 3 options">
+                        <li><label><input type="radio" name="lab2ccp_q3" value="A">Coupons, source codes, and customer groups</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q3" value="B">Coupons, products, and discounts</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q3" value="C">Source codes and exclusivity</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q3" value="D">Sorting rules and rank</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>How can you control which of the discounts that shoppers qualify for actually apply?</h2>
+
+                    <ol class="options" aria-label="Learn About B2C Commerce Campaigns and Promotions - Question 4 options">
+                        <li><label><input type="radio" name="lab2ccp_q4" value="A">Product locking</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q4" value="B">Product details and categories</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q4" value="C">Exclusivity and rank</label></li>
+                        <li><label><input type="radio" name="lab2ccp_q4" value="D">With a combination of qualifying products</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Explore B2C Commerce Catalogs</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these statements about catalogs is true?</h2>
+
+                    <ol class="options" aria-label="Explore B2C Commerce Catalogs - Question 1 options">
+                        <li><label><input type="radio" name="eb2ccc_q1" value="A">You can assign a catalog to as many sites as you want.</label></li>
+                        <li><label><input type="radio" name="eb2ccc_q1" value="B">You can only assign one catalog to a site.</label></li>
+                        <li><label><input type="radio" name="eb2ccc_q1" value="C">Catalogs and sites have a one-to-one correspondence.</label></li>
+                        <li><label><input type="radio" name="eb2ccc_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="eb2ccc_q1" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>You want to configure catalogs for multiple geographic markets. Which of these statements is true?</h2>
+
+                    <ol class="options" aria-label="Explore B2C Commerce Catalogs - Question 2 options">
+                        <li><label><input type="radio" name="eb2ccc_q2" value="A">All products in a storefront catalog are visible on the assigned site.</label></li>
+                        <li><label><input type="radio" name="eb2ccc_q2" value="B">If you have two sites, you can configure which products are available on both sites and which are not.</label></li>
+                        <li><label><input type="radio" name="eb2ccc_q2" value="C">Products can be available in multiple categories.</label></li>
+                        <li><label><input type="radio" name="eb2ccc_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="eb2ccc_q2" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Create Categories</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these statements is true about B2C Commerce categories?</h2>
+
+                    <ol class="options" aria-label="Create Categories - Question 1 options">
+                        <li><label><input type="radio" name="ccat_q1" value="A">It’s important to categorize as many levels as possible to document product complexity.</label></li>
+                        <li><label><input type="radio" name="ccat_q1" value="B">You can create categories that are not part of the navigation structure.</label></li>
+                        <li><label><input type="radio" name="ccat_q1" value="C">You can assign products to more than one category within and across catalogs.</label></li>
+                        <li><label><input type="radio" name="ccat_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="ccat_q1" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: A dynamic categorization rule set automates product category assignment via AND and OR logic operators.</h2>
+
+                    <ol class="options" aria-label="Create Categories - Question 2 options">
+                        <li><label><input type="radio" name="ccat_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="ccat_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Products</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these statements describe the product attribute relationship?</h2>
+
+                    <ol class="options" aria-label="Configure Products - Question 1 options">
+                        <li><label><input type="radio" name="cp_q1" value="A">Products can share attributes or have different attributes.</label></li>
+                        <li><label><input type="radio" name="cp_q1" value="B">Product attributes define how well a product sells.</label></li>
+                        <li><label><input type="radio" name="cp_q1" value="C">The product ID attribute identifies a distinct item (or product) for sale.</label></li>
+                        <li><label><input type="radio" name="cp_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="cp_q1" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Products relate to categories in which of these ways?</h2>
+
+                    <ol class="options" aria-label="Configure Products - Question 2 options">
+                        <li><label><input type="radio" name="cp_q2" value="A">A product must be assigned to a category for it to appear on the storefront.</label></li>
+                        <li><label><input type="radio" name="cp_q2" value="B">You can assign products to more than one category within and across catalogs.</label></li>
+                        <li><label><input type="radio" name="cp_q2" value="C">You can configure only one category per product.</label></li>
+                        <li><label><input type="radio" name="cp_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="cp_q2" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Variation Groups and Slicing</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these illustrates the difference between displaying product variations via variation groups and slicing?</h2>
+
+                    <ol class="options" aria-label="Configure Variation Groups and Slicing - Question 1 options">
+                        <li><label><input type="radio" name="cvgs_q1" value="A">Variation groups help you control search results more accurately.</label></li>
+                        <li><label><input type="radio" name="cvgs_q1" value="B">You can slice by multiple variations at one time.</label></li>
+                        <li><label><input type="radio" name="cvgs_q1" value="C">B2C Commerce enables slicing when variation groups exist for a base product.</label></li>
+                        <li><label><input type="radio" name="cvgs_q1" value="D">You can have only one variation group within a base product.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: Slicing lets you define how variation products display in search results or on category pages: as separate products, each with its own swatch, or as one product with swatches for each of the variations.</h2>
+
+                    <ol class="options" aria-label="Configure Variation Groups and Slicing - Question 2 options">
+                        <li><label><input type="radio" name="cvgs_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="cvgs_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Product Sets, Bundles, and Options</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: With a product set, shoppers can also order the individual products separately. With bundles shoppers cannot.</h2>
+
+                    <ol class="options" aria-label="Configure Product Sets, Bundles, and Options - Question 1 options">
+                        <li><label><input type="radio" name="cpsbo_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="cpsbo_q1" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these is true about B2C Commerce options?</h2>
+
+                    <ol class="options" aria-label="Configure Product Sets, Bundles, and Options - Question 2 options">
+                        <li><label><input type="radio" name="cpsbo_q2" value="A">Product options have their own price and display name, but do not have their own thumbnail images.</label></li>
+                        <li><label><input type="radio" name="cpsbo_q2" value="B">You can only create product options for a local site.</label></li>
+                        <li><label><input type="radio" name="cpsbo_q2" value="C">A shopper can’t search for options, but they are visible on the product detail page.</label></li>
+                        <li><label><input type="radio" name="cpsbo_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="cpsbo_q2" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Price Books</summary>
+            <div>
+                <div class="question">
+                    <h2>Which factor does Salesforce B2C Commerce use to determine which price to use when multiple price books are active and have overlapping valid periods?</h2>
+
+                    <ol class="options" aria-label="Configure Price Books - Question 1 options">
+                        <li><label><input type="radio" name="cpb_q1" value="A">The price book with the most recent "Valid From" date.</label></li>
+                        <li><label><input type="radio" name="cpb_q1" value="B">The price book with the earliest "Valid From" date.</label></li>
+                        <li><label><input type="radio" name="cpb_q1" value="C">The price book with the highest number of products.</label></li>
+                        <li><label><input type="radio" name="cpb_q1" value="D">The price book that was created first.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What is a key benefit of using Read-Only Price Books in Salesforce B2C Commerce?</h2>
+
+                    <ol class="options" aria-label="Configure Price Books - Question 2 options">
+                        <li><label><input type="radio" name="cpb_q2" value="A">They allow for manual price editing directly within Business Manager.</label></li>
+                        <li><label><input type="radio" name="cpb_q2" value="B">They are primarily used for exporting price data to an ERP system.</label></li>
+                        <li><label><input type="radio" name="cpb_q2" value="C">They offer significantly faster import times for price data and don't require product indexing for prices to take effect in the search index.</label></li>
+                        <li><label><input type="radio" name="cpb_q2" value="D">They can only hold a limited number of prices, ensuring system efficiency required for price indexing.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Manage Product Images</summary>
+            <div>
+                <div class="question">
+                    <h2>What is the purpose of a "Swatch" view type?</h2>
+
+                    <ol class="options" aria-label="Manage Product Images - Question 1 options">
+                        <li><label><input type="radio" name="mpi_q1" value="A">To display large images on the product detail page.</label></li>
+                        <li><label><input type="radio" name="mpi_q1" value="B">To show medium images on the search results page.</label></li>
+                        <li><label><input type="radio" name="mpi_q1" value="C">To provide a very small image for hover help.</label></li>
+                        <li><label><input type="radio" name="mpi_q1" value="D">To differentiate variation products by an attribute, typically by color.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which Salesforce B2C Commerce feature allows for matrix-based image assignment for internal or external images?</h2>
+
+                    <ol class="options" aria-label="Manage Product Images - Question 2 options">
+                        <li><label><input type="radio" name="mpi_q2" value="A">Dynamic Imaging Service (DIS)</label></li>
+                        <li><label><input type="radio" name="mpi_q2" value="B">Image Transformation System</label></li>
+                        <li><label><input type="radio" name="mpi_q2" value="C">Image Management System</label></li>
+                        <li><label><input type="radio" name="mpi_q2" value="D">Catalog Image Editor</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Manage Content</summary>
+            <div>
+                <div class="question">
+                    <h2>How do private libraries differ from shared libraries?</h2>
+
+                    <ol class="options" aria-label="Manage Content - Question 1 options">
+                        <li><label><input type="radio" name="mc_q1" value="A">A site can use its private library or a shared library, but not both.</label></li>
+                        <li><label><input type="radio" name="mc_q1" value="B">Private libraries can be used by multiple sites, while shared libraries are specific to one site.</label></li>
+                        <li><label><input type="radio" name="mc_q1" value="C">Shared libraries are created when a site is created, while private libraries are created independently.</label></li>
+                        <li><label><input type="radio" name="mc_q1" value="D">Private libraries have a maximum limit of 200 per instance, while shared libraries do not.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these statements describes how storefront search handles content assets?</h2>
+
+                    <ol class="options" aria-label="Manage Content - Question 2 options">
+                        <li><label><input type="radio" name="mc_q2" value="A">B2C Commerce ignores site-specific attribute values for content assets when indexing them.</label></li>
+                        <li><label><input type="radio" name="mc_q2" value="B">If a site uses a shared library, the data in the private library doesn't appear in a search index.</label></li>
+                        <li><label><input type="radio" name="mc_q2" value="C">Site-specific attribute values for content assets are ignored during indexing.</label></li>
+                        <li><label><input type="radio" name="mc_q2" value="D">If a site uses a shared library, the data in its private library is always included in the search index.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Explore Campaigns and Experience Types</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of the following is NOT an experience type that can be part of a B2C Commerce campaign?</h2>
+
+                    <ol class="options" aria-label="Explore Campaigns and Experience Types - Question 1 options">
+                        <li><label><input type="radio" name="ecet_q1" value="A">Promotions</label></li>
+                        <li><label><input type="radio" name="ecet_q1" value="B">Content slots</label></li>
+                        <li><label><input type="radio" name="ecet_q1" value="C">Keyword search sorting rules</label></li>
+                        <li><label><input type="radio" name="ecet_q1" value="D">Qualifiers</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these statements is correct regarding how a shopper can get a discount within a campaign?</h2>
+
+                    <ol class="options" aria-label="Explore Campaigns and Experience Types - Question 2 options">
+                        <li><label><input type="radio" name="ecet_q2" value="A">A shopper can only get a discount by using a single coupon assigned to a promotion experience within a campaign.</label></li>
+                        <li><label><input type="radio" name="ecet_q2" value="B">A shopper can get a discount by qualifying via one or more coupons, customer groups, or source codes assigned to a promotion experience within a campaign.</label></li>
+                        <li><label><input type="radio" name="ecet_q2" value="C">A shopper can get a discount only if they belong to a specific customer group assigned to a promotion experience within a campaign.</label></li>
+                        <li><label><input type="radio" name="ecet_q2" value="D">A shopper can get a discount only through source codes assigned to a promotion experience within a campaign.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Create Qualifiers</summary>
+            <div>
+                <div class="question">
+                    <h2>What are three actions that source codes can perform?</h2>
+
+                    <ol class="options" aria-label="Create Qualifiers - Question 1 options">
+                        <li><label><input type="radio" name="cq_q1" value="A">Direct customers to specialized landing pages, redirect them to other sites, and activate price books.</label></li>
+                        <li><label><input type="radio" name="cq_q1" value="B">Store a code on a browser cookie, send the shopper to the storefront automatically, and activate promotions.</label></li>
+                        <li><label><input type="radio" name="cq_q1" value="C">Activate a price book, use as a qualifier in a campaign, and redirect customers to other sites.</label></li>
+                        <li><label><input type="radio" name="cq_q1" value="D">Contain one or more literal codes, match multiple codes, and track results on a per source code basis.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What are the three main types of qualifier settings for promotion experiences within a campaign?</h2>
+
+                    <ol class="options" aria-label="Create Qualifiers - Question 2 options">
+                        <li><label><input type="radio" name="cq_q2" value="A">Coupons, Customer Groups, and Price Books</label></li>
+                        <li><label><input type="radio" name="cq_q2" value="B">Coupons, Customer Groups, and Source Codes</label></li>
+                        <li><label><input type="radio" name="cq_q2" value="C">Discounts, Customer Groups, and Affiliate Links</label></li>
+                        <li><label><input type="radio" name="cq_q2" value="D">Promotions, Loyalty Members, and Source Codes</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Explore Discount Types and Promotion Controls</summary>
+            <div>
+                <div class="question">
+                    <h2>What does the exclusivity setting "GLOBAL" mean for a promotion?</h2>
+
+                    <ol class="options" aria-label="Explore Discount Types and Promotion Controls - Question 1 options">
+                        <li><label><input type="radio" name="edtpc_q1" value="A">Can combine with any promotion.</label></li>
+                        <li><label><input type="radio" name="edtpc_q1" value="B">Can’t combine with a promotion of the same class.</label></li>
+                        <li><label><input type="radio" name="edtpc_q1" value="C">Can combine with promotions of a different class.</label></li>
+                        <li><label><input type="radio" name="edtpc_q1" value="D">Can’t combine with any promotion.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>In what order does B2C Commerce process discounts by class?</h2>
+
+                    <ol class="options" aria-label="Explore Discount Types and Promotion Controls - Question 2 options">
+                        <li><label><input type="radio" name="edtpc_q2" value="A">Product promotions, order promotions, shipping promotions.</label></li>
+                        <li><label><input type="radio" name="edtpc_q2" value="B">Order promotions, product promotions, shipping promotions.</label></li>
+                        <li><label><input type="radio" name="edtpc_q2" value="C">Shipping promotions, product promotions, order promotions.</label></li>
+                        <li><label><input type="radio" name="edtpc_q2" value="D">Product promotions, shipping promotions, order promotions.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Create Promotions</summary>
+            <div>
+                <div class="question">
+                    <h2>What action does the Return as approaching promotion setting cause when creating an Order or Shipping promotion?</h2>
+
+                    <ol class="options" aria-label="Create Promotions - Question 1 options">
+                        <li><label><input type="radio" name="cpromo_q1" value="A">It removes the promotion from the storefront when the shopper meets the approaching value.</label></li>
+                        <li><label><input type="radio" name="cpromo_q1" value="B">It prevents the promotion from combining with other promotions.</label></li>
+                        <li><label><input type="radio" name="cpromo_q1" value="C">It sets the Alert on Approaching feature, causing the storefront to show a message when the order value is close to the discount threshold.</label></li>
+                        <li><label><input type="radio" name="cpromo_q1" value="D">It applies the discount when the shopper satisfies the approaching value.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>When you assign the CLASS exclusivity setting to your product promotions, what does it mean for the shopper?</h2>
+
+                    <ol class="options" aria-label="Create Promotions - Question 2 options">
+                        <li><label><input type="radio" name="cpromo_q2" value="A">The shopper can only use one promotion from any class.</label></li>
+                        <li><label><input type="radio" name="cpromo_q2" value="B">The shopper can’t use a promotion with another promotion in the same class.</label></li>
+                        <li><label><input type="radio" name="cpromo_q2" value="C">The shopper can use multiple promotions from the same class.</label></li>
+                        <li><label><input type="radio" name="cpromo_q2" value="D">The shopper can’t combine any promotions.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Create Campaigns</summary>
+            <div>
+                <div class="question">
+                    <h2>What does selecting "Any" in the Required Qualifiers field for a promotion mean?</h2>
+
+                    <ol class="options" aria-label="Create Campaigns - Question 1 options">
+                        <li><label><input type="radio" name="ccamp_q1" value="A">A shopper meets all the qualifiers to be eligible for the promotion.</label></li>
+                        <li><label><input type="radio" name="ccamp_q1" value="B">A shopper provides a valid coupon associated with the promotion.</label></li>
+                        <li><label><input type="radio" name="ccamp_q1" value="C">A shopper belongs to all selected customer groups.</label></li>
+                        <li><label><input type="radio" name="ccamp_q1" value="D">A shopper meets at least one qualifier to be eligible for the promotion.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which statement about campaigns is true?</h2>
+
+                    <ol class="options" aria-label="Create Campaigns - Question 2 options">
+                        <li><label><input type="radio" name="ccamp_q2" value="A">Campaigns always have a start and end date.</label></li>
+                        <li><label><input type="radio" name="ccamp_q2" value="B">After you set qualifiers for a campaign, you can’t deselect them.</label></li>
+                        <li><label><input type="radio" name="ccamp_q2" value="C">After you create a campaign, you can use it as a default or copy it to create future campaigns.</label></li>
+                        <li><label><input type="radio" name="ccamp_q2" value="D">You use the Storefront Toolkit primarily for deploying campaigns to a production instance.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Explore Translation and Localization</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these reflect general steps you’d take to localize a Salesforce B2C Commerce storefront?</h2>
+
+                    <ol class="options" aria-label="Explore Translation and Localization - Question 1 options">
+                        <li><label><input type="radio" name="etl_q1" value="A">Identify which components of the storefront require localization.</label></li>
+                        <li><label><input type="radio" name="etl_q1" value="B">Determine how to attract good translators.</label></li>
+                        <li><label><input type="radio" name="etl_q1" value="C">Identify which languages to support and how they interrelate.</label></li>
+                        <li><label><input type="radio" name="etl_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="etl_q1" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these statements explain how the dictionary fallback mechanism works?</h2>
+
+                    <ol class="options" aria-label="Explore Translation and Localization - Question 2 options">
+                        <li><label><input type="radio" name="etl_q2" value="A">Within Business Manager, you can define how B2C Commerce linguistic search rules are applied in a multi-locale site.</label></li>
+                        <li><label><input type="radio" name="etl_q2" value="B">Once you configure the locales you want, you must rebuild locale-specific search indexes.</label></li>
+                        <li><label><input type="radio" name="etl_q2" value="C">When a shopper selects a locale and searches on the storefront, B2C Commerce uses the standard search index.</label></li>
+                        <li><label><input type="radio" name="etl_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="etl_q2" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Locales</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these represent organizational localization settings?</h2>
+
+                    <ol class="options" aria-label="Configure Locales - Question 1 options">
+                        <li><label><input type="radio" name="cloc_q1" value="A">The default data language</label></li>
+                        <li><label><input type="radio" name="cloc_q1" value="B">Instance time zones</label></li>
+                        <li><label><input type="radio" name="cloc_q1" value="C">Default country codes</label></li>
+                        <li><label><input type="radio" name="cloc_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="cloc_q1" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these statements is/are true about currency data in a B2C Commerce storefront?</h2>
+
+                    <ol class="options" aria-label="Configure Locales - Question 2 options">
+                        <li><label><input type="radio" name="cloc_q2" value="A">You must add, edit, and remove currencies through Business Manager.</label></li>
+                        <li><label><input type="radio" name="cloc_q2" value="B">You can configure the currencies you want to allow and define how they look for a locale.</label></li>
+                        <li><label><input type="radio" name="cloc_q2" value="C">B2C Commerce comes with current world currency data.</label></li>
+                        <li><label><input type="radio" name="cloc_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="cloc_q2" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Localize Storefront Components</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these statements is/are true about how resource files work?</h2>
+
+                    <ol class="options" aria-label="Localize Storefront Components - Question 1 options">
+                        <li><label><input type="radio" name="lsc_q1" value="A">There’s a resource bundle for each folder in the templates directory that’s stored within the /templates/resources directory.</label></li>
+                        <li><label><input type="radio" name="lsc_q1" value="B">Templates access resource messages when you ask nicely.</label></li>
+                        <li><label><input type="radio" name="lsc_q1" value="C">Resource bundles contain localized static content, such as error messages.</label></li>
+                        <li><label><input type="radio" name="lsc_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="lsc_q1" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these steps must you take to translate product and content files?</h2>
+
+                    <ol class="options" aria-label="Localize Storefront Components - Question 2 options">
+                        <li><label><input type="radio" name="lsc_q2" value="A">Identify images (for example, buttons) with locale-specific text.</label></li>
+                        <li><label><input type="radio" name="lsc_q2" value="B">Export content, category, or products and then translate them.</label></li>
+                        <li><label><input type="radio" name="lsc_q2" value="C">Identify for translation only the templates that are used in the storefront.</label></li>
+                        <li><label><input type="radio" name="lsc_q2" value="D">Identify the JavaScript files where the locale-specific text is used.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Implement Multi-Currency Sites</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: When a shopper first accesses the storefront, their session currency is initialized with the site’s default currency. B2C Commerce uses this currency for all transactions.</h2>
+
+                    <ol class="options" aria-label="Implement Multi-Currency Sites - Question 1 options">
+                        <li><label><input type="radio" name="imcs_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="imcs_q1" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these explains why you’d want to implement a multi-currency site?</h2>
+
+                    <ol class="options" aria-label="Implement Multi-Currency Sites - Question 2 options">
+                        <li><label><input type="radio" name="imcs_q2" value="A">Your product prices, shipping methods, shipping costs, payment methods, and promotions vary only by currency.</label></li>
+                        <li><label><input type="radio" name="imcs_q2" value="B">Your site is the same, regardless of locale, for logic and design, storefront data, shoppers, inventory, and third-party integrations.</label></li>
+                        <li><label><input type="radio" name="imcs_q2" value="C">Your shoppers are multilingual.</label></li>
+                        <li><label><input type="radio" name="imcs_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="imcs_q2" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Explore Storefront Search</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these is a way to improve your no search results page?</h2>
+
+                    <ol class="options" aria-label="Explore Storefront Search - Question 1 options">
+                        <li><label><input type="radio" name="ess_q1" value="A">Decrease the size of your search indexes.</label></li>
+                        <li><label><input type="radio" name="ess_q1" value="B">Add creative content like links to gift guides or key categories.</label></li>
+                        <li><label><input type="radio" name="ess_q1" value="C">Change the number of searchable attributes.</label></li>
+                        <li><label><input type="radio" name="ess_q1" value="D">Rebuild the search index on a staging instance.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which statement is true about what happens during a Salesforce B2C Commerce storefront search?</h2>
+
+                    <ol class="options" aria-label="Explore Storefront Search - Question 2 options">
+                        <li><label><input type="radio" name="ess_q2" value="A">The shopper enters text into the search field, B2C Commerce evaluates what the shopper enters against the search dictionary, redirects, and settings, and then displays the results.</label></li>
+                        <li><label><input type="radio" name="ess_q2" value="B">B2C Commerce evaluates what the shopper enters against the search dictionary, redirects, and settings, and then the shopper sorts the results.</label></li>
+                        <li><label><input type="radio" name="ess_q2" value="C">The shopper enters text into the search field, B2C Commerce evaluates what the shopper enters against the search dictionary, redirects, and settings, B2C Commerce evaluates how to sort the results, and then displays the results.</label></li>
+                        <li><label><input type="radio" name="ess_q2" value="D">B2C Commerce displays the results, and then the shopper evaluates how to sort the results.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Storefront Search Preferences</summary>
+            <div>
+                <div class="question">
+                    <h2>Which setting allows you to hide unavailable products or specify an availability percentage, ensuring only orderable products show up in search results?</h2>
+
+                    <ol class="options" aria-label="Configure Storefront Search Preferences - Question 1 options">
+                        <li><label><input type="radio" name="cssp_q1" value="A">Search Autocorrections</label></li>
+                        <li><label><input type="radio" name="cssp_q1" value="B">Einstein Search Recommendations</label></li>
+                        <li><label><input type="radio" name="cssp_q1" value="C">Include Promotion IDs in the Product Index</label></li>
+                        <li><label><input type="radio" name="cssp_q1" value="D">Show Orderable Products Only</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these are search settings?</h2>
+
+                    <ol class="options" aria-label="Configure Storefront Search Preferences - Question 2 options">
+                        <li><label><input type="radio" name="cssp_q2" value="A">Dictionary locale fallback</label></li>
+                        <li><label><input type="radio" name="cssp_q2" value="B">Email notification</label></li>
+                        <li><label><input type="radio" name="cssp_q2" value="C">Product availability</label></li>
+                        <li><label><input type="radio" name="cssp_q2" value="D">Check catalog size</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Storefront Search Redirects</summary>
+            <div>
+                <div class="question">
+                    <h2>
+                        Brandon wants to configure a search redirect that applies to <strong>"mens shoes"</strong> and
+                        <strong>"cheap shoes for men"</strong> but excludes results containing
+                        <strong>"used."</strong><br/>
+                        <strong>How should he configure the keywords?</strong>
+                    </h2>
+
+                    <ol class="options" aria-label="Configure Storefront Search Redirects - Question 1 options">
+                        <li><label><input type="radio" name="csr_q1" value="A"><code>-used, mens shoes</code></label>
+                        </li>
+                        <li><label><input type="radio" name="csr_q1" value="B"><code>mens shoes, -used</code></label>
+                        </li>
+                        <li><label><input type="radio" name="csr_q1" value="C"><code>"mens shoes", -used</code></label>
+                        </li>
+                        <li><label><input type="radio" name="csr_q1" value="D"><code>mens shoes, used</code></label>
+                        </li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong> — <code>mens shoes, -used</code></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of the following statements about search redirects is true?</h2>
+
+                    <ol class="options" aria-label="Configure Storefront Search Redirects - Question 2 options">
+                        <li><label><input type="radio" name="csr_q2" value="A">They allow merchandisers to direct
+                            shoppers to a specific page or URL based on their search terms.</label></li>
+                        <li><label><input type="radio" name="csr_q2" value="B">They are primarily used to prevent
+                            shoppers from finding specific product pages.</label></li>
+                        <li><label><input type="radio" name="csr_q2" value="C">They increase the likelihood that
+                            shoppers will browse more products without making a purchase.</label></li>
+                        <li><label><input type="radio" name="csr_q2" value="D">They are configured to bypass the
+                            standard search function even if no redirect keyword is matched.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Searchable Attributes</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these are general boost factor rules?</h2>
+
+                    <ol class="options" aria-label="Configure Searchable Attributes - Question 1 options">
+                        <li><label><input type="radio" name="csa_q1" value="A">Use boost factors greater than
+                            5.00.</label></li>
+                        <li><label><input type="radio" name="csa_q1" value="B">You can’t use decimals as boost factors.</label>
+                        </li>
+                        <li><label><input type="radio" name="csa_q1" value="C">Use 1.01–5.00 to increase the importance
+                            of the field in search results.</label></li>
+                        <li><label><input type="radio" name="csa_q1" value="D">-1.00 is the default boost
+                            factor.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Before configuring “holiday special” as a searchable attribute for content, what is the
+                        necessary prerequisite?</h2>
+
+                    <ol class="options" aria-label="Configure Searchable Attributes - Question 2 options">
+                        <li><label><input type="radio" name="csa_q2" value="A">It must be assigned a boost
+                            factor.</label></li>
+                        <li><label><input type="radio" name="csa_q2" value="B">It must be enabled for
+                            autocorrection.</label></li>
+                        <li><label><input type="radio" name="csa_q2" value="C">It must be listed in the product index
+                            attributes.</label></li>
+                        <li><label><input type="radio" name="csa_q2" value="D">It must already exist as an attribute of
+                            a system object.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Learn About Sorting Rules</summary>
+            <div>
+                <div class="question">
+                    <h2>What is the primary difference between Search Placement and Search Rank?</h2>
+
+                    <ol class="options" aria-label="Learn About Sorting Rules - Question 1 options">
+                        <li><label><input type="radio" name="lasr_q1" value="A">Search Placement is used for categories only, while Search Rank is used for keyword searches only.</label></li>
+                        <li><label><input type="radio" name="lasr_q1" value="B">Search Placement sorts products by price, while Search Rank sorts products by popularity.</label></li>
+                        <li><label><input type="radio" name="lasr_q1" value="C">Search Placement groups products with a numeric code, while Search Rank sets a product’s position within a Search Placement group.</label></li>
+                        <li><label><input type="radio" name="lasr_q1" value="D">Search Placement is a static setting, while Search Rank is dynamic based on customer behavior.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of the following is a benefit of using sorting rules?</h2>
+
+                    <ol class="options" aria-label="Learn About Sorting Rules - Question 2 options">
+                        <li><label><input type="radio" name="lasr_q2" value="A">Simplifying product data entry</label></li>
+                        <li><label><input type="radio" name="lasr_q2" value="B">Increasing add-to-basket and conversion rates</label></li>
+                        <li><label><input type="radio" name="lasr_q2" value="C">Automating customer support responses</label></li>
+                        <li><label><input type="radio" name="lasr_q2" value="D">Reducing website loading times</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Understand How Sorting Rules Work</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these is in sorting rule best practice sort order?</h2>
+
+                    <ol class="options" aria-label="Understand How Sorting Rules Work - Question 1 options">
+                        <li><label><input type="radio" name="uhsrw_q1" value="A">Explicit search rank, explicit product placement, and explicit category placement</label></li>
+                        <li><label><input type="radio" name="uhsrw_q1" value="B">Explicit category placement, explicit product placement, and explicit search rank</label></li>
+                        <li><label><input type="radio" name="uhsrw_q1" value="C">Availability ranking, explicit search rank, and text relevance</label></li>
+                        <li><label><input type="radio" name="uhsrw_q1" value="D">Term frequency, availability ranking, and explicit search rank</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of the following is the first step B2C Commerce takes when applying sorting rules?</h2>
+
+                    <ol class="options" aria-label="Understand How Sorting Rules Work - Question 2 options">
+                        <li><label><input type="radio" name="uhsrw_q2" value="A">Applies the activeData.salesVelocityWeek rule.</label></li>
+                        <li><label><input type="radio" name="uhsrw_q2" value="B">Evaluates products by the value in the top attribute in the sorting rule list.</label></li>
+                        <li><label><input type="radio" name="uhsrw_q2" value="C">Sorts products with identical values using the default sorting rules.</label></li>
+                        <li><label><input type="radio" name="uhsrw_q2" value="D">Applies the activeData.returnRate rule.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Explore Sorting Rule Strategies</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these attributes can you use to create a dynamic attribute?</h2>
+
+                    <ol class="options" aria-label="Explore Sorting Rule Strategies - Question 1 options">
+                        <li><label><input type="radio" name="esrs_q1" value="A">Product system object</label></li>
+                        <li><label><input type="radio" name="esrs_q1" value="B">Active data</label></li>
+                        <li><label><input type="radio" name="esrs_q1" value="C">Search placement</label></li>
+                        <li><label><input type="radio" name="esrs_q1" value="D">Category position</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Brandon wants to promote products within a category by assigning a high, medium, or low value. Which manual sorting rule attribute should he use?</h2>
+
+                    <ol class="options" aria-label="Explore Sorting Rule Strategies - Question 2 options">
+                        <li><label><input type="radio" name="esrs_q2" value="A">Category Position</label></li>
+                        <li><label><input type="radio" name="esrs_q2" value="B">Search Placement</label></li>
+                        <li><label><input type="radio" name="esrs_q2" value="C">Search Rank</label></li>
+                        <li><label><input type="radio" name="esrs_q2" value="D">isSale custom attribute</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Create Sorting Rules</summary>
+            <div>
+                <div class="question">
+                    <h2>Brandon wants to create a storefront sorting option that blends new arrivals and bestsellers. What is the correct order of steps he needs to take?</h2>
+
+                    <ol class="options" aria-label="Create Sorting Rules - Question 1 options">
+                        <li><label><input type="radio" name="csr_q1" value="A">Create a dynamic attribute, create a sorting rule that uses the dynamic attribute, create a storefront option that uses the sorting rule.</label></li>
+                        <li><label><input type="radio" name="csr_q1" value="B">Create a sorting rule that uses the dynamic attribute, create a dynamic attribute, create a storefront option that uses the sorting rule.</label></li>
+                        <li><label><input type="radio" name="csr_q1" value="C">Create a storefront option that uses the sorting rule, create a dynamic attribute, create a sorting rule that uses the dynamic attribute.</label></li>
+                        <li><label><input type="radio" name="csr_q1" value="D">Create a dynamic attribute, create a storefront option that uses the sorting rule, create a sorting rule that uses the dynamic attribute.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>When previewing a sorting rule, if no products meet the specific attribute requirements, what will still appear in the preview category?</h2>
+
+                    <ol class="options" aria-label="Create Sorting Rules - Question 2 options">
+                        <li><label><input type="radio" name="csr_q2" value="A">Products that have the search term in the product name.</label></li>
+                        <li><label><input type="radio" name="csr_q2" value="B">Only out-of-stock products.</label></li>
+                        <li><label><input type="radio" name="csr_q2" value="C">Products from a different category.</label></li>
+                        <li><label><input type="radio" name="csr_q2" value="D">No products will appear.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Explore Meta Tag Rules</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these statements about meta tag rule inheritance is true?</h2>
+
+                    <ol class="options" aria-label="Explore Meta Tag Rules - Question 1 options">
+                        <li><label><input type="radio" name="emtr_q1" value="A">Rules at the root category are visible within all child categories.</label></li>
+                        <li><label><input type="radio" name="emtr_q1" value="B">Rules follow the product category assignment structure.</label></li>
+                        <li><label><input type="radio" name="emtr_q1" value="C">Rules are inherited within the current locale context first.</label></li>
+                        <li><label><input type="radio" name="emtr_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="emtr_q1" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: Meta tags tell search engines what a page is all about—and so, they are vital for SEO.</h2>
+
+                    <ol class="options" aria-label="Explore Meta Tag Rules - Question 2 options">
+                        <li><label><input type="radio" name="emtr_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="emtr_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Page Meta Tag Rules</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these are basic meta tag settings?</h2>
+
+                    <ol class="options" aria-label="Configure Page Meta Tag Rules - Question 1 options">
+                        <li><label><input type="radio" name="cpmtr_q1" value="A">Scope</label></li>
+                        <li><label><input type="radio" name="cpmtr_q1" value="B">Assignment</label></li>
+                        <li><label><input type="radio" name="cpmtr_q1" value="C">Location</label></li>
+                        <li><label><input type="radio" name="cpmtr_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="cpmtr_q1" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: The benefit of using static and dynamic text in your meta tags is that it increases SEO value across pages, products, and URLs.</h2>
+
+                    <ol class="options" aria-label="Configure Page Meta Tag Rules - Question 2 options">
+                        <li><label><input type="radio" name="cpmtr_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="cpmtr_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Integrate and Check Your Meta Tags</summary>
+            <div>
+                <div class="question">
+                    <h2>Where on a storefront page do you add meta tags?</h2>
+
+                    <ol class="options" aria-label="Integrate and Check Your Meta Tags - Question 1 options">
+                        <li><label><input type="radio" name="icymt_q1" value="A">Body</label></li>
+                        <li><label><input type="radio" name="icymt_q1" value="B">Footer</label></li>
+                        <li><label><input type="radio" name="icymt_q1" value="C">Head</label></li>
+                        <li><label><input type="radio" name="icymt_q1" value="D">Banner</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these things should you do when checking your final meta tags?</h2>
+
+                    <ol class="options" aria-label="Integrate and Check Your Meta Tags - Question 2 options">
+                        <li><label><input type="radio" name="icymt_q2" value="A">Pay attention to headings and how you structure your content.</label></li>
+                        <li><label><input type="radio" name="icymt_q2" value="B">Make sure all footers have alt text.</label></li>
+                        <li><label><input type="radio" name="icymt_q2" value="C">Use the robot meta tags to guide search engines on how they should access your page.</label></li>
+                        <li><label><input type="radio" name="icymt_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="icymt_q2" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Explore Search Engine Optimization</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: Hostname aliases, SEO URLs, XML sitemaps, and in-storefront search and navigation are B2C Commerce SEO features.</h2>
+
+                    <ol class="options" aria-label="Explore Search Engine Optimization - Question 1 options">
+                        <li><label><input type="radio" name="eseo_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="eseo_q1" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these tasks do you perform to implement meta tags in B2C Commerce?</h2>
+
+                    <ol class="options" aria-label="Explore Search Engine Optimization - Question 2 options">
+                        <li><label><input type="radio" name="eseo_q2" value="A">Configure meta tags in Business Manager.</label></li>
+                        <li><label><input type="radio" name="eseo_q2" value="B">Create body text, intra-site links, anchor text, and image &lt;alt&gt; tags.</label></li>
+                        <li><label><input type="radio" name="eseo_q2" value="C">Use a text editor to create and manage page meta tags for your storefront products.</label></li>
+                        <li><label><input type="radio" name="eseo_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="eseo_q2" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Hostname Aliases</summary>
+            <div>
+                <div class="question">
+                    <h2>Why is it important to configure the hostname alias for the current instance hostname?</h2>
+
+                    <ol class="options" aria-label="Configure Hostname Aliases - Question 1 options">
+                        <li><label><input type="radio" name="cha_q1" value="A">To ensure that search engines see the full URL.</label></li>
+                        <li><label><input type="radio" name="cha_q1" value="B">So shoppers get to the storefront without typing the entire URL.</label></li>
+                        <li><label><input type="radio" name="cha_q1" value="C">To restrict the number of shoppers who land on the site.</label></li>
+                        <li><label><input type="radio" name="cha_q1" value="D">To increase the likelihood of shoppers landing on the site.</label></li>
+                        <li><label><input type="radio" name="cha_q1" value="E">B and D</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: Hostname alias files include version, settings, and hostName parameters.</h2>
+
+                    <ol class="options" aria-label="Configure Hostname Aliases - Question 2 options">
+                        <li><label><input type="radio" name="cha_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="cha_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure Hostname Mapping Rules</summary>
+            <div>
+                <div class="question">
+                    <h2>Why would you add mapping rules to your hostname alias file?</h2>
+
+                    <ol class="options" aria-label="Configure Hostname Mapping Rules - Question 1 options">
+                        <li><label><input type="radio" name="chmr_q1" value="A">To display a list of possible URLs</label></li>
+                        <li><label><input type="radio" name="chmr_q1" value="B">To direct shoppers to a specific landing page based on the hostname they type as the URL</label></li>
+                        <li><label><input type="radio" name="chmr_q1" value="C">To redirect commonly used hostname to their proper hostname</label></li>
+                        <li><label><input type="radio" name="chmr_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="chmr_q1" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What JSON syntax areas do you need to check when debugging your hostname alias file?</h2>
+
+                    <ol class="options" aria-label="Configure Hostname Mapping Rules - Question 2 options">
+                        <li><label><input type="radio" name="chmr_q2" value="A">Bold all comments.</label></li>
+                        <li><label><input type="radio" name="chmr_q2" value="B">Use colons instead of equal signs when specifying properties.</label></li>
+                        <li><label><input type="radio" name="chmr_q2" value="C">Add commas after host entries.</label></li>
+                        <li><label><input type="radio" name="chmr_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="chmr_q2" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Explore SEO URLs</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: Optimizing site URLs for external search engines can greatly improve the shopper experience, search rankings, linking functionality, and site traffic.</h2>
+
+                    <ol class="options" aria-label="Explore SEO URLs - Question 1 options">
+                        <li><label><input type="radio" name="seourl_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="seourl_q1" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>How does Salesforce B2C Commerce handle special characters like the ampersand (&amp;) in URLs?</h2>
+
+                    <ol class="options" aria-label="Explore SEO URLs - Question 2 options">
+                        <li><label><input type="radio" name="seourl_q2" value="A">It removes them completely.</label></li>
+                        <li><label><input type="radio" name="seourl_q2" value="B">It converts them to underscores (_).</label></li>
+                        <li><label><input type="radio" name="seourl_q2" value="C">It replaces them with a hyphen (-).</label></li>
+                        <li><label><input type="radio" name="seourl_q2" value="D">It ignores them during URL generation.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure SEO URLs</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these do you need to consider when configuring SEO URL rules?</h2>
+
+                    <ol class="options" aria-label="Configure SEO URLs - Question 1 options">
+                        <li><label><input type="radio" name="cseourl_q1" value="A">If a site has a category depth of more than two or three categories, use category instead of category-path to keep the URLs brief.</label></li>
+                        <li><label><input type="radio" name="cseourl_q1" value="B">If a site has duplicate category names within different parent categories, such as women &gt; shoes and men &gt; shoes, you can still use category.</label></li>
+                        <li><label><input type="radio" name="cseourl_q1" value="C">If you use category-path, use a delimiter other than a forward slash.</label></li>
+                        <li><label><input type="radio" name="cseourl_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="cseourl_q1" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: You need to make sure locales appear in the URLs in a certain way to satisfy country and language-specific customs and requirements.</h2>
+
+                    <ol class="options" aria-label="Configure SEO URLs - Question 2 options">
+                        <li><label><input type="radio" name="cseourl_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="cseourl_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure SEO URL Search Refinements</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these is a reason for using SEO URL search refinements?</h2>
+
+                    <ol class="options" aria-label="Configure SEO URL Search Refinements - Question 1 options">
+                        <li><label><input type="radio" name="cseourlsr_q1" value="A">To streamline a rule that adds the color search refinement (blue|green) at the end of the URL.</label></li>
+                        <li><label><input type="radio" name="cseourlsr_q1" value="B">To control the position of where search refinements are added to the URL.</label></li>
+                        <li><label><input type="radio" name="cseourlsr_q1" value="C">To redirect commonly used hostnames to their proper hostname.</label></li>
+                        <li><label><input type="radio" name="cseourlsr_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="cseourlsr_q1" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: Snapshots make it easy to compare changes over time of search refinement values and the corresponding URL mappings for all enabled category and folder search refinements.</h2>
+
+                    <ol class="options" aria-label="Configure SEO URL Search Refinements - Question 2 options">
+                        <li><label><input type="radio" name="cseourlsr_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="cseourlsr_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Preview and Resolve Conflicts</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these help you resolve SEO URL conflicts?</h2>
+
+                    <ol class="options" aria-label="Preview and Resolve Conflicts - Question 1 options">
+                        <li><label><input type="radio" name="parc_q1" value="A">SEO URL redirects</label></li>
+                        <li><label><input type="radio" name="parc_q1" value="B">SEO URL Preview</label></li>
+                        <li><label><input type="radio" name="parc_q1" value="C">SEO URL General tab showing the conflicts</label></li>
+                        <li><label><input type="radio" name="parc_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="parc_q1" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these reflects how B2C Commerce tracks category, folder, and search refinement SEO URLs?</h2>
+
+                    <ol class="options" aria-label="Preview and Resolve Conflicts - Question 2 options">
+                        <li><label><input type="radio" name="parc_q2" value="A">B2C Commerce stores product and content URLs.</label></li>
+                        <li><label><input type="radio" name="parc_q2" value="B">B2C Commerce maintains a directory of category, folder, and search refinement URLs in its database.</label></li>
+                        <li><label><input type="radio" name="parc_q2" value="C">The directory contains a URL endpoint for each category in the site catalog and each folder in the site library for each site locale.</label></li>
+                        <li><label><input type="radio" name="parc_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="parc_q2" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Configure URL Redirects</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: Within a URL Redirect mapping, it’s best practice to define the redirect target as URL directly, to reduce processing time.</h2>
+
+                    <ol class="options" aria-label="Configure URL Redirects - Question 1 options">
+                        <li><label><input type="radio" name="cur_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="cur_q1" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these redirect methods is automatic?</h2>
+
+                    <ol class="options" aria-label="Configure URL Redirects - Question 2 options">
+                        <li><label><input type="radio" name="cur_q2" value="A">URL Redirect</label></li>
+                        <li><label><input type="radio" name="cur_q2" value="B">URL archive</label></li>
+                        <li><label><input type="radio" name="cur_q2" value="C">Search refinement redirects</label></li>
+                        <li><label><input type="radio" name="cur_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="cur_q2" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADD NEW SECTION: Explore XML Sitemaps -->
+    <li>
+        <details class="topic">
+            <summary>Explore XML Sitemaps</summary>
+            <div>
+                <div class="question">
+                    <h2>A sitemap file contains which of these elements?</h2>
+
+                    <ol class="options" aria-label="Explore XML Sitemaps - Question 1 options">
+                        <li><label><input type="radio" name="exs_q1" value="A">An alternate link to the development instance</label></li>
+                        <li><label><input type="radio" name="exs_q1" value="B">sitemap.pdf</label></li>
+                        <li><label><input type="radio" name="exs_q1" value="C">An entry for each URL asset for the supported site locales</label></li>
+                        <li><label><input type="radio" name="exs_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="exs_q1" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: B2C Commerce uses the SitemapMgr class to manage and process sitemaps.</h2>
+
+                    <ol class="options" aria-label="Explore XML Sitemaps - Question 2 options">
+                        <li><label><input type="radio" name="exs_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="exs_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADD NEW SECTION: Generate Sitemaps -->
+    <li>
+        <details class="topic">
+            <summary>Generate Sitemaps</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: If your site has 30,000 links and you set the links per sitemap setting to 5,000, B2C Commerce creates 6 sitemap files.</h2>
+
+                    <ol class="options" aria-label="Generate Sitemaps - Question 1 options">
+                        <li><label><input type="radio" name="gensm_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="gensm_q1" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these attributes are used in a catalog and content import feed?</h2>
+
+                    <ol class="options" aria-label="Generate Sitemaps - Question 2 options">
+                        <li><label><input type="radio" name="gensm_q2" value="A">smp-flag</label></li>
+                        <li><label><input type="radio" name="gensm_q2" value="B">chg-frequency</label></li>
+                        <li><label><input type="radio" name="gensm_q2" value="C">sitemap-priority</label></li>
+                        <li><label><input type="radio" name="gensm_q2" value="D">notify-feed</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Notify Search Engines About Your Sitemaps</summary>
+            <div>
+                <div class="question">
+                    <h2>True or false: After successfully creating a sitemap, you can submit your sitemap to Google by using Google Search Console.</h2>
+
+                    <ol class="options" aria-label="Notify Search Engines About Your Sitemaps - Question 1 options">
+                        <li><label><input type="radio" name="nseays_q1" value="A">True</label></li>
+                        <li><label><input type="radio" name="nseays_q1" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of these tasks help you add the google-site-verification meta tag for Google site verification?</h2>
+
+                    <ol class="options" aria-label="Notify Search Engines About Your Sitemaps - Question 2 options">
+                        <li><label><input type="radio" name="nseays_q2" value="A">Create a custom site preference for the Google tag.</label></li>
+                        <li><label><input type="radio" name="nseays_q2" value="B">Include the Google tag in the storefront application.</label></li>
+                        <li><label><input type="radio" name="nseays_q2" value="C">Create a custom variable for the meta tag.</label></li>
+                        <li><label><input type="radio" name="nseays_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="nseays_q2" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADD NEW SECTION: Generate a robots.txt File -->
+    <li>
+        <details class="topic">
+            <summary>Generate a robots.txt File</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of these are included in a robots.txt file?</h2>
+
+                    <ol class="options" aria-label="Generate a robots.txt File - Question 1 options">
+                        <li><label><input type="radio" name="robotstxt_q1" value="A">User-agent</label></li>
+                        <li><label><input type="radio" name="robotstxt_q1" value="B">Disallow</label></li>
+                        <li><label><input type="radio" name="robotstxt_q1" value="C">Index</label></li>
+                        <li><label><input type="radio" name="robotstxt_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="robotstxt_q1" value="E">B and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: You need Business Manager to upload a robots.txt file for a B2C Commerce storefront application.</h2>
+
+                    <ol class="options" aria-label="Generate a robots.txt File - Question 2 options">
+                        <li><label><input type="radio" name="robotstxt_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="robotstxt_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+
+    <!-- ADD NEW SECTION: Get to Know Commerce Cloud Einstein -->
+    <li>
+        <details class="topic">
+            <summary>Get to Know Commerce Cloud Einstein</summary>
+            <div>
+                <div class="question">
+                    <h2>Which three types of data does Agentforce Commerce Einstein utilize for its intelligence?</h2>
+
+                    <ol class="options" aria-label="Get to Know Commerce Cloud Einstein - Question 1 options">
+                        <li><label><input type="radio" name="gkce_q1" value="A">Historical Customer Demographics, Product Catalog, and Website Traffic</label></li>
+                        <li><label><input type="radio" name="gkce_q1" value="B">Clickstream, Orders, and Products</label></li>
+                        <li><label><input type="radio" name="gkce_q1" value="C">Product Attributes, Storefront Sessions, and Inventory</label></li>
+                        <li><label><input type="radio" name="gkce_q1" value="D">Merchandiser Activity, Promotion Data, and Site Search Terms</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What is the primary difference between Einstein Product Recommendations and the Einstein Search features?</h2>
+
+                    <ol class="options" aria-label="Get to Know Commerce Cloud Einstein - Question 2 options">
+                        <li><label><input type="radio" name="gkce_q2" value="A">Product Recommendations are only available on the production instance, while Search features are available on staging.</label></li>
+                        <li><label><input type="radio" name="gkce_q2" value="B">Search features provide personalized term completion, while Product Recommendations provide personalized product suggestions.</label></li>
+                        <li><label><input type="radio" name="gkce_q2" value="C">Product Recommendations require merchandisers to configure features in Business Manager, while Search features require only an administrator.</label></li>
+                        <li><label><input type="radio" name="gkce_q2" value="D">Product Recommendations focus on suggesting specific items, while Search features focus on search term and result optimization.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Plan Your Implementation</summary>
+            <div>
+                <div class="question">
+                    <h2>Which set of features can a merchandiser begin configuring and testing with minimal or no development effort shortly after the initial data enablement is complete?</h2>
+
+                    <ol class="options" aria-label="Plan Your Implementation - Question 1 options">
+                        <li><label><input type="radio" name="pyi_q1" value="A">Einstein Search Dictionaries, Commerce Insights, and basic Einstein Search Recommendations.</label></li>
+                        <li><label><input type="radio" name="pyi_q1" value="B">Einstein Predictive Sort, Einstein Product Recommendations, and Commerce Insights.</label></li>
+                        <li><label><input type="radio" name="pyi_q1" value="C">Einstein Search Dictionaries, Einstein Predictive Sort, and Product Recommendations.</label></li>
+                        <li><label><input type="radio" name="pyi_q1" value="D">Basic Search Recommendations, Predictive Sort, and Product Recommendations.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>After Einstein Product Recommendations are live, what methodology is recommended to ensure the best use of the predictive data?</h2>
+
+                    <ol class="options" aria-label="Plan Your Implementation - Question 2 options">
+                        <li><label><input type="radio" name="pyi_q2" value="A">Consistently validating clickstream data using the Agentforce Commerce Recommendation Validator.</label></li>
+                        <li><label><input type="radio" name="pyi_q2" value="B">Monitoring the Einstein Dashboard to review attributed revenue relative to overall site revenue.</label></li>
+                        <li><label><input type="radio" name="pyi_q2" value="C">Implementing a test-and-learn methodology using an A/B testing tool.</label></li>
+                        <li><label><input type="radio" name="pyi_q2" value="D">Conducting routine reviews with the Marketing team to develop new product-centric campaigns.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADD NEW SECTION: Develop Feature-Specific Plans -->
+    <li>
+        <details class="topic">
+            <summary>Develop Feature-Specific Plans</summary>
+            <div>
+                <div class="question">
+                    <h2>Which task must a developer complete as a critical prerequisite to ensure that Predictive Sort works correctly?</h2>
+
+                    <ol class="options" aria-label="Develop Feature-Specific Plans - Question 1 options">
+                        <li><label><input type="radio" name="dfsp_q1" value="A">Create new recommendation slot rendering templates for content slots.</label></li>
+                        <li><label><input type="radio" name="dfsp_q1" value="B">Validate that the request is not cached when predictive sort is applied as a sorting rule.</label></li>
+                        <li><label><input type="radio" name="dfsp_q1" value="C">Design the content slot look and feel for the product detail page.</label></li>
+                        <li><label><input type="radio" name="dfsp_q1" value="D">Define the custom recommenders used for dynamic sorting.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>After Product Recommendations are live, what is a key post-launch step for a merchandiser?</h2>
+
+                    <ol class="options" aria-label="Develop Feature-Specific Plans - Question 2 options">
+                        <li><label><input type="radio" name="dfsp_q2" value="A">Designing the content slot look and feel.</label></li>
+                        <li><label><input type="radio" name="dfsp_q2" value="B">Requesting a cache upgrade for category and search grid pages.</label></li>
+                        <li><label><input type="radio" name="dfsp_q2" value="C">Using preview and the validator tool to check for issues.</label></li>
+                        <li><label><input type="radio" name="dfsp_q2" value="D">Creating new recommenders in the Configurator.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADD NEW SECTION: Deploy Commerce Cloud Einstein -->
+    <li>
+        <details class="topic">
+            <summary>Deploy Commerce Cloud Einstein</summary>
+            <div>
+                <div class="question">
+                    <h2>Which two production instance data feeds must a Agentforce Commerce for B2C administrator execute to enable Einstein on a storefront?</h2>
+
+                    <ol class="options" aria-label="Deploy Commerce Cloud Einstein - Question 1 options">
+                        <li><label><input type="radio" name="dcce_q1" value="A">Storefront Sessions and Product Affinities</label></li>
+                        <li><label><input type="radio" name="dcce_q1" value="B">Catalog and Orders</label></li>
+                        <li><label><input type="radio" name="dcce_q1" value="C">Inventory and Customer Demographics</label></li>
+                        <li><label><input type="radio" name="dcce_q1" value="D">Clickstream and Promotion Data</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What is the primary function of enabling browser-based activity tracking for the storefront?</h2>
+
+                    <ol class="options" aria-label="Deploy Commerce Cloud Einstein - Question 2 options">
+                        <li><label><input type="radio" name="dcce_q2" value="A">To track third-party advertising performance in the Business Manager.</label></li>
+                        <li><label><input type="radio" name="dcce_q2" value="B">To ensure all products in the catalog are correctly indexed for search.</label></li>
+                        <li><label><input type="radio" name="dcce_q2" value="C">To allow Einstein to respond to shoppers' actions on your site in real-time.</label></li>
+                        <li><label><input type="radio" name="dcce_q2" value="D">To send daily order and product feeds to the Einstein Status Dashboard.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADD NEW SECTION: Use Configurator to Review Data -->
+    <li>
+        <details class="topic">
+            <summary>Use Configurator to Review Data</summary>
+            <div>
+                <div class="question">
+                    <h2>What is a key benefit of using Commerce Insights data for a merchandiser?</h2>
+
+                    <ol class="options" aria-label="Use Configurator to Review Data - Question 1 options">
+                        <li><label><input type="radio" name="ucrd_q1" value="A">It functions as a financial reporting tool to calculate attributed revenue.</label></li>
+                        <li><label><input type="radio" name="ucrd_q1" value="B">It provides the ability to create new product catalog entries.</label></li>
+                        <li><label><input type="radio" name="ucrd_q1" value="C">It helps configure product bundles, deals, and “complete the look” suggestions.</label></li>
+                        <li><label><input type="radio" name="ucrd_q1" value="D">It validates recommendation activities on the storefront in real-time.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Commerce Insights drilldown, which metric detail is provided for a product "Purchased in Same Basket"?</h2>
+
+                    <ol class="options" aria-label="Use Configurator to Review Data - Question 2 options">
+                        <li><label><input type="radio" name="ucrd_q2" value="A">The total revenue generated by the co-purchased product.</label></li>
+                        <li><label><input type="radio" name="ucrd_q2" value="B">The average price of the co-purchased product.</label></li>
+                        <li><label><input type="radio" name="ucrd_q2" value="C">The number of unique shoppers who bought the product together.</label></li>
+                        <li><label><input type="radio" name="ucrd_q2" value="D">The percent of all key item baskets that contained the specific item.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <li>
+        <details class="topic">
+            <summary>Set Up Search Dictionaries</summary>
+            <div>
+                <div class="question">
+                    <h2>What is one way Einstein Search Dictionaries adds value compared to standard keyword search?</h2>
+
+                    <ol class="options" aria-label="Set Up Search Dictionaries - Question 1 options">
+                        <li><label><input type="radio" name="susd_q1" value="A">It provides basic search-as-you-type with advanced features.</label></li>
+                        <li><label><input type="radio" name="susd_q1" value="B">It automatically detects relationships between search terms and adds data to existing dictionaries.</label></li>
+                        <li><label><input type="radio" name="susd_q1" value="C">It allows merchants to manually create search dictionaries based on specific data.</label></li>
+                        <li><label><input type="radio" name="susd_q1" value="D">It only uses the site’s data by default.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which of the following is a standard search feature in Salesforce Agentforce Commerce for B2C?</h2>
+
+                    <ol class="options" aria-label="Set Up Search Dictionaries - Question 2 options">
+                        <li><label><input type="radio" name="susd_q2" value="A">Predictive Sort</label></li>
+                        <li><label><input type="radio" name="susd_q2" value="B">Search Recommendations</label></li>
+                        <li><label><input type="radio" name="susd_q2" value="C">Keyword Search</label></li>
+                        <li><label><input type="radio" name="susd_q2" value="D">Einstein Search Dictionaries</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADD NEW SECTION: Set Up Search Recommendations -->
+    <li>
+        <details class="topic">
+            <summary>Set Up Search Recommendations</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of the following is a benefit of using Einstein Search Recommendations?</h2>
+
+                    <ol class="options" aria-label="Set Up Search Recommendations - Question 1 options">
+                        <li><label><input type="radio" name="susr_q1" value="A">It increases the likelihood of zero search results.</label></li>
+                        <li><label><input type="radio" name="susr_q1" value="B">It lowers the abandonment rate on the search results page.</label></li>
+                        <li><label><input type="radio" name="susr_q1" value="C">It allows for the use of simple search suggestions.</label></li>
+                        <li><label><input type="radio" name="susr_q1" value="D">It only suggests content, not products.</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which tool should Brandon use to analyze Einstein’s effect on his autocomplete and search term corrections?</h2>
+
+                    <ol class="options" aria-label="Set Up Search Recommendations - Question 2 options">
+                        <li><label><input type="radio" name="susr_q2" value="A">Agentforce Commerce Recommendations Validator</label></li>
+                        <li><label><input type="radio" name="susr_q2" value="B">A third-party A/B testing tool</label></li>
+                        <li><label><input type="radio" name="susr_q2" value="C">Business Manager's native A/B testing tool</label></li>
+                        <li><label><input type="radio" name="susr_q2" value="D">Search Index Query Testing Tool</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADD NEW SECTION: Explore Einstein Product Recommendations -->
+    <li>
+        <details class="topic">
+            <summary>Explore Einstein Product Recommendations</summary>
+            <div>
+                <div class="question">
+                    <h2>How does Commerce Cloud Einstein Product Recommendations enable implicit recommendations?</h2>
+
+                    <ol class="options" aria-label="Explore Einstein Product Recommendations - Question 1 options">
+                        <li><label><input type="radio" name="eepr_q1" value="A">It lets you configure links between one specific product and another specific product.</label></li>
+                        <li><label><input type="radio" name="eepr_q1" value="B">It takes the guesswork out of product recommendations via leading-edge data science.</label></li>
+                        <li><label><input type="radio" name="eepr_q1" value="C">It lets you configure cross-sells and up-sells.</label></li>
+                        <li><label><input type="radio" name="eepr_q1" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="eepr_q1" value="E">A and C</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: You configure these settings in a recommender: types, strategies, and rules.</h2>
+
+                    <ol class="options" aria-label="Explore Einstein Product Recommendations - Question 2 options">
+                        <li><label><input type="radio" name="eepr_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="eepr_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADD NEW SECTION: Configure Recommenders -->
+    <li>
+        <details class="topic">
+            <summary>Configure Recommenders</summary>
+            <div>
+                <div class="question">
+                    <h2>Which recommender type can you use to generate recommendations by analyzing a product's similarity to other products or by analyzing the view or purchase behavior of other customers?</h2>
+
+                    <ol class="options" aria-label="Configure Recommenders - Question 1 options">
+                        <li><label><input type="radio" name="crcmd_q1" value="A">Product to Product</label></li>
+                        <li><label><input type="radio" name="crcmd_q1" value="B">Recently Viewed</label></li>
+                        <li><label><input type="radio" name="crcmd_q1" value="C">Products in a Category</label></li>
+                        <li><label><input type="radio" name="crcmd_q1" value="D">Products in All Categories</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>True or false: For the Real-Time Personalized Recommendations strategy, Einstein analyzes the shopper's current and past viewing and purchasing behavior.</h2>
+
+                    <ol class="options" aria-label="Configure Recommenders - Question 2 options">
+                        <li><label><input type="radio" name="crcmd_q2" value="A">True</label></li>
+                        <li><label><input type="radio" name="crcmd_q2" value="B">False</label></li>
+                    </ol>
+
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+
+    <!-- ADD NEW SECTION: Edit Templates and Create Slot Configurations -->
+    <li>
+        <details class="topic">
+            <summary>Edit Templates and Create Slot Configurations</summary>
+            <div>
+                <div class="question">
+                    <h2>The Recent Top-Selling Products strategy often results in which of these?</h2>
+                    <ol class="options" aria-label="Edit Templates and Create Slot Configurations - Question 1 options">
+                        <li><label><input type="radio" name="etsc_q1" value="A">Products with the highest trailing 7-day revenue among shoppers visiting from that location on that type of device.</label></li>
+                        <li><label><input type="radio" name="etsc_q1" value="B">The highest ranked products for a specific shopper based on their recent browsing history.</label></li>
+                        <li><label><input type="radio" name="etsc_q1" value="C">Products with the highest revenue on that day.</label></li>
+                        <li><label><input type="radio" name="etsc_q1" value="D">Products with the lowest inventory.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What is true about content slots?</h2>
+                    <ol class="options" aria-label="Edit Templates and Create Slot Configurations - Question 2 options">
+                        <li><label><input type="radio" name="etsc_q2" value="A">The global slot context is only available on the cart page.</label></li>
+                        <li><label><input type="radio" name="etsc_q2" value="B">The slot context can be global or category.</label></li>
+                        <li><label><input type="radio" name="etsc_q2" value="C">The steps for creating and managing content slot configurations are the same for global or category content slot configurations.</label></li>
+                        <li><label><input type="radio" name="etsc_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="etsc_q2" value="E">B and C</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+</ol>
+
 </body>
 </html>
