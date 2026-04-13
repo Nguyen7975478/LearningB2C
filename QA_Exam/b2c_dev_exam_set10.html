@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2C Commerce Developer — Practice Exam Set 10 (60 Questions)</title>
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 960px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #222; }
+h1 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 8px; }
+h3.set-title { color: #003366; margin: 32px 0 12px 0; font-size: 1.15em; border-left: 4px solid #003366; padding-left: 10px; }
+.question-list { list-style: none; padding: 0; }
+.question-list > li { margin-bottom: 24px; }
+.question { background: #fff; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+h2 { font-size: 1em; margin: 0 0 12px 0; color: #003366; }
+.options { padding-left: 20px; margin: 0 0 12px 0; }
+.options li { margin: 6px 0; list-style: none; }
+.options label { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.options input[type=radio] { margin-top: 3px; flex-shrink: 0; }
+details { margin-top: 8px; }
+summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none; }
+.answer { padding: 8px 12px; background: #e8f5e9; border-radius: 4px; margin-top: 6px; }
+.translate { padding: 8px 12px; background: #e3f2fd; border-radius: 4px; margin-top: 6px; }
+.translate ul { margin: 6px 0; padding-left: 20px; }
+.translate ul li { list-style: disc; }
+</style>
+</head>
+<body>
+<h1>Salesforce Certified B2C Commerce Developer &mdash; Practice Questions (Set 10)</h1>
+<p>Total: 60 questions. Each question indicates the number of correct choices. An answer key with concise explanations is provided at the end.</p>
+<ol class="question-list">
+<li>
+<h3 class="set-title">Section A: Setup, Code Versions, Cartridges</h3>
+<ol class="question-list">
+<li>
+<div class="question">
+<h2>Q1. A new custom controller was uploaded but returns 404. What is the most likely issue? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q1" value="A"> A. Missing reindex</label></li>
+<li><label><input type="radio" name="s10_sa_q1" value="B"> B. Cartridge not added to the site's cartridge path</label></li>
+<li><label><input type="radio" name="s10_sa_q1" value="C"> C. Missing Page Designer component</label></li>
+<li><label><input type="radio" name="s10_sa_q1" value="D"> D. Wrong locale</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>B</strong><br><small>Cartridge must be in the site path to resolve controllers.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một controller tùy chỉnh mới đã được tải lên nhưng trả về 404. Nguyên nhân có thể nhất là gì? (Chọn một)</strong></p>
+<ul>
+<li>A. Thiếu reindex</li>
+<li>B. Cartridge chưa được thêm vào cartridge path của site</li>
+<li>C. Thiếu thành phần Page Designer</li>
+<li>D. Sai locale</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>B — Cartridge phải nằm trong site path để resolve controllers.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q2. Where must cartridge code be uploaded for a specific code version? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q2" value="A"> A. /impex/src/</label></li>
+<li><label><input type="radio" name="s10_sa_q2" value="B"> B. /versioned/cartridges/&lt;code-version&gt;/cartridges</label></li>
+<li><label><input type="radio" name="s10_sa_q2" value="C"> C. /static/default/</label></li>
+<li><label><input type="radio" name="s10_sa_q2" value="D"> D. /impex/exports/</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>B</strong><br><small>Deployed code for a specific version resides at /versioned/.../cartridges.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Code của cartridge phải được tải lên đâu cho một code version cụ thể? (Chọn một)</strong></p>
+<ul>
+<li>A. /impex/src/</li>
+<li>B. /versioned/cartridges/&lt;code-version&gt;/cartridges</li>
+<li>C. /static/default/</li>
+<li>D. /impex/exports/</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>B — Code đã triển khai cho một version cụ thể nằm tại /versioned/.../cartridges.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q3. You need to override app_storefront_base PDP template. Which two conditions are required? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q3" value="A"> A. The override must be placed at the same relative path/name</label></li>
+<li><label><input type="radio" name="s10_sa_q3" value="B"> B. The override must be registered in ocapi.json</label></li>
+<li><label><input type="radio" name="s10_sa_q3" value="C"> C. The custom cartridge must be before app_storefront_base in the path</label></li>
+<li><label><input type="radio" name="s10_sa_q3" value="D"> D. The template must be in /impex/src/templates</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, C</strong><br><small>Same relative path/name and higher path precedence.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn cần override template PDP của app_storefront_base. Hai điều kiện nào là bắt buộc? (Chọn hai)</strong></p>
+<ul>
+<li>A. Override phải được đặt tại cùng đường dẫn/tên tương đối</li>
+<li>B. Override phải được đăng ký trong ocapi.json</li>
+<li>C. Cartridge tùy chỉnh phải đượng trước app_storefront_base trong path</li>
+<li>D. Template phải nằm trong /impex/src/templates</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, C — Cùng đường dẫn/tên tương đối và có độ ưu tiên path cao hơn.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q4. Which is true about code versions? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q4" value="A"> A. A single global code version is enforced for all sites</label></li>
+<li><label><input type="radio" name="s10_sa_q4" value="B"> B. Each site independently references a code version in Settings</label></li>
+<li><label><input type="radio" name="s10_sa_q4" value="C"> C. Code versions are inferred from ocapi.json</label></li>
+<li><label><input type="radio" name="s10_sa_q4" value="D"> D. The Organization-level setting overrides site-level</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>B</strong><br><small>Sites independently reference a code version.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Điều nào đúng về code versions? (Chọn một)</strong></p>
+<ul>
+<li>A. Một code version toàn cục duy nhất được áp dụng cho tất cả sites</li>
+<li>B. Mỗi site tự tham chiếu đến một code version trong Settings</li>
+<li>C. Code versions được suy ra từ ocapi.json</li>
+<li>D. Cài đặt cấp Organization ghi đè cấp site</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>B — Mỗi site tự tham chiếu đến một code version.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q5. After switching the referenced code version, the storefront still renders old content. Which two steps help? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q5" value="A"> A. Clear application cache</label></li>
+<li><label><input type="radio" name="s10_sa_q5" value="B"> B. Invalidate iscache fragments for affected templates</label></li>
+<li><label><input type="radio" name="s10_sa_q5" value="C"> C. Rebuild search every request</label></li>
+<li><label><input type="radio" name="s10_sa_q5" value="D"> D. Change the cartridge id</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Clear application cache and invalidate template fragments.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Sau khi chuyển code version, storefront vẫn hiển thị nội dung cũ. Hai bước nào có thể giúp ích? (Chọn hai)</strong></p>
+<ul>
+<li>A. Xóa application cache</li>
+<li>B. Vô hiệu hóa các iscache fragment cho các template bị ảnh hưởng</li>
+<li>C. Rebuild search sau mỗi request</li>
+<li>D. Thay đổi cartridge id</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Xóa application cache và vô hiệu hóa các template fragment.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q6. Why does cartridge order matter in SFRA? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q6" value="A"> A. Determines which translation files load</label></li>
+<li><label><input type="radio" name="s10_sa_q6" value="B"> B. Determines left-to-right resolution precedence for controllers/templates/scripts</label></li>
+<li><label><input type="radio" name="s10_sa_q6" value="C"> C. Determines OCAPI client throttling</label></li>
+<li><label><input type="radio" name="s10_sa_q6" value="D"> D. Determines CDN header behavior</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>B</strong><br><small>Left-to-right precedence controls resolution.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Tại sao thứ tự cartridge quan trọng trong SFRA? (Chọn một)</strong></p>
+<ul>
+<li>A. Xác định file dịch nào được tải</li>
+<li>B. Xác định thứ tự ưu tiên từ trái sang phải khi phân giải controllers/templates/scripts</li>
+<li>C. Xác định giới hạn OCAPI client</li>
+<li>D. Xác định hành vi CDN header</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>B — Thứ tự ưu tiên từ trái sang phải kiểm soát việc phân giải.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q7. Where is the active code version selected? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q7" value="A"> A. BM &gt; Administration &gt; Site Development &gt; Code Versions</label></li>
+<li><label><input type="radio" name="s10_sa_q7" value="B"> B. BM &gt; Merchant Tools &gt; SEO</label></li>
+<li><label><input type="radio" name="s10_sa_q7" value="C"> C. BM &gt; Content &gt; Assets</label></li>
+<li><label><input type="radio" name="s10_sa_q7" value="D"> D. BM &gt; Services</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Code Versions page manages the active version.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Code version đang hoạt động được chọn ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. BM &gt; Administration &gt; Site Development &gt; Code Versions</li>
+<li>B. BM &gt; Merchant Tools &gt; SEO</li>
+<li>C. BM &gt; Content &gt; Assets</li>
+<li>D. BM &gt; Services</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Trang Code Versions quản lý version đang hoạt động.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q8. What does dw.json configure? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q8" value="A"> A. OCAPI Shop permissions</label></li>
+<li><label><input type="radio" name="s10_sa_q8" value="B"> B. IDE/WebDAV connection (hostname, username, code version)</label></li>
+<li><label><input type="radio" name="s10_sa_q8" value="C"> C. Page Designer permissions</label></li>
+<li><label><input type="radio" name="s10_sa_q8" value="D"> D. Search synonyms</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>B</strong><br><small>dw.json configures IDE/WebDAV connection and target version.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>dw.json cấu hình điều gì? (Chọn một)</strong></p>
+<ul>
+<li>A. Quyền OCAPI Shop</li>
+<li>B. Kết nối IDE/WebDAV (hostname, username, code version)</li>
+<li>C. Quyền Page Designer</li>
+<li>D. Từ đồng nghĩa tìm kiếm</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>B — dw.json cấu hình kết nối IDE/WebDAV và version mục tiêu.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q9. A stakeholder requests different cartridge paths per locale within one site. Correct guidance? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q9" value="A"> A. Supported via site preferences</label></li>
+<li><label><input type="radio" name="s10_sa_q9" value="B"> B. Not supported; use a single site-level path and handle locale in code/templates</label></li>
+<li><label><input type="radio" name="s10_sa_q9" value="C"> C. Supported via ocapi.json</label></li>
+<li><label><input type="radio" name="s10_sa_q9" value="D"> D. Supported via services.json</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>B</strong><br><small>Path is site-level; handle locale differences in code/templates.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một bên liên quan yêu cầu cartridge path khác nhau theo locale trong một site. Hướng dẫn đúng? (Chọn một)</strong></p>
+<ul>
+<li>A. Được hỗ trợ qua site preferences</li>
+<li>B. Không được hỗ trợ; sử dụng một path cấp site duy nhất và xử lý locale trong code/templates</li>
+<li>C. Được hỗ trợ qua ocapi.json</li>
+<li>D. Được hỗ trợ qua services.json</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>B — Path ở cấp site; xử lý sự khác biệt locale trong code/templates.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q10. Which artifact inside a cartridge defines cartridge metadata like id/description? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q10" value="A"> A. templates/resources/*.properties</label></li>
+<li><label><input type="radio" name="s10_sa_q10" value="B"> B. app_*.properties</label></li>
+<li><label><input type="radio" name="s10_sa_q10" value="C"> C. ocapi.json</label></li>
+<li><label><input type="radio" name="s10_sa_q10" value="D"> D. services.json</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>B</strong><br><small>app_*.properties holds cartridge metadata.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Artifact nào bên trong cartridge định nghĩa metadata của cartridge như id/mô tả? (Chọn một)</strong></p>
+<ul>
+<li>A. templates/resources/*.properties</li>
+<li>B. app_*.properties</li>
+<li>C. ocapi.json</li>
+<li>D. services.json</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>B — app_*.properties chứa metadata của cartridge.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q11. You must enforce HTTPS on sensitive routes. What should you use? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q11" value="A"> A. server.middleware.https</label></li>
+<li><label><input type="radio" name="s10_sa_q11" value="B"> B. ocapi.json</label></li>
+<li><label><input type="radio" name="s10_sa_q11" value="C"> C. Page Designer policy</label></li>
+<li><label><input type="radio" name="s10_sa_q11" value="D"> D. services.json</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Use server.middleware.https.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn phải bắt buộc HTTPS trên các route nhạy cảm. Bạn nên dùng gì? (Chọn một)</strong></p>
+<ul>
+<li>A. server.middleware.https</li>
+<li>B. ocapi.json</li>
+<li>C. Chính sách Page Designer</li>
+<li>D. services.json</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Sử dụng server.middleware.https.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q12. Two cartridges define the same controller route. Which implementation runs? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sa_q12" value="A"> A. The newer file by timestamp</label></li>
+<li><label><input type="radio" name="s10_sa_q12" value="B"> B. The implementation in the leftmost cartridge in the site path</label></li>
+<li><label><input type="radio" name="s10_sa_q12" value="C"> C. The rightmost cartridge in the site path</label></li>
+<li><label><input type="radio" name="s10_sa_q12" value="D"> D. The platform throws an error</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>B</strong><br><small>The leftmost (earliest) cartridge in the path wins.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Hai cartridge định nghĩa cùng một controller route. Triển khai nào được chạy? (Chọn một)</strong></p>
+<ul>
+<li>A. File mới hơn theo timestamp</li>
+<li>B. Triển khai trong cartridge nằm ngoài cùng bên trái trong site path</li>
+<li>C. Cartridge nằm ngoài cùng bên phải trong site path</li>
+<li>D. Nền tảng ném ra lỗi</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>B — Cartridge ngoài cùng bên trái (đầu tiên) trong path sẽ thắng.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+</ol>
+</li>
+<li>
+<h3 class="set-title">Section B: Business Manager, Search, Content, Logging</h3>
+<ol class="question-list">
+<li>
+<div class="question">
+<h2>Q13. Where can you import catalogs and inventory? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q1" value="A"> A. BM &gt; Administration &gt; Logs</label></li>
+<li><label><input type="radio" name="s10_sb_q1" value="B"> B. BM &gt; Merchant Tools &gt; Site Import &amp; Export</label></li>
+<li><label><input type="radio" name="s10_sb_q1" value="C"> C. BM &gt; SEO</label></li>
+<li><label><input type="radio" name="s10_sb_q1" value="D"> D. BM &gt; Services</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>B</strong><br><small>Site Import &amp; Export handles inbound data loads.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn có thể import catalog và tồn kho ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. BM &gt; Administration &gt; Logs</li>
+<li>B. BM &gt; Merchant Tools &gt; Site Import &amp; Export</li>
+<li>C. BM &gt; SEO</li>
+<li>D. BM &gt; Services</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>B — Site Import &amp; Export xử lý việc tải dữ liệu đầu vào.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q14. To make a product attribute searchable, which two are required? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q2" value="A"> A. Mark the attribute as searchable</label></li>
+<li><label><input type="radio" name="s10_sb_q2" value="B"> B. Add the attribute to Page Designer</label></li>
+<li><label><input type="radio" name="s10_sb_q2" value="C"> C. Rebuild the search index</label></li>
+<li><label><input type="radio" name="s10_sb_q2" value="D"> D. Add it to ocapi.json read_attributes</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, C</strong><br><small>Mark searchable and rebuild index.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để làm cho một thuộc tính sản phẩm có thể tìm kiếm được, hai điều kiện nào là bắt buộc? (Chọn hai)</strong></p>
+<ul>
+<li>A. Đánh dấu thuộc tính là searchable</li>
+<li>B. Thêm thuộc tính vào Page Designer</li>
+<li>C. Rebuild search index</li>
+<li>D. Thêm vào ocapi.json read_attributes</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, C — Đánh dấu searchable và rebuild index.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q15. Where are storefront search refinements configured? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q3" value="A"> A. Merchant Tools &gt; Search &gt; Search Refinements</label></li>
+<li><label><input type="radio" name="s10_sb_q3" value="B"> B. Merchant Tools &gt; SEO &gt; URL Rules</label></li>
+<li><label><input type="radio" name="s10_sb_q3" value="C"> C. Administration &gt; Sites</label></li>
+<li><label><input type="radio" name="s10_sb_q3" value="D"> D. Content &gt; Assets</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Refinements are configured under Search.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bộ lọc tìm kiếm storefront được cấu hình ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. Merchant Tools &gt; Search &gt; Search Refinements</li>
+<li>B. Merchant Tools &gt; SEO &gt; URL Rules</li>
+<li>C. Administration &gt; Sites</li>
+<li>D. Content &gt; Assets</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Các refinement được cấu hình trong mục Search.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q16. A one-way synonym 'parka → winter coat' is required. Where is it configured? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q4" value="A"> A. SEO &gt; Redirects</label></li>
+<li><label><input type="radio" name="s10_sb_q4" value="B"> B. Search &gt; Dictionaries (one-way)</label></li>
+<li><label><input type="radio" name="s10_sb_q4" value="C"> C. Search &gt; Search Refinements</label></li>
+<li><label><input type="radio" name="s10_sb_q4" value="D"> D. Site Preferences</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>B</strong><br><small>One-way synonyms live in Dictionaries.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Cần một từ đồng nghĩa một chiều 'parka → áo khoác mùa đông'. Nó được cấu hình ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. SEO &gt; Redirects</li>
+<li>B. Search &gt; Dictionaries (một chiều)</li>
+<li>C. Search &gt; Search Refinements</li>
+<li>D. Site Preferences</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>B — Từ đồng nghĩa một chiều nằm trong Dictionaries.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q17. To show a new PDP attribute value, which two updates are typical? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q5" value="A"> A. Product model decorators/factory to expose data</label></li>
+<li><label><input type="radio" name="s10_sb_q5" value="B"> B. PDP ISML template to render</label></li>
+<li><label><input type="radio" name="s10_sb_q5" value="C"> C. ocapi.json</label></li>
+<li><label><input type="radio" name="s10_sb_q5" value="D"> D. services.json</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Extend model and update templates.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để hiển thị giá trị thuộc tính PDP mới, hai cập nhật nào là thông thường? (Chọn hai)</strong></p>
+<ul>
+<li>A. Decorators/factory của product model để expose dữ liệu</li>
+<li>B. Template ISML của PDP để render</li>
+<li>C. ocapi.json</li>
+<li>D. services.json</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Mở rộng model và cập nhật templates.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q18. Where are Logger categories and appenders configured? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q6" value="A"> A. BM &gt; Administration &gt; Operations &gt; Logging</label></li>
+<li><label><input type="radio" name="s10_sb_q6" value="B"> B. ocapi.json</label></li>
+<li><label><input type="radio" name="s10_sb_q6" value="C"> C. services.json</label></li>
+<li><label><input type="radio" name="s10_sb_q6" value="D"> D. dw.json</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Configure logging under Admin &gt; Operations.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Các category và appender của Logger được cấu hình ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. BM &gt; Administration &gt; Operations &gt; Logging</li>
+<li>B. ocapi.json</li>
+<li>C. services.json</li>
+<li>D. dw.json</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Cấu hình logging trong Admin &gt; Operations.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q19. A marketer wants to assemble new landing pages with components. Which feature should be used? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q7" value="A"> A. Page Designer</label></li>
+<li><label><input type="radio" name="s10_sb_q7" value="B"> B. URL Rules</label></li>
+<li><label><input type="radio" name="s10_sb_q7" value="C"> C. OCAPI Shop</label></li>
+<li><label><input type="radio" name="s10_sb_q7" value="D"> D. Services</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Page Designer supports componentized pages.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một nhà marketing muốn tạo các landing page mới bằng các thành phần. Tính năng nào nên được sử dụng? (Chọn một)</strong></p>
+<ul>
+<li>A. Page Designer</li>
+<li>B. URL Rules</li>
+<li>C. OCAPI Shop</li>
+<li>D. Services</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Page Designer hỗ trợ các trang được cấu thành từ các thành phần.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q20. After enabling a new locale, search returns fewer results. Which two are likely? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q8" value="A"> A. Missing localized values for searchable attributes</label></li>
+<li><label><input type="radio" name="s10_sb_q8" value="B"> B. Forgot to reindex after data change</label></li>
+<li><label><input type="radio" name="s10_sb_q8" value="C"> C. Missing cspTrustedSite</label></li>
+<li><label><input type="radio" name="s10_sb_q8" value="D"> D. Wrong code version active</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Missing localized values or not reindexing reduces recall.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Sau khi bật một locale mới, tìm kiếm trả về ít kết quả hơn. Hai nguyên nhân có thể nhất là gì? (Chọn hai)</strong></p>
+<ul>
+<li>A. Thiếu giá trị được bản địa hóa cho các thuộc tính có thể tìm kiếm</li>
+<li>B. Quên reindex sau khi thay đổi dữ liệu</li>
+<li>C. Thiếu cspTrustedSite</li>
+<li>D. Code version đang hoạt động sai</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Thiếu giá trị bản địa hóa hoặc không reindex làm giảm kết quả.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q21. To allow an integration to access a custom object via OCAPI Data, which two steps are required? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q9" value="A"> A. ocapi.json with read/write and attribute lists</label></li>
+<li><label><input type="radio" name="s10_sb_q9" value="B"> B. OCAPI client credentials mapped to that setting</label></li>
+<li><label><input type="radio" name="s10_sb_q9" value="C"> C. New code version</label></li>
+<li><label><input type="radio" name="s10_sb_q9" value="D"> D. New Page Designer page type</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>ocapi.json permissions and client credentials are required.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để cho phép tích hợp truy cập custom object qua OCAPI Data, hai bước nào là bắt buộc? (Chọn hai)</strong></p>
+<ul>
+<li>A. ocapi.json với quyền đọc/ghi và danh sách thuộc tính</li>
+<li>B. Client credentials OCAPI được ánh xạ với cài đặt đó</li>
+<li>C. Code version mới</li>
+<li>D. Loại trang Page Designer mới</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Cần có quyền ocapi.json và client credentials.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q22. Production logging best practice: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q10" value="A"> A. Logger with categories at INFO/WARN/ERROR; DEBUG sparingly for targeted troubleshooting</label></li>
+<li><label><input type="radio" name="s10_sb_q10" value="B"> B. System.out.println</label></li>
+<li><label><input type="radio" name="s10_sb_q10" value="C"> C. Everything at DEBUG</label></li>
+<li><label><input type="radio" name="s10_sb_q10" value="D"> D. Disable logs</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Use Logger with appropriate levels; limit DEBUG in prod.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Thực hành tốt nhất cho logging ở môi trường production: (Chọn một)</strong></p>
+<ul>
+<li>A. Logger với các category ở mức INFO/WARN/ERROR; DEBUG ít dùng cho xử lý sự cố cụ thể</li>
+<li>B. System.out.println</li>
+<li>C. Tất cả ở mức DEBUG</li>
+<li>D. Tắt logs</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Sử dụng Logger với các mức phù hợp; hạn chế DEBUG trong production.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q23. Where do you configure the site default currency and taxation type? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q11" value="A"> A. Administration &gt; Sites &gt; Manage Sites &gt; [Site] &gt; Settings</label></li>
+<li><label><input type="radio" name="s10_sb_q11" value="B"> B. Merchant Tools &gt; Search</label></li>
+<li><label><input type="radio" name="s10_sb_q11" value="C"> C. Merchant Tools &gt; SEO</label></li>
+<li><label><input type="radio" name="s10_sb_q11" value="D"> D. Administration &gt; Roles</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Site Settings specify currency/taxation.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn cấu hình loại tiền tệ mặc định và loại thuế của site ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. Administration &gt; Sites &gt; Manage Sites &gt; [Site] &gt; Settings</li>
+<li>B. Merchant Tools &gt; Search</li>
+<li>C. Merchant Tools &gt; SEO</li>
+<li>D. Administration &gt; Roles</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Site Settings xác định tiền tệ/thuế.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q24. To change availability label copy, which two places are typical? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sb_q12" value="A"> A. templates/resources/*.properties</label></li>
+<li><label><input type="radio" name="s10_sb_q12" value="B"> B. ISML templates rendering the label</label></li>
+<li><label><input type="radio" name="s10_sb_q12" value="C"> C. ocapi.json</label></li>
+<li><label><input type="radio" name="s10_sb_q12" value="D"> D. dw.json</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Properties + ISML typically control user-facing copy.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để thay đổi nội dung nhãn hiển thị tình trạng hàng, hai nơi thông thường là? (Chọn hai)</strong></p>
+<ul>
+<li>A. templates/resources/*.properties</li>
+<li>B. Templates ISML render nhãn</li>
+<li>C. ocapi.json</li>
+<li>D. dw.json</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Properties + ISML thường kiểm soát nội dung hiển thị cho người dùng.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+</ol>
+</li>
+<li>
+<h3 class="set-title">Section C: Controllers, ISML, Forms, Hooks, Services</h3>
+<ol class="question-list">
+<li>
+<div class="question">
+<h2>Q25. Maintainable controller design includes: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q1" value="A"> A. Thin controllers; business logic in helpers/decorators/factories</label></li>
+<li><label><input type="radio" name="s10_sc_q1" value="B"> B. ISML templates contain business logic</label></li>
+<li><label><input type="radio" name="s10_sc_q1" value="C"> C. Controllers contain all logic</label></li>
+<li><label><input type="radio" name="s10_sc_q1" value="D"> D. Avoid services entirely</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Keep controllers thin; push domain logic to helpers/decorators/factories.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Thiết kế controller có thể bảo trì bao gồm: (Chọn một)</strong></p>
+<ul>
+<li>A. Controller gọn nhẹ; logic nghiệp vụ trong helpers/decorators/factories</li>
+<li>B. Templates ISML chứa logic nghiệp vụ</li>
+<li>C. Controller chứa tất cả logic</li>
+<li>D. Tránh sử dụng services hoàn toàn</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Giữ controller gọn nhẹ; đẩy logic domain vào helpers/decorators/factories.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q26. Which directive enables cacheable template fragments? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q2" value="A"> A. iscache</label></li>
+<li><label><input type="radio" name="s10_sc_q2" value="B"> B. isif</label></li>
+<li><label><input type="radio" name="s10_sc_q2" value="C"> C. isloop</label></li>
+<li><label><input type="radio" name="s10_sc_q2" value="D"> D. isdecorate</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>iscache caches template fragments.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Directive nào cho phép cache các fragment của template? (Chọn một)</strong></p>
+<ul>
+<li>A. iscache</li>
+<li>B. isif</li>
+<li>C. isloop</li>
+<li>D. isdecorate</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — iscache cache các fragment của template.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q27. Proper CSRF handling for forms requires: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q3" value="A"> A. Generate token on GET and validate on POST via csrfProtection</label></li>
+<li><label><input type="radio" name="s10_sc_q3" value="B"> B. HTTPS alone</label></li>
+<li><label><input type="radio" name="s10_sc_q3" value="C"> C. No CSRF in SFRA</label></li>
+<li><label><input type="radio" name="s10_sc_q3" value="D"> D. Site preference only</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>CSRF token generate/validate pattern.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Xử lý CSRF đúng cách cho forms yêu cầu: (Chọn một)</strong></p>
+<ul>
+<li>A. Tạo token khi GET và xác thực khi POST qua csrfProtection</li>
+<li>B. Chỉ cần HTTPS</li>
+<li>C. Không có CSRF trong SFRA</li>
+<li>D. Chỉ site preference</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Mô hình tạo/xác thực CSRF token.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q28. A route returns JSON. What two actions are correct? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q4" value="A"> A. Set Content-Type to application/json</label></li>
+<li><label><input type="radio" name="s10_sc_q4" value="B"> B. Use res.json or write JSON</label></li>
+<li><label><input type="radio" name="s10_sc_q4" value="C"> C. Render ISML then parse to JSON</label></li>
+<li><label><input type="radio" name="s10_sc_q4" value="D"> D. Disable caching globally</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Correct content type and JSON body handling.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một route trả về JSON. Hai hành động nào là đúng? (Chọn hai)</strong></p>
+<ul>
+<li>A. Đặt Content-Type là application/json</li>
+<li>B. Sử dụng res.json hoặc viết JSON</li>
+<li>C. Render ISML rồi parse sang JSON</li>
+<li>D. Tắt caching toàn cục</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Content type đúng và xử lý JSON body.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q29. Customize pricing behavior without editing base controllers using: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q5" value="A"> A. Hook extension points (pricing/tax)</label></li>
+<li><label><input type="radio" name="s10_sc_q5" value="B"> B. Page Designer</label></li>
+<li><label><input type="radio" name="s10_sc_q5" value="C"> C. URL Rules</label></li>
+<li><label><input type="radio" name="s10_sc_q5" value="D"> D. Site preference only</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Use hooks to modify pricing/tax behavior.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Tùy chỉnh hành vi pricing mà không chỉnh sửa base controllers bằng cách sử dụng: (Chọn một)</strong></p>
+<ul>
+<li>A. Các điểm mở rộng hook (pricing/tax)</li>
+<li>B. Page Designer</li>
+<li>C. URL Rules</li>
+<li>D. Chỉ site preference</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Sử dụng hooks để sửa đổi hành vi pricing/tax.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q30. A PLP performs synchronous HTTP per product tile. Which two help? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q6" value="A"> A. Use Service Framework with timeouts and circuit breaker</label></li>
+<li><label><input type="radio" name="s10_sc_q6" value="B"> B. Batch/cache to avoid N+1 calls</label></li>
+<li><label><input type="radio" name="s10_sc_q6" value="C"> C. Move calls into ISML</label></li>
+<li><label><input type="radio" name="s10_sc_q6" value="D"> D. Use System.out.println for timing</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Service Framework + batching/caching reduces per-item calls.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một PLP thực hiện HTTP đồng bộ cho từng tile sản phẩm. Hai biện pháp nào có thể giúp ích? (Chọn hai)</strong></p>
+<ul>
+<li>A. Sử dụng Service Framework với timeouts và circuit breaker</li>
+<li>B. Batch/cache để tránh các cuộc gọi N+1</li>
+<li>C. Di chuyển các cuộc gọi vào ISML</li>
+<li>D. Sử dụng System.out.println để đo thời gian</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Service Framework + batching/caching giảm các cuộc gọi cho từng item.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q31. Localize UI strings using: (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q7" value="A"> A. templates/resources/*.properties</label></li>
+<li><label><input type="radio" name="s10_sc_q7" value="B"> B. Resource.msg/Resource.msgf</label></li>
+<li><label><input type="radio" name="s10_sc_q7" value="C"> C. ocapi.json</label></li>
+<li><label><input type="radio" name="s10_sc_q7" value="D"> D. services.json</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Use properties bundles and Resource helpers for i18n.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bản địa hóa chuỗi UI bằng cách sử dụng: (Chọn hai)</strong></p>
+<ul>
+<li>A. templates/resources/*.properties</li>
+<li>B. Resource.msg/Resource.msgf</li>
+<li>C. ocapi.json</li>
+<li>D. services.json</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Sử dụng properties bundles và Resource helpers cho i18n.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q32. A remote include shows stale promotion data. How to fix? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q8" value="A"> A. Add vary keys for basket/promo/customer context or disable cache for the include</label></li>
+<li><label><input type="radio" name="s10_sc_q8" value="B"> B. Disable all caching</label></li>
+<li><label><input type="radio" name="s10_sc_q8" value="C"> C. Change code version</label></li>
+<li><label><input type="radio" name="s10_sc_q8" value="D"> D. Switch to GET</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Add vary keys for basket/promo/customer or disable include cache.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một remote include hiển thị dữ liệu khuyến mãi lỗi thời. Cách khắc phục? (Chọn một)</strong></p>
+<ul>
+<li>A. Thêm vary keys cho context basket/promo/customer hoặc tắt cache cho include</li>
+<li>B. Tắt tất cả caching</li>
+<li>C. Thay đổi code version</li>
+<li>D. Chuyển sang GET</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Thêm vary keys cho basket/promo/customer hoặc tắt include cache.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q33. Caching a personalized Shop API response safely requires: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q9" value="A"> A. No cache, or cache with vary on customer group/locale/currency</label></li>
+<li><label><input type="radio" name="s10_sc_q9" value="B"> B. Global cache with no vary</label></li>
+<li><label><input type="radio" name="s10_sc_q9" value="C"> C. CDN cache only</label></li>
+<li><label><input type="radio" name="s10_sc_q9" value="D"> D. Response cache only</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>No cache or appropriate vary keys for personalization.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Cache an toàn một phản hồi Shop API được cá nhân hóa yêu cầu: (Chọn một)</strong></p>
+<ul>
+<li>A. Không cache, hoặc cache với vary theo customer group/locale/currency</li>
+<li>B. Cache toàn cục không có vary</li>
+<li>C. Chỉ CDN cache</li>
+<li>D. Chỉ Response cache</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Không cache hoặc các vary key phù hợp cho cá nhân hóa.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q34. A service returns HTTP 200 with an error payload. Correct handling is: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q10" value="A"> A. Treat as success and continue</label></li>
+<li><label><input type="radio" name="s10_sc_q10" value="B"> B. Parse application-level status and fail appropriately</label></li>
+<li><label><input type="radio" name="s10_sc_q10" value="C"> C. Rely only on timeout</label></li>
+<li><label><input type="radio" name="s10_sc_q10" value="D"> D. Retry forever</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>B</strong><br><small>Parse application-level status and respond accordingly.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một service trả về HTTP 200 với payload lỗi. Xử lý đúng là: (Chọn một)</strong></p>
+<ul>
+<li>A. Xem như thành công và tiếp tục</li>
+<li>B. Phân tích status cấp ứng dụng và xử lý lỗi phù hợp</li>
+<li>C. Chỉ dựa vào timeout</li>
+<li>D. Retry vô hạn</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>B — Phân tích status cấp ứng dụng và phản hồi phù hợp.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q35. Storing PII from a form requires which two? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q11" value="A"> A. Minimize/encrypt sensitive fields where possible</label></li>
+<li><label><input type="radio" name="s10_sc_q11" value="B"> B. Restrict OCAPI Data access to least privilege</label></li>
+<li><label><input type="radio" name="s10_sc_q11" value="C"> C. Log raw PII for troubleshooting</label></li>
+<li><label><input type="radio" name="s10_sc_q11" value="D"> D. Use GET to avoid CSRF</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Minimize/encrypt PII; enforce least-privilege access.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Lưu trữ PII từ một form yêu cầu hai điều nào? (Chọn hai)</strong></p>
+<ul>
+<li>A. Thu gọn/mã hóa các trường nhạy cảm khi có thể</li>
+<li>B. Giới hạn quyền truy cập OCAPI Data theo nguyên tắc đặc quyền tối thiểu</li>
+<li>C. Log PII thô để xử lý sự cố</li>
+<li>D. Sử dụng GET để tránh CSRF</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Thu gọn/mã hóa PII; thực thi quyền truy cập tối thiểu.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q36. A controller must stream a large CSV. Best approach: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sc_q12" value="A"> A. Stream incrementally with appropriate headers</label></li>
+<li><label><input type="radio" name="s10_sc_q12" value="B"> B. Build entire CSV in memory then send</label></li>
+<li><label><input type="radio" name="s10_sc_q12" value="C"> C. Use ISML to render CSV</label></li>
+<li><label><input type="radio" name="s10_sc_q12" value="D"> D. Print to System.out</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Stream CSV; avoid building large responses in memory.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một controller phải stream một CSV lớn. Cách tiếp cận tốt nhất: (Chọn một)</strong></p>
+<ul>
+<li>A. Stream từng phần với các header phù hợp</li>
+<li>B. Xây dựng toàn bộ CSV trong bộ nhớ rồi gửi</li>
+<li>C. Sử dụng ISML để render CSV</li>
+<li>D. In ra System.out</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Stream CSV; tránh xây dựng phản hồi lớn trong bộ nhớ.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+</ol>
+</li>
+<li>
+<h3 class="set-title">Section D: OCAPI, Jobs, Integrations, Data</h3>
+<ol class="question-list">
+<li>
+<div class="question">
+<h2>Q37. To allow baskets via OCAPI Shop, which two are required? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q1" value="A"> A. ocapi.json Shop permissions with allowed attributes</label></li>
+<li><label><input type="radio" name="s10_sd_q1" value="B"> B. Map a client ID/secret to that setting</label></li>
+<li><label><input type="radio" name="s10_sd_q1" value="C"> C. Create a new code version</label></li>
+<li><label><input type="radio" name="s10_sd_q1" value="D"> D. Add a Page Designer component</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>OCAPI Shop configuration + client mapping.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để cho phép baskets qua OCAPI Shop, hai điều kiện nào là bắt buộc? (Chọn hai)</strong></p>
+<ul>
+<li>A. Quyền OCAPI Shop trong ocapi.json với các thuộc tính được phép</li>
+<li>B. Ánh xạ client ID/secret với cài đặt đó</li>
+<li>C. Tạo code version mới</li>
+<li>D. Thêm thành phần Page Designer</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Cấu hình OCAPI Shop + ánh xạ client.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q38. A nightly job imports inventory and reindexes search. Which two steps are typical? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q2" value="A"> A. Script step: import inventory</label></li>
+<li><label><input type="radio" name="s10_sd_q2" value="B"> B. System step: trigger delta/full index</label></li>
+<li><label><input type="radio" name="s10_sd_q2" value="C"> C. Disable logs</label></li>
+<li><label><input type="radio" name="s10_sd_q2" value="D"> D. Rename code version</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Import via script, then trigger indexing.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một job hàng đêm import tồn kho và reindex tìm kiếm. Hai bước nào là thông thường? (Chọn hai)</strong></p>
+<ul>
+<li>A. Script step: import tồn kho</li>
+<li>B. System step: kích hoạt delta/full index</li>
+<li>C. Tắt logs</li>
+<li>D. Đổi tên code version</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Import qua script, sau đó kích hoạt indexing.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q39. Which inbound folders are commonly used for imports? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q3" value="A"> A. /impex/src/</label></li>
+<li><label><input type="radio" name="s10_sd_q3" value="B"> B. /impex/src/instance/</label></li>
+<li><label><input type="radio" name="s10_sd_q3" value="C"> C. /versioned/cartridges/</label></li>
+<li><label><input type="radio" name="s10_sd_q3" value="D"> D. /static/default/</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>impex src and src/instance are common inbound folders.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Các thư mục đầu vào nào thường được sử dụng cho imports? (Chọn hai)</strong></p>
+<ul>
+<li>A. /impex/src/</li>
+<li>B. /impex/src/instance/</li>
+<li>C. /versioned/cartridges/</li>
+<li>D. /static/default/</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — impex src và src/instance là các thư mục đầu vào phổ biến.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q40. When an import job intermittently fails due to file locks, what two mitigations help? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q4" value="A"> A. Retry with exponential backoff</label></li>
+<li><label><input type="radio" name="s10_sd_q4" value="B"> B. Coordinate schedules/locks to avoid overlap</label></li>
+<li><label><input type="radio" name="s10_sd_q4" value="C"> C. Add TRACE logs only</label></li>
+<li><label><input type="radio" name="s10_sd_q4" value="D"> D. Run the job from controllers</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Retries with backoff and schedule/lock coordination.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Khi một import job thỉnh thoảng thất bại do file lock, hai biện pháp giảm thiểu nào giúp ích? (Chọn hai)</strong></p>
+<ul>
+<li>A. Retry với exponential backoff</li>
+<li>B. Phối hợp lịch trình/lock để tránh chồng chéo</li>
+<li>C. Chỉ thêm TRACE logs</li>
+<li>D. Chạy job từ controllers</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Retry với backoff và phối hợp lịch trình/lock.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q41. Least-privilege OCAPI Data access for orders should include: (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q5" value="A"> A. Restrict read_attributes to only required fields</label></li>
+<li><label><input type="radio" name="s10_sd_q5" value="B"> B. Dedicated client credentials per integration</label></li>
+<li><label><input type="radio" name="s10_sd_q5" value="C"> C. One client shared by all partners</label></li>
+<li><label><input type="radio" name="s10_sd_q5" value="D"> D. Expose all fields to simplify mapping</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Restrict attributes and use dedicated credentials.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Quyền truy cập OCAPI Data tối thiểu cho orders nên bao gồm: (Chọn hai)</strong></p>
+<ul>
+<li>A. Giới hạn read_attributes chỉ cho các trường cần thiết</li>
+<li>B. Client credentials riêng cho từng tích hợp</li>
+<li>C. Một client dùng chung cho tất cả đối tác</li>
+<li>D. Expose tất cả trường để đơn giản hóa ánh xạ</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Giới hạn thuộc tính và sử dụng credentials riêng.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q42. To rotate a service credential without downtime, which two steps help? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q6" value="A"> A. Add a new credential/profile and cut over</label></li>
+<li><label><input type="radio" name="s10_sd_q6" value="B"> B. Hardcode the secret in code</label></li>
+<li><label><input type="radio" name="s10_sd_q6" value="C"> C. Support overlapping keys if upstream allows</label></li>
+<li><label><input type="radio" name="s10_sd_q6" value="D"> D. Stop traffic</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, C</strong><br><small>Blue/green credentials or overlapping windows.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để thay đổi credential dịch vụ mà không có downtime, hai bước nào giúp ích? (Chọn hai)</strong></p>
+<ul>
+<li>A. Thêm credential/profile mới và chuyển đổi</li>
+<li>B. Hardcode secret trong code</li>
+<li>C. Hỗ trợ overlapping keys nếu upstream cho phép</li>
+<li>D. Dừng traffic</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, C — Credentials blue/green hoặc overlapping windows.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q43. A robust synchronous integration should include: (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q7" value="A"> A. Short timeouts and circuit breaker</label></li>
+<li><label><input type="radio" name="s10_sd_q7" value="B"> B. Retries with exponential backoff for transient failures</label></li>
+<li><label><input type="radio" name="s10_sd_q7" value="C"> C. Always log full payloads</label></li>
+<li><label><input type="radio" name="s10_sd_q7" value="D"> D. Never cache anything</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Short timeouts, retries, and circuit breaker.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một tích hợp đồng bộ mạnh mẽ nên bao gồm: (Chọn hai)</strong></p>
+<ul>
+<li>A. Timeout ngắn và circuit breaker</li>
+<li>B. Retry với exponential backoff cho các lỗi tạm thời</li>
+<li>C. Luôn log toàn bộ payload</li>
+<li>D. Không bao giờ cache bất cứ thứ gì</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Timeout ngắn, retry và circuit breaker.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q44. Product deltas arrive hourly. Which indexing policy is most efficient? (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q8" value="A"> A. Delta index after each import</label></li>
+<li><label><input type="radio" name="s10_sd_q8" value="B"> B. Full index hourly</label></li>
+<li><label><input type="radio" name="s10_sd_q8" value="C"> C. Weekly index</label></li>
+<li><label><input type="radio" name="s10_sd_q8" value="D"> D. No index needed</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Use delta indexing for frequent updates.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Các delta sản phẩm đến hàng giờ. Chính sách indexing nào hiệu quả nhất? (Chọn một)</strong></p>
+<ul>
+<li>A. Delta index sau mỗi lần import</li>
+<li>B. Full index hàng giờ</li>
+<li>C. Index hàng tuần</li>
+<li>D. Không cần index</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Sử dụng delta indexing cho các cập nhật thường xuyên.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q45. To write to a custom object via Data API you need: (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q9" value="A"> A. ocapi.json write permissions and write_attributes for fields</label></li>
+<li><label><input type="radio" name="s10_sd_q9" value="B"> B. Client credentials mapped to that ocapi.json setting</label></li>
+<li><label><input type="radio" name="s10_sd_q9" value="C"> C. A new code version</label></li>
+<li><label><input type="radio" name="s10_sd_q9" value="D"> D. Search refinements</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Write permissions/attributes and mapped client.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để ghi vào custom object qua Data API bạn cần: (Chọn hai)</strong></p>
+<ul>
+<li>A. Quyền ghi ocapi.json và write_attributes cho các trường</li>
+<li>B. Client credentials được ánh xạ với cài đặt ocapi.json đó</li>
+<li>C. Code version mới</li>
+<li>D. Search refinements</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Quyền ghi/thuộc tính và client được ánh xạ.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q46. Two job steps update the same records and collide. The best remedy is: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q10" value="A"> A. Locking/serialization or mutually exclusive windows</label></li>
+<li><label><input type="radio" name="s10_sd_q10" value="B"> B. Disable logs</label></li>
+<li><label><input type="radio" name="s10_sd_q10" value="C"> C. Remote includes</label></li>
+<li><label><input type="radio" name="s10_sd_q10" value="D"> D. Global cache</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Serialize or isolate windows to avoid conflicts.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Hai bước job cập nhật cùng một bản ghi và xung đột. Biện pháp tốt nhất là: (Chọn một)</strong></p>
+<ul>
+<li>A. Locking/serialization hoặc các cửa sổ thời gian loại trừ lẫn nhau</li>
+<li>B. Tắt logs</li>
+<li>C. Remote includes</li>
+<li>D. Cache toàn cục</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Serialize hoặc cô lập các cửa sổ để tránh xung đột.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q47. Prevent sensitive token leakage from services logs by: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q11" value="A"> A. Redacting/masking in parsers; avoid logging bodies unless masked</label></li>
+<li><label><input type="radio" name="s10_sd_q11" value="B"> B. Printing to System.out</label></li>
+<li><label><input type="radio" name="s10_sd_q11" value="C"> C. Keep logs at DEBUG</label></li>
+<li><label><input type="radio" name="s10_sd_q11" value="D"> D. Disable the service</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Redact tokens and avoid logging bodies unless masked.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Ngăn chặn rò rỉ token nhạy cảm từ logs của services bằng cách: (Chọn một)</strong></p>
+<ul>
+<li>A. Biên tập/che giấu trong parsers; tránh log body trừ khi đã che giấu</li>
+<li>B. In ra System.out</li>
+<li>C. Giữ logs ở mức DEBUG</li>
+<li>D. Tắt service</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Biên tập token và tránh log body trừ khi đã che giấu.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q48. A Shop API endpoint varies by pricebook and locale. Safe caching strategy: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_sd_q12" value="A"> A. No cache, or cache with appropriate vary keys</label></li>
+<li><label><input type="radio" name="s10_sd_q12" value="B"> B. Global cache</label></li>
+<li><label><input type="radio" name="s10_sd_q12" value="C"> C. CDN cache with no vary</label></li>
+<li><label><input type="radio" name="s10_sd_q12" value="D"> D. Application cache only</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>No cache or vary keys (pricebook/locale).</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một endpoint Shop API biến đổi theo pricebook và locale. Chiến lược caching an toàn: (Chọn một)</strong></p>
+<ul>
+<li>A. Không cache, hoặc cache với các vary key phù hợp</li>
+<li>B. Cache toàn cục</li>
+<li>C. CDN cache không có vary</li>
+<li>D. Chỉ Application cache</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Không cache hoặc vary keys (pricebook/locale).</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+</ol>
+</li>
+<li>
+<h3 class="set-title">Section E: Performance, Caching, Troubleshooting</h3>
+<ol class="question-list">
+<li>
+<div class="question">
+<h2>Q49. To reduce PDP TTFB, which two help? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q1" value="A"> A. Precompute heavy fields in decorators; avoid per-request blocking calls</label></li>
+<li><label><input type="radio" name="s10_se_q1" value="B"> B. Cache static fragments with iscache and proper vary</label></li>
+<li><label><input type="radio" name="s10_se_q1" value="C"> C. Always disable caching</label></li>
+<li><label><input type="radio" name="s10_se_q1" value="D"> D. Force OCAPI</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Precompute and cache static fragments.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để giảm TTFB của PDP, hai biện pháp nào giúp ích? (Chọn hai)</strong></p>
+<ul>
+<li>A. Tính toán trước các trường nặng trong decorators; tránh các cuộc gọi chặn theo từng request</li>
+<li>B. Cache các fragment tĩnh với iscache và vary phù hợp</li>
+<li>C. Luôn tắt caching</li>
+<li>D. Bắt buộc dùng OCAPI</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Tính toán trước và cache các fragment tĩnh.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q50. Profiler shows heavy per-tile service calls. Which two help? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q2" value="A"> A. Batch/cache calls to avoid N+1</label></li>
+<li><label><input type="radio" name="s10_se_q2" value="B"> B. Move computation offline to jobs; decorate from stored values</label></li>
+<li><label><input type="radio" name="s10_se_q2" value="C"> C. Add TRACE logs everywhere</label></li>
+<li><label><input type="radio" name="s10_se_q2" value="D"> D. Use remote includes for each tile</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Batch/cache and precompute via jobs.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Profiler cho thấy các cuộc gọi service nặng cho từng tile. Hai biện pháp nào giúp ích? (Chọn hai)</strong></p>
+<ul>
+<li>A. Batch/cache các cuộc gọi để tránh N+1</li>
+<li>B. Chuyển tính toán offline vào jobs; decorate từ các giá trị đã lưu</li>
+<li>C. Thêm TRACE logs khắp nơi</li>
+<li>D. Sử dụng remote includes cho từng tile</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Batch/cache và tính toán trước qua jobs.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q51. Stale content persists after deployment. Which two are typical fixes? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q3" value="A"> A. Clear application cache</label></li>
+<li><label><input type="radio" name="s10_se_q3" value="B"> B. Invalidate template caches (iscache) for affected templates</label></li>
+<li><label><input type="radio" name="s10_se_q3" value="C"> C. Rebuild search every request</label></li>
+<li><label><input type="radio" name="s10_se_q3" value="D"> D. Change code version name</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Clear app cache and invalidate iscache.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Nội dung lỗi thời vẫn tồn tại sau khi triển khai. Hai cách khắc phục thông thường là gì? (Chọn hai)</strong></p>
+<ul>
+<li>A. Xóa application cache</li>
+<li>B. Vô hiệu hóa template caches (iscache) cho các template bị ảnh hưởng</li>
+<li>C. Rebuild search sau mỗi request</li>
+<li>D. Thay đổi tên code version</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Xóa app cache và vô hiệu hóa iscache.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q52. A large JSON export OOMs. Correct fix is: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q4" value="A"> A. Stream chunks to the response</label></li>
+<li><label><input type="radio" name="s10_se_q4" value="B"> B. Build entire JSON in memory</label></li>
+<li><label><input type="radio" name="s10_se_q4" value="C"> C. Use ISML</label></li>
+<li><label><input type="radio" name="s10_se_q4" value="D"> D. Disable HTTPS</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Stream JSON to avoid OOM.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một JSON export lớn gây OOM. Cách khắc phục đúng là: (Chọn một)</strong></p>
+<ul>
+<li>A. Stream từng chunk đến response</li>
+<li>B. Xây dựng toàn bộ JSON trong bộ nhớ</li>
+<li>C. Sử dụng ISML</li>
+<li>D. Tắt HTTPS</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Stream JSON để tránh OOM.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q53. Cache correctness issues on multi-locale/multi-currency sites often arise from: (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q5" value="A"> A. Missing vary-by-locale/currency</label></li>
+<li><label><input type="radio" name="s10_se_q5" value="B"> B. Using global cache with no vary</label></li>
+<li><label><input type="radio" name="s10_se_q5" value="C"> C. Using decorators</label></li>
+<li><label><input type="radio" name="s10_se_q5" value="D"> D. Using Resource.msg</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Missing vary keys/global cache leads to leakage/incorrectness.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Vấn đề tính đúng đắn của cache trên các site đa locale/đa tiền tệ thường xuất phát từ: (Chọn hai)</strong></p>
+<ul>
+<li>A. Thiếu vary theo locale/currency</li>
+<li>B. Sử dụng cache toàn cục không có vary</li>
+<li>C. Sử dụng decorators</li>
+<li>D. Sử dụng Resource.msg</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Thiếu vary keys/global cache dẫn đến rò rỉ/sai lệch.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q54. New locale shows English strings. Which two fixes apply? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q6" value="A"> A. Add locale-specific properties under templates/resources</label></li>
+<li><label><input type="radio" name="s10_se_q6" value="B"> B. Use Resource.msg/Resource.msgf helpers</label></li>
+<li><label><input type="radio" name="s10_se_q6" value="C"> C. Update ocapi.json</label></li>
+<li><label><input type="radio" name="s10_se_q6" value="D"> D. Switch code version</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Add locale bundles and use Resource helpers.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Locale mới hiển thị chuỗi tiếng Anh. Hai cách khắc phục nào áp dụng? (Chọn hai)</strong></p>
+<ul>
+<li>A. Thêm properties theo locale trong templates/resources</li>
+<li>B. Sử dụng helpers Resource.msg/Resource.msgf</li>
+<li>C. Cập nhật ocapi.json</li>
+<li>D. Chuyển code version</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Thêm locale bundles và sử dụng Resource helpers.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q55. A route frequently times out on a downstream service. Which three techniques are best practice? (Select three)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q7" value="A"> A. Short timeouts (fail fast)</label></li>
+<li><label><input type="radio" name="s10_se_q7" value="B"> B. Retries with backoff</label></li>
+<li><label><input type="radio" name="s10_se_q7" value="C"> C. Circuit breaker</label></li>
+<li><label><input type="radio" name="s10_se_q7" value="D"> D. Increase synchronous calls</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B, C</strong><br><small>Fail fast, retry, circuit breaker.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một route thường xuyên timeout với downstream service. Ba kỹ thuật nào là thực hành tốt nhất? (Chọn ba)</strong></p>
+<ul>
+<li>A. Timeout ngắn (fail fast)</li>
+<li>B. Retry với backoff</li>
+<li>C. Circuit breaker</li>
+<li>D. Tăng số cuộc gọi đồng bộ</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B, C — Fail fast, retry, circuit breaker.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q56. After a release, PDP TTFB increased by 250ms. Which three diagnostics help? (Select three)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q8" value="A"> A. Compare profiler traces before/after</label></li>
+<li><label><input type="radio" name="s10_se_q8" value="B"> B. Add targeted timing logs around suspect blocks</label></li>
+<li><label><input type="radio" name="s10_se_q8" value="C"> C. Diff services/decorators/hooks changes</label></li>
+<li><label><input type="radio" name="s10_se_q8" value="D"> D. Disable logs permanently</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B, C</strong><br><small>Profiling, targeted timers, and diffs isolate regressions.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Sau một bản phát hành, TTFB của PDP tăng 250ms. Ba chẩn đoán nào giúp ích? (Chọn ba)</strong></p>
+<ul>
+<li>A. So sánh profiler traces trước/sau</li>
+<li>B. Thêm timing logs có mục tiêu xung quanh các khối nghi vấn</li>
+<li>C. Diff các thay đổi services/decorators/hooks</li>
+<li>D. Tắt logs vĩnh viễn</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B, C — Profiling, timers có mục tiêu và diff cô lập các regression.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q57. To reduce ISML template CPU time, which two help? (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q9" value="A"> A. Precompute data in helpers/decorators; pass view-ready data</label></li>
+<li><label><input type="radio" name="s10_se_q9" value="B"> B. Cache static fragments with iscache</label></li>
+<li><label><input type="radio" name="s10_se_q9" value="C"> C. Add HTTP calls in templates</label></li>
+<li><label><input type="radio" name="s10_se_q9" value="D"> D. Heavy loops in ISML</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Move logic out of templates and cache static parts.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để giảm thời gian CPU của template ISML, hai biện pháp nào giúp ích? (Chọn hai)</strong></p>
+<ul>
+<li>A. Tính toán trước dữ liệu trong helpers/decorators; truyền dữ liệu sẵn sàng để hiển thị</li>
+<li>B. Cache các fragment tĩnh với iscache</li>
+<li>C. Thêm HTTP calls trong templates</li>
+<li>D. Vòng lặp nặng trong ISML</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Chuyển logic ra khỏi templates và cache các phần tĩnh.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q58. A PD component shows wrong currency when cached. Fix by: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q10" value="A"> A. Adding vary-by-currency on the cached fragment</label></li>
+<li><label><input type="radio" name="s10_se_q10" value="B"> B. Using ocapi.json</label></li>
+<li><label><input type="radio" name="s10_se_q10" value="C"> C. Disabling CSRF</label></li>
+<li><label><input type="radio" name="s10_se_q10" value="D"> D. Rebuilding catalog</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Vary by currency for correctness.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một thành phần PD hiển thị sai tiền tệ khi được cache. Khắc phục bằng cách: (Chọn một)</strong></p>
+<ul>
+<li>A. Thêm vary-by-currency trên fragment được cache</li>
+<li>B. Sử dụng ocapi.json</li>
+<li>C. Tắt CSRF</li>
+<li>D. Rebuild catalog</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Vary theo currency để đảm bảo tính đúng đắn.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q59. Prevent duplicate POST submissions: (Select two)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q11" value="A"> A. Idempotency keys and server-side dedupe</label></li>
+<li><label><input type="radio" name="s10_se_q11" value="B"> B. Disable submit button client-side after click</label></li>
+<li><label><input type="radio" name="s10_se_q11" value="C"> C. Use GET to avoid CSRF</label></li>
+<li><label><input type="radio" name="s10_se_q11" value="D"> D. Disable CSRF</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A, B</strong><br><small>Idempotency and client-side prevention.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Ngăn chặn các POST submission trùng lặp: (Chọn hai)</strong></p>
+<ul>
+<li>A. Idempotency keys và dedupe phía server</li>
+<li>B. Tắt nút submit phía client sau khi click</li>
+<li>C. Sử dụng GET để tránh CSRF</li>
+<li>D. Tắt CSRF</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A, B — Idempotency và ngăn chặn phía client.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q60. Catalog import and delta reindex sometimes overlap and fail. Best remedy: (Select one)</h2>
+<ol class="options">
+<li><label><input type="radio" name="s10_se_q12" value="A"> A. Coordinate schedules with locking and add retries/backoff</label></li>
+<li><label><input type="radio" name="s10_se_q12" value="B"> B. Disable indexing</label></li>
+<li><label><input type="radio" name="s10_se_q12" value="C"> C. Add DEBUG logs</label></li>
+<li><label><input type="radio" name="s10_se_q12" value="D"> D. Change code version</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">&#x2705; Correct: <strong>A</strong><br><small>Coordinate schedules, lock, and backoff for robustness.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Catalog import và delta reindex đôi khi chồng chéo và thất bại. Biện pháp tốt nhất: (Chọn một)</strong></p>
+<ul>
+<li>A. Phối hợp lịch trình với locking và thêm retries/backoff</li>
+<li>B. Tắt indexing</li>
+<li>C. Thêm DEBUG logs</li>
+<li>D. Thay đổi code version</li>
+</ul>
+<p><em>&#x2705; Đáp án: <strong>A — Phối hợp lịch trình, lock và backoff để đảm bảo tính ổn định.</strong></em></p>
+</div>
+</details>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</body>
+</html>
