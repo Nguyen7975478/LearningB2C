@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2C Commerce Developer - Practice Exam (Sets 1–5, 60 Questions)</title>
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 960px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #222; }
+h1 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 8px; }
+h3.set-title { color: #003366; margin: 32px 0 12px 0; font-size: 1.15em; border-left: 4px solid #003366; padding-left: 10px; }
+.question-list { list-style: none; padding: 0; }
+.question-list > li { margin-bottom: 24px; }
+.question { background: #fff; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+h2 { font-size: 1em; margin: 0 0 12px 0; color: #003366; }
+.options { padding-left: 20px; margin: 0 0 12px 0; }
+.options li { margin: 6px 0; list-style: none; }
+.options label { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.options input[type=radio] { margin-top: 3px; flex-shrink: 0; }
+details { margin-top: 8px; }
+summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none; }
+.answer { padding: 8px 12px; background: #e8f5e9; border-radius: 4px; margin-top: 6px; }
+.translate { padding: 8px 12px; background: #e3f2fd; border-radius: 4px; margin-top: 6px; }
+.translate ul { margin: 6px 0; padding-left: 20px; }
+.translate ul li { list-style: disc; }
+</style>
+</head>
+<body>
+<h1>B2C Commerce Developer — Practice Exam (Sets 1–5, 60 Questions)</h1>
+<ol class="question-list">
+<li>
+<h3 class="set-title">Set 1: B2C Commerce Setup and SFRA Fundamentals</h3>
+<ol class="question-list">
+<li>
+<div class="question">
+<h2>Q1. In a sandbox, where should you deploy a custom cartridge via WebDAV so it becomes available to add to a site's cartridge path? (Select one)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 1 options">
+<li><label><input type="radio" name="b2c_set1_q1" value="A">A. /cartridges/current</label></li>
+<li><label><input type="radio" name="b2c_set1_q1" value="B">B. /versioned/cartridges/<code-version>/cartridges</label></li>
+<li><label><input type="radio" name="b2c_set1_q1" value="C">C. /static/default/cartridges</label></li>
+<li><label><input type="radio" name="b2c_set1_q1" value="D">D. /on-demand/<code-version>/cartridges</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Code is deployed under the active code version folder. Business Manager exposes code versions from /versioned/cartridges/&lt;code-version&gt;.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Trong sandbox, bạn nên triển khai một cartridge tùy chỉnh qua WebDAV ở đâu để nó có thể được thêm vào đường dẫn cartridge của site? (Chọn một)</strong></p>
+<ul>
+<li>A. /cartridges/current</li>
+<li>B. /versioned/cartridges/&lt;code-version&gt;/cartridges</li>
+<li>C. /static/default/cartridges</li>
+<li>D. /on-demand/&lt;code-version&gt;/cartridges</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Code được triển khai trong thư mục phiên bản code đang hoạt động. Business Manager hiển thị các phiên bản code từ /versioned/cartridges/&lt;code-version&gt;.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q2. After uploading a cartridge to the active code version, what must happen before storefront requests can execute controllers in that cartridge? (Select one)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 2 options">
+<li><label><input type="radio" name="b2c_set1_q2" value="A">A. Restart the application server</label></li>
+<li><label><input type="radio" name="b2c_set1_q2" value="B">B. Add the cartridge to the site's cartridge path and clear caches</label></li>
+<li><label><input type="radio" name="b2c_set1_q2" value="C">C. Rebuild ISML to HTML artifacts manually</label></li>
+<li><label><input type="radio" name="b2c_set1_q2" value="D">D. Assign the cartridge to a replication target</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Controllers resolve by traversing the cartridge path. Clearing cache ensures fresh resolution.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Sau khi tải cartridge lên phiên bản code đang hoạt động, điều gì phải xảy ra trước khi storefront có thể thực thi các controller trong cartridge đó? (Chọn một)</strong></p>
+<ul>
+<li>A. Khởi động lại application server</li>
+<li>B. Thêm cartridge vào đường dẫn cartridge của site và xóa cache</li>
+<li>C. Rebuild thủ công ISML thành HTML artifacts</li>
+<li>D. Gán cartridge vào mục tiêu replication</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Các controller được phân giải bằng cách duyệt qua đường dẫn cartridge. Xóa cache đảm bảo phân giải mới nhất.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q3. When installing SFRA locally, which statement is accurate about its structure? (Select one)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 3 options">
+<li><label><input type="radio" name="b2c_set1_q3" value="A">A. SFRA stores all server-side logic in ISML templates</label></li>
+<li><label><input type="radio" name="b2c_set1_q3" value="B">B. SFRA separates controllers, models, and views with routing via server.js</label></li>
+<li><label><input type="radio" name="b2c_set1_q3" value="C">C. SFRA requires no middleware for CSRF protection</label></li>
+<li><label><input type="radio" name="b2c_set1_q3" value="D">D. SFRA disallows decorators on product models</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>SFRA is MVC-like with controllers, models/decorators, and ISML templates; routing is in server code.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Khi cài đặt SFRA locally, phát biểu nào chính xác về cấu trúc của nó? (Chọn một)</strong></p>
+<ul>
+<li>A. SFRA lưu tất cả logic phía server trong ISML templates</li>
+<li>B. SFRA tách biệt controllers, models và views với routing qua server.js</li>
+<li>C. SFRA không cần middleware cho bảo vệ CSRF</li>
+<li>D. SFRA không cho phép decorators trên product models</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — SFRA theo kiến trúc MVC với controllers, models/decorators và ISML templates; routing nằm trong server code.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q4. A business requires a new country-specific taxation setting for a new site. Where do you configure the taxation and currency defaults? (Select one)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 4 options">
+<li><label><input type="radio" name="b2c_set1_q4" value="A">A. Merchant Tools > Ordering > Taxation</label></li>
+<li><label><input type="radio" name="b2c_set1_q4" value="B">B. Administration > Sites > Manage Sites > [Site] > Settings</label></li>
+<li><label><input type="radio" name="b2c_set1_q4" value="C">C. Administration > Global Preferences > Currency</label></li>
+<li><label><input type="radio" name="b2c_set1_q4" value="D">D. Merchant Tools > Site Preferences > Localization</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Site-level settings define taxation and default currency.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Doanh nghiệp yêu cầu cài đặt thuế theo quốc gia cụ thể cho site mới. Bạn cấu hình thuế và tiền tệ mặc định ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. Merchant Tools > Ordering > Taxation</li>
+<li>B. Administration > Sites > Manage Sites > [Site] > Settings</li>
+<li>C. Administration > Global Preferences > Currency</li>
+<li>D. Merchant Tools > Site Preferences > Localization</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Cài đặt cấp site xác định thuế và tiền tệ mặc định.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q5. You need to expose a new cartridge's JavaScript controllers. Which is the correct order in the site cartridge path? (Select one)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 5 options">
+<li><label><input type="radio" name="b2c_set1_q5" value="A">A. app_storefront_base before custom cartridges</label></li>
+<li><label><input type="radio" name="b2c_set1_q5" value="B">B. Custom cartridges first; app_storefront_base last</label></li>
+<li><label><input type="radio" name="b2c_set1_q5" value="C">C. app_storefront_base only; custom cartridges added in BM modules</label></li>
+<li><label><input type="radio" name="b2c_set1_q5" value="D">D. The order doesn't matter</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Put custom cartridges before app_storefront_base so overrides and extensions resolve first.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn cần hiển thị các JavaScript controllers của một cartridge mới. Thứ tự nào là đúng trong đường dẫn cartridge của site? (Chọn một)</strong></p>
+<ul>
+<li>A. app_storefront_base trước các cartridge tùy chỉnh</li>
+<li>B. Cartridge tùy chỉnh đứng trước; app_storefront_base đứng sau</li>
+<li>C. Chỉ app_storefront_base; cartridge tùy chỉnh thêm vào trong BM modules</li>
+<li>D. Thứ tự không quan trọng</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Đặt cartridge tùy chỉnh trước app_storefront_base để các ghi đè và mở rộng được phân giải trước.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q6. When adding a new site to an instance, which two tasks are required for storefront availability? (Select two)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 6 options">
+<li><label><input type="radio" name="b2c_set1_q6" value="A">A. Configure hostname aliases/DNS mapping</label></li>
+<li><label><input type="radio" name="b2c_set1_q6" value="B">B. Assign a code version to the site</label></li>
+<li><label><input type="radio" name="b2c_set1_q6" value="C">C. Create a dedicated replication process</label></li>
+<li><label><input type="radio" name="b2c_set1_q6" value="D">D. Add a valid cartridge path</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B, D</strong><br><small>The site must reference a code version and cartridge path; DNS/aliases occur outside initial BM steps.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Khi thêm một site mới vào instance, hai tác vụ nào là bắt buộc để storefront khả dụng? (Chọn hai)</strong></p>
+<ul>
+<li>A. Cấu hình hostname aliases/DNS mapping</li>
+<li>B. Gán một code version cho site</li>
+<li>C. Tạo một replication process riêng</li>
+<li>D. Thêm đường dẫn cartridge hợp lệ</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B, D</strong> — Site phải tham chiếu đến một code version và đường dẫn cartridge; DNS/aliases xảy ra ngoài các bước BM ban đầu.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q7. What is the recommended approach to extending the product model in SFRA? (Select one)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 7 options">
+<li><label><input type="radio" name="b2c_set1_q7" value="A">A. Modify the base Product model directly</label></li>
+<li><label><input type="radio" name="b2c_set1_q7" value="B">B. Use decorators to add computed properties to the product object</label></li>
+<li><label><input type="radio" name="b2c_set1_q7" value="C">C. Add properties in the ISML layer</label></li>
+<li><label><input type="radio" name="b2c_set1_q7" value="D">D. Add custom fields to the product price book</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>SFRA promotes decorators to extend models in a maintainable way.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Cách tiếp cận được khuyến nghị để mở rộng product model trong SFRA là gì? (Chọn một)</strong></p>
+<ul>
+<li>A. Sửa đổi trực tiếp base Product model</li>
+<li>B. Sử dụng decorators để thêm computed properties vào product object</li>
+<li>C. Thêm properties trong ISML layer</li>
+<li>D. Thêm custom fields vào product price book</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — SFRA khuyến khích sử dụng decorators để mở rộng models theo cách có thể bảo trì.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q8. Which two tools are typically used together to upload and version code to a B2C sandbox? (Select two)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 8 options">
+<li><label><input type="radio" name="b2c_set1_q8" value="A">A. WebDAV client</label></li>
+<li><label><input type="radio" name="b2c_set1_q8" value="B">B. OCAPI Shop API</label></li>
+<li><label><input type="radio" name="b2c_set1_q8" value="C">C. Git</label></li>
+<li><label><input type="radio" name="b2c_set1_q8" value="D">D. Page Designer</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>You typically manage source with Git and deploy to sandboxes via WebDAV.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Hai công cụ nào thường được sử dụng cùng nhau để tải lên và quản lý phiên bản code trên B2C sandbox? (Chọn hai)</strong></p>
+<ul>
+<li>A. WebDAV client</li>
+<li>B. OCAPI Shop API</li>
+<li>C. Git</li>
+<li>D. Page Designer</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Thông thường bạn quản lý source code bằng Git và triển khai lên sandbox qua WebDAV.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q9. What is the purpose of the dw.json file when using UX Studio or compatible IDEs? (Select one)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 9 options">
+<li><label><input type="radio" name="b2c_set1_q9" value="A">A. Configure OCAPI permissions</label></li>
+<li><label><input type="radio" name="b2c_set1_q9" value="B">B. Define Business Manager locales</label></li>
+<li><label><input type="radio" name="b2c_set1_q9" value="C">C. Define server connection (hostname, code version) for upload</label></li>
+<li><label><input type="radio" name="b2c_set1_q9" value="D">D. Toggle log levels</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br><small>dw.json tells the IDE where and how to upload to the sandbox.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Mục đích của file dw.json khi sử dụng UX Studio hoặc các IDE tương thích là gì? (Chọn một)</strong></p>
+<ul>
+<li>A. Cấu hình quyền OCAPI</li>
+<li>B. Xác định locales trong Business Manager</li>
+<li>C. Xác định kết nối server (hostname, code version) để tải lên</li>
+<li>D. Bật/tắt log levels</li>
+</ul>
+<p><em>✅ Đáp án: <strong>C</strong> — dw.json cho biết IDE nơi và cách thức tải lên sandbox.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q10. Which statement about SFRA updates is correct? (Select one)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 10 options">
+<li><label><input type="radio" name="b2c_set1_q10" value="A">A. Updates are auto-merged into custom cartridges</label></li>
+<li><label><input type="radio" name="b2c_set1_q10" value="B">B. Updates can affect templates and controllers; maintain extensions through composition/decorators</label></li>
+<li><label><input type="radio" name="b2c_set1_q10" value="C">C. Updates never change CSS structure</label></li>
+<li><label><input type="radio" name="b2c_set1_q10" value="D">D. Updates are backward compatible for all hooks</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Maintain customizations via extension points and decorators to tolerate updates.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Phát biểu nào về cập nhật SFRA là đúng? (Chọn một)</strong></p>
+<ul>
+<li>A. Các cập nhật được tự động hợp nhất vào cartridges tùy chỉnh</li>
+<li>B. Cập nhật có thể ảnh hưởng đến templates và controllers; duy trì extensions qua composition/decorators</li>
+<li>C. Cập nhật không bao giờ thay đổi cấu trúc CSS</li>
+<li>D. Cập nhật tương thích ngược với tất cả hooks</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Duy trì tùy chỉnh thông qua extension points và decorators để chịu được các cập nhật.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q11. To test that a cartridge was added correctly to the cartridge path, which is the most direct method? (Select one)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 11 options">
+<li><label><input type="radio" name="b2c_set1_q11" value="A">A. Trigger a BM cache warmup</label></li>
+<li><label><input type="radio" name="b2c_set1_q11" value="B">B. Hit a controller route unique to that cartridge and observe response</label></li>
+<li><label><input type="radio" name="b2c_set1_q11" value="C">C. Recompile ISML files</label></li>
+<li><label><input type="radio" name="b2c_set1_q11" value="D">D. Re-index the product catalog</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Exercise a known route exposed solely by the cartridge to validate path precedence.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để kiểm tra rằng cartridge đã được thêm đúng vào đường dẫn cartridge, phương pháp trực tiếp nhất là gì? (Chọn một)</strong></p>
+<ul>
+<li>A. Kích hoạt BM cache warmup</li>
+<li>B. Gọi một route controller duy nhất của cartridge đó và quan sát phản hồi</li>
+<li>C. Biên dịch lại các file ISML</li>
+<li>D. Re-index product catalog</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Gọi một route đã biết chỉ được hiển thị bởi cartridge để xác nhận độ ưu tiên của đường dẫn.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q12. Which three items are typical in an SFRA cartridge's folder structure? (Select three)</h2>
+<ol class="options" aria-label="Set 1: B2C Commerce Setup and SFRA Fundamentals - Question 12 options">
+<li><label><input type="radio" name="b2c_set1_q12" value="A">A. cartridge/scripts</label></li>
+<li><label><input type="radio" name="b2c_set1_q12" value="B">B. cartridge/controllers</label></li>
+<li><label><input type="radio" name="b2c_set1_q12" value="C">C. cartridge/models (or decorators/factories)</label></li>
+<li><label><input type="radio" name="b2c_set1_q12" value="D">D. cartridge/sfcc-logs</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>Scripts, controllers, and models/decorators are common; there's no sfcc-logs folder in cartridges.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Ba mục nào thường có trong cấu trúc thư mục của một SFRA cartridge? (Chọn ba)</strong></p>
+<ul>
+<li>A. cartridge/scripts</li>
+<li>B. cartridge/controllers</li>
+<li>C. cartridge/models (hoặc decorators/factories)</li>
+<li>D. cartridge/sfcc-logs</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, B, C</strong> — Scripts, controllers và models/decorators là phổ biến; không có thư mục sfcc-logs trong cartridges.</em></p>
+</div>
+</details>
+</div>
+</li>
+</ol>
+</li>
+<li>
+<h3 class="set-title">Set 2: Working with Business Manager and Data Management</h3>
+<ol class="question-list">
+<li>
+<div class="question">
+<h2>Q1. Where do you import site data such as catalogs or inventory lists? (Select one)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 1 options">
+<li><label><input type="radio" name="b2c_set2_q1" value="A">A. Administration > Code Versions</label></li>
+<li><label><input type="radio" name="b2c_set2_q1" value="B">B. Merchant Tools > Site Import & Export</label></li>
+<li><label><input type="radio" name="b2c_set2_q1" value="C">C. Merchant Tools > SEO</label></li>
+<li><label><input type="radio" name="b2c_set2_q1" value="D">D. Administration > Roles & Permissions</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>BM provides Site Import &amp; Export for data XML/CSV.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn nhập dữ liệu site như catalogs hoặc inventory lists ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. Administration > Code Versions</li>
+<li>B. Merchant Tools > Site Import &amp; Export</li>
+<li>C. Merchant Tools > SEO</li>
+<li>D. Administration > Roles &amp; Permissions</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — BM cung cấp Site Import &amp; Export để nhập dữ liệu XML/CSV.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q2. A business wants to enable a new payment processor. Where is this configured? (Select one)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 2 options">
+<li><label><input type="radio" name="b2c_set2_q2" value="A">A. Merchant Tools > Ordering > Payment Methods/Processors</label></li>
+<li><label><input type="radio" name="b2c_set2_q2" value="B">B. Administration > Global Preferences > Payment</label></li>
+<li><label><input type="radio" name="b2c_set2_q2" value="C">C. Merchant Tools > Services > Payment</label></li>
+<li><label><input type="radio" name="b2c_set2_q2" value="D">D. Merchant Tools > Site Preferences > Payments</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br><small>Payment methods and processors are configured under Ordering.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Doanh nghiệp muốn kích hoạt một payment processor mới. Cài đặt này được thực hiện ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. Merchant Tools > Ordering > Payment Methods/Processors</li>
+<li>B. Administration > Global Preferences > Payment</li>
+<li>C. Merchant Tools > Services > Payment</li>
+<li>D. Merchant Tools > Site Preferences > Payments</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A</strong> — Các phương thức và processor thanh toán được cấu hình trong mục Ordering.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q3. To make a new attribute searchable, you must do which two actions? (Select two)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 3 options">
+<li><label><input type="radio" name="b2c_set2_q3" value="A">A. Add it to searchable fields in site search preferences</label></li>
+<li><label><input type="radio" name="b2c_set2_q3" value="B">B. Mark the attribute as searchable in attribute settings</label></li>
+<li><label><input type="radio" name="b2c_set2_q3" value="C">C. Rebuild the search index</label></li>
+<li><label><input type="radio" name="b2c_set2_q3" value="D">D. Update the Page Designer component</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B, C</strong><br><small>Mark attribute searchable and rebuild indexes to include it.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để làm cho một attribute mới có thể tìm kiếm được, bạn phải thực hiện hai hành động nào? (Chọn hai)</strong></p>
+<ul>
+<li>A. Thêm nó vào searchable fields trong site search preferences</li>
+<li>B. Đánh dấu attribute là searchable trong cài đặt attribute</li>
+<li>C. Rebuild search index</li>
+<li>D. Cập nhật Page Designer component</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B, C</strong> — Đánh dấu attribute là searchable và rebuild indexes để bao gồm nó.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q4. Where do you create a search refinement definition for the storefront? (Select one)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 4 options">
+<li><label><input type="radio" name="b2c_set2_q4" value="A">A. Merchant Tools > SEO > URL Rules</label></li>
+<li><label><input type="radio" name="b2c_set2_q4" value="B">B. Merchant Tools > Search > Refine Settings</label></li>
+<li><label><input type="radio" name="b2c_set2_q4" value="C">C. Merchant Tools > Search > Search Refinements</label></li>
+<li><label><input type="radio" name="b2c_set2_q4" value="D">D. Merchant Tools > Products and Catalogs > Catalogs</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br><small>Search refinements are configured under Search.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn tạo định nghĩa search refinement cho storefront ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. Merchant Tools > SEO > URL Rules</li>
+<li>B. Merchant Tools > Search > Refine Settings</li>
+<li>C. Merchant Tools > Search > Search Refinements</li>
+<li>D. Merchant Tools > Products and Catalogs > Catalogs</li>
+</ul>
+<p><em>✅ Đáp án: <strong>C</strong> — Search refinements được cấu hình trong mục Search.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q5. A performance issue is suspected around a custom controller. Which two tools help diagnose this? (Select two)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 5 options">
+<li><label><input type="radio" name="b2c_set2_q5" value="A">A. Request Logs and custom log categories</label></li>
+<li><label><input type="radio" name="b2c_set2_q5" value="B">B. Profilers in BM</label></li>
+<li><label><input type="radio" name="b2c_set2_q5" value="C">C. OCAPI Data API</label></li>
+<li><label><input type="radio" name="b2c_set2_q5" value="D">D. URL Rules</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, B</strong><br><small>Use log categories and profilers to measure controller performance.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Nghi ngờ có vấn đề hiệu suất xung quanh một custom controller. Hai công cụ nào giúp chẩn đoán điều này? (Chọn hai)</strong></p>
+<ul>
+<li>A. Request Logs và custom log categories</li>
+<li>B. Profilers trong BM</li>
+<li>C. OCAPI Data API</li>
+<li>D. URL Rules</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, B</strong> — Sử dụng log categories và profilers để đo hiệu suất controller.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q6. To log only non-sensitive data at INFO level to a custom log file, what must be configured? (Select one)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 6 options">
+<li><label><input type="radio" name="b2c_set2_q6" value="A">A. Log rotation in WebDAV</label></li>
+<li><label><input type="radio" name="b2c_set2_q6" value="B">B. Log categories and appenders in BM</label></li>
+<li><label><input type="radio" name="b2c_set2_q6" value="C">C. CSRF token in server middleware</label></li>
+<li><label><input type="radio" name="b2c_set2_q6" value="D">D. Cache inheritance</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>BM log settings control categories, levels, and custom appenders.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để chỉ ghi dữ liệu không nhạy cảm ở mức INFO vào một file log tùy chỉnh, điều gì phải được cấu hình? (Chọn một)</strong></p>
+<ul>
+<li>A. Log rotation trong WebDAV</li>
+<li>B. Log categories và appenders trong BM</li>
+<li>C. CSRF token trong server middleware</li>
+<li>D. Cache inheritance</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Cài đặt log trong BM kiểm soát categories, levels và custom appenders.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q7. A new custom object is needed to store external mapping IDs. What two steps are necessary? (Select two)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 7 options">
+<li><label><input type="radio" name="b2c_set2_q7" value="A">A. Create the custom object type and its attributes in BM</label></li>
+<li><label><input type="radio" name="b2c_set2_q7" value="B">B. Add the object to the cartridge path</label></li>
+<li><label><input type="radio" name="b2c_set2_q7" value="C">C. Configure permissions and ensure OCAPI/Data API access if needed</label></li>
+<li><label><input type="radio" name="b2c_set2_q7" value="D">D. Add the object to the search index refinements</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>Define the type/attributes, and if accessed externally, configure permissions.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Cần một custom object mới để lưu trữ các mapping ID bên ngoài. Hai bước nào là cần thiết? (Chọn hai)</strong></p>
+<ul>
+<li>A. Tạo kiểu custom object và các attributes của nó trong BM</li>
+<li>B. Thêm object vào đường dẫn cartridge</li>
+<li>C. Cấu hình quyền và đảm bảo truy cập OCAPI/Data API nếu cần</li>
+<li>D. Thêm object vào search index refinements</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Xác định kiểu/attributes, và nếu được truy cập từ bên ngoài, hãy cấu hình quyền.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q8. To expose a new attribute on Product in the storefront, which locations are typically touched? (Select two)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 8 options">
+<li><label><input type="radio" name="b2c_set2_q8" value="A">A. ISML templates rendering product details</label></li>
+<li><label><input type="radio" name="b2c_set2_q8" value="B">B. Model decorators/factories</label></li>
+<li><label><input type="radio" name="b2c_set2_q8" value="C">C. The replication configuration</label></li>
+<li><label><input type="radio" name="b2c_set2_q8" value="D">D. Code version folder name</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, B</strong><br><small>Extend the model and update templates to display values.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để hiển thị một attribute mới trên Product trong storefront, những vị trí nào thường cần chỉnh sửa? (Chọn hai)</strong></p>
+<ul>
+<li>A. ISML templates hiển thị chi tiết sản phẩm</li>
+<li>B. Model decorators/factories</li>
+<li>C. Cấu hình replication</li>
+<li>D. Tên thư mục code version</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, B</strong> — Mở rộng model và cập nhật templates để hiển thị các giá trị.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q9. When adjusting site search synonyms for better recall of terms, where do you configure this? (Select one)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 9 options">
+<li><label><input type="radio" name="b2c_set2_q9" value="A">A. Merchant Tools > Search > Dictionaries</label></li>
+<li><label><input type="radio" name="b2c_set2_q9" value="B">B. Merchant Tools > SEO > Redirects</label></li>
+<li><label><input type="radio" name="b2c_set2_q9" value="C">C. Administration > Site Preferences</label></li>
+<li><label><input type="radio" name="b2c_set2_q9" value="D">D. Merchant Tools > Content > Assets</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br><small>Dictionaries manage synonyms, stop words, etc.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Khi điều chỉnh từ đồng nghĩa search của site để cải thiện khả năng nhớ lại các thuật ngữ, bạn cấu hình điều này ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. Merchant Tools > Search > Dictionaries</li>
+<li>B. Merchant Tools > SEO > Redirects</li>
+<li>C. Administration > Site Preferences</li>
+<li>D. Merchant Tools > Content > Assets</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A</strong> — Dictionaries quản lý từ đồng nghĩa, stop words, v.v.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q10. A data import is failing due to a malformed XML. What is the first best step? (Select one)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 10 options">
+<li><label><input type="radio" name="b2c_set2_q10" value="A">A. Clear site caches</label></li>
+<li><label><input type="radio" name="b2c_set2_q10" value="B">B. Validate the XML against the schema expected by BM Import</label></li>
+<li><label><input type="radio" name="b2c_set2_q10" value="C">C. Re-upload to a different directory</label></li>
+<li><label><input type="radio" name="b2c_set2_q10" value="D">D. Trigger replication</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Validate input file structure against the expected XSD.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một lần nhập dữ liệu thất bại do XML không đúng định dạng. Bước tốt nhất đầu tiên là gì? (Chọn một)</strong></p>
+<ul>
+<li>A. Xóa site caches</li>
+<li>B. Xác thực XML theo schema mà BM Import yêu cầu</li>
+<li>C. Tải lại lên một thư mục khác</li>
+<li>D. Kích hoạt replication</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Xác thực cấu trúc file đầu vào theo XSD được yêu cầu.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q11. You need to allow an external integration to access a custom object via OCAPI Data. What two actions are required? (Select two)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 11 options">
+<li><label><input type="radio" name="b2c_set2_q11" value="A">A. Update ocapi.json to permit read/write on the custom object</label></li>
+<li><label><input type="radio" name="b2c_set2_q11" value="B">B. Add the integration host to cspTrustedSites</label></li>
+<li><label><input type="radio" name="b2c_set2_q11" value="C">C. Configure client ID with appropriate API settings in BM</label></li>
+<li><label><input type="radio" name="b2c_set2_q11" value="D">D. Add a custom URL rule</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>OCAPI permissions are defined in ocapi.json and tied to client credentials.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn cần cho phép một tích hợp bên ngoài truy cập vào custom object qua OCAPI Data. Hai hành động nào là cần thiết? (Chọn hai)</strong></p>
+<ul>
+<li>A. Cập nhật ocapi.json để cho phép read/write trên custom object</li>
+<li>B. Thêm integration host vào cspTrustedSites</li>
+<li>C. Cấu hình client ID với cài đặt API phù hợp trong BM</li>
+<li>D. Thêm một URL rule tùy chỉnh</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Quyền OCAPI được xác định trong ocapi.json và gắn với thông tin xác thực client.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q12. Which three Business Manager areas are most relevant to merchandising teams rather than developers? (Select three)</h2>
+<ol class="options" aria-label="Set 2: Working with Business Manager and Data Management - Question 12 options">
+<li><label><input type="radio" name="b2c_set2_q12" value="A">A. Products and Catalogs</label></li>
+<li><label><input type="radio" name="b2c_set2_q12" value="B">B. Search and Search Refinements</label></li>
+<li><label><input type="radio" name="b2c_set2_q12" value="C">C. Services Framework</label></li>
+<li><label><input type="radio" name="b2c_set2_q12" value="D">D. Content (Assets, Slots, Page Designer)</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Merchandisers work with products, content, and search tools.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Ba khu vực Business Manager nào phù hợp nhất với các đội merchandising thay vì các nhà phát triển? (Chọn ba)</strong></p>
+<ul>
+<li>A. Products and Catalogs</li>
+<li>B. Search and Search Refinements</li>
+<li>C. Services Framework</li>
+<li>D. Content (Assets, Slots, Page Designer)</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, B, D</strong> — Các đội merchandising làm việc với sản phẩm, nội dung và công cụ search.</em></p>
+</div>
+</details>
+</div>
+</li>
+</ol>
+</li>
+<li>
+<h3 class="set-title">Set 3: Application Development — Controllers, ISML, Forms, Hooks</h3>
+<ol class="question-list">
+<li>
+<div class="question">
+<h2>Q1. In SFRA, which middleware should wrap routes that accept form submissions? (Select one)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 1 options">
+<li><label><input type="radio" name="b2c_set3_q1" value="A">A. server.middleware.https only</label></li>
+<li><label><input type="radio" name="b2c_set3_q1" value="B">B. csrfProtection.validateRequest paired with csrfProtection.generateToken</label></li>
+<li><label><input type="radio" name="b2c_set3_q1" value="C">C. consentTracking.consent</label></li>
+<li><label><input type="radio" name="b2c_set3_q1" value="D">D. cache.applyCache</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>CSRF protection is required for POSTs and form handling in SFRA.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Trong SFRA, middleware nào nên bao bọc các routes chấp nhận form submissions? (Chọn một)</strong></p>
+<ul>
+<li>A. Chỉ server.middleware.https</li>
+<li>B. csrfProtection.validateRequest kết hợp với csrfProtection.generateToken</li>
+<li>C. consentTracking.consent</li>
+<li>D. cache.applyCache</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Bảo vệ CSRF là bắt buộc đối với các POST requests và xử lý form trong SFRA.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q2. Which ISML tag is used to include a component that can render in a separate pipeline and cache independently? (Select one)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 2 options">
+<li><label><input type="radio" name="b2c_set3_q2" value="A">A. isinclude</label></li>
+<li><label><input type="radio" name="b2c_set3_q2" value="B">B. isdecorate</label></li>
+<li><label><input type="radio" name="b2c_set3_q2" value="C">C. iscomponent</label></li>
+<li><label><input type="radio" name="b2c_set3_q2" value="D">D. iscache</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br><small>iscomponent supports modular, independently cachable render units.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Thẻ ISML nào được sử dụng để bao gồm một component có thể render trong pipeline riêng và cache độc lập? (Chọn một)</strong></p>
+<ul>
+<li>A. isinclude</li>
+<li>B. isdecorate</li>
+<li>C. iscomponent</li>
+<li>D. iscache</li>
+</ul>
+<p><em>✅ Đáp án: <strong>C</strong> — iscomponent hỗ trợ các đơn vị render modular, có thể cache độc lập.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q3. To pass server-side data to an ISML template from a controller, what method is typically used? (Select one)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 3 options">
+<li><label><input type="radio" name="b2c_set3_q3" value="A">A. res.redirect(URLUtils.url(…))</label></li>
+<li><label><input type="radio" name="b2c_set3_q3" value="B">B. res.render(template, viewDataObject)</label></li>
+<li><label><input type="radio" name="b2c_set3_q3" value="C">C. next()</label></li>
+<li><label><input type="radio" name="b2c_set3_q3" value="D">D. res.json(viewDataObject)</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>res.render accepts a template path and a view-data hash.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để truyền dữ liệu phía server sang ISML template từ một controller, phương thức nào thường được sử dụng? (Chọn một)</strong></p>
+<ul>
+<li>A. res.redirect(URLUtils.url(…))</li>
+<li>B. res.render(template, viewDataObject)</li>
+<li>C. next()</li>
+<li>D. res.json(viewDataObject)</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — res.render chấp nhận đường dẫn template và một view-data hash.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q4. A route should return JSON instead of rendering a template. Which two steps are correct? (Select two)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 4 options">
+<li><label><input type="radio" name="b2c_set3_q4" value="A">A. Set response content type to application/json</label></li>
+<li><label><input type="radio" name="b2c_set3_q4" value="B">B. Call res.render with a JSON template</label></li>
+<li><label><input type="radio" name="b2c_set3_q4" value="C">C. Use res.json or write JSON string and set status</label></li>
+<li><label><input type="radio" name="b2c_set3_q4" value="D">D. Override site preference DisableJSON to false</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>Return JSON via res.json (preferred) and ensure proper content type.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một route nên trả về JSON thay vì render template. Hai bước nào là đúng? (Chọn hai)</strong></p>
+<ul>
+<li>A. Đặt response content type thành application/json</li>
+<li>B. Gọi res.render với một JSON template</li>
+<li>C. Sử dụng res.json hoặc ghi JSON string và đặt status</li>
+<li>D. Override site preference DisableJSON thành false</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Trả về JSON qua res.json (ưu tiên) và đảm bảo content type đúng.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q5. You must decorate the product with a computed boolean flag "isClearance" based on price book. Where should this logic live? (Select one)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 5 options">
+<li><label><input type="radio" name="b2c_set3_q5" value="A">A. In the ISML template using script tags</label></li>
+<li><label><input type="radio" name="b2c_set3_q5" value="B">B. In a product decorator module applied by the model factory</label></li>
+<li><label><input type="radio" name="b2c_set3_q5" value="C">C. In the OCAPI configuration</label></li>
+<li><label><input type="radio" name="b2c_set3_q5" value="D">D. In Page Designer component JSON</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Use decorators/factories to keep business logic out of templates.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn phải trang trí sản phẩm với một boolean flag được tính toán "isClearance" dựa trên price book. Logic này nên nằm ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. Trong ISML template sử dụng script tags</li>
+<li>B. Trong một product decorator module được áp dụng bởi model factory</li>
+<li>C. Trong cấu hình OCAPI</li>
+<li>D. Trong Page Designer component JSON</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Sử dụng decorators/factories để giữ business logic ra khỏi templates.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q6. Given a requirement to validate and persist a custom form, which three pieces are typical? (Select three)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 6 options">
+<li><label><input type="radio" name="b2c_set3_q6" value="A">A. forms XML definition under forms/</label></li>
+<li><label><input type="radio" name="b2c_set3_q6" value="B">B. Controller route using server.post with CSRF middleware</label></li>
+<li><label><input type="radio" name="b2c_set3_q6" value="C">C. Client-side JS only, no server validation</label></li>
+<li><label><input type="radio" name="b2c_set3_q6" value="D">D. Form handler that binds and validates fields via Form API</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Define forms XML, secure POST route, and use SFCC Form bindings/validation server-side.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Với yêu cầu xác thực và lưu trữ một custom form, ba thành phần nào là điển hình? (Chọn ba)</strong></p>
+<ul>
+<li>A. Định nghĩa XML form trong thư mục forms/</li>
+<li>B. Controller route sử dụng server.post với CSRF middleware</li>
+<li>C. Chỉ client-side JS, không có xác thực phía server</li>
+<li>D. Form handler ràng buộc và xác thực các trường qua Form API</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, B, D</strong> — Xác định forms XML, bảo mật POST route và sử dụng SFCC Form bindings/validation phía server.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q7. Which hook would you use to intercept basket calculation logic without modifying core controller behavior? (Select one)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 7 options">
+<li><label><input type="radio" name="b2c_set3_q7" value="A">A. dw.web.HttpParameterMap</label></li>
+<li><label><input type="radio" name="b2c_set3_q7" value="B">B. app_*.properties</label></li>
+<li><label><input type="radio" name="b2c_set3_q7" value="C">C. Hook dw.ocapi.shop.basket.beforeGET</label></li>
+<li><label><input type="radio" name="b2c_set3_q7" value="D">D. Hook implementations such as app.calculateLineItem or similar extension points</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br><small>Use documented hook extension points for pricing, taxes, or calculations.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn sẽ sử dụng hook nào để chặn logic tính toán basket mà không sửa đổi hành vi controller cốt lõi? (Chọn một)</strong></p>
+<ul>
+<li>A. dw.web.HttpParameterMap</li>
+<li>B. app_*.properties</li>
+<li>C. Hook dw.ocapi.shop.basket.beforeGET</li>
+<li>D. Triển khai hook như app.calculateLineItem hoặc các extension points tương tự</li>
+</ul>
+<p><em>✅ Đáp án: <strong>D</strong> — Sử dụng các extension points hook đã được tài liệu hóa cho định giá, thuế hoặc tính toán.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q8. For a new marketing landing page in Page Designer, what two artifacts must you create? (Select two)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 8 options">
+<li><label><input type="radio" name="b2c_set3_q8" value="A">A. A page type definition</label></li>
+<li><label><input type="radio" name="b2c_set3_q8" value="B">B. A job to publish the page nightly</label></li>
+<li><label><input type="radio" name="b2c_set3_q8" value="C">C. Components (and placements) used within that page type</label></li>
+<li><label><input type="radio" name="b2c_set3_q8" value="D">D. ocapi.json entry to authorize render</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>Page types and components define marketer-editable structures.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Đối với một trang landing marketing mới trong Page Designer, bạn cần tạo hai artifact nào? (Chọn hai)</strong></p>
+<ul>
+<li>A. Định nghĩa page type</li>
+<li>B. Một job để publish trang mỗi đêm</li>
+<li>C. Các components (và placements) được sử dụng trong page type đó</li>
+<li>D. Mục ocapi.json để ủy quyền render</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Page types và components xác định các cấu trúc mà marketer có thể chỉnh sửa.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q9. Where do you define localized resources used in templates? (Select one)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 9 options">
+<li><label><input type="radio" name="b2c_set3_q9" value="A">A. cartridge/templates/resources/*.properties per locale</label></li>
+<li><label><input type="radio" name="b2c_set3_q9" value="B">B. cartridge/scripts/i18n.js</label></li>
+<li><label><input type="radio" name="b2c_set3_q9" value="C">C. Global BM preferences</label></li>
+<li><label><input type="radio" name="b2c_set3_q9" value="D">D. services.json</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br><small>ISML uses properties files under templates/resources for i18n.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn xác định các localized resources được sử dụng trong templates ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. cartridge/templates/resources/*.properties theo từng locale</li>
+<li>B. cartridge/scripts/i18n.js</li>
+<li>C. Global BM preferences</li>
+<li>D. services.json</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A</strong> — ISML sử dụng các file properties trong templates/resources cho i18n.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q10. What is the best practice for logging from a controller? (Select one)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 10 options">
+<li><label><input type="radio" name="b2c_set3_q10" value="A">A. Use System.out.println</label></li>
+<li><label><input type="radio" name="b2c_set3_q10" value="B">B. Use dw.system.Logger.getLogger(category, file).info/debug/error</label></li>
+<li><label><input type="radio" name="b2c_set3_q10" value="C">C. Write to a custom text file via WebDAV</label></li>
+<li><label><input type="radio" name="b2c_set3_q10" value="D">D. Log only in production</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Use Logger with configured categories and levels.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Best practice khi logging từ một controller là gì? (Chọn một)</strong></p>
+<ul>
+<li>A. Sử dụng System.out.println</li>
+<li>B. Sử dụng dw.system.Logger.getLogger(category, file).info/debug/error</li>
+<li>C. Ghi vào một file text tùy chỉnh qua WebDAV</li>
+<li>D. Chỉ log trong môi trường production</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Sử dụng Logger với các categories và levels đã được cấu hình.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q11. A controller violates best practices by doing synchronous HTTP calls on every product detail view. Which two changes improve scalability? (Select two)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 11 options">
+<li><label><input type="radio" name="b2c_set3_q11" value="A">A. Cache results where possible via response or application cache</label></li>
+<li><label><input type="radio" name="b2c_set3_q11" value="B">B. Move calls into decorators executed for each request</label></li>
+<li><label><input type="radio" name="b2c_set3_q11" value="C">C. Use Service Framework with proper timeouts and circuit breakers and cache at model layer</label></li>
+<li><label><input type="radio" name="b2c_set3_q11" value="D">D. Increase Business Manager log levels to FATAL</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>Use the Service Framework with caching and resiliency patterns; avoid per-request blocking calls when possible.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một controller vi phạm best practices khi thực hiện các HTTP calls đồng bộ trên mỗi lượt xem chi tiết sản phẩm. Hai thay đổi nào cải thiện khả năng mở rộng? (Chọn hai)</strong></p>
+<ul>
+<li>A. Cache kết quả khi có thể qua response hoặc application cache</li>
+<li>B. Chuyển các calls vào decorators thực hiện cho mỗi request</li>
+<li>C. Sử dụng Service Framework với timeouts và circuit breakers phù hợp và cache ở model layer</li>
+<li>D. Tăng log levels của Business Manager lên FATAL</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Sử dụng Service Framework với caching và các mẫu resiliency; tránh các blocking calls per-request khi có thể.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q12. For a route that renders cached content varying by locale and currency, which approach is recommended? (Select one)</h2>
+<ol class="options" aria-label="Set 3: Application Development — Controllers, ISML, Forms, Hooks - Question 12 options">
+<li><label><input type="radio" name="b2c_set3_q12" value="A">A. Disable cache</label></li>
+<li><label><input type="radio" name="b2c_set3_q12" value="B">B. Use res.cachePeriod with varyBy parameters, or use iscache with vary attributes</label></li>
+<li><label><input type="radio" name="b2c_set3_q12" value="C">C. Use only CDN-level caching</label></li>
+<li><label><input type="radio" name="b2c_set3_q12" value="D">D. Use OCAPI caching only</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Use platform cache directives (iscache or res.cachePeriod) to vary content by keys.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Đối với một route render nội dung được cache thay đổi theo locale và tiền tệ, cách tiếp cận nào được khuyến nghị? (Chọn một)</strong></p>
+<ul>
+<li>A. Tắt cache</li>
+<li>B. Sử dụng res.cachePeriod với các tham số varyBy, hoặc sử dụng iscache với các thuộc tính vary</li>
+<li>C. Chỉ sử dụng CDN-level caching</li>
+<li>D. Chỉ sử dụng OCAPI caching</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Sử dụng platform cache directives (iscache hoặc res.cachePeriod) để biến đổi nội dung theo các keys.</em></p>
+</div>
+</details>
+</div>
+</li>
+</ol>
+</li>
+<li>
+<h3 class="set-title">Set 4: Services, OCAPI, Jobs, and Integrations</h3>
+<ol class="question-list">
+<li>
+<div class="question">
+<h2>Q1. To create a robust integration to an external REST API, which three Service Framework configurations are key? (Select three)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 1 options">
+<li><label><input type="radio" name="b2c_set4_q1" value="A">A. Connection and socket timeouts</label></li>
+<li><label><input type="radio" name="b2c_set4_q1" value="B">B. Circuit breaker/retry policies and error handling</label></li>
+<li><label><input type="radio" name="b2c_set4_q1" value="C">C. OCAPI Data credential reuse</label></li>
+<li><label><input type="radio" name="b2c_set4_q1" value="D">D. Caching policy/response parsing</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Timeouts, resiliency, and parsing/caching are core Service Framework concerns.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để tạo một tích hợp mạnh mẽ với external REST API, ba cấu hình Service Framework nào là quan trọng? (Chọn ba)</strong></p>
+<ul>
+<li>A. Connection và socket timeouts</li>
+<li>B. Circuit breaker/retry policies và error handling</li>
+<li>C. Tái sử dụng thông tin xác thực OCAPI Data</li>
+<li>D. Caching policy/response parsing</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, B, D</strong> — Timeouts, resiliency và parsing/caching là các mối quan tâm cốt lõi của Service Framework.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q2. Where are service credentials (username/password/API keys) securely stored for services? (Select one)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 2 options">
+<li><label><input type="radio" name="b2c_set4_q2" value="A">A. In cartridge scripts</label></li>
+<li><label><input type="radio" name="b2c_set4_q2" value="B">B. In dw.json</label></li>
+<li><label><input type="radio" name="b2c_set4_q2" value="C">C. In BM service profiles/credentials</label></li>
+<li><label><input type="radio" name="b2c_set4_q2" value="D">D. In site preferences resources.properties</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br><small>Store secrets in BM service credentials, not code.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Thông tin xác thực dịch vụ (username/password/API keys) được lưu trữ an toàn ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. Trong cartridge scripts</li>
+<li>B. Trong dw.json</li>
+<li>C. Trong BM service profiles/credentials</li>
+<li>D. Trong site preferences resources.properties</li>
+</ul>
+<p><em>✅ Đáp án: <strong>C</strong> — Lưu trữ secrets trong BM service credentials, không phải trong code.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q3. You must expose baskets to an external OMS via OCAPI Shop. Which two actions are required? (Select two)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 3 options">
+<li><label><input type="radio" name="b2c_set4_q3" value="A">A. Update OCAPI Shop permissions in ocapi.json to allow basket read/write</label></li>
+<li><label><input type="radio" name="b2c_set4_q3" value="B">B. Create a custom cartridge to simulate OCAPI</label></li>
+<li><label><input type="radio" name="b2c_set4_q3" value="C">C. Configure client ID/secret and assign to the OCAPI setting</label></li>
+<li><label><input type="radio" name="b2c_set4_q3" value="D">D. Enable cartridge-level setting shop.ocapi.enabled=true</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>OCAPI access requires client credentials and appropriate permissions.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Bạn phải hiển thị baskets cho một OMS bên ngoài qua OCAPI Shop. Hai hành động nào là bắt buộc? (Chọn hai)</strong></p>
+<ul>
+<li>A. Cập nhật quyền OCAPI Shop trong ocapi.json để cho phép basket read/write</li>
+<li>B. Tạo một custom cartridge để mô phỏng OCAPI</li>
+<li>C. Cấu hình client ID/secret và gán cho cài đặt OCAPI</li>
+<li>D. Kích hoạt cài đặt cấp cartridge shop.ocapi.enabled=true</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Truy cập OCAPI yêu cầu thông tin xác thực client và quyền phù hợp.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q4. A nightly job must import inventory and reindex search. What two job steps are typical? (Select two)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 4 options">
+<li><label><input type="radio" name="b2c_set4_q4" value="A">A. A script step to call import API for inventory list</label></li>
+<li><label><input type="radio" name="b2c_set4_q4" value="B">B. Disable all caches for the duration</label></li>
+<li><label><input type="radio" name="b2c_set4_q4" value="C">C. A system step to trigger search index rebuild</label></li>
+<li><label><input type="radio" name="b2c_set4_q4" value="D">D. A replication immediately after</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>A script/system step pair often imports data then rebuilds search indexes.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một job hàng đêm phải nhập inventory và reindex search. Hai bước job nào là điển hình? (Chọn hai)</strong></p>
+<ul>
+<li>A. Một script step để gọi import API cho inventory list</li>
+<li>B. Tắt tất cả các cache trong suốt thời gian</li>
+<li>C. Một system step để kích hoạt search index rebuild</li>
+<li>D. Một replication ngay sau đó</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Một cặp script/system step thường nhập dữ liệu rồi rebuild search indexes.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q5. Which two directories are commonly used for job import files? (Select two)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 5 options">
+<li><label><input type="radio" name="b2c_set4_q5" value="A">A. /on/demand/tmp/</label></li>
+<li><label><input type="radio" name="b2c_set4_q5" value="B">B. /impex/src/</label></li>
+<li><label><input type="radio" name="b2c_set4_q5" value="C">C. /versioned/imports/</label></li>
+<li><label><input type="radio" name="b2c_set4_q5" value="D">D. /impex/src/instance/</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B, D</strong><br><small>impex is the import/export directory; instance or org-level subfolders are typical.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Hai thư mục nào thường được sử dụng cho các file import của job? (Chọn hai)</strong></p>
+<ul>
+<li>A. /on/demand/tmp/</li>
+<li>B. /impex/src/</li>
+<li>C. /versioned/imports/</li>
+<li>D. /impex/src/instance/</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B, D</strong> — impex là thư mục import/export; các thư mục con cấp instance hoặc org là điển hình.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q6. To process large catalogs efficiently, which two techniques help? (Select two)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 6 options">
+<li><label><input type="radio" name="b2c_set4_q6" value="A">A. Streamed CSV/XML parsing in scripts</label></li>
+<li><label><input type="radio" name="b2c_set4_q6" value="B">B. Break imports into chunks and use delta updates</label></li>
+<li><label><input type="radio" name="b2c_set4_q6" value="C">C. Increase log level to DEBUG globally</label></li>
+<li><label><input type="radio" name="b2c_set4_q6" value="D">D. Run imports through ISML templates</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, B</strong><br><small>Streaming and delta/chunked imports scale better.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để xử lý các catalog lớn một cách hiệu quả, hai kỹ thuật nào giúp ích? (Chọn hai)</strong></p>
+<ul>
+<li>A. Phân tích CSV/XML theo luồng trong scripts</li>
+<li>B. Chia imports thành các chunks và sử dụng delta updates</li>
+<li>C. Tăng log level lên DEBUG toàn cục</li>
+<li>D. Chạy imports qua ISML templates</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, B</strong> — Streaming và delta/chunked imports có khả năng mở rộng tốt hơn.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q7. For OCAPI Data permissions, the "read_attributes" and "write_attributes" sections should include which kinds of fields? (Select one)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 7 options">
+<li><label><input type="radio" name="b2c_set4_q7" value="A">A. Only system attributes</label></li>
+<li><label><input type="radio" name="b2c_set4_q7" value="B">B. Only custom attributes</label></li>
+<li><label><input type="radio" name="b2c_set4_q7" value="C">C. Both system and custom attributes you intend to expose</label></li>
+<li><label><input type="radio" name="b2c_set4_q7" value="D">D. No attributes; OCAPI infers them</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br><small>Explicitly list fields to read/write—principle of least privilege.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Đối với quyền OCAPI Data, các mục "read_attributes" và "write_attributes" nên bao gồm những loại trường nào? (Chọn một)</strong></p>
+<ul>
+<li>A. Chỉ system attributes</li>
+<li>B. Chỉ custom attributes</li>
+<li>C. Cả system và custom attributes mà bạn muốn hiển thị</li>
+<li>D. Không có attributes; OCAPI tự suy ra chúng</li>
+</ul>
+<p><em>✅ Đáp án: <strong>C</strong> — Liệt kê rõ ràng các trường cần đọc/ghi — nguyên tắc đặc quyền tối thiểu.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q8. Which three are strong indicators an integration should be asynchronous? (Select three)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 8 options">
+<li><label><input type="radio" name="b2c_set4_q8" value="A">A. Non-blocking to storefront request path</label></li>
+<li><label><input type="radio" name="b2c_set4_q8" value="B">B. Long-running processing or batch-oriented data</label></li>
+<li><label><input type="radio" name="b2c_set4_q8" value="C">C. Requires immediate shopper feedback at checkout</label></li>
+<li><label><input type="radio" name="b2c_set4_q8" value="D">D. Can be queued and retried independently</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Async improves UX and resilience when work is long-running or not needed immediately.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Ba chỉ số nào là dấu hiệu mạnh mẽ cho thấy một tích hợp nên là bất đồng bộ? (Chọn ba)</strong></p>
+<ul>
+<li>A. Không chặn đường dẫn request của storefront</li>
+<li>B. Xử lý chạy lâu hoặc dữ liệu theo lô</li>
+<li>C. Yêu cầu phản hồi ngay lập tức cho người mua tại checkout</li>
+<li>D. Có thể được đưa vào hàng đợi và thử lại độc lập</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, B, D</strong> — Bất đồng bộ cải thiện UX và khả năng phục hồi khi công việc chạy lâu hoặc không cần ngay lập tức.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q9. To mask sensitive tokens in logs from a service response, which approach is best? (Select one)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 9 options">
+<li><label><input type="radio" name="b2c_set4_q9" value="A">A. Disable logs</label></li>
+<li><label><input type="radio" name="b2c_set4_q9" value="B">B. Use a response parser that removes/redacts sensitive fields before logging</label></li>
+<li><label><input type="radio" name="b2c_set4_q9" value="C">C. Print full payloads but store logs only for one day</label></li>
+<li><label><input type="radio" name="b2c_set4_q9" value="D">D. Rely on DEBUG-only logs</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Redact at parse/log time to prevent sensitive data leakage.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để che giấu các token nhạy cảm trong logs từ service response, cách tiếp cận nào là tốt nhất? (Chọn một)</strong></p>
+<ul>
+<li>A. Tắt logs</li>
+<li>B. Sử dụng response parser loại bỏ/che giấu các trường nhạy cảm trước khi ghi log</li>
+<li>C. In đầy đủ payloads nhưng chỉ lưu logs trong một ngày</li>
+<li>D. Chỉ dựa vào DEBUG-only logs</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Che giấu tại thời điểm parse/log để ngăn chặn rò rỉ dữ liệu nhạy cảm.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q10. When building an OCAPI customization involving hooks, where is hook code implemented? (Select one)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 10 options">
+<li><label><input type="radio" name="b2c_set4_q10" value="A">A. In ocapi.json directly</label></li>
+<li><label><input type="radio" name="b2c_set4_q10" value="B">B. In a cartridge implementing the documented hook scripts and registered in cartridge path</label></li>
+<li><label><input type="radio" name="b2c_set4_q10" value="C">C. In Business Manager's Log Settings</label></li>
+<li><label><input type="radio" name="b2c_set4_q10" value="D">D. In Page Designer page types</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>OCAPI hooks are implemented in cartridges on the server side.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Khi xây dựng tùy chỉnh OCAPI liên quan đến hooks, hook code được triển khai ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. Trực tiếp trong ocapi.json</li>
+<li>B. Trong một cartridge triển khai các hook scripts đã được tài liệu hóa và được đăng ký trong đường dẫn cartridge</li>
+<li>C. Trong Log Settings của Business Manager</li>
+<li>D. Trong page types của Page Designer</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — OCAPI hooks được triển khai trong cartridges ở phía server.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q11. A job fails intermittently due to a locked resource. What two steps improve robustness? (Select two)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 11 options">
+<li><label><input type="radio" name="b2c_set4_q11" value="A">A. Introduce retry with backoff in the job script</label></li>
+<li><label><input type="radio" name="b2c_set4_q11" value="B">B. Switch job to run synchronously on storefront requests</label></li>
+<li><label><input type="radio" name="b2c_set4_q11" value="C">C. Add job parameterization and pre-checks for locks</label></li>
+<li><label><input type="radio" name="b2c_set4_q11" value="D">D. Increase code version</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>Retries/backoff and pre-checks mitigate contention issues.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một job thất bại không liên tục do tài nguyên bị khóa. Hai bước nào cải thiện tính bền vững? (Chọn hai)</strong></p>
+<ul>
+<li>A. Giới thiệu retry với backoff trong job script</li>
+<li>B. Chuyển job chạy đồng bộ trên storefront requests</li>
+<li>C. Thêm job parameterization và pre-checks cho các khóa</li>
+<li>D. Tăng code version</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Retries/backoff và pre-checks giảm thiểu các vấn đề tranh chấp.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q12. An external PIM pushes product updates every hour. What is the most efficient search indexing strategy? (Select one)</h2>
+<ol class="options" aria-label="Set 4: Services, OCAPI, Jobs, and Integrations - Question 12 options">
+<li><label><input type="radio" name="b2c_set4_q12" value="A">A. Full reindex every hour</label></li>
+<li><label><input type="radio" name="b2c_set4_q12" value="B">B. Delta indexing after each import</label></li>
+<li><label><input type="radio" name="b2c_set4_q12" value="C">C. No indexing; search auto-detects</label></li>
+<li><label><input type="radio" name="b2c_set4_q12" value="D">D. Reindex once daily</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Delta reindexing is efficient for frequent updates.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một PIM bên ngoài đẩy cập nhật sản phẩm mỗi giờ. Chiến lược lập chỉ mục search hiệu quả nhất là gì? (Chọn một)</strong></p>
+<ul>
+<li>A. Full reindex mỗi giờ</li>
+<li>B. Delta indexing sau mỗi lần import</li>
+<li>C. Không lập chỉ mục; search tự động phát hiện</li>
+<li>D. Reindex một lần mỗi ngày</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Delta reindexing hiệu quả cho các cập nhật thường xuyên.</em></p>
+</div>
+</details>
+</div>
+</li>
+</ol>
+</li>
+<li>
+<h3 class="set-title">Set 5: Performance, Caching, Best Practices, Localization</h3>
+<ol class="question-list">
+<li>
+<div class="question">
+<h2>Q1. Which two caching layers are commonly used for storefront rendering in B2C Commerce? (Select two)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 1 options">
+<li><label><input type="radio" name="b2c_set5_q1" value="A">A. iscache directive at template level</label></li>
+<li><label><input type="radio" name="b2c_set5_q1" value="B">B. CDN edge cache only</label></li>
+<li><label><input type="radio" name="b2c_set5_q1" value="C">C. Application response cache (res.cachePeriod/varyBy)</label></li>
+<li><label><input type="radio" name="b2c_set5_q1" value="D">D. Database row cache</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>Platform supports template caching and response cache; CDN is external; DB row cache is not a storefront concept.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Hai lớp caching nào thường được sử dụng cho storefront rendering trong B2C Commerce? (Chọn hai)</strong></p>
+<ul>
+<li>A. Chỉ thị iscache ở cấp template</li>
+<li>B. Chỉ CDN edge cache</li>
+<li>C. Application response cache (res.cachePeriod/varyBy)</li>
+<li>D. Database row cache</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Platform hỗ trợ template caching và response cache; CDN là bên ngoài; DB row cache không phải là khái niệm của storefront.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q2. A template fragment must vary by currency and promotions. Which approach is best? (Select one)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 2 options">
+<li><label><input type="radio" name="b2c_set5_q2" value="A">A. No cache; always dynamic</label></li>
+<li><label><input type="radio" name="b2c_set5_q2" value="B">B. iscache with vary-by-currency and a custom vary key for promo state</label></li>
+<li><label><input type="radio" name="b2c_set5_q2" value="C">C. Cache globally for all users</label></li>
+<li><label><input type="radio" name="b2c_set5_q2" value="D">D. Use OCAPI cache exclusively</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Use iscache with appropriate vary keys to maintain correctness.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một template fragment phải biến đổi theo tiền tệ và các chương trình khuyến mãi. Cách tiếp cận nào là tốt nhất? (Chọn một)</strong></p>
+<ul>
+<li>A. Không cache; luôn động</li>
+<li>B. iscache với vary-by-currency và một custom vary key cho trạng thái promo</li>
+<li>C. Cache toàn cục cho tất cả người dùng</li>
+<li>D. Chỉ sử dụng OCAPI cache</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Sử dụng iscache với các vary keys phù hợp để duy trì tính chính xác.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q3. Which two coding issues most often cause scalability problems? (Select two)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 3 options">
+<li><label><input type="radio" name="b2c_set5_q3" value="A">A. Duplicated service calls per request without caching</label></li>
+<li><label><input type="radio" name="b2c_set5_q3" value="B">B. Excessive synchronous I/O inside the request thread</label></li>
+<li><label><input type="radio" name="b2c_set5_q3" value="C">C. Moving logic to decorators</label></li>
+<li><label><input type="radio" name="b2c_set5_q3" value="D">D. Using Logger at INFO for checkpoints</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, B</strong><br><small>Avoid redundant service calls and blocking I/O paths.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Hai vấn đề lập trình nào thường gây ra các vấn đề về khả năng mở rộng nhất? (Chọn hai)</strong></p>
+<ul>
+<li>A. Các service calls trùng lặp mỗi request mà không có caching</li>
+<li>B. I/O đồng bộ quá mức trong request thread</li>
+<li>C. Chuyển logic sang decorators</li>
+<li>D. Sử dụng Logger ở mức INFO cho các điểm kiểm tra</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, B</strong> — Tránh các service calls dư thừa và các đường dẫn I/O blocking.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q4. To localize UI strings, what are two best practices? (Select two)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 4 options">
+<li><label><input type="radio" name="b2c_set5_q4" value="A">A. Place strings in properties files under templates/resources</label></li>
+<li><label><input type="radio" name="b2c_set5_q4" value="B">B. Hardcode English in ISML and translate later</label></li>
+<li><label><input type="radio" name="b2c_set5_q4" value="C">C. Use Resource.msg/Resource.msgf helpers</label></li>
+<li><label><input type="radio" name="b2c_set5_q4" value="D">D. Store strings in services.json</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>Use properties and Resource helpers for localization.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để localize các UI strings, hai best practices nào được áp dụng? (Chọn hai)</strong></p>
+<ul>
+<li>A. Đặt strings trong các file properties trong templates/resources</li>
+<li>B. Hardcode tiếng Anh trong ISML và dịch sau</li>
+<li>C. Sử dụng các helper Resource.msg/Resource.msgf</li>
+<li>D. Lưu strings trong services.json</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Sử dụng properties và Resource helpers cho localization.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q5. A page still shows stale data after code deploy. Which two actions help? (Select two)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 5 options">
+<li><label><input type="radio" name="b2c_set5_q5" value="A">A. Clear application cache</label></li>
+<li><label><input type="radio" name="b2c_set5_q5" value="B">B. Force re-index of search every time</label></li>
+<li><label><input type="radio" name="b2c_set5_q5" value="C">C. Invalidate iscache entries if template cache was used</label></li>
+<li><label><input type="radio" name="b2c_set5_q5" value="D">D. Change code version name</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>Clear app cache and template cache as appropriate.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một trang vẫn hiển thị dữ liệu cũ sau khi triển khai code. Hai hành động nào giúp khắc phục? (Chọn hai)</strong></p>
+<ul>
+<li>A. Xóa application cache</li>
+<li>B. Buộc re-index search mỗi lần</li>
+<li>C. Vô hiệu hóa các mục iscache nếu template cache đã được sử dụng</li>
+<li>D. Thay đổi tên code version</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Xóa app cache và template cache khi cần thiết.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q6. Which is a correct approach for logging performance metrics? (Select one)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 6 options">
+<li><label><input type="radio" name="b2c_set5_q6" value="A">A. Use Logger with a dedicated category, log timings, and analyze in BM logs</label></li>
+<li><label><input type="radio" name="b2c_set5_q6" value="B">B. Print timings in templates to the page footer</label></li>
+<li><label><input type="radio" name="b2c_set5_q6" value="C">C. Log all data at ERROR level</label></li>
+<li><label><input type="radio" name="b2c_set5_q6" value="D">D. Rely only on Request Logs default</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br><small>Structured logging with categories and levels aids analysis.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Cách tiếp cận nào là đúng để ghi log performance metrics? (Chọn một)</strong></p>
+<ul>
+<li>A. Sử dụng Logger với một category chuyên dụng, ghi log timings và phân tích trong BM logs</li>
+<li>B. In timings trong templates vào page footer</li>
+<li>C. Ghi tất cả dữ liệu ở mức ERROR</li>
+<li>D. Chỉ dựa vào Request Logs mặc định</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A</strong> — Ghi log có cấu trúc với categories và levels hỗ trợ phân tích.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q7. To minimize controller complexity, where should most business logic live? (Select one)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 7 options">
+<li><label><input type="radio" name="b2c_set5_q7" value="A">A. Controllers only</label></li>
+<li><label><input type="radio" name="b2c_set5_q7" value="B">B. Decorators, helpers, factories, and services</label></li>
+<li><label><input type="radio" name="b2c_set5_q7" value="C">C. ISML templates</label></li>
+<li><label><input type="radio" name="b2c_set5_q7" value="D">D. ocapi.json</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Keep controllers thin; move logic to reusable layers.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Để giảm thiểu độ phức tạp của controller, hầu hết business logic nên nằm ở đâu? (Chọn một)</strong></p>
+<ul>
+<li>A. Chỉ trong Controllers</li>
+<li>B. Decorators, helpers, factories và services</li>
+<li>C. ISML templates</li>
+<li>D. ocapi.json</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Giữ controllers gọn nhẹ; chuyển logic sang các lớp có thể tái sử dụng.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q8. When adding a new language, which two areas are typically updated? (Select two)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 8 options">
+<li><label><input type="radio" name="b2c_set5_q8" value="A">A. templates/resources/*.properties for the new locale</label></li>
+<li><label><input type="radio" name="b2c_set5_q8" value="B">B. Page Designer components JSON only</label></li>
+<li><label><input type="radio" name="b2c_set5_q8" value="C">C. Static assets localized per locale where needed</label></li>
+<li><label><input type="radio" name="b2c_set5_q8" value="D">D. dw.json locales</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>Provide localized properties and assets for the new locale.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Khi thêm một ngôn ngữ mới, hai khu vực nào thường được cập nhật? (Chọn hai)</strong></p>
+<ul>
+<li>A. templates/resources/*.properties cho locale mới</li>
+<li>B. Chỉ Page Designer components JSON</li>
+<li>C. Static assets được localize theo locale khi cần</li>
+<li>D. dw.json locales</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Cung cấp localized properties và assets cho locale mới.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q9. A site experiences timeouts calling an external API. Which three mitigations are best practice? (Select three)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 9 options">
+<li><label><input type="radio" name="b2c_set5_q9" value="A">A. Reduce timeouts to fail fast</label></li>
+<li><label><input type="radio" name="b2c_set5_q9" value="B">B. Add caching of responses where feasible</label></li>
+<li><label><input type="radio" name="b2c_set5_q9" value="C">C. Add retries with exponential backoff and circuit breakers</label></li>
+<li><label><input type="radio" name="b2c_set5_q9" value="D">D. Increase the number of synchronous calls per page</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>Fail fast, cache, and add resiliency patterns. Avoid multiplying calls.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một site gặp phải timeouts khi gọi external API. Ba biện pháp giảm thiểu nào là best practice? (Chọn ba)</strong></p>
+<ul>
+<li>A. Giảm timeouts để thất bại nhanh</li>
+<li>B. Thêm caching cho responses khi khả thi</li>
+<li>C. Thêm retries với exponential backoff và circuit breakers</li>
+<li>D. Tăng số lượng synchronous calls mỗi trang</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, B, C</strong> — Thất bại nhanh, cache và thêm các mẫu resiliency. Tránh nhân lên số lượng calls.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q10. A developer adds custom pricing within the PDP controller and skips the pricing hook. What is the issue? (Select one)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 10 options">
+<li><label><input type="radio" name="b2c_set5_q10" value="A">A. None; controller is the best place for pricing</label></li>
+<li><label><input type="radio" name="b2c_set5_q10" value="B">B. Violates extensibility; use pricing hooks/decorators to centralize logic</label></li>
+<li><label><input type="radio" name="b2c_set5_q10" value="C">C. Pricing must live in ISML</label></li>
+<li><label><input type="radio" name="b2c_set5_q10" value="D">D. OCAPI enforces this automatically</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br><small>Centralize domain logic in hooks/decorators for reuse and consistency.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Một nhà phát triển thêm pricing tùy chỉnh trong PDP controller và bỏ qua pricing hook. Vấn đề là gì? (Chọn một)</strong></p>
+<ul>
+<li>A. Không có vấn đề gì; controller là nơi tốt nhất cho pricing</li>
+<li>B. Vi phạm khả năng mở rộng; sử dụng pricing hooks/decorators để tập trung hóa logic</li>
+<li>C. Pricing phải nằm trong ISML</li>
+<li>D. OCAPI thực thi điều này tự động</li>
+</ul>
+<p><em>✅ Đáp án: <strong>B</strong> — Tập trung hóa domain logic trong hooks/decorators để tái sử dụng và nhất quán.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q11. Which two strategies reduce template render time? (Select two)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 11 options">
+<li><label><input type="radio" name="b2c_set5_q11" value="A">A. Minimize logic in ISML; precompute in models</label></li>
+<li><label><input type="radio" name="b2c_set5_q11" value="B">B. Use remote includes for every snippet</label></li>
+<li><label><input type="radio" name="b2c_set5_q11" value="C">C. Cache static fragments with iscache</label></li>
+<li><label><input type="radio" name="b2c_set5_q11" value="D">D. Render JSON then transform client-side</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A, C</strong><br><small>Precompute data and cache static fragments to accelerate rendering.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Hai chiến lược nào giảm thời gian render template? (Chọn hai)</strong></p>
+<ul>
+<li>A. Giảm thiểu logic trong ISML; tính toán trước trong models</li>
+<li>B. Sử dụng remote includes cho mỗi snippet</li>
+<li>C. Cache các static fragments với iscache</li>
+<li>D. Render JSON rồi chuyển đổi phía client</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A, C</strong> — Tính toán trước dữ liệu và cache các static fragments để tăng tốc rendering.</em></p>
+</div>
+</details>
+</div>
+</li>
+<li>
+<div class="question">
+<h2>Q12. When should you use remote includes over local includes? (Select one)</h2>
+<ol class="options" aria-label="Set 5: Performance, Caching, Best Practices, Localization - Question 12 options">
+<li><label><input type="radio" name="b2c_set5_q12" value="A">A. When the included content must execute in a separate pipeline and be independently cached</label></li>
+<li><label><input type="radio" name="b2c_set5_q12" value="B">B. Always, because remote includes are faster</label></li>
+<li><label><input type="radio" name="b2c_set5_q12" value="C">C. Only for JSON responses</label></li>
+<li><label><input type="radio" name="b2c_set5_q12" value="D">D. Never; they are deprecated</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br><small>Remote includes are used for separate pipeline execution and caching behavior.</small></div>
+</details>
+<details>
+<summary>Translate</summary>
+<div class="translate">
+<p><strong>Khi nào bạn nên sử dụng remote includes thay vì local includes? (Chọn một)</strong></p>
+<ul>
+<li>A. Khi nội dung được bao gồm phải thực thi trong pipeline riêng và được cache độc lập</li>
+<li>B. Luôn luôn, vì remote includes nhanh hơn</li>
+<li>C. Chỉ cho JSON responses</li>
+<li>D. Không bao giờ; chúng đã bị deprecated</li>
+</ul>
+<p><em>✅ Đáp án: <strong>A</strong> — Remote includes được sử dụng để thực thi pipeline riêng và hành vi caching.</em></p>
+</div>
+</details>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</body>
+</html>
