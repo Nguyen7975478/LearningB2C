@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>B2C Commerce Developer - Practice Questions (2026-04-07 13:00)</title>
 <style>
 body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #222; }
@@ -26,919 +27,1590 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
 <h1>B2C Commerce Developer - Practice Questions (2026-04-07 13:00)</h1>
 <ol class="question-list">
 <li>
-  <div class="question">
-    <h2>A developer needs to deploy a new cartridge to a sandbox. Which protocol and tool combination is the standard for uploading code to a specific version directory?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 1">
-      <li><label><input type="radio" name="questions_202604071300_q1" value="A">A. WebDAV via an IDE like VS Code with the Prophet Debugger extension</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q1" value="B">B. REST API calls to the Metadata resource</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q1" value="C">C. SFTP via a standard FTP client like FileZilla</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q1" value="D">D. Direct upload via the Business Manager &#x27;Import/Export&#x27; module</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>WebDAV is the standard protocol used by B2C Commerce for code deployment to versioned directories on the server.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A developer needs to deploy a new cartridge to a sandbox. Which protocol and tool combination is the standard for uploading code to a specific version directory?</h2>
+<ol aria-label="Questions 202604071300 - Question 1" class="options">
+<li><label><input name="questions_202604071300_q1" type="radio" value="A"/>A. WebDAV via an IDE like VS Code with the Prophet Debugger extension</label></li>
+<li><label><input name="questions_202604071300_q1" type="radio" value="B"/>B. REST API calls to the Metadata resource</label></li>
+<li><label><input name="questions_202604071300_q1" type="radio" value="C"/>C. SFTP via a standard FTP client like FileZilla</label></li>
+<li><label><input name="questions_202604071300_q1" type="radio" value="D"/>D. Direct upload via the Business Manager 'Import/Export' module</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>WebDAV is the standard protocol used by B2C Commerce for code deployment to versioned directories on the server.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Nhà phát triển cần triển khai cartridge mới lên sandbox. Kết hợp giao thức và công cụ nào là tiêu chuẩn?</div>
+<ul>
+<li>A: WebDAV qua IDE như VS Code với extension Prophet Debugger</li>
+<li>B: REST API calls tới Metadata resource</li>
+<li>C: SFTP qua FTP client như FileZilla</li>
+<li>D: Upload trực tiếp qua module 'Import/Export' của Business Manager</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>In the cartridge path &#x27;plugin_wishlist:app_storefront_base:int_cybersource&#x27;, which cartridge&#x27;s logic will take precedence if a controller with the same name exists in all three?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 2">
-      <li><label><input type="radio" name="questions_202604071300_q2" value="A">A. plugin_wishlist</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q2" value="B">B. None, the system will throw a &#x27;Duplicate Controller&#x27; exception</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q2" value="C">C. app_storefront_base</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q2" value="D">D. int_cybersource</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>B2C Commerce searches the cartridge path from left to right; the first match found is the one executed.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>In the cartridge path 'plugin_wishlist:app_storefront_base:int_cybersource', which cartridge's logic will take precedence if a controller with the same name exists in all three?</h2>
+<ol aria-label="Questions 202604071300 - Question 2" class="options">
+<li><label><input name="questions_202604071300_q2" type="radio" value="A"/>A. plugin_wishlist</label></li>
+<li><label><input name="questions_202604071300_q2" type="radio" value="B"/>B. None, the system will throw a 'Duplicate Controller' exception</label></li>
+<li><label><input name="questions_202604071300_q2" type="radio" value="C"/>C. app_storefront_base</label></li>
+<li><label><input name="questions_202604071300_q2" type="radio" value="D"/>D. int_cybersource</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>B2C Commerce searches the cartridge path from left to right; the first match found is the one executed.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Trong cartridge path 'plugin_wishlist:app_storefront_base:int_cybersource', logic của cartridge nào được sử dụng nếu tất cả đều định nghĩa cùng controller?</div>
+<ul>
+<li>A: plugin_wishlist</li>
+<li>B: Không có - hệ thống sẽ báo lỗi 'Duplicate Controller'</li>
+<li>C: app_storefront_base</li>
+<li>D: int_cybersource</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>When configuring a new site in Business Manager, which setting determines how taxes are calculated (e.g., Gross vs. Net)?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 3">
-      <li><label><input type="radio" name="questions_202604071300_q3" value="A">A. Default Currency</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q3" value="B">B. Price Book Preference</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q3" value="C">C. Taxation Type</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q3" value="D">D. Locale Settings</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>C</strong><br><small>The Taxation Type setting (Net or Gross) defines whether prices are stored and displayed with or without tax.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>When configuring a new site in Business Manager, which setting determines how taxes are calculated (e.g., Gross vs. Net)?</h2>
+<ol aria-label="Questions 202604071300 - Question 3" class="options">
+<li><label><input name="questions_202604071300_q3" type="radio" value="A"/>A. Default Currency</label></li>
+<li><label><input name="questions_202604071300_q3" type="radio" value="B"/>B. Price Book Preference</label></li>
+<li><label><input name="questions_202604071300_q3" type="radio" value="C"/>C. Taxation Type</label></li>
+<li><label><input name="questions_202604071300_q3" type="radio" value="D"/>D. Locale Settings</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br/><small>The Taxation Type setting (Net or Gross) defines whether prices are stored and displayed with or without tax.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Khi cấu hình site mới trong Business Manager, cài đặt nào xác định cách tính thuế (net hay gross)?</div>
+<ul>
+<li>A: Default Currency</li>
+<li>B: Price Book Preference</li>
+<li>C: Taxation Type</li>
+<li>D: Locale Settings</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A developer needs to import a large catalog.xml file. What is the recommended best practice for site performance during this process?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 4">
-      <li><label><input type="radio" name="questions_202604071300_q4" value="A">A. Perform the import during peak traffic hours to monitor load</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q4" value="B">B. Disable the search index during the import</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q4" value="C">C. Use &#x27;Replace&#x27; mode to ensure data consistency</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q4" value="D">D. Use the &#x27;Merge&#x27; import mode to update only changed elements</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>Merge mode is more efficient for large datasets as it avoids deleting and recreating unchanged objects.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A developer needs to import a large catalog.xml file. What is the recommended best practice for site performance during this process?</h2>
+<ol aria-label="Questions 202604071300 - Question 4" class="options">
+<li><label><input name="questions_202604071300_q4" type="radio" value="A"/>A. Perform the import during peak traffic hours to monitor load</label></li>
+<li><label><input name="questions_202604071300_q4" type="radio" value="B"/>B. Disable the search index during the import</label></li>
+<li><label><input name="questions_202604071300_q4" type="radio" value="C"/>C. Use 'Replace' mode to ensure data consistency</label></li>
+<li><label><input name="questions_202604071300_q4" type="radio" value="D"/>D. Use the 'Merge' import mode to update only changed elements</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>Merge mode is more efficient for large datasets as it avoids deleting and recreating unchanged objects.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Nhà phát triển cần import file catalog.xml lớn. Best practice được khuyến nghị là gì?</div>
+<ul>
+<li>A: Thực hiện import trong giờ cao điểm để theo dõi tải</li>
+<li>B: Tắt search index trong khi import</li>
+<li>C: Dùng chế độ 'Replace' để đảm bảo tính nhất quán</li>
+<li>D: Dùng chế độ import 'Merge' để chỉ cập nhật phần tử đã thay đổi</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which B2C Commerce tool allows a developer to see real-time memory usage and script execution times on a Sandbox?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 5">
-      <li><label><input type="radio" name="questions_202604071300_q5" value="A">A. Pipeline Profiler</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q5" value="B">B. The Request Log Viewer</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q5" value="C">C. The Statistics Dashboard</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q5" value="D">D. The Code Profiler in Business Manager</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>The Code Profiler provides detailed insights into script performance, including execution time and hit counts.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which B2C Commerce tool allows a developer to see real-time memory usage and script execution times on a Sandbox?</h2>
+<ol aria-label="Questions 202604071300 - Question 5" class="options">
+<li><label><input name="questions_202604071300_q5" type="radio" value="A"/>A. Pipeline Profiler</label></li>
+<li><label><input name="questions_202604071300_q5" type="radio" value="B"/>B. The Request Log Viewer</label></li>
+<li><label><input name="questions_202604071300_q5" type="radio" value="C"/>C. The Statistics Dashboard</label></li>
+<li><label><input name="questions_202604071300_q5" type="radio" value="D"/>D. The Code Profiler in Business Manager</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>The Code Profiler provides detailed insights into script performance, including execution time and hit counts.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Công cụ B2C Commerce nào cho phép nhà phát triển xem memory usage và thời gian thực thi script theo thời gian thực?</div>
+<ul>
+<li>A: Pipeline Profiler</li>
+<li>B: Request Log Viewer</li>
+<li>C: Statistics Dashboard</li>
+<li>D: Code Profiler trong Business Manager</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>To enable a custom attribute of a Product to be searchable on the storefront, which action must the developer take in Business Manager?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 6">
-      <li><label><input type="radio" name="questions_202604071300_q6" value="A">A. Set the attribute to &#x27;Searchable&#x27; in the Search Index settings and rebuild the index</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q6" value="B">B. Add the attribute to the &#x27;Default&#x27; attribute group</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q6" value="C">C. Simply create the attribute in the Product System Object</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q6" value="D">D. Enable OCAPI permissions for that attribute</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>Attributes must be explicitly flagged for indexing and the index must be refreshed to become active.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>To enable a custom attribute of a Product to be searchable on the storefront, which action must the developer take in Business Manager?</h2>
+<ol aria-label="Questions 202604071300 - Question 6" class="options">
+<li><label><input name="questions_202604071300_q6" type="radio" value="A"/>A. Set the attribute to 'Searchable' in the Search Index settings and rebuild the index</label></li>
+<li><label><input name="questions_202604071300_q6" type="radio" value="B"/>B. Add the attribute to the 'Default' attribute group</label></li>
+<li><label><input name="questions_202604071300_q6" type="radio" value="C"/>C. Simply create the attribute in the Product System Object</label></li>
+<li><label><input name="questions_202604071300_q6" type="radio" value="D"/>D. Enable OCAPI permissions for that attribute</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>Attributes must be explicitly flagged for indexing and the index must be refreshed to become active.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Để bật tìm kiếm cho custom attribute của Product trên storefront, cần thực hiện hành động nào?</div>
+<ul>
+<li>A: Đặt thuộc tính thành 'Searchable' trong cài đặt Search Index và tái tạo index</li>
+<li>B: Thêm thuộc tính vào attribute group 'Default'</li>
+<li>C: Chỉ cần tạo thuộc tính trong Product System Object</li>
+<li>D: Bật quyền OCAPI cho thuộc tính đó</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>In the SFRA framework, what is the purpose of a &#x27;Model&#x27;?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 7">
-      <li><label><input type="radio" name="questions_202604071300_q7" value="A">A. To define the database schema for custom objects</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q7" value="B">B. To handle the routing of HTTP requests to controllers</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q7" value="C">C. To manage the CSS and client-side JavaScript for a component</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q7" value="D">D. To wrap raw system objects and provide helper methods for templates</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>Models in SFRA act as a layer between the database (API objects) and the view (ISML), formatting data for display.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>In the SFRA framework, what is the purpose of a 'Model'?</h2>
+<ol aria-label="Questions 202604071300 - Question 7" class="options">
+<li><label><input name="questions_202604071300_q7" type="radio" value="A"/>A. To define the database schema for custom objects</label></li>
+<li><label><input name="questions_202604071300_q7" type="radio" value="B"/>B. To handle the routing of HTTP requests to controllers</label></li>
+<li><label><input name="questions_202604071300_q7" type="radio" value="C"/>C. To manage the CSS and client-side JavaScript for a component</label></li>
+<li><label><input name="questions_202604071300_q7" type="radio" value="D"/>D. To wrap raw system objects and provide helper methods for templates</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>Models in SFRA act as a layer between the database (API objects) and the view (ISML), formatting data for display.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Trong SFRA framework, mục đích của 'Model' là gì?</div>
+<ul>
+<li>A: Định nghĩa database schema cho custom object</li>
+<li>B: Xử lý routing của HTTP request tới controller</li>
+<li>C: Quản lý CSS và JavaScript phía client cho component</li>
+<li>D: Bọc raw system object và cung cấp helper method cho template</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What is the correct way to handle a &#x27;Script.MaxMemory&#x27; quota violation in a Job that processes 10,000 orders?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 8">
-      <li><label><input type="radio" name="questions_202604071300_q8" value="A">A. Use an Iterator and clear object references within the loop</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q8" value="B">B. Increase the memory limit in the Job configuration</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q8" value="C">C. Split the job into 10 smaller jobs manually</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q8" value="D">D. Use &#x27;seekable&#x27; collections and convert them to an Array</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>Iterators prevent loading all objects into memory at once, which is the primary cause of heap memory violations.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What is the correct way to handle a 'Script.MaxMemory' quota violation in a Job that processes 10,000 orders?</h2>
+<ol aria-label="Questions 202604071300 - Question 8" class="options">
+<li><label><input name="questions_202604071300_q8" type="radio" value="A"/>A. Use an Iterator and clear object references within the loop</label></li>
+<li><label><input name="questions_202604071300_q8" type="radio" value="B"/>B. Increase the memory limit in the Job configuration</label></li>
+<li><label><input name="questions_202604071300_q8" type="radio" value="C"/>C. Split the job into 10 smaller jobs manually</label></li>
+<li><label><input name="questions_202604071300_q8" type="radio" value="D"/>D. Use 'seekable' collections and convert them to an Array</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>Iterators prevent loading all objects into memory at once, which is the primary cause of heap memory violations.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Cách đúng để xử lý quota violation 'Script.MaxMemory' trong Job xử lý 10.000 đối tượng?</div>
+<ul>
+<li>A: Dùng Iterator và xóa tham chiếu object trong vòng lặp</li>
+<li>B: Tăng giới hạn memory trong cấu hình Job</li>
+<li>C: Tách job thành 10 job nhỏ hơn thủ công</li>
+<li>D: Dùng collection 'seekable' và chuyển sang Array</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which OCAPI hook would you use to modify the response of a &#x27;Search&#x27; request before it is sent to the client?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 10">
-      <li><label><input type="radio" name="questions_202604071300_q10" value="A">A. dw.system.request.onResponse</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q10" value="B">B. dw.ocapi.shop.product_search.beforeGET</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q10" value="C">C. dw.ocapi.data.product_search.afterGET</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q10" value="D">D. dw.ocapi.shop.product_search.modifyResponse</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>The modifyResponse hook allows developers to alter the JSON output of an OCAPI call before final delivery.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which OCAPI hook would you use to modify the response of a 'Search' request before it is sent to the client?</h2>
+<ol aria-label="Questions 202604071300 - Question 10" class="options">
+<li><label><input name="questions_202604071300_q10" type="radio" value="A"/>A. dw.system.request.onResponse</label></li>
+<li><label><input name="questions_202604071300_q10" type="radio" value="B"/>B. dw.ocapi.shop.product_search.beforeGET</label></li>
+<li><label><input name="questions_202604071300_q10" type="radio" value="C"/>C. dw.ocapi.data.product_search.afterGET</label></li>
+<li><label><input name="questions_202604071300_q10" type="radio" value="D"/>D. dw.ocapi.shop.product_search.modifyResponse</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>The modifyResponse hook allows developers to alter the JSON output of an OCAPI call before final delivery.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>OCAPI hook nào dùng để sửa đổi response của request 'Search' trước khi gửi đến client?</div>
+<ul>
+<li>A: dw.system.request.onResponse</li>
+<li>B: dw.ocapi.shop.product_search.beforeGET</li>
+<li>C: dw.ocapi.data.product_search.afterGET</li>
+<li>D: dw.ocapi.shop.product_search.modifyResponse</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>When implementing a &#x27;Remote Include&#x27;, what is the impact on page caching?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 11">
-      <li><label><input type="radio" name="questions_202604071300_q11" value="A">A. The included content can have its own independent cache policy</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q11" value="B">B. It forces the parent page to revalidate with the server every time</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q11" value="C">C. The entire page becomes non-cacheable</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q11" value="D">D. The remote include inherits the cache policy of the parent page</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>Remote includes (via isinclude url) trigger a separate request, allowing the main page and the component to be cached differently.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>When implementing a 'Remote Include', what is the impact on page caching?</h2>
+<ol aria-label="Questions 202604071300 - Question 11" class="options">
+<li><label><input name="questions_202604071300_q11" type="radio" value="A"/>A. The included content can have its own independent cache policy</label></li>
+<li><label><input name="questions_202604071300_q11" type="radio" value="B"/>B. It forces the parent page to revalidate with the server every time</label></li>
+<li><label><input name="questions_202604071300_q11" type="radio" value="C"/>C. The entire page becomes non-cacheable</label></li>
+<li><label><input name="questions_202604071300_q11" type="radio" value="D"/>D. The remote include inherits the cache policy of the parent page</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>Remote includes (via isinclude url) trigger a separate request, allowing the main page and the component to be cached differently.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Khi triển khai 'Remote Include', tác động đến page caching như thế nào?</div>
+<ul>
+<li>A: Nội dung được include có thể có policy cache riêng độc lập</li>
+<li>B: Trang cha bị buộc revalidate với server mỗi lần</li>
+<li>C: Toàn bộ trang trở thành non-cacheable</li>
+<li>D: Remote include kế thừa policy cache của trang cha</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which tool should be used to troubleshoot a &#x27;Service Unavailable&#x27; error in a third-party payment integration?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 12">
-      <li><label><input type="radio" name="questions_202604071300_q12" value="A">A. Pipeline Profiler</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q12" value="B">B. Service Status in Business Manager and Communication Logs</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q12" value="C">C. The ISML Debugger</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q12" value="D">D. The storefront &#x27;Toolkit’</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>The Service Framework provides dedicated logs and a status dashboard to monitor the health of external integrations.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which tool should be used to troubleshoot a 'Service Unavailable' error in a third-party payment integration?</h2>
+<ol aria-label="Questions 202604071300 - Question 12" class="options">
+<li><label><input name="questions_202604071300_q12" type="radio" value="A"/>A. Pipeline Profiler</label></li>
+<li><label><input name="questions_202604071300_q12" type="radio" value="B"/>B. Service Status in Business Manager and Communication Logs</label></li>
+<li><label><input name="questions_202604071300_q12" type="radio" value="C"/>C. The ISML Debugger</label></li>
+<li><label><input name="questions_202604071300_q12" type="radio" value="D"/>D. The storefront 'Toolkit’</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>The Service Framework provides dedicated logs and a status dashboard to monitor the health of external integrations.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Công cụ nào nên dùng để troubleshoot lỗi 'Service Unavailable' trong tích hợp payment bên thứ ba?</div>
+<ul>
+<li>A: Pipeline Profiler</li>
+<li>B: Service Status trong Business Manager và Communication Logs</li>
+<li>C: ISML Debugger</li>
+<li>D: Storefront 'Toolkit'</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What is the primary benefit of using &#x27;Custom Objects&#x27; over &#x27;Custom Attributes&#x27; on System Objects?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 13">
-      <li><label><input type="radio" name="questions_202604071300_q13" value="A">A. They are automatically indexed for search</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q13" value="B">B. They allow for a unique data schema not tied to existing commerce entities</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q13" value="C">C. They do not count towards any platform quotas</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q13" value="D">D. They are faster to retrieve than System Objects</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>Custom Objects are flexible containers for data that doesn&#x27;t naturally fit into Products, Folders, or Orders.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What is the primary benefit of using 'Custom Objects' over 'Custom Attributes' on System Objects?</h2>
+<ol aria-label="Questions 202604071300 - Question 13" class="options">
+<li><label><input name="questions_202604071300_q13" type="radio" value="A"/>A. They are automatically indexed for search</label></li>
+<li><label><input name="questions_202604071300_q13" type="radio" value="B"/>B. They allow for a unique data schema not tied to existing commerce entities</label></li>
+<li><label><input name="questions_202604071300_q13" type="radio" value="C"/>C. They do not count towards any platform quotas</label></li>
+<li><label><input name="questions_202604071300_q13" type="radio" value="D"/>D. They are faster to retrieve than System Objects</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>Custom Objects are flexible containers for data that doesn't naturally fit into Products, Folders, or Orders.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Lợi ích chính của 'Custom Objects' so với 'Custom Attributes' trên System Objects là gì?</div>
+<ul>
+<li>A: Chúng được tự động index cho tìm kiếm</li>
+<li>B: Chúng cho phép schema dữ liệu độc đáo không gắn với commerce entity hiện có</li>
+<li>C: Chúng không tính vào quota nền tảng</li>
+<li>D: Chúng nhanh hơn để truy xuất so với System Objects</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A developer needs to protect a form submission from Cross-Site Request Forgery (CSRF). What is the first step in the SFRA controller?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 14">
-      <li><label><input type="radio" name="questions_202604071300_q14" value="A">A. Use the &#x27;csrf.validateRequest()&#x27; middleware</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q14" value="B">B. Encrypt the form data using a site-wide key</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q14" value="C">C. Manually check the session ID against a hidden field</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q14" value="D">D. Add &#x27;is-csrf=&quot;true&quot;&#x27; to the form tag in ISML</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>SFRA provides a built-in &#x27;csrf&#x27; middleware to handle the validation of tokens during a POST request.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A developer needs to protect a form submission from Cross-Site Request Forgery (CSRF). What is the first step in the SFRA controller?</h2>
+<ol aria-label="Questions 202604071300 - Question 14" class="options">
+<li><label><input name="questions_202604071300_q14" type="radio" value="A"/>A. Use the 'csrf.validateRequest()' middleware</label></li>
+<li><label><input name="questions_202604071300_q14" type="radio" value="B"/>B. Encrypt the form data using a site-wide key</label></li>
+<li><label><input name="questions_202604071300_q14" type="radio" value="C"/>C. Manually check the session ID against a hidden field</label></li>
+<li><label><input name="questions_202604071300_q14" type="radio" value="D"/>D. Add 'is-csrf="true"' to the form tag in ISML</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>SFRA provides a built-in 'csrf' middleware to handle the validation of tokens during a POST request.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Nhà phát triển cần bảo vệ form submission khỏi tấn công CSRF. Bước đầu tiên là gì?</div>
+<ul>
+<li>A: Dùng middleware 'csrf.validateRequest()'</li>
+<li>B: Mã hóa dữ liệu form bằng key toàn site</li>
+<li>C: Kiểm tra session ID thủ công so với hidden field</li>
+<li>D: Thêm 'is-csrf="true"' vào form tag trong ISML</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>In B2C Commerce, what is the maximum number of items allowed in a single &#x27;Set of Strings&#x27; site preference?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 15">
-      <li><label><input type="radio" name="questions_202604071300_q15" value="A">A. 1,000 items</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q15" value="B">B. 500 items</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q15" value="C">C. Exactly 100 items</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q15" value="D">D. There is no fixed count, but the total character size is limited</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>Site preferences are governed by size (bytes) rather than a specific item count, though extremely large sets should be avoided.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>In B2C Commerce, what is the maximum number of items allowed in a single 'Set of Strings' site preference?</h2>
+<ol aria-label="Questions 202604071300 - Question 15" class="options">
+<li><label><input name="questions_202604071300_q15" type="radio" value="A"/>A. 1,000 items</label></li>
+<li><label><input name="questions_202604071300_q15" type="radio" value="B"/>B. 500 items</label></li>
+<li><label><input name="questions_202604071300_q15" type="radio" value="C"/>C. Exactly 100 items</label></li>
+<li><label><input name="questions_202604071300_q15" type="radio" value="D"/>D. There is no fixed count, but the total character size is limited</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>Site preferences are governed by size (bytes) rather than a specific item count, though extremely large sets should be avoided.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Số lượng item tối đa trong một 'Set of Strings' site preference là bao nhiêu?</div>
+<ul>
+<li>A: 1.000 item</li>
+<li>B: 500 item</li>
+<li>C: Đúng 100 item</li>
+<li>D: Không có giới hạn số lượng cố định, nhưng tổng kích thước ký tự bị giới hạn</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>To implement localization for a form&#x27;s error messages, where should the developer store the translated strings?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 16">
-      <li><label><input type="radio" name="questions_202604071300_q16" value="A">A. Inside the JavaScript controller using an if/else block</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q16" value="B">B. In a Custom Object named &#x27;Translations&#x27;</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q16" value="C">C. In .properties files within the &#x27;templates/resources&#x27; folder</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q16" value="D">D. In the &#x27;Localizable&#x27; attribute of the Form definition XML</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>C</strong><br><small>Property files are the standard mechanism for storing localized strings for ISML, forms, and scripts.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>To implement localization for a form's error messages, where should the developer store the translated strings?</h2>
+<ol aria-label="Questions 202604071300 - Question 16" class="options">
+<li><label><input name="questions_202604071300_q16" type="radio" value="A"/>A. Inside the JavaScript controller using an if/else block</label></li>
+<li><label><input name="questions_202604071300_q16" type="radio" value="B"/>B. In a Custom Object named 'Translations'</label></li>
+<li><label><input name="questions_202604071300_q16" type="radio" value="C"/>C. In .properties files within the 'templates/resources' folder</label></li>
+<li><label><input name="questions_202604071300_q16" type="radio" value="D"/>D. In the 'Localizable' attribute of the Form definition XML</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br/><small>Property files are the standard mechanism for storing localized strings for ISML, forms, and scripts.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Để localize thông báo lỗi của form, nhà phát triển nên lưu bản dịch ở đâu?</div>
+<ul>
+<li>A: Bên trong JavaScript controller dùng if/else</li>
+<li>B: Trong Custom Object tên 'Translations'</li>
+<li>C: Trong file .properties trong thư mục 'templates/resources'</li>
+<li>D: Trong thuộc tính 'Localizable' của Form definition XML</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>When creating a Page Designer component, what does the &#x27;attribute_definition&#x27; in the JSON file define?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 17">
-      <li><label><input type="radio" name="questions_202604071300_q17" value="A">A. The database table where the component data is stored</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q17" value="B">B. The CSS classes applied to the component wrapper</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q17" value="C">C. The list of categories where the component can be used</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q17" value="D">D. The properties a merchant can configure in the Business Manager UI</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>The JSON metadata for a component defines the input fields (like text, images, or colors) available to the merchant.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>When creating a Page Designer component, what does the 'attribute_definition' in the JSON file define?</h2>
+<ol aria-label="Questions 202604071300 - Question 17" class="options">
+<li><label><input name="questions_202604071300_q17" type="radio" value="A"/>A. The database table where the component data is stored</label></li>
+<li><label><input name="questions_202604071300_q17" type="radio" value="B"/>B. The CSS classes applied to the component wrapper</label></li>
+<li><label><input name="questions_202604071300_q17" type="radio" value="C"/>C. The list of categories where the component can be used</label></li>
+<li><label><input name="questions_202604071300_q17" type="radio" value="D"/>D. The properties a merchant can configure in the Business Manager UI</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>The JSON metadata for a component defines the input fields (like text, images, or colors) available to the merchant.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Khi tạo Page Designer component, 'attribute_definition' trong file JSON định nghĩa gì?</div>
+<ul>
+<li>A: Bảng database nơi dữ liệu component được lưu</li>
+<li>B: CSS class áp dụng cho wrapper của component</li>
+<li>C: Danh sách category nơi component có thể dùng</li>
+<li>D: Các thuộc tính mà merchant có thể cấu hình trong Business Manager UI</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A developer needs to log an error that includes a customer&#x27;s credit card number for debugging. What is the correct approach?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 18">
-      <li><label><input type="radio" name="questions_202604071300_q18" value="A">A. Log it only to a &#x27;Custom&#x27; log level so only developers see it</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q18" value="B">B. Use &#x27;dw.system.Logger.debug()&#x27; because debug logs are deleted faster</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q18" value="C">C. Mask the sensitive data before logging to ensure PCI compliance</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q18" value="D">D. Encryption the log file using a certificate</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>C</strong><br><small>Logging sensitive PII or financial data (like full CC numbers) is a major security violation; only masked data or tokens should be logged.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A developer needs to log an error that includes a customer's credit card number for debugging. What is the correct approach?</h2>
+<ol aria-label="Questions 202604071300 - Question 18" class="options">
+<li><label><input name="questions_202604071300_q18" type="radio" value="A"/>A. Log it only to a 'Custom' log level so only developers see it</label></li>
+<li><label><input name="questions_202604071300_q18" type="radio" value="B"/>B. Use 'dw.system.Logger.debug()' because debug logs are deleted faster</label></li>
+<li><label><input name="questions_202604071300_q18" type="radio" value="C"/>C. Mask the sensitive data before logging to ensure PCI compliance</label></li>
+<li><label><input name="questions_202604071300_q18" type="radio" value="D"/>D. Encryption the log file using a certificate</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br/><small>Logging sensitive PII or financial data (like full CC numbers) is a major security violation; only masked data or tokens should be logged.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Nhà phát triển cần ghi log lỗi có số thẻ tín dụng của khách hàng. Cách đúng là gì?</div>
+<ul>
+<li>A: Chỉ ghi vào log level 'Custom' để chỉ nhà phát triển thấy</li>
+<li>B: Dùng 'dw.system.Logger.debug()' vì debug log bị xóa nhanh hơn</li>
+<li>C: Che giấu dữ liệu nhạy cảm trước khi ghi log để đảm bảo tuân thủ PCI</li>
+<li>D: Mã hóa file log bằng certificate</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What is the result of using &#x27;server.append&#x27; in an SFRA controller?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 19">
-      <li><label><input type="radio" name="questions_202604071300_q19" value="A">A. It adds a new parameter to the HTTP response header</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q19" value="B">B. It executes logic after the original controller function in the cartridge path</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q19" value="C">C. It replaces the existing controller logic completely</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q19" value="D">D. It combines two templates into one single view</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What is the result of using 'server.append' in an SFRA controller?</h2>
+<ol aria-label="Questions 202604071300 - Question 19" class="options">
+<li><label><input name="questions_202604071300_q19" type="radio" value="A"/>A. It adds a new parameter to the HTTP response header</label></li>
+<li><label><input name="questions_202604071300_q19" type="radio" value="B"/>B. It executes logic after the original controller function in the cartridge path</label></li>
+<li><label><input name="questions_202604071300_q19" type="radio" value="C"/>C. It replaces the existing controller logic completely</label></li>
+<li><label><input name="questions_202604071300_q19" type="radio" value="D"/>D. It combines two templates into one single view</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Kết quả của việc dùng 'server.append' trong SFRA controller là gì?</div>
+<ul>
+<li>A: Thêm tham số mới vào HTTP response header</li>
+<li>B: Thực thi logic sau hàm controller gốc trong cartridge path</li>
+<li>C: Thay thế hoàn toàn logic controller hiện có</li>
+<li>D: Kết hợp hai template thành một view duy nhất</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which Business Manager module is used to rebuild the product search index?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 20">
-      <li><label><input type="radio" name="questions_202604071300_q20" value="A">A. Search Preferences</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q20" value="B">B. Import/Export</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q20" value="C">C. Search Indexes</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q20" value="D">D. Site Indexing Services</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>C</strong><br><small>The Search Indexes module allows you to trigger manual rebuilds or schedule them for various indexes (product, content, etc.).</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which Business Manager module is used to rebuild the product search index?</h2>
+<ol aria-label="Questions 202604071300 - Question 20" class="options">
+<li><label><input name="questions_202604071300_q20" type="radio" value="A"/>A. Search Preferences</label></li>
+<li><label><input name="questions_202604071300_q20" type="radio" value="B"/>B. Import/Export</label></li>
+<li><label><input name="questions_202604071300_q20" type="radio" value="C"/>C. Search Indexes</label></li>
+<li><label><input name="questions_202604071300_q20" type="radio" value="D"/>D. Site Indexing Services</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br/><small>The Search Indexes module allows you to trigger manual rebuilds or schedule them for various indexes (product, content, etc.).</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Module Business Manager nào dùng để tái tạo product search index?</div>
+<ul>
+<li>A: Search Preferences</li>
+<li>B: Import/Export</li>
+<li>C: Search Indexes</li>
+<li>D: Site Indexing Services</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A developer needs to ensure a script runs only on a production instance. Which property should they check?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 21">
-      <li><label><input type="radio" name="questions_202604071300_q21" value="A">A. request.httpHost</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q21" value="B">B. dw.system.Site.current.getProductionStatus()</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q21" value="C">C. session.custom.isProd</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q21" value="D">D. dw.system.System.getInstanceType()</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>This method returns constants like INSTANCE_TYPE_PRODUCTION or INSTANCE_TYPE_SANDBOX.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A developer needs to ensure a script runs only on a production instance. Which property should they check?</h2>
+<ol aria-label="Questions 202604071300 - Question 21" class="options">
+<li><label><input name="questions_202604071300_q21" type="radio" value="A"/>A. request.httpHost</label></li>
+<li><label><input name="questions_202604071300_q21" type="radio" value="B"/>B. dw.system.Site.current.getProductionStatus()</label></li>
+<li><label><input name="questions_202604071300_q21" type="radio" value="C"/>C. session.custom.isProd</label></li>
+<li><label><input name="questions_202604071300_q21" type="radio" value="D"/>D. dw.system.System.getInstanceType()</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>This method returns constants like INSTANCE_TYPE_PRODUCTION or INSTANCE_TYPE_SANDBOX.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Nhà phát triển cần đảm bảo script chỉ chạy trên production instance. Thuộc tính nào kiểm tra điều này?</div>
+<ul>
+<li>A: request.httpHost</li>
+<li>B: dw.system.Site.current.getProductionStatus()</li>
+<li>C: session.custom.isProd</li>
+<li>D: dw.system.System.getInstanceType()</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>In the B2C Job framework, what is a &#x27;Step Type&#x27;?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 22">
-      <li><label><input type="radio" name="questions_202604071300_q22" value="A">A. A system-wide classification for data imports (XML vs CSV)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q22" value="B">B. A specific programming language (JavaScript vs Java)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q22" value="C">C. The priority level of a job execution</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q22" value="D">D. A definition in steptypes.json that maps a script to a job step</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>The steptypes.json file is required to register custom scripts as available steps in the Business Manager Job UI.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>In the B2C Job framework, what is a 'Step Type'?</h2>
+<ol aria-label="Questions 202604071300 - Question 22" class="options">
+<li><label><input name="questions_202604071300_q22" type="radio" value="A"/>A. A system-wide classification for data imports (XML vs CSV)</label></li>
+<li><label><input name="questions_202604071300_q22" type="radio" value="B"/>B. A specific programming language (JavaScript vs Java)</label></li>
+<li><label><input name="questions_202604071300_q22" type="radio" value="C"/>C. The priority level of a job execution</label></li>
+<li><label><input name="questions_202604071300_q22" type="radio" value="D"/>D. A definition in steptypes.json that maps a script to a job step</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>The steptypes.json file is required to register custom scripts as available steps in the Business Manager Job UI.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Trong B2C Job framework, 'Step Type' là gì?</div>
+<ul>
+<li>A: Phân loại toàn hệ thống cho data import (XML vs CSV)</li>
+<li>B: Ngôn ngữ lập trình cụ thể (JavaScript vs Java)</li>
+<li>C: Mức độ ưu tiên của thực thi job</li>
+<li>D: Định nghĩa trong steptypes.json ánh xạ script tới job step</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which ISML tag is used to create a link to a specific controller and function?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 23">
-      <li><label><input type="radio" name="questions_202604071300_q23" value="A">A. URLUtils.url(&#x27;Controller-Function&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q23" value="B">B. &lt;a href=&quot;${URLUtils.url(&#x27;Controller-Function&#x27;)}&quot;&gt;Link&lt;/a&gt;</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q23" value="C">C. &lt;isprint value=&quot;${URLUtils.url(&#x27;Controller-Function&#x27;)}&quot; /&gt;</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q23" value="D">D. &lt;isredirect location=&quot;${URLUtils.url(&#x27;Controller-Function&#x27;)}&quot; /&gt;</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>URLUtils is the standard utility class for generating SEO-friendly and session-aware URLs in B2C Commerce.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which ISML tag is used to create a link to a specific controller and function?</h2>
+<ol aria-label="Questions 202604071300 - Question 23" class="options">
+<li><label><input name="questions_202604071300_q23" type="radio" value="A"/>A. URLUtils.url('Controller-Function')</label></li>
+<li><label><input name="questions_202604071300_q23" type="radio" value="B"/>B. &lt;a href="${URLUtils.url('Controller-Function')}"&gt;Link&lt;/a&gt;</label></li>
+<li><label><input name="questions_202604071300_q23" type="radio" value="C"/>C. &lt;isprint value="${URLUtils.url('Controller-Function')}" /&gt;</label></li>
+<li><label><input name="questions_202604071300_q23" type="radio" value="D"/>D. &lt;isredirect location="${URLUtils.url('Controller-Function')}" /&gt;</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>URLUtils is the standard utility class for generating SEO-friendly and session-aware URLs in B2C Commerce.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Tag ISML nào dùng để tạo link tới controller và function cụ thể?</div>
+<ul>
+<li>A: URLUtils.url('Controller-Function')</li>
+<li>B: &lt;a href="${URLUtils.url('Controller-Function')}"&gt;Link&lt;/a&gt;</li>
+<li>C: &lt;isprint value="${URLUtils.url('Controller-Function')}" /&gt;</li>
+<li>D: &lt;isredirect location="${URLUtils.url('Controller-Function')}" /&gt;</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A merchant wants to show a &#x27;Low Stock&#x27; badge if inventory is below 10. How should the developer access inventory in a Product model?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 24">
-      <li><label><input type="radio" name="questions_202604071300_q24" value="A">A. Use the ProductAvailabilityModel via product.getAvailabilityModel()</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q24" value="B">B. Access product.custom.inventoryLevel</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q24" value="C">C. Query the &#x27;InventoryRecord&#x27; custom object</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q24" value="D">D. Use OCAPI to fetch the live inventory from the ERP</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>The Availability Model provides high-level information about stock levels, backorder status, and search-driven availability.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A merchant wants to show a 'Low Stock' badge if inventory is below 10. How should the developer access inventory in a Product model?</h2>
+<ol aria-label="Questions 202604071300 - Question 24" class="options">
+<li><label><input name="questions_202604071300_q24" type="radio" value="A"/>A. Use the ProductAvailabilityModel via product.getAvailabilityModel()</label></li>
+<li><label><input name="questions_202604071300_q24" type="radio" value="B"/>B. Access product.custom.inventoryLevel</label></li>
+<li><label><input name="questions_202604071300_q24" type="radio" value="C"/>C. Query the 'InventoryRecord' custom object</label></li>
+<li><label><input name="questions_202604071300_q24" type="radio" value="D"/>D. Use OCAPI to fetch the live inventory from the ERP</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>The Availability Model provides high-level information about stock levels, backorder status, and search-driven availability.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Merchant muốn hiển thị badge 'Low Stock' nếu tồn kho dưới 10. Cách đề xuất?</div>
+<ul>
+<li>A: Dùng ProductAvailabilityModel qua product.getAvailabilityModel()</li>
+<li>B: Truy cập product.custom.inventoryLevel</li>
+<li>C: Query 'InventoryRecord' custom object</li>
+<li>D: Dùng OCAPI để lấy tồn kho trực tiếp từ ERP</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What is the purpose of the &#x27;break&#x27; statement in an SFRA middleware chain?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 25">
-      <li><label><input type="radio" name="questions_202604071300_q25" value="A">A. It stops the execution of subsequent middleware and immediately renders the response</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q25" value="B">B. It redirects the user to the home page</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q25" value="C">C. It throws a 404 error automatically</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q25" value="D">D. It clears the &#x27;res.viewData&#x27; object</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>The &#x27;next()&#x27; function must be called to continue; omitting it or using &#x27;res.render&#x27; and returning effectively breaks the chain.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What is the purpose of the 'break' statement in an SFRA middleware chain?</h2>
+<ol aria-label="Questions 202604071300 - Question 25" class="options">
+<li><label><input name="questions_202604071300_q25" type="radio" value="A"/>A. It stops the execution of subsequent middleware and immediately renders the response</label></li>
+<li><label><input name="questions_202604071300_q25" type="radio" value="B"/>B. It redirects the user to the home page</label></li>
+<li><label><input name="questions_202604071300_q25" type="radio" value="C"/>C. It throws a 404 error automatically</label></li>
+<li><label><input name="questions_202604071300_q25" type="radio" value="D"/>D. It clears the 'res.viewData' object</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>The 'next()' function must be called to continue; omitting it or using 'res.render' and returning effectively breaks the chain.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Mục đích của lệnh 'break' trong SFRA middleware chain là gì?</div>
+<ul>
+<li>A: Dừng thực thi middleware tiếp theo và render response ngay lập tức</li>
+<li>B: Redirect người dùng về trang chủ</li>
+<li>C: Tự động báo lỗi 404</li>
+<li>D: Xóa object 'res.viewData'</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which of the following is a &#x27;Synchronous&#x27; integration method in B2C Commerce?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 26">
-      <li><label><input type="radio" name="questions_202604071300_q26" value="A">A. A Batch Import of catalog data</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q26" value="B">B. A real-time HTTP Service call to a tax calculation API</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q26" value="C">C. A Job that exports orders to an SFTP server every hour</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q26" value="D">D. An OCAPI hook that triggers a background email send</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which of the following is a 'Synchronous' integration method in B2C Commerce?</h2>
+<ol aria-label="Questions 202604071300 - Question 26" class="options">
+<li><label><input name="questions_202604071300_q26" type="radio" value="A"/>A. A Batch Import of catalog data</label></li>
+<li><label><input name="questions_202604071300_q26" type="radio" value="B"/>B. A real-time HTTP Service call to a tax calculation API</label></li>
+<li><label><input name="questions_202604071300_q26" type="radio" value="C"/>C. A Job that exports orders to an SFTP server every hour</label></li>
+<li><label><input name="questions_202604071300_q26" type="radio" value="D"/>D. An OCAPI hook that triggers a background email send</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Phương thức tích hợp 'Synchronous' trong B2C Commerce là gì?</div>
+<ul>
+<li>A: Batch Import dữ liệu catalog</li>
+<li>B: HTTP Service call thời gian thực tới API tính thuế</li>
+<li>C: Job xuất đơn hàng lên SFTP server mỗi giờ</li>
+<li>D: OCAPI hook kích hoạt gửi email background</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What is the consequence of not using &#x27;Transaction.wrap()&#x27; when modifying a Product&#x27;s custom attribute?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 27">
-      <li><label><input type="radio" name="questions_202604071300_q27" value="A">A. The change will be saved, but only for the current session</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q27" value="B">B. The script will run slower due to lack of optimization</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q27" value="C">C. The system will automatically create a transaction for you</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q27" value="D">D. An exception will be thrown because persistence requires an active transaction</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>Any write operation to the database in B2C Commerce must occur within a transaction block.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What is the consequence of not using 'Transaction.wrap()' when modifying a Product's custom attribute?</h2>
+<ol aria-label="Questions 202604071300 - Question 27" class="options">
+<li><label><input name="questions_202604071300_q27" type="radio" value="A"/>A. The change will be saved, but only for the current session</label></li>
+<li><label><input name="questions_202604071300_q27" type="radio" value="B"/>B. The script will run slower due to lack of optimization</label></li>
+<li><label><input name="questions_202604071300_q27" type="radio" value="C"/>C. The system will automatically create a transaction for you</label></li>
+<li><label><input name="questions_202604071300_q27" type="radio" value="D"/>D. An exception will be thrown because persistence requires an active transaction</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>Any write operation to the database in B2C Commerce must occur within a transaction block.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Hậu quả của việc không dùng 'Transaction.wrap()' khi sửa đổi Product attribute?</div>
+<ul>
+<li>A: Thay đổi được lưu nhưng chỉ cho session hiện tại</li>
+<li>B: Script chạy chậm hơn do thiếu tối ưu</li>
+<li>C: Hệ thống tự động tạo transaction cho bạn</li>
+<li>D: Exception được ném vì persistence yêu cầu active transaction</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>When debugging ISML templates, which tool provides a &#x27;call stack&#x27; showing which templates included others?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 28">
-      <li><label><input type="radio" name="questions_202604071300_q28" value="A">A. The Storefront Toolkit</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q28" value="B">B. The Git History</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q28" value="C">C. The Business Manager Error Log</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q28" value="D">D. The Chrome Developer Tools Network tab</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>The Toolkit&#x27;s &#x27;Page Info&#x27; or &#x27;Information&#x27; tools highlight the template hierarchy on the live site.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>When debugging ISML templates, which tool provides a 'call stack' showing which templates included others?</h2>
+<ol aria-label="Questions 202604071300 - Question 28" class="options">
+<li><label><input name="questions_202604071300_q28" type="radio" value="A"/>A. The Storefront Toolkit</label></li>
+<li><label><input name="questions_202604071300_q28" type="radio" value="B"/>B. The Git History</label></li>
+<li><label><input name="questions_202604071300_q28" type="radio" value="C"/>C. The Business Manager Error Log</label></li>
+<li><label><input name="questions_202604071300_q28" type="radio" value="D"/>D. The Chrome Developer Tools Network tab</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>The Toolkit's 'Page Info' or 'Information' tools highlight the template hierarchy on the live site.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Khi debug ISML template, công cụ nào cung cấp 'call stack' cho thấy template nào đang được render?</div>
+<ul>
+<li>A: Storefront Toolkit</li>
+<li>B: Git History</li>
+<li>C: Business Manager Error Log</li>
+<li>D: Chrome Developer Tools Network tab</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which B2C API class is used to search for Content Assets programmatically?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 29">
-      <li><label><input type="radio" name="questions_202604071300_q29" value="A">A. dw.content.ContentMgr</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q29" value="B">B. dw.content.FolderMgr</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q29" value="C">C. dw.catalog.ProductMgr</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q29" value="D">D. dw.system.SearchMgr</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>ContentMgr provides methods like getContent() or searchContent() to retrieve library assets.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which B2C API class is used to search for Content Assets programmatically?</h2>
+<ol aria-label="Questions 202604071300 - Question 29" class="options">
+<li><label><input name="questions_202604071300_q29" type="radio" value="A"/>A. dw.content.ContentMgr</label></li>
+<li><label><input name="questions_202604071300_q29" type="radio" value="B"/>B. dw.content.FolderMgr</label></li>
+<li><label><input name="questions_202604071300_q29" type="radio" value="C"/>C. dw.catalog.ProductMgr</label></li>
+<li><label><input name="questions_202604071300_q29" type="radio" value="D"/>D. dw.system.SearchMgr</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>ContentMgr provides methods like getContent() or searchContent() to retrieve library assets.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Class B2C API nào dùng để tìm kiếm Content Assets theo chương trình?</div>
+<ul>
+<li>A: dw.content.ContentMgr</li>
+<li>B: dw.content.FolderMgr</li>
+<li>C: dw.catalog.ProductMgr</li>
+<li>D: dw.system.SearchMgr</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A developer needs to add a &#x27;Gift Wrap&#x27; option to the checkout. What is the most appropriate way to store this selection in the Cart?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 30">
-      <li><label><input type="radio" name="questions_202604071300_q30" value="A">A. As a custom attribute on the ProductLineItem object</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q30" value="B">B. In a Session Variable</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q30" value="C">C. On the Profile object of the Customer</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q30" value="D">D. In a Custom Object with the Order ID as a key</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>Line-item specific data (like gift wrapping) should be stored on the ProductLineItem to ensure it stays with the specific product during checkout.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A developer needs to add a 'Gift Wrap' option to the checkout. What is the most appropriate way to store this selection in the Cart?</h2>
+<ol aria-label="Questions 202604071300 - Question 30" class="options">
+<li><label><input name="questions_202604071300_q30" type="radio" value="A"/>A. As a custom attribute on the ProductLineItem object</label></li>
+<li><label><input name="questions_202604071300_q30" type="radio" value="B"/>B. In a Session Variable</label></li>
+<li><label><input name="questions_202604071300_q30" type="radio" value="C"/>C. On the Profile object of the Customer</label></li>
+<li><label><input name="questions_202604071300_q30" type="radio" value="D"/>D. In a Custom Object with the Order ID as a key</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>Line-item specific data (like gift wrapping) should be stored on the ProductLineItem to ensure it stays with the specific product during checkout.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Nhà phát triển cần thêm tùy chọn 'Gift Wrap' vào checkout. Cách tốt nhất là gì?</div>
+<ul>
+<li>A: Dùng custom attribute trên ProductLineItem object</li>
+<li>B: Trong Session Variable</li>
+<li>C: Trên Profile object của Customer</li>
+<li>D: Trong Custom Object với Order ID là key</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which configuration in Business Manager allows you to redirect a legacy URL to a new SFRA controller URL?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 31">
-      <li><label><input type="radio" name="questions_202604071300_q31" value="A">A. Content Assets</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q31" value="B">B. URL Redirects module</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q31" value="C">C. Aliases module</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q31" value="D">D. Dynamic Mappings in URL Rules</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>The URL Redirects module handles 301 and 302 redirects for SEO and legacy support.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which configuration in Business Manager allows you to redirect a legacy URL to a new SFRA controller URL?</h2>
+<ol aria-label="Questions 202604071300 - Question 31" class="options">
+<li><label><input name="questions_202604071300_q31" type="radio" value="A"/>A. Content Assets</label></li>
+<li><label><input name="questions_202604071300_q31" type="radio" value="B"/>B. URL Redirects module</label></li>
+<li><label><input name="questions_202604071300_q31" type="radio" value="C"/>C. Aliases module</label></li>
+<li><label><input name="questions_202604071300_q31" type="radio" value="D"/>D. Dynamic Mappings in URL Rules</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>The URL Redirects module handles 301 and 302 redirects for SEO and legacy support.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Cấu hình nào trong Business Manager cho phép redirect legacy URL sang URL mới?</div>
+<ul>
+<li>A: Content Assets</li>
+<li>B: Module URL Redirects</li>
+<li>C: Module Aliases</li>
+<li>D: Dynamic Mappings trong URL Rules</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What happens if a developer forgets to call &#x27;server.next()&#x27; in a middleware function?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 32">
-      <li><label><input type="radio" name="questions_202604071300_q32" value="A">A. The request hangs and eventually times out or renders nothing</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q32" value="B">B. The platform throws a &#x27;MiddlewareChainException&#x27;</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q32" value="C">C. The next cartridge in the path is checked automatically</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q32" value="D">D. A blank white page is served to the user</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>Next() is the trigger to move to the next function in the chain; without it, processing stops indefinitely.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What happens if a developer forgets to call 'server.next()' in a middleware function?</h2>
+<ol aria-label="Questions 202604071300 - Question 32" class="options">
+<li><label><input name="questions_202604071300_q32" type="radio" value="A"/>A. The request hangs and eventually times out or renders nothing</label></li>
+<li><label><input name="questions_202604071300_q32" type="radio" value="B"/>B. The platform throws a 'MiddlewareChainException'</label></li>
+<li><label><input name="questions_202604071300_q32" type="radio" value="C"/>C. The next cartridge in the path is checked automatically</label></li>
+<li><label><input name="questions_202604071300_q32" type="radio" value="D"/>D. A blank white page is served to the user</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>Next() is the trigger to move to the next function in the chain; without it, processing stops indefinitely.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Điều gì xảy ra nếu nhà phát triển quên gọi 'server.next()' trong middleware function?</div>
+<ul>
+<li>A: Request bị treo và timeout hoặc không render gì</li>
+<li>B: Nền tảng báo lỗi 'MiddlewareChainException'</li>
+<li>C: Cartridge tiếp theo trong path được kiểm tra tự động</li>
+<li>D: Trang trắng được trả về cho người dùng</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which of these is a valid way to optimize a site&#x27;s page load time (Speed Index)?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 33">
-      <li><label><input type="radio" name="questions_202604071300_q33" value="A">A. Configure &#x27;Cache Time-to-Live (TTL)&#x27; in Business Manager for controllers</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q33" value="B">B. Increase the number of cartridges in the cartridge path</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q33" value="C">C. Turn off the &#x27;Enforce Quotas&#x27; setting in Jobs</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q33" value="D">D. Use &#x27;Remote Includes&#x27; for every single ISML template</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>Server-side caching reduces the need to re-execute complex JavaScript logic on every request.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which of these is a valid way to optimize a site's page load time (Speed Index)?</h2>
+<ol aria-label="Questions 202604071300 - Question 33" class="options">
+<li><label><input name="questions_202604071300_q33" type="radio" value="A"/>A. Configure 'Cache Time-to-Live (TTL)' in Business Manager for controllers</label></li>
+<li><label><input name="questions_202604071300_q33" type="radio" value="B"/>B. Increase the number of cartridges in the cartridge path</label></li>
+<li><label><input name="questions_202604071300_q33" type="radio" value="C"/>C. Turn off the 'Enforce Quotas' setting in Jobs</label></li>
+<li><label><input name="questions_202604071300_q33" type="radio" value="D"/>D. Use 'Remote Includes' for every single ISML template</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>Server-side caching reduces the need to re-execute complex JavaScript logic on every request.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Cách hợp lệ nào để tối ưu page load time (Speed Index)?</div>
+<ul>
+<li>A: Cấu hình 'Cache Time-to-Live (TTL)' trong Business Manager cho controller</li>
+<li>B: Tăng số cartridge trong cartridge path</li>
+<li>C: Tắt cài đặt 'Enforce Quotas' trong Jobs</li>
+<li>D: Dùng 'Remote Includes' cho mọi ISML template</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>How do you define a &#x27;Price Book&#x27; for a specific customer group?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 34">
-      <li><label><input type="radio" name="questions_202604071300_q34" value="A">A. Manually update the price in the cart using a Hook</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q34" value="B">B. Assign the Price Book to the Customer Group in the Price Book settings</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q34" value="C">C. Use an IF statement in the ISML template to check the price</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q34" value="D">D. Create a custom attribute on the Customer Group</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>Price Books can be assigned to specific sites and then further restricted to specific customer groups (e.g., VIPs).</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>How do you define a 'Price Book' for a specific customer group?</h2>
+<ol aria-label="Questions 202604071300 - Question 34" class="options">
+<li><label><input name="questions_202604071300_q34" type="radio" value="A"/>A. Manually update the price in the cart using a Hook</label></li>
+<li><label><input name="questions_202604071300_q34" type="radio" value="B"/>B. Assign the Price Book to the Customer Group in the Price Book settings</label></li>
+<li><label><input name="questions_202604071300_q34" type="radio" value="C"/>C. Use an IF statement in the ISML template to check the price</label></li>
+<li><label><input name="questions_202604071300_q34" type="radio" value="D"/>D. Create a custom attribute on the Customer Group</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>Price Books can be assigned to specific sites and then further restricted to specific customer groups (e.g., VIPs).</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Làm thế nào để định nghĩa 'Price Book' cho customer group cụ thể?</div>
+<ul>
+<li>A: Cập nhật giá thủ công trong cart bằng Hook</li>
+<li>B: Gán Price Book cho Customer Group trong cài đặt Price Book</li>
+<li>C: Dùng IF statement trong ISML template để kiểm tra giá</li>
+<li>D: Tạo custom attribute trên Customer Group</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What is the correct location for the &#x27;client-side&#x27; JavaScript files in an SFRA cartridge?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 35">
-      <li><label><input type="radio" name="questions_202604071300_q35" value="A">A. cartridge/templates/js</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q35" value="B">B. cartridge/scripts/js</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q35" value="C">C. cartridge/static/default/js</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q35" value="D">D. cartridge/client/default/js</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>SFRA uses a specific folder structure for assets that are compiled (via webpack/gulp) for the browser.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What is the correct location for the 'client-side' JavaScript files in an SFRA cartridge?</h2>
+<ol aria-label="Questions 202604071300 - Question 35" class="options">
+<li><label><input name="questions_202604071300_q35" type="radio" value="A"/>A. cartridge/templates/js</label></li>
+<li><label><input name="questions_202604071300_q35" type="radio" value="B"/>B. cartridge/scripts/js</label></li>
+<li><label><input name="questions_202604071300_q35" type="radio" value="C"/>C. cartridge/static/default/js</label></li>
+<li><label><input name="questions_202604071300_q35" type="radio" value="D"/>D. cartridge/client/default/js</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>SFRA uses a specific folder structure for assets that are compiled (via webpack/gulp) for the browser.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Vị trí đúng cho file JavaScript phía client trong cartridge SFRA là ở đâu?</div>
+<ul>
+<li>A: cartridge/templates/js</li>
+<li>B: cartridge/scripts/js</li>
+<li>C: cartridge/static/default/js</li>
+<li>D: cartridge/client/default/js</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which Business Manager setting is required to allow &#x27;Search Refinement&#x27; by a new attribute like &#x27;Material&#x27;?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 36">
-      <li><label><input type="radio" name="questions_202604071300_q36" value="A">A. Enable &#x27;OCAPI Searchable&#x27; for the attribute</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q36" value="B">B. Add the attribute to the &#x27;Search Refinement&#x27; bucket in the Search Index module</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q36" value="C">C. Create a new ISML template for the refinement</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q36" value="D">D. The platform automatically shows all searchable attributes as refinements</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>You must explicitly define which attributes can be used as filters (refinements) in the search settings.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which Business Manager setting is required to allow 'Search Refinement' by a new attribute like 'Material'?</h2>
+<ol aria-label="Questions 202604071300 - Question 36" class="options">
+<li><label><input name="questions_202604071300_q36" type="radio" value="A"/>A. Enable 'OCAPI Searchable' for the attribute</label></li>
+<li><label><input name="questions_202604071300_q36" type="radio" value="B"/>B. Add the attribute to the 'Search Refinement' bucket in the Search Index module</label></li>
+<li><label><input name="questions_202604071300_q36" type="radio" value="C"/>C. Create a new ISML template for the refinement</label></li>
+<li><label><input name="questions_202604071300_q36" type="radio" value="D"/>D. The platform automatically shows all searchable attributes as refinements</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>You must explicitly define which attributes can be used as filters (refinements) in the search settings.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Cài đặt Business Manager nào cần thiết để cho phép 'Search Refinement' theo thuộc tính mới?</div>
+<ul>
+<li>A: Bật 'OCAPI Searchable' cho thuộc tính</li>
+<li>B: Thêm thuộc tính vào bucket 'Search Refinement' trong module Search Index</li>
+<li>C: Tạo ISML template mới cho refinement</li>
+<li>D: Nền tảng tự động hiển thị tất cả searchable attribute dưới dạng refinement</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A developer needs to perform an action when a shopper clicks &#x27;Place Order&#x27;. Which hook is appropriate?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 37">
-      <li><label><input type="radio" name="questions_202604071300_q37" value="A">A. dw.ocapi.shop.order.afterPOST</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q37" value="B">B. dw.ocapi.data.order.beforePOST</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q37" value="C">C. dw.system.order.beforeSubmit</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q37" value="D">D. app.order.placed</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>The afterPOST hook is triggered after an order is successfully created, allowing for post-processing like sending notifications.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A developer needs to perform an action when a shopper clicks 'Place Order'. Which hook is appropriate?</h2>
+<ol aria-label="Questions 202604071300 - Question 37" class="options">
+<li><label><input name="questions_202604071300_q37" type="radio" value="A"/>A. dw.ocapi.shop.order.afterPOST</label></li>
+<li><label><input name="questions_202604071300_q37" type="radio" value="B"/>B. dw.ocapi.data.order.beforePOST</label></li>
+<li><label><input name="questions_202604071300_q37" type="radio" value="C"/>C. dw.system.order.beforeSubmit</label></li>
+<li><label><input name="questions_202604071300_q37" type="radio" value="D"/>D. app.order.placed</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>The afterPOST hook is triggered after an order is successfully created, allowing for post-processing like sending notifications.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Nhà phát triển cần thực hiện hành động khi người mua click 'Place Order'. Hook nào phù hợp?</div>
+<ul>
+<li>A: dw.ocapi.shop.order.afterPOST</li>
+<li>B: dw.ocapi.data.order.beforePOST</li>
+<li>C: dw.system.order.beforeSubmit</li>
+<li>D: app.order.placed</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What is the best practice for storing external service credentials (like an API Key)?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 38">
-      <li><label><input type="radio" name="questions_202604071300_q38" value="A">A. Inside the Service Profile or Service Credential module in Business Manager</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q38" value="B">B. Inside a Site Preference with &#x27;Password&#x27; type</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q38" value="C">C. In a .properties file</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q38" value="D">D. As a hardcoded string in the script file</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>The Service Framework provides a secure, encrypted way to store credentials without hardcoding them in scripts.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What is the best practice for storing external service credentials (like an API Key)?</h2>
+<ol aria-label="Questions 202604071300 - Question 38" class="options">
+<li><label><input name="questions_202604071300_q38" type="radio" value="A"/>A. Inside the Service Profile or Service Credential module in Business Manager</label></li>
+<li><label><input name="questions_202604071300_q38" type="radio" value="B"/>B. Inside a Site Preference with 'Password' type</label></li>
+<li><label><input name="questions_202604071300_q38" type="radio" value="C"/>C. In a .properties file</label></li>
+<li><label><input name="questions_202604071300_q38" type="radio" value="D"/>D. As a hardcoded string in the script file</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>The Service Framework provides a secure, encrypted way to store credentials without hardcoding them in scripts.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Best practice để lưu trữ service credential bên ngoài (như API key) là gì?</div>
+<ul>
+<li>A: Trong Service Profile hoặc module Service Credential trong Business Manager</li>
+<li>B: Trong Site Preference loại 'Password'</li>
+<li>C: Trong file .properties</li>
+<li>D: Chuỗi hardcoded trong file script</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which method is used to retrieve a specific product by its ID in a script?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 39">
-      <li><label><input type="radio" name="questions_202604071300_q39" value="A">A. dw.system.Site.current.getProduct(&#x27;ID&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q39" value="B">B. new Product(&#x27;ID&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q39" value="C">C. dw.catalog.CatalogMgr.getProduct(&#x27;ID&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q39" value="D">D. dw.catalog.ProductMgr.getProduct(&#x27;ID&#x27;)</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>ProductMgr is the static manager class used for accessing the catalog&#x27;s products.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which method is used to retrieve a specific product by its ID in a script?</h2>
+<ol aria-label="Questions 202604071300 - Question 39" class="options">
+<li><label><input name="questions_202604071300_q39" type="radio" value="A"/>A. dw.system.Site.current.getProduct('ID')</label></li>
+<li><label><input name="questions_202604071300_q39" type="radio" value="B"/>B. new Product('ID')</label></li>
+<li><label><input name="questions_202604071300_q39" type="radio" value="C"/>C. dw.catalog.CatalogMgr.getProduct('ID')</label></li>
+<li><label><input name="questions_202604071300_q39" type="radio" value="D"/>D. dw.catalog.ProductMgr.getProduct('ID')</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>ProductMgr is the static manager class used for accessing the catalog's products.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Phương thức nào dùng để lấy sản phẩm cụ thể theo ID trong script?</div>
+<ul>
+<li>A: dw.system.Site.current.getProduct('ID')</li>
+<li>B: new Product('ID')</li>
+<li>C: dw.catalog.CatalogMgr.getProduct('ID')</li>
+<li>D: dw.catalog.ProductMgr.getProduct('ID')</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>When implementing Page Designer, what is the role of the &#x27;meta&#x27; file?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 40">
-      <li><label><input type="radio" name="questions_202604071300_q40" value="A">A. It contains the SEO metadata like page title and description</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q40" value="B">B. It handles the server-side logic for the component</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q40" value="C">C. It stores the binary image data for the component</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q40" value="D">D. It defines the attributes, layout, and region rules for the component</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>The JSON meta file acts as the configuration schema for Page Designer components and page types.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>When implementing Page Designer, what is the role of the 'meta' file?</h2>
+<ol aria-label="Questions 202604071300 - Question 40" class="options">
+<li><label><input name="questions_202604071300_q40" type="radio" value="A"/>A. It contains the SEO metadata like page title and description</label></li>
+<li><label><input name="questions_202604071300_q40" type="radio" value="B"/>B. It handles the server-side logic for the component</label></li>
+<li><label><input name="questions_202604071300_q40" type="radio" value="C"/>C. It stores the binary image data for the component</label></li>
+<li><label><input name="questions_202604071300_q40" type="radio" value="D"/>D. It defines the attributes, layout, and region rules for the component</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>The JSON meta file acts as the configuration schema for Page Designer components and page types.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Khi triển khai Page Designer, vai trò của file 'meta' là gì?</div>
+<ul>
+<li>A: Chứa SEO metadata như page title và description</li>
+<li>B: Xử lý logic phía server cho component</li>
+<li>C: Lưu trữ dữ liệu image nhị phân cho component</li>
+<li>D: Định nghĩa thuộc tính, layout và region rule cho component</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A developer needs to check if a specific feature is enabled via a Site Preference. What is the code snippet?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 41">
-      <li><label><input type="radio" name="questions_202604071300_q41" value="A">A. dw.system.Site.current.getCustomPreferenceValue(&#x27;myFeature&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q41" value="B">B. session.custom.myFeature</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q41" value="C">C. dw.system.System.getPreference(&#x27;myFeature&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q41" value="D">D. dw.web.Resource.msg(&#x27;myFeature&#x27;)</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>This is the standard API for accessing site-specific custom configuration.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A developer needs to check if a specific feature is enabled via a Site Preference. What is the code snippet?</h2>
+<ol aria-label="Questions 202604071300 - Question 41" class="options">
+<li><label><input name="questions_202604071300_q41" type="radio" value="A"/>A. dw.system.Site.current.getCustomPreferenceValue('myFeature')</label></li>
+<li><label><input name="questions_202604071300_q41" type="radio" value="B"/>B. session.custom.myFeature</label></li>
+<li><label><input name="questions_202604071300_q41" type="radio" value="C"/>C. dw.system.System.getPreference('myFeature')</label></li>
+<li><label><input name="questions_202604071300_q41" type="radio" value="D"/>D. dw.web.Resource.msg('myFeature')</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>This is the standard API for accessing site-specific custom configuration.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Nhà phát triển cần kiểm tra nếu tính năng được bật qua Site Preference. Cách tiếp cận đúng?</div>
+<ul>
+<li>A: dw.system.Site.current.getCustomPreferenceValue('myFeature')</li>
+<li>B: session.custom.myFeature</li>
+<li>C: dw.system.System.getPreference('myFeature')</li>
+<li>D: dw.web.Resource.msg('myFeature')</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>In the SFRA framework, how do you extend an existing model without replacing the entire file?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 42">
-      <li><label><input type="radio" name="questions_202604071300_q42" value="A">A. Use &#x27;server.append&#x27; on the model</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q42" value="B">B. Create a file with the same name in a higher-priority cartridge</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q42" value="C">C. Require the base model and use module.exports to override specific properties</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q42" value="D">D. Use the &#x27;super()&#x27; keyword in a class definition</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>C</strong><br><small>Standard Node.js pattern of requiring the base, calling its constructor, and then adding/modifying methods is the way to extend models.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>In the SFRA framework, how do you extend an existing model without replacing the entire file?</h2>
+<ol aria-label="Questions 202604071300 - Question 42" class="options">
+<li><label><input name="questions_202604071300_q42" type="radio" value="A"/>A. Use 'server.append' on the model</label></li>
+<li><label><input name="questions_202604071300_q42" type="radio" value="B"/>B. Create a file with the same name in a higher-priority cartridge</label></li>
+<li><label><input name="questions_202604071300_q42" type="radio" value="C"/>C. Require the base model and use module.exports to override specific properties</label></li>
+<li><label><input name="questions_202604071300_q42" type="radio" value="D"/>D. Use the 'super()' keyword in a class definition</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br/><small>Standard Node.js pattern of requiring the base, calling its constructor, and then adding/modifying methods is the way to extend models.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Trong SFRA, làm thế nào để mở rộng model hiện có mà không thay thế hoàn toàn?</div>
+<ul>
+<li>A: Dùng 'server.append' trên model</li>
+<li>B: Tạo file cùng tên trong cartridge có độ ưu tiên cao hơn</li>
+<li>C: Require base model và dùng module.exports để override thuộc tính cụ thể</li>
+<li>D: Dùng từ khóa 'super()' trong class definition</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which of the following is a symptom of a &#x27;Cache Hit&#x27; on the B2C platform?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 43">
-      <li><label><input type="radio" name="questions_202604071300_q43" value="A">A. The shopper sees the same product price regardless of their customer group</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q43" value="B">B. The response header &#x27;X-Cache&#x27; is set to &#x27;MISS&#x27;</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q43" value="C">C. The controller logic is not executed for that specific request</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q43" value="D">D. The page loads in exactly 5 seconds every time</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>C</strong><br><small>If a page is cached, the platform serves the HTML directly from the web server layer, bypassing the script execution entirely.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which of the following is a symptom of a 'Cache Hit' on the B2C platform?</h2>
+<ol aria-label="Questions 202604071300 - Question 43" class="options">
+<li><label><input name="questions_202604071300_q43" type="radio" value="A"/>A. The shopper sees the same product price regardless of their customer group</label></li>
+<li><label><input name="questions_202604071300_q43" type="radio" value="B"/>B. The response header 'X-Cache' is set to 'MISS'</label></li>
+<li><label><input name="questions_202604071300_q43" type="radio" value="C"/>C. The controller logic is not executed for that specific request</label></li>
+<li><label><input name="questions_202604071300_q43" type="radio" value="D"/>D. The page loads in exactly 5 seconds every time</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br/><small>If a page is cached, the platform serves the HTML directly from the web server layer, bypassing the script execution entirely.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Triệu chứng nào của 'Cache Hit' trên nền tảng B2C?</div>
+<ul>
+<li>A: Người mua thấy cùng giá sản phẩm bất kể customer group</li>
+<li>B: Response header 'X-Cache' được đặt là 'MISS'</li>
+<li>C: Logic controller không được thực thi cho request cụ thể đó</li>
+<li>D: Trang tải trong đúng 5 giây mỗi lần</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A merchant wants to offer a &#x27;Buy One Get One Free&#x27; promotion. Where is this configured?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 44">
-      <li><label><input type="radio" name="questions_202604071300_q44" value="A">A. Merchant Tools &gt; Site Preferences</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q44" value="B">B. Merchant Tools &gt; Online Marketing &gt; Promotions</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q44" value="C">C. Merchant Tools &gt; Pricing &gt; Price Books</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q44" value="D">D. Merchant Tools &gt; Products &gt; Bundles</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>The Promotions engine handles marketing rules like BOGO, percentage off, and free shipping.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A merchant wants to offer a 'Buy One Get One Free' promotion. Where is this configured?</h2>
+<ol aria-label="Questions 202604071300 - Question 44" class="options">
+<li><label><input name="questions_202604071300_q44" type="radio" value="A"/>A. Merchant Tools &gt; Site Preferences</label></li>
+<li><label><input name="questions_202604071300_q44" type="radio" value="B"/>B. Merchant Tools &gt; Online Marketing &gt; Promotions</label></li>
+<li><label><input name="questions_202604071300_q44" type="radio" value="C"/>C. Merchant Tools &gt; Pricing &gt; Price Books</label></li>
+<li><label><input name="questions_202604071300_q44" type="radio" value="D"/>D. Merchant Tools &gt; Products &gt; Bundles</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>The Promotions engine handles marketing rules like BOGO, percentage off, and free shipping.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Merchant muốn cung cấp promotion 'Mua Một Được Một Miễn Phí'. Cấu hình ở đâu?</div>
+<ul>
+<li>A: Merchant Tools &gt; Site Preferences</li>
+<li>B: Merchant Tools &gt; Online Marketing &gt; Promotions</li>
+<li>C: Merchant Tools &gt; Pricing &gt; Price Books</li>
+<li>D: Merchant Tools &gt; Products &gt; Bundles</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>How do you log a message to a specific file named &#x27;payment-errors&#x27;?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 45">
-      <li><label><input type="radio" name="questions_202604071300_q45" value="A">A. Write to the &#x27;scripts/logs/payment-errors.log&#x27; file using File IO</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q45" value="B">B. dw.system.Logger.getLogger(&#x27;payment-errors&#x27;).error(&#x27;message&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q45" value="C">C. dw.system.System.log(&#x27;payment-errors&#x27;, &#x27;message&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q45" value="D">D. dw.system.Logger.error(&#x27;payment-errors&#x27;, &#x27;message&#x27;)</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>Using getLogger(category) allows you to route logs to specific files based on the category name.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>How do you log a message to a specific file named 'payment-errors'?</h2>
+<ol aria-label="Questions 202604071300 - Question 45" class="options">
+<li><label><input name="questions_202604071300_q45" type="radio" value="A"/>A. Write to the 'scripts/logs/payment-errors.log' file using File IO</label></li>
+<li><label><input name="questions_202604071300_q45" type="radio" value="B"/>B. dw.system.Logger.getLogger('payment-errors').error('message')</label></li>
+<li><label><input name="questions_202604071300_q45" type="radio" value="C"/>C. dw.system.System.log('payment-errors', 'message')</label></li>
+<li><label><input name="questions_202604071300_q45" type="radio" value="D"/>D. dw.system.Logger.error('payment-errors', 'message')</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>Using getLogger(category) allows you to route logs to specific files based on the category name.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Làm thế nào để ghi log message vào file cụ thể tên 'payment-errors'?</div>
+<ul>
+<li>A: Ghi vào file 'scripts/logs/payment-errors.log' bằng File IO</li>
+<li>B: dw.system.Logger.getLogger('payment-errors').error('message')</li>
+<li>C: dw.system.System.log('payment-errors', 'message')</li>
+<li>D: dw.system.Logger.error('payment-errors', 'message')</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What is the primary function of the &#x27;Forms Framework&#x27; in B2C Commerce?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 46">
-      <li><label><input type="radio" name="questions_202604071300_q46" value="A">A. To connect the storefront to a Google Form</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q46" value="B">B. To automatically generate CSS for HTML forms</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q46" value="C">C. To handle validation, rendering, and persistence of user input</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q46" value="D">D. To manage the customer&#x27;s login session</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>C</strong><br><small>The framework uses XML definitions to automate the lifecycle of storefront forms.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What is the primary function of the 'Forms Framework' in B2C Commerce?</h2>
+<ol aria-label="Questions 202604071300 - Question 46" class="options">
+<li><label><input name="questions_202604071300_q46" type="radio" value="A"/>A. To connect the storefront to a Google Form</label></li>
+<li><label><input name="questions_202604071300_q46" type="radio" value="B"/>B. To automatically generate CSS for HTML forms</label></li>
+<li><label><input name="questions_202604071300_q46" type="radio" value="C"/>C. To handle validation, rendering, and persistence of user input</label></li>
+<li><label><input name="questions_202604071300_q46" type="radio" value="D"/>D. To manage the customer's login session</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br/><small>The framework uses XML definitions to automate the lifecycle of storefront forms.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Chức năng chính của 'Forms Framework' trong B2C Commerce là gì?</div>
+<ul>
+<li>A: Kết nối storefront với Google Form</li>
+<li>B: Tự động tạo CSS cho HTML form</li>
+<li>C: Xử lý validation, rendering và persistence của input người dùng</li>
+<li>D: Quản lý session đăng nhập của khách hàng</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which tool provides a visual representation of how different cartridges override each other for a specific template?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 47">
-      <li><label><input type="radio" name="questions_202604071300_q47" value="A">A. Business Manager - Cartridges module</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q47" value="B">B. Storefront Toolkit - Information tool</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q47" value="C">C. VS Code - File Explorer</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q47" value="D">D. Chrome - Inspector</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>The Toolkit displays the full path of the template and highlights which cartridge it&#x27;s being loaded from.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which tool provides a visual representation of how different cartridges override each other for a specific template?</h2>
+<ol aria-label="Questions 202604071300 - Question 47" class="options">
+<li><label><input name="questions_202604071300_q47" type="radio" value="A"/>A. Business Manager - Cartridges module</label></li>
+<li><label><input name="questions_202604071300_q47" type="radio" value="B"/>B. Storefront Toolkit - Information tool</label></li>
+<li><label><input name="questions_202604071300_q47" type="radio" value="C"/>C. VS Code - File Explorer</label></li>
+<li><label><input name="questions_202604071300_q47" type="radio" value="D"/>D. Chrome - Inspector</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>The Toolkit displays the full path of the template and highlights which cartridge it's being loaded from.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Công cụ nào cung cấp đại diện trực quan về cách các cartridge khác nhau override lẫn nhau?</div>
+<ul>
+<li>A: Business Manager - module Cartridges</li>
+<li>B: Storefront Toolkit - công cụ Information</li>
+<li>C: VS Code - File Explorer</li>
+<li>D: Chrome - Inspector</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which of the following is required to make an OCAPI request authenticated?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 48">
-      <li><label><input type="radio" name="questions_202604071300_q48" value="A">A. A standard session cookie from the browser</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q48" value="B">B. The &#x27;x-dw-client-id&#x27; header alone</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q48" value="C">C. A password sent in plain text</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q48" value="D">D. An OAuth JWT token in the &#x27;Authorization&#x27; header</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>OCAPI uses JWT (JSON Web Tokens) for authenticating users and applications.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which of the following is required to make an OCAPI request authenticated?</h2>
+<ol aria-label="Questions 202604071300 - Question 48" class="options">
+<li><label><input name="questions_202604071300_q48" type="radio" value="A"/>A. A standard session cookie from the browser</label></li>
+<li><label><input name="questions_202604071300_q48" type="radio" value="B"/>B. The 'x-dw-client-id' header alone</label></li>
+<li><label><input name="questions_202604071300_q48" type="radio" value="C"/>C. A password sent in plain text</label></li>
+<li><label><input name="questions_202604071300_q48" type="radio" value="D"/>D. An OAuth JWT token in the 'Authorization' header</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>OCAPI uses JWT (JSON Web Tokens) for authenticating users and applications.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Điều gì cần thiết để thực hiện OCAPI request được xác thực?</div>
+<ul>
+<li>A: Session cookie tiêu chuẩn từ trình duyệt</li>
+<li>B: Chỉ header 'x-dw-client-id'</li>
+<li>C: Mật khẩu gửi dạng plain text</li>
+<li>D: OAuth JWT token trong header 'Authorization'</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>In a Job, what does the &#x27;Parallel&#x27; execution mode do?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 49">
-      <li><label><input type="radio" name="questions_202604071300_q49" value="A">A. It executes multiple steps simultaneously to improve speed</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q49" value="B">B. It syncs the data to a second instance automatically</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q49" value="C">C. It ensures two users cannot edit the same product at once</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q49" value="D">D. It runs the same script twice with different parameters</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>The Job framework allows independent steps to run in parallel to reduce the total job duration.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>In a Job, what does the 'Parallel' execution mode do?</h2>
+<ol aria-label="Questions 202604071300 - Question 49" class="options">
+<li><label><input name="questions_202604071300_q49" type="radio" value="A"/>A. It executes multiple steps simultaneously to improve speed</label></li>
+<li><label><input name="questions_202604071300_q49" type="radio" value="B"/>B. It syncs the data to a second instance automatically</label></li>
+<li><label><input name="questions_202604071300_q49" type="radio" value="C"/>C. It ensures two users cannot edit the same product at once</label></li>
+<li><label><input name="questions_202604071300_q49" type="radio" value="D"/>D. It runs the same script twice with different parameters</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>The Job framework allows independent steps to run in parallel to reduce the total job duration.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Trong Job, chế độ thực thi 'Parallel' làm gì?</div>
+<ul>
+<li>A: Thực thi nhiều step đồng thời để tăng tốc</li>
+<li>B: Đồng bộ dữ liệu sang instance thứ hai tự động</li>
+<li>C: Đảm bảo hai người dùng không thể sửa cùng sản phẩm</li>
+<li>D: Chạy cùng script hai lần với tham số khác nhau</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What is the correct way to include a &#x27;Static&#x27; file (like a CSS file) in an ISML template?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 50">
-      <li><label><input type="radio" name="questions_202604071300_q50" value="A">A. &lt;isinclude template=&quot;/css/style.css&quot; /&gt; (Sai vì isinclude dùng cho template .isml, không dùng cho .css)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q50" value="B">B. URLUtils.url(&#x27;/style.css&#x27;) (Sai vì url() dùng cho các Controller/Pipeline hành động)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q50" value="C">C. URLUtils.staticURL(&#x27;/css/style.css&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q50" value="D">D. &lt;link rel=&quot;stylesheet&quot; href=&quot;${URLUtils.webRoot()}/css/style.css&quot; /&gt;</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>C</strong><br><small>staticURL ensures that the correct path to the static folder is generated, including versioning for cache busting.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What is the correct way to include a 'Static' file (like a CSS file) in an ISML template?</h2>
+<ol aria-label="Questions 202604071300 - Question 50" class="options">
+<li><label><input name="questions_202604071300_q50" type="radio" value="A"/>A. &lt;isinclude template="/css/style.css" /&gt; (Sai vì isinclude dùng cho template .isml, không dùng cho .css)</label></li>
+<li><label><input name="questions_202604071300_q50" type="radio" value="B"/>B. URLUtils.url('/style.css') (Sai vì url() dùng cho các Controller/Pipeline hành động)</label></li>
+<li><label><input name="questions_202604071300_q50" type="radio" value="C"/>C. URLUtils.staticURL('/css/style.css')</label></li>
+<li><label><input name="questions_202604071300_q50" type="radio" value="D"/>D. &lt;link rel="stylesheet" href="${URLUtils.webRoot()}/css/style.css" /&gt;</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br/><small>staticURL ensures that the correct path to the static folder is generated, including versioning for cache busting.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Cách đúng để include file 'Static' (như CSS) trong ISML template là gì?</div>
+<ul>
+<li>A: &lt;isinclude template="/css/style.css" /&gt;</li>
+<li>B: URLUtils.url('/style.css')</li>
+<li>C: URLUtils.staticURL('/css/style.css')</li>
+<li>D: &lt;link rel="stylesheet" href="${URLUtils.webRoot()}/css/style.css" /&gt;</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which class would you use to check if a customer is currently logged in?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 51">
-      <li><label><input type="radio" name="questions_202604071300_q51" value="A">A. session.user.isLoggedIn()</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q51" value="B">B. customer.authenticated</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q51" value="C">C. request.isAuthenticated()</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q51" value="D">D. dw.customer.CustomerMgr.isLoggedIn()</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>The global &#x27;customer&#x27; object has an &#x27;authenticated&#x27; property that returns true if the user is logged in.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which class would you use to check if a customer is currently logged in?</h2>
+<ol aria-label="Questions 202604071300 - Question 51" class="options">
+<li><label><input name="questions_202604071300_q51" type="radio" value="A"/>A. session.user.isLoggedIn()</label></li>
+<li><label><input name="questions_202604071300_q51" type="radio" value="B"/>B. customer.authenticated</label></li>
+<li><label><input name="questions_202604071300_q51" type="radio" value="C"/>C. request.isAuthenticated()</label></li>
+<li><label><input name="questions_202604071300_q51" type="radio" value="D"/>D. dw.customer.CustomerMgr.isLoggedIn()</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>The global 'customer' object has an 'authenticated' property that returns true if the user is logged in.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Class nào dùng để kiểm tra khách hàng hiện tại có đang đăng nhập không?</div>
+<ul>
+<li>A: session.user.isLoggedIn()</li>
+<li>B: customer.authenticated</li>
+<li>C: request.isAuthenticated()</li>
+<li>D: dw.customer.CustomerMgr.isLoggedIn()</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What is the purpose of the &#x27;dw.system.HookMgr&#x27; class?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 52">
-      <li><label><input type="radio" name="questions_202604071300_q52" value="A">A. To manage the cartridge path at runtime</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q52" value="B">B. To check if a specific hook is defined and call it</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q52" value="C">C. To schedule a job to run at a specific time</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q52" value="D">D. To capture errors and send them to an external system</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>HookMgr allows developers to programmatically trigger or check for the existence of custom or system hooks.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What is the purpose of the 'dw.system.HookMgr' class?</h2>
+<ol aria-label="Questions 202604071300 - Question 52" class="options">
+<li><label><input name="questions_202604071300_q52" type="radio" value="A"/>A. To manage the cartridge path at runtime</label></li>
+<li><label><input name="questions_202604071300_q52" type="radio" value="B"/>B. To check if a specific hook is defined and call it</label></li>
+<li><label><input name="questions_202604071300_q52" type="radio" value="C"/>C. To schedule a job to run at a specific time</label></li>
+<li><label><input name="questions_202604071300_q52" type="radio" value="D"/>D. To capture errors and send them to an external system</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>HookMgr allows developers to programmatically trigger or check for the existence of custom or system hooks.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Mục đích của class 'dw.system.HookMgr' là gì?</div>
+<ul>
+<li>A: Quản lý cartridge path trong runtime</li>
+<li>B: Kiểm tra xem hook cụ thể có được định nghĩa không và gọi nó</li>
+<li>C: Lên lịch job chạy vào thời điểm cụ thể</li>
+<li>D: Bắt lỗi và gửi đến hệ thống bên ngoài</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A developer needs to prevent an ISML template from being cached. What should they do?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 53">
-      <li><label><input type="radio" name="questions_202604071300_q53" value="A">A. Disable caching for the entire site in Business Manager</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q53" value="B">B. Use the &lt;isnocache&gt; tag</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q53" value="C">C. Set the response header &#x27;Pragma: no-cache&#x27; in the controller</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q53" value="D">D. Add &lt;iscache type=&quot;relative&quot; hour=&quot;0&quot; minute=&quot;0&quot; /&gt;</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>Setting the cache time to zero effectively disables caching for that specific page or component.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A developer needs to prevent an ISML template from being cached. What should they do?</h2>
+<ol aria-label="Questions 202604071300 - Question 53" class="options">
+<li><label><input name="questions_202604071300_q53" type="radio" value="A"/>A. Disable caching for the entire site in Business Manager</label></li>
+<li><label><input name="questions_202604071300_q53" type="radio" value="B"/>B. Use the &lt;isnocache&gt; tag</label></li>
+<li><label><input name="questions_202604071300_q53" type="radio" value="C"/>C. Set the response header 'Pragma: no-cache' in the controller</label></li>
+<li><label><input name="questions_202604071300_q53" type="radio" value="D"/>D. Add &lt;iscache type="relative" hour="0" minute="0" /&gt;</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>Setting the cache time to zero effectively disables caching for that specific page or component.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Nhà phát triển cần ngăn ISML template bị cache. Cần làm gì?</div>
+<ul>
+<li>A: Tắt cache cho toàn site trong Business Manager</li>
+<li>B: Dùng tag &lt;isnocache&gt;</li>
+<li>C: Đặt response header 'Pragma: no-cache' trong controller</li>
+<li>D: Thêm &lt;iscache type="relative" hour="0" minute="0" /&gt;</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>In the SFRA &#x27;Form Definition&#x27; XML, what does the &#x27;binding&#x27; attribute do?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 54">
-      <li><label><input type="radio" name="questions_202604071300_q54" value="A">A. It maps the form field to a specific attribute on a System or Custom Object</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q54" value="B">B. It binds a CSS class to the HTML input</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q54" value="C">C. It defines which user group can see the form</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q54" value="D">D. It links the form to an external database</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>Binding allows for automatic data transfer between the UI form and the database objects.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>In the SFRA 'Form Definition' XML, what does the 'binding' attribute do?</h2>
+<ol aria-label="Questions 202604071300 - Question 54" class="options">
+<li><label><input name="questions_202604071300_q54" type="radio" value="A"/>A. It maps the form field to a specific attribute on a System or Custom Object</label></li>
+<li><label><input name="questions_202604071300_q54" type="radio" value="B"/>B. It binds a CSS class to the HTML input</label></li>
+<li><label><input name="questions_202604071300_q54" type="radio" value="C"/>C. It defines which user group can see the form</label></li>
+<li><label><input name="questions_202604071300_q54" type="radio" value="D"/>D. It links the form to an external database</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>Binding allows for automatic data transfer between the UI form and the database objects.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Trong 'Form Definition' XML của SFRA, thuộc tính 'binding' làm gì?</div>
+<ul>
+<li>A: Ánh xạ form field tới thuộc tính cụ thể trên System hoặc Custom Object</li>
+<li>B: Gán CSS class cho HTML input</li>
+<li>C: Định nghĩa nhóm người dùng có thể thấy form</li>
+<li>D: Liên kết form với database bên ngoài</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which of the following is a reason to use a &#x27;Local Include&#x27; instead of a &#x27;Remote Include&#x27;?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 55">
-      <li><label><input type="radio" name="questions_202604071300_q55" value="A">A. The included content is provided by an external server</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q55" value="B">B. The included content must share the same variables/dictionary as the parent page</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q55" value="C">C. The parent page is dynamic but the include is static</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q55" value="D">D. The included content needs to be cached separately</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>Local includes are processed in the same request thread, meaning they can access variables defined in the parent template.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which of the following is a reason to use a 'Local Include' instead of a 'Remote Include'?</h2>
+<ol aria-label="Questions 202604071300 - Question 55" class="options">
+<li><label><input name="questions_202604071300_q55" type="radio" value="A"/>A. The included content is provided by an external server</label></li>
+<li><label><input name="questions_202604071300_q55" type="radio" value="B"/>B. The included content must share the same variables/dictionary as the parent page</label></li>
+<li><label><input name="questions_202604071300_q55" type="radio" value="C"/>C. The parent page is dynamic but the include is static</label></li>
+<li><label><input name="questions_202604071300_q55" type="radio" value="D"/>D. The included content needs to be cached separately</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>Local includes are processed in the same request thread, meaning they can access variables defined in the parent template.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Lý do nào để dùng 'Local Include' thay vì 'Remote Include'?</div>
+<ul>
+<li>A: Nội dung được include đến từ server bên ngoài</li>
+<li>B: Nội dung được include phải chia sẻ biến/dictionary với trang cha</li>
+<li>C: Trang cha động nhưng include là tĩnh</li>
+<li>D: Nội dung được include cần được cache riêng</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>What is the purpose of the &#x27;onSession&#x27; hook in the &#x27;hooks.json&#x27; file?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 56">
-      <li><label><input type="radio" name="questions_202604071300_q56" value="A">A. To save the cart data to a persistent database</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q56" value="B">B. To log the user out after a period of inactivity</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q56" value="C">C. To execute logic whenever a new shopper session is created</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q56" value="D">D. To check if the user&#x27;s password has expired</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>C</strong><br><small>The onSession hook is ideal for initializing session data, like tracking parameters or geolocation settings.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>What is the purpose of the 'onSession' hook in the 'hooks.json' file?</h2>
+<ol aria-label="Questions 202604071300 - Question 56" class="options">
+<li><label><input name="questions_202604071300_q56" type="radio" value="A"/>A. To save the cart data to a persistent database</label></li>
+<li><label><input name="questions_202604071300_q56" type="radio" value="B"/>B. To log the user out after a period of inactivity</label></li>
+<li><label><input name="questions_202604071300_q56" type="radio" value="C"/>C. To execute logic whenever a new shopper session is created</label></li>
+<li><label><input name="questions_202604071300_q56" type="radio" value="D"/>D. To check if the user's password has expired</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br/><small>The onSession hook is ideal for initializing session data, like tracking parameters or geolocation settings.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Mục đích của hook 'onSession' trong file 'hooks.json' là gì?</div>
+<ul>
+<li>A: Lưu dữ liệu giỏ hàng vào database persistent</li>
+<li>B: Đăng xuất người dùng sau thời gian không hoạt động</li>
+<li>C: Thực thi logic mỗi khi session người mua mới được tạo</li>
+<li>D: Kiểm tra mật khẩu người dùng có hết hạn không</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which tool is best for finding the &#x27;Total Page Load Time&#x27; from a user&#x27;s perspective?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 57">
-      <li><label><input type="radio" name="questions_202604071300_q57" value="A">A. B2C Code Profiler</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q57" value="B">B. Request Logs in Business Manager</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q57" value="C">C. Chrome DevTools - Network/Performance tab</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q57" value="D">D. Pipeline Profiler</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>C</strong><br><small>Browser tools are necessary to see the impact of front-end assets, network latency, and rendering on the user&#x27;s device.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which tool is best for finding the 'Total Page Load Time' from a user's perspective?</h2>
+<ol aria-label="Questions 202604071300 - Question 57" class="options">
+<li><label><input name="questions_202604071300_q57" type="radio" value="A"/>A. B2C Code Profiler</label></li>
+<li><label><input name="questions_202604071300_q57" type="radio" value="B"/>B. Request Logs in Business Manager</label></li>
+<li><label><input name="questions_202604071300_q57" type="radio" value="C"/>C. Chrome DevTools - Network/Performance tab</label></li>
+<li><label><input name="questions_202604071300_q57" type="radio" value="D"/>D. Pipeline Profiler</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br/><small>Browser tools are necessary to see the impact of front-end assets, network latency, and rendering on the user's device.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Công cụ nào tốt nhất để tìm 'Total Page Load Time' từ góc nhìn người dùng?</div>
+<ul>
+<li>A: B2C Code Profiler</li>
+<li>B: Request Logs trong Business Manager</li>
+<li>C: Chrome DevTools - tab Network/Performance</li>
+<li>D: Pipeline Profiler</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A developer is writing a Job to update 5,000 prices. Which approach minimizes database locking issues?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 58">
-      <li><label><input type="radio" name="questions_202604071300_q58" value="A">A. Break the work into small transactions using Transaction.begin() and commit() inside the loop</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q58" value="B">B. Disable all other jobs that might touch the catalog</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q58" value="C">C. Use the &#x27;Replace&#x27; mode in the import step</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q58" value="D">D. Run the job only when the site is in &#x27;Maintenance Mode’</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>Small transactions release locks quickly, whereas one massive transaction locks all 5,000 records for the entire duration.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A developer is writing a Job to update 5,000 prices. Which approach minimizes database locking issues?</h2>
+<ol aria-label="Questions 202604071300 - Question 58" class="options">
+<li><label><input name="questions_202604071300_q58" type="radio" value="A"/>A. Break the work into small transactions using Transaction.begin() and commit() inside the loop</label></li>
+<li><label><input name="questions_202604071300_q58" type="radio" value="B"/>B. Disable all other jobs that might touch the catalog</label></li>
+<li><label><input name="questions_202604071300_q58" type="radio" value="C"/>C. Use the 'Replace' mode in the import step</label></li>
+<li><label><input name="questions_202604071300_q58" type="radio" value="D"/>D. Run the job only when the site is in 'Maintenance Mode’</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>Small transactions release locks quickly, whereas one massive transaction locks all 5,000 records for the entire duration.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Nhà phát triển đang viết Job để cập nhật 5.000 giá. Cách nào giảm thiểu database lock?</div>
+<ul>
+<li>A: Chia công việc thành các transaction nhỏ dùng Transaction.begin() và commit() trong vòng lặp</li>
+<li>B: Tắt tất cả job khác có thể chạm catalog</li>
+<li>C: Dùng chế độ 'Replace' trong import step</li>
+<li>D: Chạy job chỉ khi site ở 'Maintenance Mode'</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>In OCAPI, what is the &#x27;x-dw-client-id&#x27; used for?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 59">
-      <li><label><input type="radio" name="questions_202604071300_q59" value="A">A. To bypass the site&#x27;s firewall</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q59" value="B">B. To identify the specific application making the request</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q59" value="C">C. To store the user&#x27;s password securely</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q59" value="D">D. To set the locale of the response</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>B</strong><br><small>The client ID is a mandatory key that identifies the caller and is used for permission and quota management.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>In OCAPI, what is the 'x-dw-client-id' used for?</h2>
+<ol aria-label="Questions 202604071300 - Question 59" class="options">
+<li><label><input name="questions_202604071300_q59" type="radio" value="A"/>A. To bypass the site's firewall</label></li>
+<li><label><input name="questions_202604071300_q59" type="radio" value="B"/>B. To identify the specific application making the request</label></li>
+<li><label><input name="questions_202604071300_q59" type="radio" value="C"/>C. To store the user's password securely</label></li>
+<li><label><input name="questions_202604071300_q59" type="radio" value="D"/>D. To set the locale of the response</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>B</strong><br/><small>The client ID is a mandatory key that identifies the caller and is used for permission and quota management.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Trong OCAPI, 'x-dw-client-id' dùng để làm gì?</div>
+<ul>
+<li>A: Bỏ qua firewall của site</li>
+<li>B: Xác định ứng dụng cụ thể đang thực hiện request</li>
+<li>C: Lưu mật khẩu người dùng an toàn</li>
+<li>D: Đặt locale của response</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>Which of the following is true about &#x27;Master Catalogs&#x27; in B2C Commerce?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 60">
-      <li><label><input type="radio" name="questions_202604071300_q60" value="A">A. They act as the central repository for product data, but are not directly visible on the storefront</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q60" value="B">B. They cannot contain variations or product sets</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q60" value="C">C. They are only used for B2B commerce scenarios</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q60" value="D">D. They must have the same category structure as the storefront catalog</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>A</strong><br><small>Master Catalogs hold the source of truth; Storefront Catalogs then use &#x27;assignments&#x27; to show those products in categories.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>Which of the following is true about 'Master Catalogs' in B2C Commerce?</h2>
+<ol aria-label="Questions 202604071300 - Question 60" class="options">
+<li><label><input name="questions_202604071300_q60" type="radio" value="A"/>A. They act as the central repository for product data, but are not directly visible on the storefront</label></li>
+<li><label><input name="questions_202604071300_q60" type="radio" value="B"/>B. They cannot contain variations or product sets</label></li>
+<li><label><input name="questions_202604071300_q60" type="radio" value="C"/>C. They are only used for B2B commerce scenarios</label></li>
+<li><label><input name="questions_202604071300_q60" type="radio" value="D"/>D. They must have the same category structure as the storefront catalog</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>A</strong><br/><small>Master Catalogs hold the source of truth; Storefront Catalogs then use 'assignments' to show those products in categories.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Điều nào đúng về 'Master Catalogs' trong B2C Commerce?</div>
+<ul>
+<li>A: Chúng là kho dữ liệu sản phẩm trung tâm nhưng không hiển thị trực tiếp trên storefront</li>
+<li>B: Chúng không thể chứa variation hoặc product set</li>
+<li>C: Chúng chỉ dùng cho B2B commerce</li>
+<li>D: Chúng phải có cùng cấu trúc category với storefront catalog</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>A developer needs to implement a custom logging requirement where only errors from a specific third-party integration are sent to a separate log file named &#x27;custom-integration&#x27;. Which approach is correct?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 61">
-      <li><label><input type="radio" name="questions_202604071300_q61" value="A">A. dw.io.File.write(&#x27;/logs/custom-integration.log&#x27;, &#x27;message&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q61" value="B">B. dw.system.Logger.getRootLogger().addAppender(&#x27;custom-integration&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q61" value="C">C. dw.system.Logger.error(&#x27;custom-integration&#x27;, &#x27;message&#x27;)</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q61" value="D">D. dw.system.Logger.getLogger(&#x27;custom-integration&#x27;, &#x27;integration-prefix&#x27;).error(&#x27;message&#x27;)</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>D</strong><br><small>The getLogger method accepts a category and a prefix, allowing for the creation of specific log files that can be filtered in Business Manager.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>A developer needs to implement a custom logging requirement where only errors from a specific third-party integration are sent to a separate log file named 'custom-integration'. Which approach is correct?</h2>
+<ol aria-label="Questions 202604071300 - Question 61" class="options">
+<li><label><input name="questions_202604071300_q61" type="radio" value="A"/>A. dw.io.File.write('/logs/custom-integration.log', 'message')</label></li>
+<li><label><input name="questions_202604071300_q61" type="radio" value="B"/>B. dw.system.Logger.getRootLogger().addAppender('custom-integration')</label></li>
+<li><label><input name="questions_202604071300_q61" type="radio" value="C"/>C. dw.system.Logger.error('custom-integration', 'message')</label></li>
+<li><label><input name="questions_202604071300_q61" type="radio" value="D"/>D. dw.system.Logger.getLogger('custom-integration', 'integration-prefix').error('message')</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>D</strong><br/><small>The getLogger method accepts a category and a prefix, allowing for the creation of specific log files that can be filtered in Business Manager.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Nhà phát triển cần triển khai custom logging chỉ ghi lỗi từ tích hợp cụ thể. Cách tốt nhất?</div>
+<ul>
+<li>A: dw.io.File.write('/logs/custom-integration.log', 'message')</li>
+<li>B: dw.system.Logger.getRootLogger().addAppender('custom-integration')</li>
+<li>C: dw.system.Logger.error('custom-integration', 'message')</li>
+<li>D: dw.system.Logger.getLogger('custom-integration', 'integration-prefix').error('message')</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 <li>
-  <div class="question">
-    <h2>In SFRA, what is the best practice for passing data from a Controller to an ISML template that requires localized formatting (e.g., currency)?</h2>
-    <ol class="options" aria-label="Questions 202604071300 - Question 62">
-      <li><label><input type="radio" name="questions_202604071300_q62" value="A">A. Pass the raw object to the template and use a &#x27;local&#x27; script block for formatting</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q62" value="B">B. Use the  tag with a &#x27;formatter&#x27; attribute directly in ISML</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q62" value="C">C. Format the data within a Model and pass the formatted string to the template</label></li>
-      <li><label><input type="radio" name="questions_202604071300_q62" value="D">D. Perform the formatting inside the Controller using the &#x27;dw.util.StringUtils&#x27; class</label></li>
-    </ol>
-    <details>
-      <summary>Answer</summary>
-      <div class="answer">✅ Correct: <strong>C</strong><br><small>Models are intended to wrap raw objects and prepare data specifically for view consumption, keeping templates logic-free.</small></div>
-    </details>
-  </div>
+<div class="question">
+<h2>In SFRA, what is the best practice for passing data from a Controller to an ISML template that requires localized formatting (e.g., currency)?</h2>
+<ol aria-label="Questions 202604071300 - Question 62" class="options">
+<li><label><input name="questions_202604071300_q62" type="radio" value="A"/>A. Pass the raw object to the template and use a 'local' script block for formatting</label></li>
+<li><label><input name="questions_202604071300_q62" type="radio" value="B"/>B. Use the  tag with a 'formatter' attribute directly in ISML</label></li>
+<li><label><input name="questions_202604071300_q62" type="radio" value="C"/>C. Format the data within a Model and pass the formatted string to the template</label></li>
+<li><label><input name="questions_202604071300_q62" type="radio" value="D"/>D. Perform the formatting inside the Controller using the 'dw.util.StringUtils' class</label></li>
+</ol>
+<details>
+<summary>Answer</summary>
+<div class="answer">✅ Correct: <strong>C</strong><br/><small>Models are intended to wrap raw objects and prepare data specifically for view consumption, keeping templates logic-free.</small></div>
+</details> <details>
+<summary>Translate</summary>
+<div class="translate">
+<div>Trong SFRA, best practice để truyền dữ liệu từ Controller sang ISML template là gì?</div>
+<ul>
+<li>A: Truyền raw object vào template và dùng 'local' script block để định dạng</li>
+<li>B: Dùng tag &lt;isprint&gt; với thuộc tính 'formatter' trực tiếp trong ISML</li>
+<li>C: Định dạng dữ liệu trong Model và truyền chuỗi đã định dạng vào template</li>
+<li>D: Thực hiện định dạng trong Controller dùng 'dw.util.StringUtils'</li>
+</ul>
+</div>
+</details>
+</div>
 </li>
 </ol>
 </body>
