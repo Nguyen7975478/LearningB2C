@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #000;
+            margin: 20px;
+            line-height: 1.45;
+        }
+
+        /* ===== Auto numbering for TOPIC list (1., 2., 3., ...) ===== */
+        ol.topics {
+            margin: 0;
+            padding-left: 22px; /* room for numbers */
+        }
+
+        ol.topics > li {
+            margin: 0 0 10px 0;
+        }
+
+        ol.topics > li::marker {
+            font-weight: 700; /* bold number like summary */
+        }
+
+        /* Hide default disclosure marker so we don't get bullet + triangle */
+        ol.topics details.topic > summary {
+            list-style: none;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        ol.topics details.topic > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .question {
+            margin: 18px 15px 26px;
+        }
+
+        .question h2 {
+            font-size: 16px;
+            margin: 0 0 10px;
+            font-weight: 700;
+        }
+
+        /* Auto A/B/C/D... for options */
+        .options {
+            counter-reset: opt;
+            margin: 0 15px;
+            padding: 0;
+        }
+
+        .options li {
+            list-style: none;
+            margin: 6px 0;
+        }
+
+        .options label {
+            display: block;
+            cursor: pointer;
+        }
+
+        .options label::before {
+            counter-increment: opt;
+            content: counter(opt, upper-alpha) " ";
+            font-weight: 700;
+            display: inline-block;
+            width: 22px;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        details {
+            margin-top: 10px;
+        }
+
+        .answer {
+            margin-top: 8px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            background: #f7f7f7;
+            border-radius: 6px;
+        }
+
+        details.topic > div {
+            padding: 10px 0 0;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e5e7eb;
+            margin: 18px 0;
+        }
+
+        code {
+            background: #f2f2f2;
+            padding: 1px 6px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<ol class="topics">
+    <li>
+        <details class="topic">
+            <summary>Get to Know Agentforce Vibes IDE</summary>
+            <div>
+                <div class="question">
+                    <h2>When you first open Code Builder, which org is set as the default org?</h2>
+                    <ol class="options" aria-label="Get to Know Agentforce Vibes IDE - Question 1 options">
+                        <li><label><input type="radio" name="agentforce_vibes_q1" value="A">A scratch org created automatically</label></li>
+                        <li><label><input type="radio" name="agentforce_vibes_q1" value="B">The org you launched Code Builder from</label></li>
+                        <li><label><input type="radio" name="agentforce_vibes_q1" value="C">A Developer Edition org provided by Salesforce</label></li>
+                        <li><label><input type="radio" name="agentforce_vibes_q1" value="D">No org is connected by default</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Câu hỏi: Khi bạn mở Code Builder lần đầu, org nào được đặt làm default?</div>
+                            <ul>
+                                <li>A: Một scratch org được tạo tự động</li>
+                                <li>B: Org mà bạn đã mở Code Builder từ đó</li>
+                                <li>C: Một Developer Edition org do Salesforce cấp</li>
+                                <li>D: Không org nào được kết nối mặc định</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Which Code Builder feature lets you browse and retrieve metadata components directly from your org?</h2>
+                    <ol class="options" aria-label="Get to Know Agentforce Vibes IDE - Question 2 options">
+                        <li><label><input type="radio" name="agentforce_vibes_q2" value="A">Org Browser</label></li>
+                        <li><label><input type="radio" name="agentforce_vibes_q2" value="B">Command Palette</label></li>
+                        <li><label><input type="radio" name="agentforce_vibes_q2" value="C">Explorer</label></li>
+                        <li><label><input type="radio" name="agentforce_vibes_q2" value="D">Snippets Manager</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Câu hỏi: Tính năng nào của Code Builder cho phép bạn duyệt và lấy metadata trực tiếp từ org?</div>
+                            <ul>
+                                <li>A: Org Browser</li>
+                                <li>B: Command Palette</li>
+                                <li>C: Explorer</li>
+                                <li>D: Snippets Manager</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+    <li>
+        <details class="topic">
+            <summary>Discover Developer Environments</summary>
+            <div>
+                <div class="question">
+                    <h2>Which of the following is true about Salesforce environments?</h2>
+                    <ol class="options" aria-label="Discover Developer Environments - Question 1 options">
+                        <li><label><input type="radio" name="envs_q1" value="A">Environments are orgs for specific purposes and groups.</label></li>
+                        <li><label><input type="radio" name="envs_q1" value="B">All environments require you to purchase Salesforce.</label></li>
+                        <li><label><input type="radio" name="envs_q1" value="C">You should create a new environment each time you spin up Salesforce to get the latest updates.</label></li>
+                        <li><label><input type="radio" name="envs_q1" value="D">Environments are only for Salesforce developers to work on new apps.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Câu hỏi: Câu nào sau đây đúng về Salesforce environments?</div>
+                            <ul>
+                                <li>A: Environment là các org phục vụ mục đích và nhóm cụ thể.</li>
+                                <li>B: Mọi environment đều cần mua Salesforce.</li>
+                                <li>C: Mỗi lần dựng Salesforce cần tạo environment mới để nhận update.</li>
+                                <li>D: Environment chỉ để developer tạo app mới.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What makes a developer environment different from a production environment?</h2>
+                    <ol class="options" aria-label="Discover Developer Environments - Question 2 options">
+                        <li><label><input type="radio" name="envs_q2" value="A">Developer environments have time limits and data limitations that production environments do not have.</label></li>
+                        <li><label><input type="radio" name="envs_q2" value="B">Developer environments include a special developer console that allows you to configure elements of Salesforce that are not configurable in production.</label></li>
+                        <li><label><input type="radio" name="envs_q2" value="C">A developer environment requires a minimum of 2,500 users, while a production environment has no minimum user requirement.</label></li>
+                        <li><label><input type="radio" name="envs_q2" value="D">Developer environments are separate deployments that may copy data from production orgs but allow testing and development without impacting the production environment.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Câu hỏi: Điều gì làm environment kiểu developer khác production?</div>
+                            <ul>
+                                <li>A: Env kiểu developer có giới hạn thời gian & dữ liệu mà production không có.</li>
+                                <li>B: Env kiểu developer có developer console cho phép cấu hình Salesforce (production không có).</li>
+                                <li>C: Env developer cần tối thiểu 2500 users, production không có giới hạn user.</li>
+                                <li>D: Env developer là deployment riêng có thể copy dữ liệu từ production, phục vụ test/dev mà không ảnh hưởng production.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+    <li>
+        <details class="topic">
+            <summary>Plan for Changes to Your Org</summary>
+            <div>
+                <div class="question">
+                    <h2>The org development model:</h2>
+                    <ol class="options" aria-label="Plan for Changes to Your Org - Question 1 options">
+                        <li><label><input type="radio" name="orgchange_q1" value="A">Uses packages to move metadata between environments.</label></li>
+                        <li><label><input type="radio" name="orgchange_q1" value="B">Requires that you develop all customizations in your sandbox.</label></li>
+                        <li><label><input type="radio" name="orgchange_q1" value="C">Externalizes changes in a source control repository to keep environments in sync.</label></li>
+                        <li><label><input type="radio" name="orgchange_q1" value="D">Uses a source control repository so developers don't have to track changes manually.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Mô hình phát triển org:</div>
+                            <ul>
+                                <li>A: Dùng packages để chuyển metadata giữa các environment.</li>
+                                <li>B: Yêu cầu bạn phát triển mọi tùy biến trong sandbox.</li>
+                                <li>C: Đẩy thay đổi ra repo source control để đồng bộ các environment.</li>
+                                <li>D: Dùng repo để dev không phải tự theo dõi thay đổi.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What is one benefit of using a source control system with the org development model?</h2>
+                    <ol class="options" aria-label="Plan for Changes to Your Org - Question 2 options">
+                        <li><label><input type="radio" name="orgchange_q2" value="A">It allows developers to work on the same set of files at the same time.</label></li>
+                        <li><label><input type="radio" name="orgchange_q2" value="B">You no longer need to track changes made in the sandbox.</label></li>
+                        <li><label><input type="radio" name="orgchange_q2" value="C">It provides a snapshot of your production org at a specific point in time.</label></li>
+                        <li><label><input type="radio" name="orgchange_q2" value="D">It prohibits a developer from seeing changes and metadata created by others</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Lợi ích khi dùng source control với org development model là gì?</div>
+                            <ul>
+                                <li>A: Cho phép dev cùng làm việc trên cùng tập file cùng lúc.</li>
+                                <li>B: Không cần theo dõi thay đổi trong sandbox nữa.</li>
+                                <li>C: Có bản snapshot production org vào mốc thời gian nhất định.</li>
+                                <li>D: Không cho dev thấy thay đổi và metadata của người khác.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+    <li>
+        <details class="topic">
+            <summary>Develop and Test Changes Locally</summary>
+            <div>
+                <div class="question">
+                    <h2>Once a project is underway, what important step must a developer do before making changes?</h2>
+                    <ol class="options" aria-label="Develop and Test Changes Locally - Question 1 options">
+                        <li><label><input type="radio" name="devlocal_q1" value="A">Create a new GitHub repo for their code, then create a branch.</label></li>
+                        <li><label><input type="radio" name="devlocal_q1" value="B">Deploy any changes from the repository into their Developer sandbox.</label></li>
+                        <li><label><input type="radio" name="devlocal_q1" value="C">Create their own Salesforce DX project.</label></li>
+                        <li><label><input type="radio" name="devlocal_q1" value="D">Refactor all the code provided by other developers.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Câu hỏi: Khi đã bắt đầu dự án, trước khi sửa đổi code developer phải làm gì quan trọng?</div>
+                            <ul>
+                                <li>A: Tạo repo GitHub mới rồi tạo branch.</li>
+                                <li>B: Deploy mọi thay đổi từ repo vào Developer sandbox.</li>
+                                <li>C: Tạo một Salesforce DX project của riêng mình.</li>
+                                <li>D: Refactor toàn bộ code do developer khác đưa vào.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>After a developer makes a change in a sandbox org, what step is required to share it with others?</h2>
+                    <ol class="options" aria-label="Develop and Test Changes Locally - Question 2 options">
+                        <li><label><input type="radio" name="devlocal_q2" value="A">Create a new branch in the source control system and a new DX project.</label></li>
+                        <li><label><input type="radio" name="devlocal_q2" value="B">Test the changes after pushing them to a clean testing org.</label></li>
+                        <li><label><input type="radio" name="devlocal_q2" value="C">Deploy the changes to every teammate's sandbox.</label></li>
+                        <li><label><input type="radio" name="devlocal_q2" value="D">Retrieve the changes from their sandbox to the project in the source repository.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Sau khi dev sửa đổi trong sandbox, bước nào cần làm để chia sẻ với mọi người?</div>
+                            <ul>
+                                <li>A: Tạo branch mới trong source control và DX project mới.</li>
+                                <li>B: Test thay đổi khi đã push sang org testing sạch.</li>
+                                <li>C: Deploy thay đổi tới sandbox của đồng đội.</li>
+                                <li>D: Truy xuất thay đổi từ sandbox về project trong source repository.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+    <li>
+        <details class="topic">
+            <summary>Test and Deploy Changes</summary>
+            <div>
+                <div class="question">
+                    <h2>What is a manifest file (package.xml)?</h2>
+                    <ol class="options" aria-label="Test and Deploy Changes - Question 1 options">
+                        <li><label><input type="radio" name="deploy_q1" value="A">A .zip file that contains all the objects and components to deploy to an org.</label></li>
+                        <li><label><input type="radio" name="deploy_q1" value="B">An XML file that lists the metadata components to deploy to (or retrieve from) an org.</label></li>
+                        <li><label><input type="radio" name="deploy_q1" value="C">A package version of the changes that the development team has made in this release.</label></li>
+                        <li><label><input type="radio" name="deploy_q1" value="D">The Inbound change set that Juan deploys to the production environment.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Câu hỏi: Manifest file (package.xml) là gì?</div>
+                            <ul>
+                                <li>A: File .zip chứa tất cả object và component để deploy lên org.</li>
+                                <li>B: File XML liệt kê metadata component để deploy (hoặc retrieve) lên org.</li>
+                                <li>C: Phiên bản package tổng hợp các thay đổi của đội dev làm ở release này.</li>
+                                <li>D: Inbound change set mà Juan deploy lên production.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                <div class="question">
+                    <h2>What is a benefit of using the 'project deploy validate' command?</h2>
+                    <ol class="options" aria-label="Test and Deploy Changes - Question 2 options">
+                        <li><label><input type="radio" name="deploy_q2" value="A">It sets up a quick deploy to your production org, which minimizes disruption to users.</label></li>
+                        <li><label><input type="radio" name="deploy_q2" value="B">It verifies the results of tests that would be executed in a deployment without actually committing any changes to the org.</label></li>
+                        <li><label><input type="radio" name="deploy_q2" value="C">You feel validated that your CLI command knowledge is excellent.</label></li>
+                        <li><label><input type="radio" name="deploy_q2" value="D">A and B.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Lợi ích khi dùng lệnh ‘project deploy validate’ là gì?</div>
+                            <ul>
+                                <li>A: Tạo deploy nhanh lên production, giảm gián đoạn cho user.</li>
+                                <li>B: Kiểm thử kết quả của deployment mà không thực sự commit gì vào org.</li>
+                                <li>C: Cảm thấy mình giỏi câu lệnh CLI.</li>
+                                <li>D: A và B.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+    <li>
+        <details class="topic">
+            <summary>Imagine a New Source of Truth</summary>
+            <div>
+                <div class="question">
+                    <h2>What is the source of truth for package development?</h2>
+                    <ol class="options" aria-label="Imagine a New Source of Truth - Question 1 options">
+                        <li><label><input type="radio" name="source_truth_q1" value="A">Sandbox</label></li>
+                        <li><label><input type="radio" name="source_truth_q1" value="B">Version control system</label></li>
+                        <li><label><input type="radio" name="source_truth_q1" value="C">Production org</label></li>
+                        <li><label><input type="radio" name="source_truth_q1" value="D">Salesforce DX project</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Câu hỏi: Nguồn xác thực (source of truth) cho phát triển package là gì?</div>
+                            <ul>
+                                <li>A: Sandbox</li>
+                                <li>B: Version control system (hệ thống quản lý mã nguồn)</li>
+                                <li>C: Production org</li>
+                                <li>D: Salesforce DX project</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What are the advantages of package development?</h2>
+                    <ol class="options" aria-label="Imagine a New Source of Truth - Question 2 options">
+                        <li><label><input type="radio" name="source_truth_q2" value="A">Ability to build development orgs directly from source</label></li>
+                        <li><label><input type="radio" name="source_truth_q2" value="B">All code and customizations are intermingled in the source repo</label></li>
+                        <li><label><input type="radio" name="source_truth_q2" value="C">Agile release models allow more frequent, independent releases</label></li>
+                        <li><label><input type="radio" name="source_truth_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="source_truth_q2" value="E">A and C</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Câu hỏi: Lợi thế của phát triển dạng package là gì?</div>
+                            <ul>
+                                <li>A: Build development org trực tiếp từ source</li>
+                                <li>B: Tất cả code và tuỳ biến trộn lẫn trong repo source</li>
+                                <li>C: Agile release cho phép release độc lập, thường xuyên hơn</li>
+                                <li>D: A và B</li>
+                                <li>E: A và C</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What's included in a package?</h2>
+                    <ol class="options" aria-label="Imagine a New Source of Truth - Question 3 options">
+                        <li><label><input type="radio" name="source_truth_q3" value="A">All the code in your production org</label></li>
+                        <li><label><input type="radio" name="source_truth_q3" value="B">The metadata in your sandbox</label></li>
+                        <li><label><input type="radio" name="source_truth_q3" value="C">A group of code and customizations you want to release together</label></li>
+                        <li><label><input type="radio" name="source_truth_q3" value="D">The set of all changes that you want to deploy in a monthly release</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Câu hỏi: Một package bao gồm những gì?</div>
+                            <ul>
+                                <li>A: Tất cả code trong production org</li>
+                                <li>B: Metadata trong sandbox</li>
+                                <li>C: Một nhóm code và tuỳ biến bạn muốn release chung</li>
+                                <li>D: Tập hợp mọi thay đổi bạn muốn deploy theo tháng</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+    <li>
+        <details class="topic">
+            <summary>Increase Productivity with Integrated Tools</summary>
+            <div>
+                <div class="question">
+                    <h2>Scratch orgs provide:</h2>
+                    <ol class="options" aria-label="Increase Productivity with Integrated Tools - Question 1 options">
+                        <li><label><input type="radio" name="prodtools_q1" value="A">A Salesforce org that multiple developers use at the same time</label></li>
+                        <li><label><input type="radio" name="prodtools_q1" value="B">A dedicated and disposable Salesforce environment for a developer and their project</label></li>
+                        <li><label><input type="radio" name="prodtools_q1" value="C">A copy of an existing sandbox</label></li>
+                        <li><label><input type="radio" name="prodtools_q1" value="D">A and B</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Scratch org cung cấp:</div>
+                            <ul>
+                                <li>A: Một org Salesforce cho nhiều developer dùng cùng lúc</li>
+                                <li>B: Môi trường Salesforce chuyên biệt, dùng một lần cho một developer và dự án của họ</li>
+                                <li>C: Bản sao một sandbox đã có</li>
+                                <li>D: A và B</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>What is the role of sandboxes in the package development model?</h2>
+                    <ol class="options" aria-label="Increase Productivity with Integrated Tools - Question 2 options">
+                        <li><label><input type="radio" name="prodtools_q2" value="A">You don't use sandboxes in the package development life cycle</label></li>
+                        <li><label><input type="radio" name="prodtools_q2" value="B">You use sandboxes for user acceptance testing and as a staging environment.</label></li>
+                        <li><label><input type="radio" name="prodtools_q2" value="C">It's a starting point for the development process.</label></li>
+                        <li><label><input type="radio" name="prodtools_q2" value="D">It's where you test your package during continuous delivery testing.</label></li>
+                        <li><label><input type="radio" name="prodtools_q2" value="E">B and D</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Vai trò của sandbox trong mô hình phát triển package là gì?</div>
+                            <ul>
+                                <li>A: Không dùng sandbox trong vòng đời phát triển package</li>
+                                <li>B: Dùng sandbox để kiểm thử người dùng chấp nhận và staging</li>
+                                <li>C: Sandbox là điểm xuất phát quy trình phát triển</li>
+                                <li>D: Nơi kiểm thử package khi CI/CD </li>
+                                <li>E: B và D</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>How does the Salesforce CLI increase your productivity?</h2>
+                    <ol class="options" aria-label="Increase Productivity with Integrated Tools - Question 3 options">
+                        <li><label><input type="radio" name="prodtools_q3" value="A">It completely replaces the Setup UI.</label></li>
+                        <li><label><input type="radio" name="prodtools_q3" value="B">It washes your car and does the dishes.</label></li>
+                        <li><label><input type="radio" name="prodtools_q3" value="C">You can create scripts for repetitive tasks, for build automation, or to run tests.</label></li>
+                        <li><label><input type="radio" name="prodtools_q3" value="D">It contains commands that help you directly interact with your version control system.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Salesforce CLI tăng năng suất của bạn như thế nào?</div>
+                            <ul>
+                                <li>A: Hoàn toàn thay thế giao diện Setup UI</li>
+                                <li>B: Giúp rửa xe và rửa chén!</li>
+                                <li>C: Dùng để scripting tự động, build, hoặc chạy test lặp đi lặp lại</li>
+                                <li>D: Chứa các lệnh giúp bạn thao tác trực tiếp với version control system</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+    <li>
+        <details class="topic">
+            <summary>Understand Source-Driven Development</summary>
+            <div>
+                <div class="question">
+                    <h2>The Salesforce DX project:</h2>
+                    <ol class="options" aria-label="Understand Source-Driven Development - Question 1 options">
+                        <li><label><input type="radio" name="source_driven_q1" value="A">Is an exact copy of your development sandbox</label></li>
+                        <li><label><input type="radio" name="source_driven_q1" value="B">Does not have to be checked into source control</label></li>
+                        <li><label><input type="radio" name="source_driven_q1" value="C">Contains your source and Salesforce DX configuration files</label></li>
+                        <li><label><input type="radio" name="source_driven_q1" value="D">Contains only Salesforce DX configuration files</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>C</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Salesforce DX project:</div>
+                            <ul>
+                                <li>A: Bản sao chính xác của sandbox phát triển</li>
+                                <li>B: Không cần đưa vào source control</li>
+                                <li>C: Chứa source code và các tệp cấu hình Salesforce DX</li>
+                                <li>D: Chỉ chứa tệp cấu hình Salesforce DX</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>How do we facilitate change tracking?</h2>
+                    <ol class="options" aria-label="Understand Source-Driven Development - Question 2 options">
+                        <li><label><input type="radio" name="source_driven_q2" value="A">We track changes you make locally, but you need to manually track changes you make in your scratch org.</label></li>
+                        <li><label><input type="radio" name="source_driven_q2" value="B">We transform large source files into smaller files, which provide more project flexibility and reduce merge conflicts.</label></li>
+                        <li><label><input type="radio" name="source_driven_q2" value="C">We keep track of both changes you make locally as well as any in your scratch org.</label></li>
+                        <li><label><input type="radio" name="source_driven_q2" value="D">A and B</label></li>
+                        <li><label><input type="radio" name="source_driven_q2" value="E">B and C</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Làm sao để dễ dàng theo dõi thay đổi (change tracking)?</div>
+                            <ul>
+                                <li>A: Chỉ theo dõi thay đổi local, còn scratch org thì phải track thủ công</li>
+                                <li>B: Chia nhỏ file lớn, tăng linh hoạt và giảm conflict</li>
+                                <li>C: Theo dõi cả local và scratch org</li>
+                                <li>D: A và B</li>
+                                <li>E: B và C</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <h2>Use scratch orgs in the development process to:</h2>
+                    <ol class="options" aria-label="Understand Source-Driven Development - Question 3 options">
+                        <li><label><input type="radio" name="source_driven_q3" value="A">Perform declarative (point-and-click) development and other tasks directly in an org.</label></li>
+                        <li><label><input type="radio" name="source_driven_q3" value="B">Maintain all your source for posterity.</label></li>
+                        <li><label><input type="radio" name="source_driven_q3" value="C">Develop new features over several releases.</label></li>
+                        <li><label><input type="radio" name="source_driven_q3" value="D">Replace sandboxes for staging.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>A</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Sử dụng scratch org trong quy trình phát triển để làm gì?</div>
+                            <ul>
+                                <li>A: Phát triển declarative (point-and-click) và tác vụ trực tiếp trên org</li>
+                                <li>B: Lưu trữ source code dài hạn</li>
+                                <li>C: Phát triển tính năng mới cho nhiều lần phát hành (release)</li>
+                                <li>D: Thay thế sandbox cho staging</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+    <li>
+        <details class="topic">
+            <summary>Learn How to Test, Build, and Release</summary>
+            <div>
+                <div class="question">
+                    <h2>How do scratch orgs support testing and continuous integration?</h2>
+                    <ol class="options" aria-label="Learn How to Test, Build, and Release - Question 1 options">
+                        <li><label><input type="radio" name="testbuild_q1" value="A">You can refresh them once a day so you can run tests.</label></li>
+                        <li><label><input type="radio" name="testbuild_q1" value="B">You can pull source and metadata from the scratch org for testing purposes.</label></li>
+                        <li><label><input type="radio" name="testbuild_q1" value="C">Best practices dictate that you use the same org for development and testing.</label></li>
+                        <li><label><input type="radio" name="testbuild_q1" value="D">You can spin up a new scratch org specifically for testing and CI.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Làm cách nào scratch org hỗ trợ testing & CI?</div>
+                            <ul>
+                                <li>A: Có thể refresh mỗi ngày để chạy test.</li>
+                                <li>B: Lấy source/metadata từ scratch org để test.</li>
+                                <li>C: Best practice là dùng cùng org cho development & testing.</li>
+                                <li>D: Có thể tạo scratch org mới chỉ cho testing & CI.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                <div class="question">
+                    <h2>Use sandboxes for continuous delivery and user acceptance testing to:</h2>
+                    <ol class="options" aria-label="Learn How to Test, Build, and Release - Question 2 options">
+                        <li><label><input type="radio" name="testbuild_q2" value="A">Provide new features directly to your customers.</label></li>
+                        <li><label><input type="radio" name="testbuild_q2" value="B">Test the same process you'll use to deploy and release to the production org.</label></li>
+                        <li><label><input type="radio" name="testbuild_q2" value="C">Develop new features or customizations.</label></li>
+                        <li><label><input type="radio" name="testbuild_q2" value="D">Create the package.xml file.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>B</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Dùng sandbox cho continuous delivery & UAT để làm gì?</div>
+                            <ul>
+                                <li>A: Cung cấp tính năng mới trực tiếp cho khách hàng.</li>
+                                <li>B: Kiểm thử quy trình bạn sẽ dùng để deploy/release lên production.</li>
+                                <li>C: Phát triển tính năng mới/tuỳ biến mới.</li>
+                                <li>D: Tạo file package.xml.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+    <li>
+        <details class="topic">
+            <summary>Plan Your Move to Packages</summary>
+            <div>
+                <div class="question">
+                    <h2>What use cases are ideal for shifting to a modular package-based approach?</h2>
+                    <ol class="options" aria-label="Plan Your Move to Packages - Question 1 options">
+                        <li><label><input type="radio" name="move_pkg_q1" value="A">You're developing a distinct application.</label></li>
+                        <li><label><input type="radio" name="move_pkg_q1" value="B">Your production org isn't complex and you make minimal changes month over month.</label></li>
+                        <li><label><input type="radio" name="move_pkg_q1" value="C">You want multiple development teams to work independently and deploy changes on their own release cycles.</label></li>
+                        <li><label><input type="radio" name="move_pkg_q1" value="D">Your sales automation customizations can't be tested independently of the rest of the org metadata.</label></li>
+                        <li><label><input type="radio" name="move_pkg_q1" value="E">A and C.</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>E</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Trường hợp nào phù hợp để chuyển sang hướng tiếp cận dạng package module?</div>
+                            <ul>
+                                <li>A: Bạn phát triển một ứng dụng riêng biệt.</li>
+                                <li>B: Production org đơn giản và mỗi tháng thay đổi rất ít.</li>
+                                <li>C: Nhiều nhóm dev muốn làm việc độc lập và triển khai release riêng.</li>
+                                <li>D: Không thể test custom sales automation riêng biệt với org metadata.</li>
+                                <li>E: A và C.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                <div class="question">
+                    <h2>In what scenario do you need to be careful when creating projects?</h2>
+                    <ol class="options" aria-label="Plan Your Move to Packages - Question 2 options">
+                        <li><label><input type="radio" name="move_pkg_q2" value="A">When a project is a distinct application</label></li>
+                        <li><label><input type="radio" name="move_pkg_q2" value="B">When your team is ready to build and deliver in a separate release cycle</label></li>
+                        <li><label><input type="radio" name="move_pkg_q2" value="C">When your team works on multiple projects</label></li>
+                        <li><label><input type="radio" name="move_pkg_q2" value="D">When projects share metadata components</label></li>
+                    </ol>
+                    <details>
+                        <summary>Answer</summary>
+                        <div class="answer">✅ Correct: <strong>D</strong></div>
+                    </details>
+                    <details>
+                        <summary>Translate</summary>
+                        <div class="translate">
+                            <div>Trường hợp nào nên cẩn trọng khi tạo project?</div>
+                            <ul>
+                                <li>A: Khi project là một ứng dụng riêng biệt.</li>
+                                <li>B: Khi team đã sẵn sàng build/deliver trong chu kỳ release riêng biệt.</li>
+                                <li>C: Khi team làm nhiều project một lúc.</li>
+                                <li>D: Khi các project dùng chung metadata component.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </details>
+        <hr/>
+    </li>
+</ol>
+</body>

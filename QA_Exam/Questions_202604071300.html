@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salesforce B2C Commerce Developer Certification Infographic</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1E293B; margin: 0; padding: 0; }
+.chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 40vh; max-height: 400px; }
+.glass-card { background: rgba(255, 255, 255, 0.95); border-radius: 1rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); border: 1px solid #E2E8F0; }
+.bg-vibrant-gradient { background: linear-gradient(135deg, #4C1D95 0%, #DB2777 100%); }
+.text-vibrant { background: linear-gradient(to right, #4C1D95, #DB2777); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.icon-box { display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 0.75rem; font-size: 1.5rem; font-weight: bold; color: white; }
+.flow-arrow { font-size: 2rem; color: #94A3B8; display: flex; align-items: center; justify-content: center; }
+@media (min-width: 768px) { .chart-container { height: 350px; } }
+</style>
+</head>
+<body class="antialiased">
+
+<div id="metadata" style="display:none;" data-palette="Vibrant: #4C1D95, #DB2777, #06B6D4, #F59E0B" data-nosvg="Confirmed: NEITHER Mermaid JS NOR SVG were used" data-plan="Plan: 1. Exam Weights (Donut) 2. Quotas (Bar) 3. Performance (Line) 4. Architecture Flow (HTML)"></div>
+
+<header class="bg-vibrant-gradient text-white py-20 px-6 mb-12 shadow-xl">
+    <div class="max-w-5xl mx-auto text-center">
+        <div class="text-sm font-bold tracking-widest uppercase mb-4 text-pink-200">Certification Study Guide</div>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Salesforce B2C Commerce Developer</h1>
+        <p class="text-lg md:text-xl font-light opacity-90 max-w-3xl mx-auto">A comprehensive visual analysis of the Storefront Reference Architecture (SFRA), platform quotas, and critical integration patterns required to pass the certification exam.</p>
+    </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 pb-24 space-y-16">
+
+    <section class="glass-card p-8 md:p-12">
+        <h2 class="text-3xl font-bold mb-6 text-vibrant">1. Exam Blueprint & Core Domains</h2>
+        <p class="text-slate-600 mb-10 text-lg leading-relaxed">The certification exam heavily weights Application Development, focusing deeply on SFRA, ISML, and Controllers. Understanding the distribution of these topics is crucial for prioritizing your study efforts effectively.</p>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="chart-container">
+                <canvas id="examWeightsChart"></canvas>
+            </div>
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="icon-box bg-[#4C1D95] mr-4 shadow-lg shadow-purple-200">&#10003;</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-slate-800">Application Development (53%)</h3>
+                        <p class="text-slate-600 mt-1">Dominates the exam. Requires deep knowledge of SFRA Controllers, middleware chains, ISML templates, and the Service Framework.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="icon-box bg-[#DB2777] mr-4 shadow-lg shadow-pink-200">&#10003;</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-slate-800">Data Management (24%)</h3>
+                        <p class="text-slate-600 mt-1">Focuses on Search Refinements, System Object extensions, Custom Objects, and configuring OCAPI permissions via Business Manager.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="icon-box bg-[#06B6D4] mr-4 shadow-lg shadow-cyan-200">&#10003;</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-slate-800">Work With a B2C Site (12%)</h3>
+                        <p class="text-slate-600 mt-1">Covers the product data model, Content Assets, Content Slots, and utilizing Page Designer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="glass-card p-8 md:p-12">
+        <h2 class="text-3xl font-bold mb-6 text-vibrant">2. Cartridge Path & Architecture Overlay</h2>
+        <p class="text-slate-600 mb-10 text-lg leading-relaxed">B2C Commerce resolves files by scanning the configured Cartridge Path from left to right. The leftmost cartridge holds the highest priority. Developers utilize this behavior to override or extend base functionality without modifying core files.</p>
+        
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="bg-[#4C1D95] text-white p-6 rounded-xl w-full text-center shadow-xl transform hover:-translate-y-1 transition-transform">
+                <div class="text-xs uppercase tracking-widest opacity-70 mb-2">Highest Priority</div>
+                <div class="font-bold text-lg">plugin_wishlist</div>
+                <div class="text-sm mt-2 opacity-90">Custom Feature</div>
+            </div>
+            <div class="flow-arrow rotate-90 md:rotate-0">&#10132;</div>
+            <div class="bg-[#DB2777] text-white p-6 rounded-xl w-full text-center shadow-xl transform hover:-translate-y-1 transition-transform">
+                <div class="text-xs uppercase tracking-widest opacity-70 mb-2">Medium Priority</div>
+                <div class="font-bold text-lg">app_custom</div>
+                <div class="text-sm mt-2 opacity-90">Brand Overrides</div>
+            </div>
+            <div class="flow-arrow rotate-90 md:rotate-0">&#10132;</div>
+            <div class="bg-[#06B6D4] text-white p-6 rounded-xl w-full text-center shadow-xl transform hover:-translate-y-1 transition-transform">
+                <div class="text-xs uppercase tracking-widest opacity-70 mb-2">Lowest Priority</div>
+                <div class="font-bold text-lg">app_storefront_base</div>
+                <div class="text-sm mt-2 opacity-90">Core SFRA Logic</div>
+            </div>
+        </div>
+        <div class="mt-8 p-6 bg-amber-50 border-l-4 border-[#F59E0B] rounded-r-xl">
+            <h4 class="font-bold text-[#F59E0B] text-lg mb-2">The superModule Keyword</h4>
+            <p class="text-slate-700">To extend a controller safely, create a file with the same name in a higher-priority cartridge and use <code>server.extend(module.superModule)</code>. This initiates the middleware inheritance chain, preserving the base logic while appending your custom functionality.</p>
+        </div>
+    </section>
+
+    <section class="glass-card p-8 md:p-12">
+        <h2 class="text-3xl font-bold mb-6 text-vibrant">3. System Quotas & Platform Limits</h2>
+        <p class="text-slate-600 mb-10 text-lg leading-relaxed">Salesforce enforces hard platform limits (Quotas) to ensure multi-tenant stability. Exceeding these limits results in immediate fatal exceptions. Developers must design scripts to operate well within these constraints.</p>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="p-6 border-2 border-slate-100 rounded-xl hover:border-[#06B6D4] transition-colors">
+                    <h3 class="font-bold text-xl text-slate-800 flex items-center justify-between">
+                        Script.MaxCallStackDepth
+                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Strict: 50</span>
+                    </h3>
+                    <p class="text-slate-600 mt-2">Deep recursion is strictly forbidden. The platform terminates any script execution thread that exceeds 50 nested function calls to prevent infinite loops.</p>
+                </div>
+                <div class="p-6 border-2 border-slate-100 rounded-xl hover:border-[#4C1D95] transition-colors">
+                    <h3 class="font-bold text-xl text-slate-800 flex items-center justify-between">
+                        Object.MaxCustomAttributes
+                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Schema Limit</span>
+                    </h3>
+                    <p class="text-slate-600 mt-2">Limits the number of custom attributes you can define on a single System Object type in Business Manager to prevent database schema bloat.</p>
+                </div>
+                <div class="p-6 border-2 border-slate-100 rounded-xl hover:border-[#DB2777] transition-colors">
+                    <h3 class="font-bold text-xl text-slate-800 flex items-center justify-between">
+                        api.MaxObjectCount
+                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Memory Limit</span>
+                    </h3>
+                    <p class="text-slate-600 mt-2">Restricts the total number of persistent objects (like Products or Orders) that can be instantiated into memory during a single HTTP request.</p>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="quotasChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <section class="glass-card p-8 md:p-12">
+        <h2 class="text-3xl font-bold mb-6 text-vibrant">4. Performance Optimization: Iterators vs Arrays</h2>
+        <p class="text-slate-600 mb-10 text-lg leading-relaxed">A common cause of <code>Script.MaxMemory</code> quota violations is using <code>.toArray()</code> or <code>.asList()</code> on massive database result sets. Visualized below is the memory impact of loading items into an Array versus streaming them directly from the database using a <code>SeekableIterator</code>.</p>
+        
+        <div class="chart-container mb-8" style="max-width: 800px;">
+            <canvas id="performanceChart"></canvas>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-rose-50 p-6 rounded-xl border border-rose-100">
+                <h4 class="font-bold text-rose-800 text-lg mb-2">&#10007; The Array Approach</h4>
+                <p class="text-rose-700">Loading 50,000 orders into a List forces the JVM to allocate heap space for every single object simultaneously, guaranteeing a fatal memory crash.</p>
+            </div>
+            <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
+                <h4 class="font-bold text-emerald-800 text-lg mb-2">&#10003; The Iterator Approach</h4>
+                <p class="text-emerald-700">A SeekableIterator streams records one-by-one. Combined with periodic transaction commits and clearing object references, memory usage remains flat.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script>
+function wrapLabel(label) {
+    if (label.length <= 16) return label;
+    let words = label.split(' ');
+    let lines = [];
+    let currentLine = '';
+    for (let i = 0; i < words.length; i++) {
+        if ((currentLine + words[i]).length > 16) {
+            if (currentLine !== '') {
+                lines.push(currentLine.trim());
+            }
+            currentLine = words[i] + ' ';
+        } else {
+            currentLine += words[i] + ' ';
+        }
+    }
+    if (currentLine.trim() !== '') {
+        lines.push(currentLine.trim());
+    }
+    return lines;
+}
+
+const tooltipConfig = {
+    callbacks: {
+        title: function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        }
+    }
+};
+
+const ctxExam = document.getElementById('examWeightsChart').getContext('2d');
+new Chart(ctxExam, {
+    type: 'doughnut',
+    data: {
+        labels: [
+            wrapLabel('Application Development'),
+            wrapLabel('Data Management BM Usage'),
+            wrapLabel('Work With a B2C Site'),
+            wrapLabel('B2C Commerce Setup')
+        ],
+        datasets: [{
+            data: [53, 24, 12, 11],
+            backgroundColor: ['#4C1D95', '#DB2777', '#06B6D4', '#F59E0B'],
+            borderWidth: 0,
+            hoverOffset: 10
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { position: 'bottom', labels: { font: { family: 'Inter', size: 13 } } },
+            tooltip: tooltipConfig
+        },
+        cutout: '65%'
+    }
+});
+
+const ctxQuotas = document.getElementById('quotasChart').getContext('2d');
+new Chart(ctxQuotas, {
+    type: 'bar',
+    data: {
+        labels: [
+            wrapLabel('Max Call Stack Depth'),
+            wrapLabel('Standard String Length'),
+            wrapLabel('Session Size Impact Limit')
+        ],
+        datasets: [{
+            label: 'System Quota Limit Value',
+            data: [50, 4000, 1000],
+            backgroundColor: ['#DB2777', '#06B6D4', '#F59E0B'],
+            borderRadius: 6
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            x: { type: 'logarithmic', grid: { display: false } },
+            y: { grid: { display: false }, ticks: { font: { family: 'Inter', weight: '600' } } }
+        },
+        plugins: {
+            legend: { display: false },
+            tooltip: tooltipConfig
+        }
+    }
+});
+
+const ctxPerf = document.getElementById('performanceChart').getContext('2d');
+new Chart(ctxPerf, {
+    type: 'line',
+    data: {
+        labels: ['0', '10,000', '20,000', '30,000', '40,000', '50,000 Items'],
+        datasets: [
+            {
+                label: wrapLabel('Array Loading Memory Usage'),
+                data: [5, 25, 50, 85, 100, 100],
+                borderColor: '#DB2777',
+                backgroundColor: 'rgba(219, 39, 119, 0.1)',
+                borderWidth: 3,
+                fill: true,
+                tension: 0.4
+            },
+            {
+                label: wrapLabel('SeekableIterator Memory Usage'),
+                data: [5, 8, 7, 9, 8, 8],
+                borderColor: '#06B6D4',
+                backgroundColor: 'rgba(6, 182, 212, 0.1)',
+                borderWidth: 3,
+                fill: true,
+                tension: 0.4
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 110,
+                ticks: { callback: function(value) { return value + '%'; } },
+                grid: { color: '#F1F5F9' }
+            },
+            x: { grid: { display: false } }
+        },
+        plugins: {
+            legend: { position: 'top', labels: { usePointStyle: true, boxWidth: 8 } },
+            tooltip: tooltipConfig
+        }
+    }
+});
+</script>
+</body>
+</html>
