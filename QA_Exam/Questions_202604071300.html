@@ -1340,7 +1340,7 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
         <div>Cách chính xác để bao gồm tệp &#x27;Static&#x27; (như tệp CSS) trong một ISML template là gì?</div>
         <ul>
           <li>A: &lt;isinclude template=&quot;/css/style.css&quot; /&gt; (Sai vì isinclude dùng cho template .isml, không dùng cho .css)</li>
-          <li>B: URLUtils.url(&#x27;/style.css&#x27;) (Sai vì url() dùng cho các hành động Controller/Pipeline)</li>
+          <li>B: URLUtils.url(&#x27;/style.css&#x27;) (Sai vì url() dùng cho các Controller/Pipeline action)</li>
           <li>C: URLUtils.staticURL(&#x27;/css/style.css&#x27;)</li>
           <li>D: &lt;link rel=&quot;stylesheet&quot; href=&quot;${URLUtils.webRoot()}/css/style.css&quot; /&gt;</li>
         </ul>
