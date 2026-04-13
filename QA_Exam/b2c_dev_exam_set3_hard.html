@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2C Commerce Developer Exam - Practice Set 3 (Hard)</title>
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #222; }
+h1 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 8px; }
+.question-list { list-style: none; padding: 0; }
+.question-list > li { margin-bottom: 28px; }
+.question { background: #fff; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+h2 { font-size: 1em; margin: 0 0 12px 0; color: #003366; }
+.options { padding-left: 20px; margin: 0 0 12px 0; }
+.options li { margin: 6px 0; list-style: none; }
+.options label { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.options input[type=radio] { margin-top: 3px; flex-shrink: 0; }
+details { margin-top: 8px; }
+summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none; }
+.answer { padding: 8px 12px; background: #e8f5e9; border-radius: 4px; margin-top: 6px; }
+.translate { padding: 8px 12px; background: #e3f2fd; border-radius: 4px; margin-top: 6px; }
+.translate ul { margin: 6px 0; padding-left: 20px; }
+</style>
+</head>
+<body>
+<h1>B2C Commerce Developer Exam - Practice Set 3 (Hard)</h1>
+<ol class="question-list">
+<li>
+  <div class="question">
+    <h2>You deploy two custom cartridges that both define the same controller route path. Cartridge order is: app_custom_extA, app_custom_extB, app_storefront_base. Which route executes when the storefront requests that path?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 1">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q1" value="A">A. The route from app_storefront_base</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q1" value="B">B. The route from app_custom_extB</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q1" value="C">C. The route from app_custom_extA</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q1" value="D">D. The platform throws an ambiguity error</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Cartridge path is resolved left-to-right; first match wins (custom extA).</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A site references code version “23.10.1” in Settings. You deploy new code to “23.12.0” and change the site’s referenced version, but overrides don’t appear. Which two actions are most likely required?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 2">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q2" value="A">A. Clear application cache and any relevant template caches</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q2" value="B">B. Rebuild search indexes</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q2" value="C">C. Update cartridge path under the site to include new cartridges</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q2" value="D">D. Restart the application servers</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Clear caches; ensure the new version’s cartridges are referenced in the site path.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You need to validate which cartridge in the path is resolving a given ISML template. What’s the most precise approach?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 3">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q3" value="A">A. Inspect server logs for a template load line</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q3" value="B">B. Temporarily add a unique comment/string to each candidate template and reload the page</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q3" value="C">C. Change the template name in the base to force an error</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q3" value="D">D. Enable global DEBUG and check BM Profiler</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Tag each template candidate with a unique marker to observe which renders.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In SFRA, which statement about middleware ordering is most accurate?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 4">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q4" value="A">A. Middleware order doesn’t matter; all are parallelized</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q4" value="B">B. Middleware executes in the order registered on the route; earlier middleware can short-circuit</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q4" value="C">C. All middleware executes after the main route function</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q4" value="D">D. Middleware is defined only in server.js, not per-route</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Middleware runs in registered order; earlier middleware can short-circuit.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You added a decorator that sets product.custom.badge = &#x27;VIP&#x27; during model build. On PDP, some products render the badge, others don’t, though all have the attribute value. Which two causes are likely?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 5">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q5" value="A">A. Route-level cache not varying by product ID</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q5" value="B">B. iscache fragment without vary keys including product ID</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q5" value="C">C. Product attributes not persisted yet</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q5" value="D">D. Missing CSRF token</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Caching without proper vary keys can surface stale/other-product data.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You extend app_storefront_base Product model via a factory that chains base and custom decorators. A teammate moves the custom decorator to run before the base builder. What subtle issue might occur?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 6">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q6" value="A">A. Decorator not executed due to hook conflicts</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q6" value="B">B. Decorator operates on incomplete base model, missing fields it expects</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q6" value="C">C. Infinite recursion in factory</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q6" value="D">D. No impact; decorator order is irrelevant</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Running custom decorator before base can access missing fields; order matters.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A controller uses a remote include to render a cart mini-summary. Occasionally, users see stale totals after promotions change. Which two misconfigurations can cause this?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 7">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q7" value="A">A. Remote include cached without vary-by-promotion state</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q7" value="B">B. Response cache on parent route not varying by basket UUID</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q7" value="C">C. Missing ocapi.json Shop settings</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q7" value="D">D. Logger mis-level (INFO vs DEBUG)</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Missing vary on remote include or parent response cache causes stale totals.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A site defines a cartridge path at the Organization level and another at the Site level. Which statement is correct?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 8">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q8" value="A">A. Only Organization-level path is used</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q8" value="B">B. The two are merged; Site-level entries take precedence order-wise</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q8" value="C">C. The platform alternates between them per request</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q8" value="D">D. Site-level path is ignored if Organization-level exists</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Paths merge; Site-level ordering takes precedence.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You introduce a new code version and keep the same cartridge path. A single custom script resolves differently than before. Which is the best first step?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 9">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q9" value="A">A. Clear logs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q9" value="B">B. Compare directory structures and ensure the script exists in the same cartridge location</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q9" value="C">C. Rebuild caches</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q9" value="D">D. Change code version label</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Verify identical structure and presence of the script in the target version.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In SFRA, which is the most accurate description of the role of controllers vs. helpers/decorators?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 10">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q10" value="A">A. Controllers should hold all business logic; helpers handle I/O only</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q10" value="B">B. Helpers/decorators encapsulate business rules; controllers orchestrate request handling and rendering</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q10" value="C">C. Decorators are for CSS; helpers are for translations</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q10" value="D">D. Controllers must return JSON only; helpers render ISML</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Keep controllers thin; push business logic to helpers/decorators.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Your custom storefront experience adds a controller that returns JSON for client-side rendering. It is cached at the CDN with no vary keys. Which two risks are introduced?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 11">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q11" value="A">A. Leaking shopper-specific data across users</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q11" value="B">B. Increased server CPU per request</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q11" value="C">C. Serving outdated or mismatched personalization</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q11" value="D">D. Breaking OCAPI rate-limits</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Cached JSON without vary risks data leakage and stale personalization.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>After adding a cartridge with a higher path priority, a few Page Designer components stop rendering. What is the MOST likely reason?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 12">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q12" value="A">A. The new cartridge shadows template or script names expected by PD components</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q12" value="B">B. CDN disabled</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q12" value="C">C. Missing ocapi.data write permission</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q12" value="D">D. Log level is too low</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Higher-priority cartridge may shadow PD component templates/scripts.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A new searchable product attribute is defined and populated. The attribute is still not searchable after a reindex. Which two issues are likely?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 13">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q13" value="A">A. The attribute type is non-indexable (e.g., binary)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q13" value="B">B. The attribute wasn’t added to the product type assigned to the SKUs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q13" value="C">C. The attribute is localized, but values were uploaded only for the default locale while search uses another</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q13" value="D">D. Log appenders weren’t configured</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Non-indexable type or attribute not attached to product type block search.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which approach yields the best recall for misspellings on popular search terms without over-matching?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 14">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q14" value="A">A. Add broad wildcard rules on all keywords</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q14" value="B">B. Use Dictionaries for synonyms and tune fuzzy matching thresholds</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q14" value="C">C. Disable stemming and rely on exact match</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q14" value="D">D. Rebuild the catalog nightly</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Use curated synonyms + tuned fuzzy thresholds to balance recall/precision.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You add a refinement definition but it does not appear on category pages. Which two steps are commonly missed?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 15">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q15" value="A">A. Assigning the refinement to the relevant search refinement menu</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q15" value="B">B. Rebuilding the search index to include the attribute</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q15" value="C">C. Adding the component to Page Designer</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q15" value="D">D. Creating a custom object</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Assign to menu and reindex so values are available.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A merchandiser wants “color family” refinements grouped from granular colors (e.g., “navy,” “sky”) without changing source attributes. Which is the best approach?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 16">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q16" value="A">A. Create a classification catalog</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q16" value="B">B. Use search mapping rules to bucket attribute values into refinement groups</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q16" value="C">C. Add a new product attribute and backfill data manually</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q16" value="D">D. Use URL rules</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Use mapping rules to bucket values into a refinement dimension.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Delta indexing is configured but new products aren’t appearing promptly. Which two misconfigurations commonly cause this?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 17">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q17" value="A">A. Missing trigger for delta indexing job step post-import</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q17" value="B">B. Attribute not marked searchable</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q17" value="C">C. CDN not purged</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q17" value="D">D. Remote include disabled</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Missing delta trigger or attribute not searchable prevents prompt appearance.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You need to expose a variant-level custom attribute in search facets. Which statement is accurate?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 18">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q18" value="A">A. Variant attributes cannot be used in refinements</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q18" value="B">B. Use search configuration that indexes variant attributes and map to refinements appropriately</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q18" value="C">C. Only master-level attributes are indexable</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q18" value="D">D. Requires OCAPI Data POST per product</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Variant attributes can be indexed and mapped to facets with proper config.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A guided search page needs a custom sort by “margin” (computed server-side). Which two are best practices?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 19">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q19" value="A">A. Precompute and store margin in an indexable attribute updated by jobs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q19" value="B">B. Compute margin in-template during render for each product in results</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q19" value="C">C. Implement a custom sort definition using the precomputed field</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q19" value="D">D. Use client-side JavaScript to reorder results after page load</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Precompute margin and define a sort using that field.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A site has multi-locale catalogs. Searches in one locale return far fewer results than another. What are two likely causes?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 20">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q20" value="A">A. Missing localized attribute values for that locale</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q20" value="B">B. The site runs older SFRA</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q20" value="C">C. The tokenizer for that locale differs, resulting in stricter matching</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q20" value="D">D. Too many Page Designer components</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Missing localized values or tokenizer differences reduce results.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Your relevance degraded after turning on aggressive stemming. What is the safest rollback?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 21">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q21" value="A">A. Disable stemming entirely and push to production immediately</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q21" value="B">B. Reduce stemming to a moderate level and re-evaluate with A/B testing and logs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q21" value="C">C. Switch to wildcard-only search</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q21" value="D">D. Rebuild the catalog every hour</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Taper stemming and validate via A/B and logs.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You introduced a “brand” synonym expansion that maps many unrelated terms. Which remediation is best?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 22">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q22" value="A">A. Convert the synonym set to one-way synonyms limited to high-precision expansions</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q22" value="B">B. Increase fuzzy distance</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q22" value="C">C. Delete all synonyms</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q22" value="D">D. Add redirect rules</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>One-way, precise expansions prevent over-broad matching.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You must make a new attribute searchable, sortable, and refinable. Which two steps are essential?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 23">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q23" value="A">A. Enable both searchable and sortable flags on the attribute definition</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q23" value="B">B. Add the attribute to “refinements” and to the sort definition</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q23" value="C">C. Add it to ocapi.json write_attributes</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q23" value="D">D. Replace the catalog</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Enable attribute flags and include it in refinements/sort config.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A custom index field inflates index size, slowing queries. Which optimizations help most?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 24">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q24" value="A">A. Reduce precision (e.g., truncate decimals) if exact precision is unnecessary</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q24" value="B">B. Store normalized values, not verbose text, if text is not required</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q24" value="C">C. Duplicate fields for safety</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q24" value="D">D. Increase log levels</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Reduce precision and store normalized tokens to shrink the index.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A POST endpoint accepts JSON payloads and updates a custom object. Which two platform precautions are mandatory?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 25">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q25" value="A">A. CSRF protection on POST routes when relevant</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q25" value="B">B. Input validation and size limits; reject overly large or malformed payloads</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q25" value="C">C. Disable HTTPS to reduce latency</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q25" value="D">D. Write directly to logs for auditing PII</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Protect POSTs and validate inputs/size to prevent abuse.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Your service call must fail fast during peak traffic to protect storefront performance. Which three configurations should you tune?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 26">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q26" value="A">A. Connection timeout and socket timeout</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q26" value="B">B. Circuit breaker thresholds and open-state duration</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q26" value="C">C. Retry count with exponential backoff</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q26" value="D">D. Disable all logging globally</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>Timeouts, CB, and backoff retries protect storefront under stress.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You add a new Shop API OCAPI GET that is personalized. Which two requirements are critical for caching correctness?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 27">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q27" value="A">A. Do not cache or include vary keys (customer, locale, currency) where needed</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q27" value="B">B. If caching, include appropriate vary keys (customer group, locale, currency) or disable cache</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q27" value="C">C. Always set max-age=86400</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q27" value="D">D. Force CDN to ignore all headers</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>For personalized endpoints, either avoid caching or vary appropriately.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A teammate added pricing logic directly in the PDP controller that also returns JSON for headless clients. What’s the MAIN maintainability risk?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 28">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q28" value="A">A. JSON cannot carry prices</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q28" value="B">B. Duplication and divergence from the platform pricing hooks/decorators</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q28" value="C">C. Increased log size</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q28" value="D">D. Page Designer breaks</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Logic diverges from hooks; duplication across outputs becomes fragile.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Your basket calculation relies on a hook that sometimes runs after totals are displayed. Which is the best fix?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 29">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q29" value="A">A. Move logic into ISML</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q29" value="B">B. Ensure hook is invoked in the calculation pipeline before totals are read; add deterministic ordering</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q29" value="C">C. Switch to remote include</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q29" value="D">D. Disable CSRF</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Ensure hook order executes before totals; deterministic placement.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A form persists PII to a custom object. Which two practices are mandatory?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 30">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q30" value="A">A. Log the raw PII payload for support</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q30" value="B">B. Validate and minimize PII storage; encrypt or avoid storing sensitive fields</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q30" value="C">C. Restrict OCAPI Data read/write to least privilege</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q30" value="D">D. Use GET for submissions to ease caching</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B, C</strong><br><small>Minimize/secure PII; lock down OCAPI permissions.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Your service occasionally returns a 200 with an error payload. How do you robustly detect failure?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 31">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q31" value="A">A. Assume 200 is always success</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q31" value="B">B. Implement a response parser that reads application-level status codes and validates schema</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q31" value="C">C. Rely only on timeouts</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q31" value="D">D. Switch to SOAP</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Parse payload-level status and schema to detect logical failures.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>An OCAPI Data POST intermittently fails with 403 for a client. Which two root causes are likely?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 32">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q32" value="A">A. Missing or expired client credentials</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q32" value="B">B. Incorrect ocapi.json write_attributes for the payload fields</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q32" value="C">C. CDN cache is stale</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q32" value="D">D. Log category disabled</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>403 often indicates auth or ocapi.json attribute permission issues.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A hook implementation requires sharing context between pre- and post-steps. Which technique is appropriate?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 33">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q33" value="A">A. Write to a global variable in the cartridge</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q33" value="B">B. Attach needed metadata to the request object or a scoped object the framework passes</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q33" value="C">C. Use ISML to pass hidden fields</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q33" value="D">D. Save to a custom object on each call</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Use request-scoped context; avoid globals and persistent writes.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Your checkout has a custom POST that sometimes receives duplicate submissions (e.g., double-click). Which two mitigations help?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 34">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q34" value="A">A. Idempotency key in payload and server-side dedupe</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q34" value="B">B. Client-side JS to disable the submit button after click</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q34" value="C">C. Increase cache time</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q34" value="D">D. Replace POST with GET</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Idempotency and UI disable prevent duplicate effects.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A controller needs to stream a large JSON export to the browser without exhausting memory. Which approach is best?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 35">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q35" value="A">A. Build a giant object and stringify at end</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q35" value="B">B. Stream chunks to the response writer incrementally and set appropriate headers</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q35" value="C">C. Write to ISML then convert to JSON</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q35" value="D">D. Use Logger to buffer chunks</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Stream chunks to the response; avoid building huge in-memory JSON.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Your custom object update job fails when running concurrently with another job that touches the same records. Best practice?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 36">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q36" value="A">A. Ignore; failures are fine</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q36" value="B">B. Introduce locking strategy or run jobs in mutually exclusive windows; add retries/backoff</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q36" value="C">C. Increase log verbosity</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q36" value="D">D. Use templates/resources to coordinate</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Coordinate schedules/locks and implement backoff.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which two statements reflect least-privilege OCAPI configuration?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 37">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q37" value="A">A. Expose only required resources and attributes in read/write sections</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q37" value="B">B. Grant global read/write to speed development</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q37" value="C">C. Separate client credentials for distinct integrations</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q37" value="D">D. Put secrets in cartridge constants.js</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Least privilege and separate credentials are core; never hardcode secrets.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A new external client requires access to order data via OCAPI Data. Which three steps are essential?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 38">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q38" value="A">A. Create client ID/secret in BM and map to OCAPI settings</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q38" value="B">B. Allow order resources with explicit read_attributes in ocapi.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q38" value="C">C. Enable Shop API basket read/write</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q38" value="D">D. Restrict fields to non-PII where possible</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Credentials, ocapi.json, and PII minimization.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which two practices help avoid sensitive data in logs?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 39">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q39" value="A">A. Redact tokens and PII in service response parser before logging</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q39" value="B">B. Log entire payloads at DEBUG only</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q39" value="C">C. Disable logs entirely</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q39" value="D">D. Avoid logging request/response bodies unless masked or essential</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, D</strong><br><small>Redact/mask and avoid logging bodies unless essential.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Your hardening review flags that CSRF tokens sometimes aren’t validated on POST. What is the correct remediation?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 40">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q40" value="A">A. Switch POST to GET</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q40" value="B">B. Ensure csrfProtection.generateToken on GET render and csrfProtection.validateRequest on POST handlers</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q40" value="C">C. Add HTTPS and keep POSTs as-is</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q40" value="D">D. Disable caching</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Generate token on GET, validate on POST for CSRF protection.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>An auditor asks how you segregate duties between environments (dev/test/prod). Which two controls are relevant?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 41">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q41" value="A">A. Different OCAPI credentials and permissions per environment</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q41" value="B">B. Shared code versions across all environments</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q41" value="C">C. Restricted BM roles per environment and replication controls</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q41" value="D">D. Merge all logs into one bucket</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Distinct creds/roles per environment; controlled replication.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You must rotate a service credential without downtime. Which two steps help?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 42">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q42" value="A">A. Create a new credential/profile, deploy code to reference it, cut over, then remove the old one</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q42" value="B">B. Change the password in code and redeploy</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q42" value="C">C. Schedule a maintenance window to stop traffic</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q42" value="D">D. Support both old and new keys for a transition period if the upstream allows it</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, D</strong><br><small>Blue/green credentials or dual-key transition when supported.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A Shop API endpoint exposes personalized recommendations. What’s the safest caching strategy?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 43">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q43" value="A">A. Global cache with no vary</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q43" value="B">B. No cache or vary by customer (and locale/currency)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q43" value="C">C. Cache at CDN for one day</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q43" value="D">D. Only rely on application cache</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>No cache or vary by customer/locale/currency for personalization.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A partner integration requests broad OCAPI write on system objects. What is the recommended response?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 44">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q44" value="A">A. Approve to accelerate go-live</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q44" value="B">B. Grant least privilege with scoped resources/attributes and time-bound credentials</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q44" value="C">C. Deny all OCAPI</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q44" value="D">D. Ask them to use Page Designer</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Grant only what’s needed, scoped and time-bound.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Your logs show frequent 401s on a service call from production only. Which two root causes are most likely?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 45">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q45" value="A">A. Wrong credentials or environment-specific key</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q45" value="B">B. Sandbox IP allow-lists applied to prod</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q45" value="C">C. Missing locale files</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q45" value="D">D. Incorrect HTTP method</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Wrong creds or IP allow-lists often cause 401 in prod.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A new security policy mandates masking card PANs end-to-end. Which two platform strategies are applicable?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 46">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q46" value="A">A. Do not store PANs; rely on tokenization via the PSP</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q46" value="B">B. Redact PANs in all logs and prevent them from being written by parsers</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q46" value="C">C. Save the last 8 digits in custom objects for analytics</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q46" value="D">D. Include full PAN in DEBUG for reconciliation</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Tokenize; redact/mask; never store full PANs.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Your SiteGenesis legacy code uses XML pipelines and you must migrate a critical flow to SFRA. What’s the safest path?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 47">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q47" value="A">A. Rewrite entire site at once</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q47" value="B">B. Incrementally port flows to SFRA controllers/templates; keep legacy isolated; maintain feature parity with tests</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q47" value="C">C. Mix pipeline calls inside SFRA controllers</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q47" value="D">D. Use ISML to call pipelines</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Incremental migration with isolation and tests is safest.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>An OCAPI customization must run validation before writing to a system object. Where does the logic live?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 48">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q48" value="A">A. ocapi.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q48" value="B">B. A cartridge hook implementation registered in the path (e.g., beforePOST/validate)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q48" value="C">C. services.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q48" value="D">D. Page Designer component</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>OCAPI validation logic is in hook implementations in a cartridge.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A route renders a product grid and is slow under load. Which three improvements are typical?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 49">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q49" value="A">A. Introduce response cache with vary keys (locale, currency, page, filters)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q49" value="B">B. Precompute expensive fields in decorators and avoid per-item service calls</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q49" value="C">C. Move all logic into ISML</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q49" value="D">D. Use batched lookups or cached services to avoid N+1 patterns</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Response caching, precompute, and batched/cached lookups help.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You discover double JSON serialization (stringified strings). What is the clean fix?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 50">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q50" value="A">A. Keep as-is; browsers parse twice</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q50" value="B">B. Ensure the controller passes a JS object to res.json once; avoid pre-stringifying</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q50" value="C">C. Render ISML instead</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q50" value="D">D. Cache longer</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Avoid double-stringify; let res.json serialize once.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Profiler shows 40% of time in a synchronous service call on each tile of a product list. Which two remedies help?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 51">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q51" value="A">A. Aggregate calls: one request for many items or cache results</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q51" value="B">B. Increase log level to TRACE</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q51" value="C">C. Remove the call or precompute data offline via jobs and decorate from storage</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q51" value="D">D. Use more remote includes</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Batch/cache or precompute via jobs; remove per-item calls.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Stale template content persists despite cache clears. Which two lesser-known causes exist?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 52">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q52" value="A">A. A remote include has its own cache not invalidated</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q52" value="B">B. CDN edge cache still serving old variant</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q52" value="C">C. Wrong ocapi.json client name</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q52" value="D">D. Logger buffering</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Remote include cache and CDN can serve stale content independently.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A job fails only when catalog import and search delta reindex overlap. What’s the best mitigation?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 53">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q53" value="A">A. Disable delta indexing</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q53" value="B">B. Introduce job schedule coordination and lock mechanism; ensure order of operations</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q53" value="C">C. Increase retries to 100</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q53" value="D">D. Turn off logs</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Coordinate schedules and locking to avoid overlaps.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You need to diagnose a memory spike during peak hours. Which two tools/approaches are relevant?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 54">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q54" value="A">A. Analyze BM Profiler data and request logs for allocation hotspots</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q54" value="B">B. Add heap dumps via platform APIs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q54" value="C">C. Add targeted logging and correlate with service latencies</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q54" value="D">D. Use ISML to render diagnostics to shoppers</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Use profiler/log correlation; platform doesn’t provide heap dumps.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>The site occasionally returns 503 from a downstream service chain. Which three resilience techniques are most effective?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 55">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q55" value="A">A. Circuit breaker to shed failing dependency</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q55" value="B">B. Exponential backoff retries with jitter for transient failures</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q55" value="C">C. Graceful degradation (serve cached/placeholder content)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q55" value="D">D. Add synchronous retries inside ISML</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>CB, retries with backoff, and graceful fallbacks; never retry in ISML.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A controller endpoint must stream a CSV export of orders for one tenant while preventing cross-tenant leaks. Which two safeguards are required?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 56">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q56" value="A">A. Tenant scoping on queries and authorization checks</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q56" value="B">B. Caching without vary to increase speed</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q56" value="C">C. Content-Disposition and CSV headers; stream output</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q56" value="D">D. Use GET to skip CSRF</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Scope/authorize per tenant and stream CSV with correct headers.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A Page Designer component shows wrong currency on cache hits. Which root cause is most likely?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 57">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q57" value="A">A. Missing vary-by-currency on the cached fragment</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q57" value="B">B. Wrong ocapi.data permissions</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q57" value="C">C. Controller name collision</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q57" value="D">D. No CDN</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Add vary-by-currency for correct cache partitioning.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>An integration needs at-least-once delivery semantics for outbound events. Which approach is best?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 58">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q58" value="A">A. Fire-and-forget synchronous POSTs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q58" value="B">B. Queue events with IDs, retry on failure with dedupe on consumer side</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q58" value="C">C. Log-only and reprocess manually</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q58" value="D">D. Use templates/resources</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Queue with IDs and dedupe for at-least-once semantics.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>The storefront performs excessive DDoS-like traffic to your service due to a client bug. Which two mitigations help quickly?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 59">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q59" value="A">A. Rate-limit/throttle at the Service Framework or edge</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q59" value="B">B. Increase timeouts</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q59" value="C">C. Cache negative responses appropriately (with short TTL)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q59" value="D">D. Disable logs</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Rate-limit and cache negatives to absorb bursts.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A regression reduced PDP TTFB by 300ms. You must isolate the cause. Which three steps are effective?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set3 Hard - Question 60">
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q60" value="A">A. Compare profiler traces before/after by route</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q60" value="B">B. Diff code between versions and examine changed services/decorators</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q60" value="C">C. Clear all caches and assume it’s fixed</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set3_hard_q60" value="D">D. Add targeted timers/logs around suspect blocks to measure deltas</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Profiling deltas, code diff, and targeted timings isolate regressions.</small></div>
+    </details>
+  </div>
+</li>
+</ol>
+</body>
+</html>

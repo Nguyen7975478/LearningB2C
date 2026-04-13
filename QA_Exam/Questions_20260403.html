@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2C Commerce Developer - Practice Questions (2026-04-03)</title>
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #222; }
+h1 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 8px; }
+.question-list { list-style: none; padding: 0; }
+.question-list > li { margin-bottom: 28px; }
+.question { background: #fff; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+h2 { font-size: 1em; margin: 0 0 12px 0; color: #003366; }
+.options { padding-left: 20px; margin: 0 0 12px 0; }
+.options li { margin: 6px 0; list-style: none; }
+.options label { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.options input[type=radio] { margin-top: 3px; flex-shrink: 0; }
+details { margin-top: 8px; }
+summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none; }
+.answer { padding: 8px 12px; background: #e8f5e9; border-radius: 4px; margin-top: 6px; }
+.translate { padding: 8px 12px; background: #e3f2fd; border-radius: 4px; margin-top: 6px; }
+.translate ul { margin: 6px 0; padding-left: 20px; }
+</style>
+</head>
+<body>
+<h1>B2C Commerce Developer - Practice Questions (2026-04-03)</h1>
+<ol class="question-list">
+<li>
+  <div class="question">
+    <h2>How do you extend a Controller without modifying the base cartridge in SFRA?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 1">
+      <li><label><input type="radio" name="questions_20260403_q1" value="A">A. Copy the base controller into your cartridge and modify it.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q1" value="B">B. Create a controller with the same name and use server.extend(module.superModule).</label></li>
+      <li><label><input type="radio" name="questions_20260403_q1" value="C">C. Use the server.replace() method to overwrite the base route.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q1" value="D">D. Use require(&#x27;app_storefront_base/cartridge/controllers/...&#x27;) directly.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>This initiates the middleware inheritance chain, preserving the base logic while allowing extensions.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In a middleware chain, what happens if you call res.render() and then next()?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 2">
+      <li><label><input type="radio" name="questions_20260403_q2" value="A">A. The template renders twice.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q2" value="B">B. An error occurs, and the request fails.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q2" value="C">C. The template renders, and the next middleware executes normally.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q2" value="D">D. The next() call is silently ignored.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Once a response is rendered or sent, the request lifecycle is closed; calling next() afterward throws an exception.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which middleware functions are required to enable CSRF protection on a specific route pair in SFRA?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 3">
+      <li><label><input type="radio" name="questions_20260403_q3" value="A">A. csrfProtection.validateAjaxRequest on all routes.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q3" value="B">B. csrfProtection.generateToken for GET and csrfProtection.validateRequest for POST.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q3" value="C">C. server.middleware.csrf on both GET and POST routes.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q3" value="D">D. security.enableCSRF() on the POST route.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>The GET route needs to generate the token for the view, and the POST route needs to validate the submitted token.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you prevent a specific Controller route from being cached at the web-tier?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 4">
+      <li><label><input type="radio" name="questions_20260403_q4" value="A">A. Use cache.applyDefaultCache.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q4" value="B">B. Return false from the middleware.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q4" value="C">C. Use iscacheable in the controller.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q4" value="D">D. Use res.cacheExpiration(0).</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>Setting the expiration to zero explicitly tells the platform&#x27;s page cache not to store this response.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>If a site&#x27;s cartridge path is &#x27;plugin_wishlist:app_custom:app_storefront_base&#x27;, which &#x27;ProductModel.js&#x27; is used if it exists in all three?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 5">
+      <li><label><input type="radio" name="questions_20260403_q5" value="A">A. All three are merged automatically.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q5" value="B">B. The one in app_storefront_base.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q5" value="C">C. The one in plugin_wishlist.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q5" value="D">D. The one in app_custom.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>The platform resolves file lookups from left to right; the leftmost cartridge always has the highest priority.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How can you pass data from a Controller to an ISML template in SFRA?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 6">
+      <li><label><input type="radio" name="questions_20260403_q6" value="A">A. Pass a JSON object as the second argument to res.render(&#x27;templateName&#x27;, { data: value }).</label></li>
+      <li><label><input type="radio" name="questions_20260403_q6" value="B">B. Return the data from the controller module.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q6" value="C">C. Use the pdict.set() method in the controller.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q6" value="D">D. Assign the data to session.custom.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>The properties of this object become accessible via the pdict variable in the ISML template.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the primary difference between server.get() and server.append() in SFRA?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 7">
+      <li><label><input type="radio" name="questions_20260403_q7" value="A">A. server.get defines a new route; server.append adds middleware to the end of an existing route.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q7" value="B">B. server.get handles data retrieval; server.append handles database writes.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q7" value="C">C. server.get is for AJAX; server.append is for page loads.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q7" value="D">D. server.append replaces the original route completely.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Get initializes the endpoint, while append modifies a route inherited via superModule.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you securely access HTTP Cookies in a B2C Script?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 8">
+      <li><label><input type="radio" name="questions_20260403_q8" value="A">A. Via response.cookies.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q8" value="B">B. Via session.getCookies().</label></li>
+      <li><label><input type="radio" name="questions_20260403_q8" value="C">C. Via request.httpCookies.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q8" value="D">D. Using document.cookie.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>The request object provides a dedicated property to access incoming client cookies safely.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Why is it dangerous to store large objects in session.custom?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 9">
+      <li><label><input type="radio" name="questions_20260403_q9" value="A">A. It exposes the data to cross-site scripting (XSS) attacks.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q9" value="B">B. It automatically disables the page cache.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q9" value="C">C. It increases the session size, degrading performance due to serialization overhead.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q9" value="D">D. It violates the Object.MaxCustomAttributes quota.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>The entire session object must be saved and loaded across the application servers for every single request.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you trigger a 410 (Gone) status code for a discontinued product?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 10">
+      <li><label><input type="radio" name="questions_20260403_q10" value="A">A. Use  in the ISML.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q10" value="B">B. Throw a new Error(410).</label></li>
+      <li><label><input type="radio" name="questions_20260403_q10" value="C">C. res.setStatusCode(410).</label></li>
+      <li><label><input type="radio" name="questions_20260403_q10" value="D">D. res.redirect(&#x27;410&#x27;).</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Setting the status code explicitly on the response object informs search engines the product is permanently removed.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the primary constraint regarding res.viewData in SFRA?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 11">
+      <li><label><input type="radio" name="questions_20260403_q11" value="A">A. It is a standard JS object, but it must be kept lean to avoid memory overhead during template rendering.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q11" value="B">B. It is read-only and cannot be modified by middleware.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q11" value="C">C. It can only hold strings and numbers, not objects.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q11" value="D">D. It automatically persists data to the database.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Passing massive datasets (like full API responses) to the template engine consumes significant CPU and memory quotas.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you handle multi-language support for error messages generated in a Controller?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 12">
+      <li><label><input type="radio" name="questions_20260403_q12" value="A">A. Use dw.web.Resource.msg(&#x27;error.key&#x27;, &#x27;bundle&#x27;, null).</label></li>
+      <li><label><input type="radio" name="questions_20260403_q12" value="B">B. Create separate controller files for each language.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q12" value="C">C. Use session.getLocale().translate(&#x27;error.key&#x27;).</label></li>
+      <li><label><input type="radio" name="questions_20260403_q12" value="D">D. Hardcode the translations in a JSON object in the script.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>The Resource class safely fetches the correct localized string based on the user&#x27;s current session locale.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which SFRA object is typically responsible for generating the &#x27;Breadcrumbs&#x27; logic?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 13">
+      <li><label><input type="radio" name="questions_20260403_q13" value="A">A. The Site Preferences.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q13" value="B">B. The Product or Search model/decorator.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q13" value="C">C. The URLUtils class.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q13" value="D">D. The session.custom object.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Models analyze the category hierarchy of the current product or search term to build the breadcrumb data structure.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How can a developer detect if the current request is coming from a &#x27;Search Engine Bot&#x27;?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 14">
+      <li><label><input type="radio" name="questions_20260403_q14" value="A">A. Check session.isBot.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q14" value="B">B. Check request.httpUserAgent.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q14" value="C">C. Check request.httpMethod === &#x27;BOT&#x27;.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q14" value="D">D. Use dw.system.Site.isCrawler().</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>The User-Agent string identifies the browser or crawler making the request (e.g., Googlebot).</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you execute a redirect to the Home Page from within an SFRA Controller?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 15">
+      <li><label><input type="radio" name="questions_20260403_q15" value="A">A. server.route(&#x27;Home-Show&#x27;).</label></li>
+      <li><label><input type="radio" name="questions_20260403_q15" value="B">B. res.redirect(URLUtils.url(&#x27;Home-Show&#x27;)).</label></li>
+      <li><label><input type="radio" name="questions_20260403_q15" value="C">C. res.render(&#x27;Home-Show&#x27;).</label></li>
+      <li><label><input type="radio" name="questions_20260403_q15" value="D">D. window.location.href = &#x27;/&#x27;.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>This uses the URL utility to safely construct the path and issues a 302 redirect via the response object.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the strict platform limit for Script.MaxCallStackDepth?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 16">
+      <li><label><input type="radio" name="questions_20260403_q16" value="A">A. 500</label></li>
+      <li><label><input type="radio" name="questions_20260403_q16" value="B">B. 50</label></li>
+      <li><label><input type="radio" name="questions_20260403_q16" value="C">C. 100</label></li>
+      <li><label><input type="radio" name="questions_20260403_q16" value="D">D. Unlimited</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Salesforce restricts the call stack depth to 50 to prevent infinite recursion from crashing application threads.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How should a developer query for Custom Objects to avoid hitting performance bottlenecks?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 17">
+      <li><label><input type="radio" name="questions_20260403_q17" value="A">A. Use CustomObjectMgr.queryCustomObjects with a specific indexed attribute in the query string.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q17" value="B">B. Use CustomObjectMgr.getAllCustomObjects() and filter via a JavaScript loop.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q17" value="C">C. Export all Custom Objects to XML and parse them.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q17" value="D">D. Use direct SQL queries.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Using indexed attributes allows the database to filter results efficiently without loading all objects into memory.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What happens if a developer exceeds the Object.MaxCustomAttributes quota?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 18">
+      <li><label><input type="radio" name="questions_20260403_q18" value="A">A. The cartridge will fail to upload.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q18" value="B">B. Old attributes are automatically deleted to make room.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q18" value="C">C. The storefront will throw a 500 Error for all users.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q18" value="D">D. They cannot create new attribute definitions in Business Manager for that object type.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>This is a hard schema limit imposed by Salesforce to protect database performance.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>If a custom requirement dictates storing an Array of complex objects on a Customer Profile, what is the best practice?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 19">
+      <li><label><input type="radio" name="questions_20260403_q19" value="A">A. Create a &#x27;Set of Objects&#x27; custom attribute.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q19" value="B">B. Stringify the array to JSON and store it in a &#x27;Text&#x27; or &#x27;Long String&#x27; attribute.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q19" value="C">C. Store the data in the session.custom object permanently.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q19" value="D">D. Create hundreds of individual custom attributes (e.g., item1, item2).</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>B2C Commerce does not support &#x27;Arrays of Objects&#x27; natively, so JSON serialization into a text field is the standard workaround.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the purpose of dw.system.Transaction.begin()?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 20">
+      <li><label><input type="radio" name="questions_20260403_q20" value="A">A. To begin rendering the ISML template.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q20" value="B">B. To start a new HTTP request.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q20" value="C">C. To manually start a database transaction when explicit control is needed.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q20" value="D">D. To initialize a Service Framework call.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>While Transaction.wrap() is preferred for safety, begin() allows manual start of atomic database operations.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How many price books can be active for a single site at once?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 21">
+      <li><label><input type="radio" name="questions_20260403_q21" value="A">A. A maximum of two: one regular and one sale.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q21" value="B">B. Only one active price book is allowed globally.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q21" value="C">C. Multiple, and they are evaluated based on the assigned priority in Business Manager.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q21" value="D">D. Only one per currency.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Sites often use multiple active price books (e.g., standard, sale, clearance) stacked via priority.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the technical difference between a &#x27;System Quota&#x27; and a &#x27;Service Limit&#x27;?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 22">
+      <li><label><input type="radio" name="questions_20260403_q22" value="A">A. They are identical terms for the same concept.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q22" value="B">B. Quotas restrict database size; Limits restrict code length.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q22" value="C">C. Quotas apply to Sandbox; Limits apply to Production.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q22" value="D">D. Quotas are hard platform-enforced limits; Service Limits (like API timeouts) can sometimes be configured.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>Quotas protect the shared JVM and cannot be overridden, whereas service limits manage integration rules.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you retrieve a site preference named &#x27;myConfig&#x27; via script?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 23">
+      <li><label><input type="radio" name="questions_20260403_q23" value="A">A. session.custom.myConfig</label></li>
+      <li><label><input type="radio" name="questions_20260403_q23" value="B">B. request.getPreference(&#x27;myConfig&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_20260403_q23" value="C">C. Site.preferences.myConfig</label></li>
+      <li><label><input type="radio" name="questions_20260403_q23" value="D">D. dw.system.Site.current.getCustomPreferenceValue(&#x27;myConfig&#x27;)</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>This is the secure, standard API method to access developer-defined custom preferences.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the maximum length of a standard &#x27;String&#x27; attribute in B2C Commerce?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 24">
+      <li><label><input type="radio" name="questions_20260403_q24" value="A">A. 255 characters.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q24" value="B">B. 100,000 characters.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q24" value="C">C. 4,000 characters.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q24" value="D">D. Unlimited.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>This is the database column limit for standard String types; longer data requires the &#x27;Text&#x27; type.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you programmatically delete a persistent cookie from the user&#x27;s browser?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 25">
+      <li><label><input type="radio" name="questions_20260403_q25" value="A">A. Use dw.system.Session.clearCookies().</label></li>
+      <li><label><input type="radio" name="questions_20260403_q25" value="B">B. Set the cookie value to null.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q25" value="C">C. Call request.removeCookie(&#x27;name&#x27;).</label></li>
+      <li><label><input type="radio" name="questions_20260403_q25" value="D">D. Set its max age to 0 and add it to the response object.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>Browsers delete cookies when they receive an update instructing them that the cookie has expired (age 0).</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Why is it highly recommended to use LocalServiceRegistry over dw.net.HTTPClient?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 26">
+      <li><label><input type="radio" name="questions_20260403_q26" value="A">A. HTTPClient is blocked on Production environments.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q26" value="B">B. LocalServiceRegistry provides integrated logging, rate monitoring, and circuit breakers.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q26" value="C">C. HTTPClient cannot make HTTPS requests.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q26" value="D">D. LocalServiceRegistry executes significantly faster.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>The Service Framework adds enterprise-grade resilience and analytics that raw HTTP clients lack.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What behavior does the api.MaxObjectCount quota restrict?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 27">
+      <li><label><input type="radio" name="questions_20260403_q27" value="A">A. It limits the total number of items a customer can have in their cart.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q27" value="B">B. It limits the number of persistent objects (like products or orders) instantiated in a single request.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q27" value="C">C. It limits the number of products returned in a search result.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q27" value="D">D. It limits how many Custom Object definitions you can create in Business Manager.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Creating massive amounts of persistent objects in memory threatens the heap space of the JVM.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How can a developer best avoid database &#x27;Deadlocks&#x27; in high-volume custom scripts?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 28">
+      <li><label><input type="radio" name="questions_20260403_q28" value="A">A. Disable the database locking mechanism in Site Preferences.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q28" value="B">B. Wrap the entire Job in a single massive Transaction.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q28" value="C">C. Ensure all scripts access and lock objects in the same order and keep transactions as short as possible.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q28" value="D">D. Use the transaction.rollback() method after every query.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Are native JavaScript &#x27;Map&#x27; and &#x27;Set&#x27; objects supported in B2C Commerce Script?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 29">
+      <li><label><input type="radio" name="questions_20260403_q29" value="A">A. Yes, they are fully ES2022 compliant.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q29" value="B">B. Yes, but they are the versions provided by the Rhino engine, which may lack some modern ES6 methods.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q29" value="C">C. No, Maps and Sets cause memory leaks in the JVM.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q29" value="D">D. No, developers must exclusively use dw.util.Map and dw.util.Set.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you programmatically trigger a refresh of the Product Search Index from a Controller?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 30">
+      <li><label><input type="radio" name="questions_20260403_q30" value="A">A. Set the search index status to &#x27;Stale&#x27; in session.custom.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q30" value="B">B. Use dw.catalog.SearchIndexMgr.rebuildAll().</label></li>
+      <li><label><input type="radio" name="questions_20260403_q30" value="C">C. Call the OCAPI Search API with a POST command.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q30" value="D">D. You cannot trigger a full rebuild directly from a Script; you must use a Job with the Search-Index step.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In the Service Framework registry, what is the exact purpose of the &#x27;createRequest&#x27; callback?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 31">
+      <li><label><input type="radio" name="questions_20260403_q31" value="A">A. It is where you define the URL path, headers, and request body for the outgoing call.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q31" value="B">B. It bypasses the Circuit Breaker for testing.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q31" value="C">C. It handles the retry logic if the API returns a 500 error.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q31" value="D">D. It maps the raw JSON response back into a script object.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you enable &#x27;Mock Mode&#x27; for a specific Service to bypass external calls?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 32">
+      <li><label><input type="radio" name="questions_20260403_q32" value="A">A. Delete the Service Credentials.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q32" value="B">B. Add a mock:true property to the package.json.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q32" value="C">C. Use service.setMock(true) in the createRequest method.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q32" value="D">D. Administration &gt; Operations &gt; Services &gt; Select Service &gt; Check the &#x27;Mocked&#x27; box.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When designing an OCAPI integration, what dictates the use of POST over GET?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 33">
+      <li><label><input type="radio" name="questions_20260403_q33" value="A">A. POST is faster than GET for large product catalogs.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q33" value="B">B. GET is strictly for retrieving data safely; POST creates resources or performs complex actions like authentication.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q33" value="C">C. POST allows bypassing the allowed_origins CORS settings.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q33" value="D">D. GET cannot handle JSON responses.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you securely authorize an OCAPI call coming from a custom Mobile App?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 34">
+      <li><label><input type="radio" name="questions_20260403_q34" value="A">A. Use a hidden input field on the mobile screen.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q34" value="B">B. Pass the Business Manager admin password in the request header.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q34" value="C">C. Disable the client_id requirement in OCAPI settings.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q34" value="D">D. Use a JWT (JSON Web Token) via the Auth API and verify the Client ID.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the technical definition of a &#x27;Hook&#x27; in the context of OCAPI?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 35">
+      <li><label><input type="radio" name="questions_20260403_q35" value="A">A. A mechanism to intercept and steal user passwords.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q35" value="B">B. A custom script execution point that fires before or after a standard OCAPI resource call.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q35" value="C">C. A tool to convert XML to JSON.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q35" value="D">D. A way to connect two different Business Manager instances.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the most secure way to pass an API Key to an external Service?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 36">
+      <li><label><input type="radio" name="questions_20260403_q36" value="A">A. Hardcode it as a constant at the top of the Service script.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q36" value="B">B. Save it in a Custom Object named &#x27;Secrets&#x27;.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q36" value="C">C. Store it in the &#x27;Service Credentials&#x27; password field in Business Manager.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q36" value="D">D. Pass it as a URL parameter generated by ISML.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>If a storefront Service is timing out and blocking checkout, what is the best immediate architectural fix?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 37">
+      <li><label><input type="radio" name="questions_20260403_q37" value="A">A. Change the service from POST to GET.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q37" value="B">B. Wrap the service call in a Job.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q37" value="C">C. Increase the timeout to 60 seconds to guarantee it finishes.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q37" value="D">D. Ensure the Service timeout is configured lower (e.g., 2 seconds) to fail fast.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How should a Service Framework script handle a &#x27;429 Too Many Requests&#x27; response?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 38">
+      <li><label><input type="radio" name="questions_20260403_q38" value="A">A. Implement a retry logic with an exponential backoff strategy.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q38" value="B">B. Trip the circuit breaker permanently.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q38" value="C">C. Ignore the error and return an empty object.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q38" value="D">D. Send an email to the customer.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Can OCAPI be used to read or modify Site Preferences?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 39">
+      <li><label><input type="radio" name="questions_20260403_q39" value="A">A. No, OCAPI only handles catalog and order data.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q39" value="B">B. Yes, they are available in the Shop API under /site.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q39" value="C">C. No, preferences can only be changed via WebDAV.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q39" value="D">D. Yes, but strictly through the Data API, as preferences are administrative configurations.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In the Service Framework, what is the critical role of the &#x27;parseResponse&#x27; callback?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 40">
+      <li><label><input type="radio" name="questions_20260403_q40" value="A">A. To write the response to the service log file.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q40" value="B">B. To determine if the Circuit Breaker should trip.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q40" value="C">C. To convert the raw HTTP string or JSON payload into a clean Data Transfer Object (DTO) for the script.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q40" value="D">D. To serialize the outgoing request payload.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>If a custom Service is failing on Staging, where is the best place to find the raw request/response payload for debugging?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 41">
+      <li><label><input type="radio" name="questions_20260403_q41" value="A">A. Check the WebDAV IMPEX folder.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q41" value="B">B. Check the service-*.log files in the Log Center, assuming &#x27;Communication Log&#x27; is enabled.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q41" value="C">C. Use the Code Profiler.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q41" value="D">D. Look in the custom-error.log file.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the operational implication of using a &#x27;Local Include&#x27; () in ISML?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 42">
+      <li><label><input type="radio" name="questions_20260403_q42" value="A">A. It executes asynchronously after the page loads.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q42" value="B">B. It bypasses the controller and accesses the database directly.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q42" value="C">C. It requires a separate HTTP request to the application server.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q42" value="D">D. It executes in the same thread and shares the cache policy of the parent template.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the primary benefit of using a &#x27;Remote Include&#x27; ()?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 43">
+      <li><label><input type="radio" name="questions_20260403_q43" value="A">A. It allows ISML to call third-party APIs directly.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q43" value="B">B. It initiates a new internal request, allowing the specific component to have an independent cache policy.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q43" value="C">C. It prevents XSS attacks.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q43" value="D">D. It reduces the load on the application server.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you implement a Webhook listener in B2C Commerce to receive updates from an external ERP?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 44">
+      <li><label><input type="radio" name="questions_20260403_q44" value="A">A. Register a new Hook in hooks.json pointing to an external URL.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q44" value="B">B. Create a public Controller route that parses the incoming JSON payload and trigger logic based on the data.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q44" value="C">C. Configure a Webhook URL in Site Preferences.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q44" value="D">D. Use the dw.net.Webhook class.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When debugging performance, what is the primary benefit of &#x27;Service Profiling&#x27; in Business Manager?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 45">
+      <li><label><input type="radio" name="questions_20260403_q45" value="A">A. It helps identify which external API integrations are introducing latency and slowing down the site flow.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q45" value="B">B. It tracks how fast the ISML templates compile.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q45" value="C">C. It prevents the MaxCallStackDepth error.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q45" value="D">D. It analyzes the memory usage of Custom Objects.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you properly configure a Job Step to execute a custom JavaScript function?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 46">
+      <li><label><input type="radio" name="questions_20260403_q46" value="A">A. Use the &#x27;EvaluateString&#x27; step and type the code in the UI.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q46" value="B">B. Select the &#x27;ExecuteScriptModule&#x27; step type and provide the module path and exported function name.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q46" value="C">C. Select the &#x27;LegacyPipelet&#x27; step.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q46" value="D">D. Select the &#x27;RunController&#x27; step and point to a route.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In the Job ChunkProcessing model, what is the purpose of the &#x27;beforeStep&#x27; or &#x27;onOpen&#x27; callback?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 47">
+      <li><label><input type="radio" name="questions_20260403_q47" value="A">A. It clears the database cache.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q47" value="B">B. It is called exactly once before any chunks are processed to initialize resources like file streams or iterators.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q47" value="C">C. It is called before every single item is processed.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q47" value="D">D. It forces the job to wait for another job to finish.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you define custom parameters (like a file path) that can be passed from the Business Manager UI into a Job Script?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 48">
+      <li><label><input type="radio" name="questions_20260403_q48" value="A">A. Define them in the package.json file.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q48" value="B">B. Define the parameters in the steptypes.json file of the cartridge.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q48" value="C">C. Hardcode them as constants in the script.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q48" value="D">D. Pass them via the query string in the job execution URL.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Why must a developer use dw.io.XMLStreamWriter instead of building a massive XML string for large catalog exports?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 49">
+      <li><label><input type="radio" name="questions_20260403_q49" value="A">A. Because standard strings cannot contain XML tags.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q49" value="B">B. To ensure the XML is minified.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q49" value="C">C. To automatically encrypt the data.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q49" value="D">D. To stream the data directly to the file system, avoiding memory quotas that string concatenation would trigger.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the most common cause of a &#x27;Catalog Replication&#x27; task failing between Staging and Production?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 50">
+      <li><label><input type="radio" name="questions_20260403_q50" value="A">A. A developer forgot to clear the cache.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q50" value="B">B. The Production instance ran out of disk space.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q50" value="C">C. Locked objects or invalid category assignments disrupting the data integrity constraints.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q50" value="D">D. The OCAPI client ID was incorrect.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the functional purpose of &#x27;A/B Testing&#x27; natively built into B2C Commerce?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 51">
+      <li><label><input type="radio" name="questions_20260403_q51" value="A">A. To test API endpoint performance.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q51" value="B">B. To automatically fix JavaScript bugs on the frontend.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q51" value="C">C. To test different content, layouts, or promotions simultaneously on segmented traffic to measure conversion rates.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q51" value="D">D. To compare Sandbox code with Production code.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How can a developer programmatically determine which specific promotion triggered a discount on a product?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 52">
+      <li><label><input type="radio" name="questions_20260403_q52" value="A">A. Query the PromotionMgr for the lowest price.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q52" value="B">B. Use product.getPromotions().</label></li>
+      <li><label><input type="radio" name="questions_20260403_q52" value="C">C. Check the session.custom.promo object.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q52" value="D">D. Iterate through lineItem.priceAdjustments and inspect the applied promotion ID.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How is an XML &#x27;Sitemap&#x27; generated for search engines in B2C Commerce?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 53">
+      <li><label><input type="radio" name="questions_20260403_q53" value="A">A. A developer must write a custom script using XMLStreamWriter.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q53" value="B">B. It is generated automatically on a schedule via the Sitemap Job configuration in Merchant Tools.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q53" value="C">C. It is uploaded manually by the merchant via WebDAV.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q53" value="D">D. It is generated dynamically via a Controller every time a bot requests it.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the standard architectural pattern for implementing &#x27;Infinite Scroll&#x27; on a Product Listing Page (PLP)?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 54">
+      <li><label><input type="radio" name="questions_20260403_q54" value="A">A. Fetch all products on the first load and hide them using CSS.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q54" value="B">B. Redirect the user to page 2, page 3, etc., automatically via JavaScript.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q54" value="C">C. Use an OCAPI call to fetch JSON and render the tiles using React.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q54" value="D">D. Use an AJAX call to a Controller that renders only the HTML for the new product tiles and appends them to the DOM.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the purpose of the &#x27;Profile Wrapper&#x27; often seen in SFRA Unit Tests?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 55">
+      <li><label><input type="radio" name="questions_20260403_q55" value="A">A. It encrypts the customer&#x27;s password before saving.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q55" value="B">B. It connects to the Staging instance to download test data.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q55" value="C">C. It acts as a mock object to simulate a user profile without hitting the database.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q55" value="D">D. It generates a temporary session for testing.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you ensure &#x27;Thread Safety&#x27; when writing a complex background Job?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 56">
+      <li><label><input type="radio" name="questions_20260403_q56" value="A">A. Wrap all code in a single transaction.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q56" value="B">B. Avoid using globally scoped variables that might be read or modified unpredictably by parallel executing threads.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q56" value="C">C. Use the session object to store variables instead.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q56" value="D">D. Always use single-thread execution in Job Framework 2.0.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which B2C Script API class is the primary engine for executing queries and facet filtering on the storefront?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 57">
+      <li><label><input type="radio" name="questions_20260403_q57" value="A">A. dw.system.IndexMgr</label></li>
+      <li><label><input type="radio" name="questions_20260403_q57" value="B">B. dw.catalog.ProductMgr</label></li>
+      <li><label><input type="radio" name="questions_20260403_q57" value="C">C. dw.util.SearchCriteria</label></li>
+      <li><label><input type="radio" name="questions_20260403_q57" value="D">D. dw.catalog.ProductSearchModel</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you reliably retrieve the URL of a product image formatted for a &#x27;large&#x27; view using the B2C API?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 58">
+      <li><label><input type="radio" name="questions_20260403_q58" value="A">A. product.getImage(&#x27;large&#x27;, 0).getURL()</label></li>
+      <li><label><input type="radio" name="questions_20260403_q58" value="B">B. URLUtils.staticURL(&#x27;/images/large/&#x27; + product.ID + &#x27;.jpg&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_20260403_q58" value="C">C. product.custom.largeImageURL</label></li>
+      <li><label><input type="radio" name="questions_20260403_q58" value="D">D. product.getLargeImage()</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the function of a &#x27;Custom Cache Key&#x27; when dealing with Remote Includes?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 59">
+      <li><label><input type="radio" name="questions_20260403_q59" value="A">A. It forces the browser to ignore the local cache.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q59" value="B">B. It encrypts the cache file on the server.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q59" value="C">C. It is a URL parameter added to ensure different contextual versions of a component are cached separately (e.g., ?currency=EUR).</label></li>
+      <li><label><input type="radio" name="questions_20260403_q59" value="D">D. It links the remote include to a specific Custom Object.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How should a developer handle &#x27;Global Errors&#x27; (e.g., unhandled 500 exceptions) in an SFRA project?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 60">
+      <li><label><input type="radio" name="questions_20260403_q60" value="A">A. Redirect all errors to the Homepage via Business Manager.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q60" value="B">B. Wrap every single line of code in try/catch blocks.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q60" value="C">C. Customize the Error.js controller to catch exceptions and safely render a friendly maintenance or &#x27;Oops&#x27; template.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q60" value="D">D. Disable error logging to prevent the server from crashing.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to implement a custom &#x27;Inventory Reservation&#x27; system using Custom Objects. To prevent race conditions where two customers claim the last item simultaneously, which approach is mandatory?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 61">
+      <li><label><input type="radio" name="questions_20260403_q61" value="A">A. Wrap the update in a Transaction and use the &#x27;locking&#x27; parameter in the query.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q61" value="B">B. Perform the update within a Job instead of a Storefront Controller.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q61" value="C">C. Use session.custom to track the reservation temporarily.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q61" value="D">D. Use a try-catch block to handle the &#x27;OptimisticLockingException&#x27;.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In a Job using the &#x27;Chunk&#x27; processing model, the &#x27;process&#x27; function returns &#x27;null&#x27; for a specific item. What is the impact on the &#x27;write&#x27; function?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 62">
+      <li><label><input type="radio" name="questions_20260403_q62" value="A">A. The entire Job fails with a &#x27;NullPointerException&#x27;.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q62" value="B">B. The Job stops immediately and moves to the &#x27;afterStep&#x27; phase.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q62" value="C">C. The item is passed to &#x27;write&#x27; as an empty object.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q62" value="D">D. The item is filtered out and will not be passed to the &#x27;write&#x27; function.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When configuring an OCAPI &#x27;before&#x27; hook for a &#x27;POST&#x27; request, how can the developer modify the incoming request body before it reaches the standard resource logic?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 63">
+      <li><label><input type="radio" name="questions_20260403_q63" value="A">A. Use a &#x27;Remote Include&#x27; to transform the data.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q63" value="B">B. It is impossible to modify the body; you can only validate it and return an error.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q63" value="C">C. Use request.setHttpBody() within the hook script.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q63" value="D">D. Modify the script argument object passed to the hook function.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>An enterprise site has 500,000 active Products. A developer uses &#x27;ProductMgr.queryAllSiteProducts()&#x27; and converts it to a List. Why will this fail on a Production instance?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 64">
+      <li><label><input type="radio" name="questions_20260403_q64" value="A">A. It violates the &#x27;Script.MaxMemory&#x27; quota by loading all objects into the JVM heap.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q64" value="B">B. It violates the &#x27;api.MaxObjectCount&#x27; quota for persistent objects.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q64" value="C">C. The &#x27;queryAllSiteProducts&#x27; method is deprecated and returns an empty list.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q64" value="D">D. Product queries are restricted to 10,000 results by the database layer.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To implement a complex SEO requirement where the URL must include the parent category name for products, which SFRA file should be primarily extended?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 65">
+      <li><label><input type="radio" name="questions_20260403_q65" value="A">A. The &#x27;Search.js&#x27; controller.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q65" value="B">B. The &#x27;Product.isml&#x27; template.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q65" value="C">C. The &#x27;UrlUtils.js&#x27; or the URL request mapping configuration in Business Manager.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q65" value="D">D. The &#x27;sitemap.xml&#x27; generator.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the specific risk of using &#x27;Transaction.wrap()&#x27; inside a loop that iterates over thousands of items?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 66">
+      <li><label><input type="radio" name="questions_20260403_q66" value="A">A. It automatically triggers a Site Maintenance mode.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q66" value="B">B. It results in an &#x27;IllegalStateException&#x27; because nested transactions are required.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q66" value="C">C. It causes a &#x27;Script.MaxCallStackDepth&#x27; violation.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q66" value="D">D. It creates significant overhead due to constant database &#x27;commit&#x27; and &#x27;begin&#x27; operations.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to share a &#x27;Wishlist&#x27; across two different sites (SiteA and SiteB) within the same Realm. What is the most efficient architectural approach?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 67">
+      <li><label><input type="radio" name="questions_20260403_q67" value="A">A. It is impossible as sites have strictly isolated databases.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q67" value="B">B. Use a Custom Object with the &#x27;site-wide&#x27; scope instead of the &#x27;site&#x27; scope.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q67" value="C">C. Store the Wishlist in the Customer Profile custom attributes.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q67" value="D">D. Copy the data via a Job that runs every 5 minutes.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In the Service Framework, if &#x27;mockMode&#x27; is enabled, which function is executed instead of &#x27;createRequest&#x27; and &#x27;parseResponse&#x27;?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 68">
+      <li><label><input type="radio" name="questions_20260403_q68" value="A">A. mockFull</label></li>
+      <li><label><input type="radio" name="questions_20260403_q68" value="B">B. bypassCall</label></li>
+      <li><label><input type="radio" name="questions_20260403_q68" value="C">C. getMockData</label></li>
+      <li><label><input type="radio" name="questions_20260403_q68" value="D">D. createMockRequest</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Why would a developer use &#x27;dw.system.Logger.getRootLogger()&#x27; instead of &#x27;dw.system.Logger.getLogger(&#x27;name&#x27;)&#x27;?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 69">
+      <li><label><input type="radio" name="questions_20260403_q69" value="A">A. To ensure logs are sent to an external syslog server automatically.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q69" value="B">B. To capture all log statements across the entire system regardless of the category.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q69" value="C">C. To bypass the log file size limits.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q69" value="D">D. Because categorized loggers are deprecated.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the impact of setting &#x27;pdict.cacheTag = true&#x27; in an SFRA controller?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 70">
+      <li><label><input type="radio" name="questions_20260403_q70" value="A">A. It invalidates the cache for all users globally.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q70" value="B">B. It automatically adds the product ID to the cache key.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q70" value="C">C. It is not a standard SFRA feature; caching is controlled via the &#x27;res&#x27; object.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q70" value="D">D. It enables page-level caching for the next 24 hours.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When developing a &#x27;Scripted&#x27; Job Step, what is the purpose of the &#x27;steptypes.json&#x27; file?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 71">
+      <li><label><input type="radio" name="questions_20260403_q71" value="A">A. To compile the JavaScript code into optimized machine code.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q71" value="B">B. To define the sequence in which different jobs are executed.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q71" value="C">C. To register the custom step and define its input/output parameters for Business Manager.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q71" value="D">D. To store the database credentials for the job&#x27;s external integrations.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>If a developer uses &#x27;URLUtils.staticURL()&#x27; to link to an image, when will that link be updated in the user&#x27;s browser?</h2>
+    <ol class="options" aria-label="Questions 20260403 - Question 72">
+      <li><label><input type="radio" name="questions_20260403_q72" value="A">A. Every time the user clears their browser cookies.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q72" value="B">B. When the Search Index is rebuilt.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q72" value="C">C. Only when the cartridge containing the asset is uploaded with a new version string.</label></li>
+      <li><label><input type="radio" name="questions_20260403_q72" value="D">D. Automatically every 60 minutes.</label></li>
+    </ol>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to implement a custom &#x27;Sort Order&#x27; for a Search Results page. Which object should they modify?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the outcome of attempting to call &#x27;dw.system.Transaction.commit()&#x27; when no transaction was actually started?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In OCAPI, what is the purpose of the &#x27;x-dw-client-id&#x27; header?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which method should be used to securely compare a user-provided password against the &#x27;Password&#x27; attribute of a Custom Object (assuming it was hashed)?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In SFRA, how can a developer ensure that a specific variable in &#x27;res.viewData&#x27; is available to all templates rendered in a single request, including nested ones?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the primary technical limitation of &#x27;dw.util.SortedMap&#x27; when compared to a standard JavaScript &#x27;Object&#x27;?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer wants to use &#x27;ISML expressions&#x27; inside a JavaScript file. Why is this not possible?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When using &#x27;dw.svc.LocalServiceRegistry&#x27;, which status code indicates that the &#x27;Circuit Breaker&#x27; has tripped and blocked the request?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>An SFRA controller needs to render a different template based on the user&#x27;s &#x27;Device Type&#x27; (Mobile vs Desktop). What is the best practice?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the purpose of &#x27;dw.system.System.getPreferences()&#x27;?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How can a developer effectively debug a Job that only fails on the &#x27;Production&#x27; instance due to data-specific issues?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When defining a Custom Object, what does the &#x27;Key Attribute&#x27; represent?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which B2C Commerce tool allows a developer to see a &#x27;live&#x27; breakdown of which pipeline steps or scripts are consuming the most execution time?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the maximum number of &#x27;Price Books&#x27; that can be assigned to a single Site?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>If an ISML template uses , why might it fail to render correctly if &#x27;myValue&#x27; contains HTML tags?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When implementing &#x27;Apple Pay&#x27; for a B2C storefront, where is the &#x27;Merchant ID&#x27; primarily configured?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Why would a developer use &#x27;dw.util.UUIDUtils.createUUID()&#x27; instead of a standard counter for a unique transaction ID?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the primary architectural benefit of &#x27;Page Designer&#x27; for a developer?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>An ISML template needs to format a currency value correctly for the current locale. Which tag is most appropriate?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In Account Manager, what does the &#x27;API Client&#x27; record define?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What happens if a developer tries to access &#x27;request.geolocation&#x27; on a Sandbox instance?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which of the following describes the &#x27;OCAPI Data API&#x27; primarily?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In a &#x27;Remote Include&#x27; call, which variables from the parent request are automatically available in the included controller?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you implement &#x27;Rate Limiting&#x27; for a custom Service integration to prevent overwhelming a third-party API?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the primary risk of using &#x27;dw.system.Transaction.rollback()&#x27; in a catch block?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to fetch a list of all Orders placed in the last 24 hours. Which class is best suited for this?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Why is &#x27;dw.crypto.MessageDigest&#x27; preferred over simple string manipulation for generating a hash?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In Business Manager, what does the &#x27;Replication&#x27; feature do between Staging and Production?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the purpose of the &#x27;dw.catalog.CatalogMgr.getSiteCatalog()&#x27; method?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to check if a specific &#x27;Promotion&#x27; is currently active for the current shopper. Which object should they use?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In ISML, what is the impact of using ?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which of the following is a &#x27;Hard Quota&#x27; that cannot be increased even by Salesforce Support?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Why is it important to use &#x27;dw.web.URLUtils.continueURL()&#x27; inside an ISML form action?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the primary purpose of &#x27;dw.util.Locale.getLocale(request.locale)&#x27;?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you define a &#x27;Shared&#x27; cartridge that can be used by all sites in a Realm?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In the Job Framework, what happens if the &#x27;read&#x27; function returns &#x27;null&#x27;?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the specific purpose of the &#x27;dw.catalog.SearchModel.setSearchPhrase()&#x27; method?</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to check if a Customer has already &#x27;Used&#x27; a specific one-time-use coupon. Which class should they inspect?</h2>
+
+  </div>
+</li>
+</ol>
+</body>
+</html>
