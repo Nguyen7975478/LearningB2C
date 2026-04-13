@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2C Commerce Developer - Practice Questions (2026-04-07)</title>
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #222; }
+h1 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 8px; }
+.question-list { list-style: none; padding: 0; }
+.question-list > li { margin-bottom: 28px; }
+.question { background: #fff; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+h2 { font-size: 1em; margin: 0 0 12px 0; color: #003366; }
+.options { padding-left: 20px; margin: 0 0 12px 0; }
+.options li { margin: 6px 0; list-style: none; }
+.options label { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.options input[type=radio] { margin-top: 3px; flex-shrink: 0; }
+details { margin-top: 8px; }
+summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none; }
+.answer { padding: 8px 12px; background: #e8f5e9; border-radius: 4px; margin-top: 6px; }
+.translate { padding: 8px 12px; background: #e3f2fd; border-radius: 4px; margin-top: 6px; }
+.translate ul { margin: 6px 0; padding-left: 20px; }
+</style>
+</head>
+<body>
+<h1>B2C Commerce Developer - Practice Questions (2026-04-07)</h1>
+<ol class="question-list">
+<li>
+  <div class="question">
+    <h2>A developer needs to deploy a new cartridge to a sandbox. Which protocol is primarily used by the IDE to upload files to the version directory?</h2>
+    <ol class="options" aria-label="Questions 20260407 - Question 1">
+      <li><label><input type="radio" name="questions_20260407_q1" value="A">A. SFTP</label></li>
+      <li><label><input type="radio" name="questions_20260407_q1" value="B">B. WebDAV</label></li>
+      <li><label><input type="radio" name="questions_20260407_q1" value="C">C. Git Push</label></li>
+      <li><label><input type="radio" name="questions_20260407_q1" value="D">D. HTTPS POST</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>WebDAV is the standard protocol used for deploying cartridges and managing files on Salesforce B2C Commerce instances.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>If a site&#x27;s cartridge path is set to &#x27;plugin_wishlist:app_custom:app_storefront_base&#x27;, and a file named &#x27;ProductModel.js&#x27; exists in all three, which one will the platform use?</h2>
+    <ol class="options" aria-label="Questions 20260407 - Question 2">
+      <li><label><input type="radio" name="questions_20260407_q2" value="A">A. plugin_wishlist</label></li>
+      <li><label><input type="radio" name="questions_20260407_q2" value="B">B. app_storefront_base</label></li>
+      <li><label><input type="radio" name="questions_20260407_q2" value="C">C. The platform will throw a conflict error.</label></li>
+      <li><label><input type="radio" name="questions_20260407_q2" value="D">D. app_custom</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>The platform searches the cartridge path from left to right and uses the first occurrence it finds.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which Business Manager module is used to import initial catalog data provided in an XML format?</h2>
+    <ol class="options" aria-label="Questions 20260407 - Question 3">
+      <li><label><input type="radio" name="questions_20260407_q3" value="A">A. Metadata Import</label></li>
+      <li><label><input type="radio" name="questions_20260407_q3" value="B">B. Data Replication</label></li>
+      <li><label><input type="radio" name="questions_20260407_q3" value="C">C. Site Import &amp; Export</label></li>
+      <li><label><input type="radio" name="questions_20260407_q3" value="D">D. Catalog Import &amp; Export</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>Right answer</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When creating a new site in Business Manager, which two configurations are mandatory to define during the initial site creation process?</h2>
+    <ol class="options" aria-label="Questions 20260407 - Question 4">
+      <li><label><input type="radio" name="questions_20260407_q4" value="A">A. Cartridge Path and Payment Processor</label></li>
+      <li><label><input type="radio" name="questions_20260407_q4" value="B">B. Default Currency and Taxation Type</label></li>
+      <li><label><input type="radio" name="questions_20260407_q4" value="C">C. Customer Groups and Promotions</label></li>
+      <li><label><input type="radio" name="questions_20260407_q4" value="D">D. Price Books and Inventory Lists</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>As per the exam guide, setting currency and taxation (Net vs Gross) is a primary requirement for new site setup.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer wants to ensure that a custom attribute &#x27;isEcoFriendly&#x27; is available for all Product objects. Where should this be configured?</h2>
+    <ol class="options" aria-label="Questions 20260407 - Question 5">
+      <li><label><input type="radio" name="questions_20260407_q5" value="A">A. In the ISML template using a script block</label></li>
+      <li><label><input type="radio" name="questions_20260407_q5" value="B">B. Product Search Model</label></li>
+      <li><label><input type="radio" name="questions_20260407_q5" value="C">C. System Object Types &gt; Product &gt; Attribute Definitions</label></li>
+      <li><label><input type="radio" name="questions_20260407_q5" value="D">D. Custom Object Types &gt; Product</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Extending existing platform objects is done by adding attribute definitions to the System Object Type.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the primary difference between a Master Catalog and a Storefront Catalog?</h2>
+    <ol class="options" aria-label="Questions 20260407 - Question 6">
+      <li><label><input type="radio" name="questions_20260407_q6" value="A">A. Only Master catalogs can have prices.</label></li>
+      <li><label><input type="radio" name="questions_20260407_q6" value="B">B. Master catalogs hold the product definitions, while Storefront catalogs define the navigation structure.</label></li>
+      <li><label><input type="radio" name="questions_20260407_q6" value="C">C. Master catalogs cannot be replicated.</label></li>
+      <li><label><input type="radio" name="questions_20260407_q6" value="D">D. Master catalogs are for staging, Storefront catalogs are for production.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>That&#x27;s right!</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A merchant wants to allow shoppers to filter search results by &#x27;Material&#x27;. Which configuration is required in Business Manager?</h2>
+    <ol class="options" aria-label="Questions 20260407 - Question 7">
+      <li><label><input type="radio" name="questions_20260407_q7" value="A">A. Search Refinement Definitions</label></li>
+      <li><label><input type="radio" name="questions_20260407_q7" value="B">B. Search Sorting Definitions</label></li>
+      <li><label><input type="radio" name="questions_20260407_q7" value="C">C. Search Suggestions</label></li>
+      <li><label><input type="radio" name="questions_20260407_q7" value="D">D. Category Assignments</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Refinement definitions allow attributes to be used as filters on the storefront PLP.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which tool in Business Manager allows a developer to see which specific script or template is causing performance latency on a page?</h2>
+    <ol class="options" aria-label="Questions 20260407 - Question 8">
+      <li><label><input type="radio" name="questions_20260407_q8" value="A">A. Log Center</label></li>
+      <li><label><input type="radio" name="questions_20260407_q8" value="B">B. Pipeline Profiler</label></li>
+      <li><label><input type="radio" name="questions_20260407_q8" value="C">C. Code Profiler</label></li>
+      <li><label><input type="radio" name="questions_20260407_q8" value="D">D. Request Log</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>The Code Profiler provides a breakdown of execution time for templates and scripts.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to create a persistent storage for &#x27;User Favorites&#x27; that are not part of the standard Profile. When is it appropriate to use a Custom Object?</h2>
+    <ol class="options" aria-label="Questions 20260407 - Question 9">
+      <li><label><input type="radio" name="questions_20260407_q9" value="A">A. Only for temporary session data.</label></li>
+      <li><label><input type="radio" name="questions_20260407_q9" value="B">B. When the data model is complex and doesn&#x27;t fit standard system objects.</label></li>
+      <li><label><input type="radio" name="questions_20260407_q9" value="C">C. Always, to keep system objects clean.</label></li>
+      <li><label><input type="radio" name="questions_20260407_q9" value="D">D. To replace standard Product attributes.</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Custom Objects should be used when system objects (like Profile, Order) cannot accommodate the business data requirement.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In OCAPI Settings, which JSON key defines the specific API resources (e.g., /products, /baskets) an application can access?</h2>
+    <ol class="options" aria-label="Questions 20260407 - Question 10">
+      <li><label><input type="radio" name="questions_20260407_q10" value="A">A. client_id</label></li>
+      <li><label><input type="radio" name="questions_20260407_q10" value="B">B. methods</label></li>
+      <li><label><input type="radio" name="questions_20260407_q10" value="C">C. resources</label></li>
+      <li><label><input type="radio" name="questions_20260407_q10" value="D">D. permissions</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Cấu trúc (Setup): Tập trung vào WebDAV, Cartridge Path và Site Import.</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Quản lý dữ liệu: Nhấn mạnh vào System Objects, Search Refinements và OCAPI permissions.</h2>
+
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Phát triển ứng dụng (Trọng tâm 53%): Bao gồm SFRA Controllers, ISML tags, Middleware (CSRF), Transaction handling, và Job steps (Chunk processing).</h2>
+
+  </div>
+</li>
+</ol>
+</body>
+</html>

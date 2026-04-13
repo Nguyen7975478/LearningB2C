@@ -3,293 +3,943 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salesforce B2C Commerce Developer Certification Infographic</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<title>B2C Commerce Developer - Practice Questions (2026-04-07 13:00)</title>
 <style>
-body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1E293B; margin: 0; padding: 0; }
-.chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 40vh; max-height: 400px; }
-.glass-card { background: rgba(255, 255, 255, 0.95); border-radius: 1rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); border: 1px solid #E2E8F0; }
-.bg-vibrant-gradient { background: linear-gradient(135deg, #4C1D95 0%, #DB2777 100%); }
-.text-vibrant { background: linear-gradient(to right, #4C1D95, #DB2777); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.icon-box { display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 0.75rem; font-size: 1.5rem; font-weight: bold; color: white; }
-.flow-arrow { font-size: 2rem; color: #94A3B8; display: flex; align-items: center; justify-content: center; }
-@media (min-width: 768px) { .chart-container { height: 350px; } }
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #222; }
+h1 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 8px; }
+.question-list { list-style: none; padding: 0; }
+.question-list > li { margin-bottom: 28px; }
+.question { background: #fff; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+h2 { font-size: 1em; margin: 0 0 12px 0; color: #003366; }
+.options { padding-left: 20px; margin: 0 0 12px 0; }
+.options li { margin: 6px 0; list-style: none; }
+.options label { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.options input[type=radio] { margin-top: 3px; flex-shrink: 0; }
+details { margin-top: 8px; }
+summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none; }
+.answer { padding: 8px 12px; background: #e8f5e9; border-radius: 4px; margin-top: 6px; }
+.translate { padding: 8px 12px; background: #e3f2fd; border-radius: 4px; margin-top: 6px; }
+.translate ul { margin: 6px 0; padding-left: 20px; }
 </style>
 </head>
-<body class="antialiased">
-
-<div id="metadata" style="display:none;" data-palette="Vibrant: #4C1D95, #DB2777, #06B6D4, #F59E0B" data-nosvg="Confirmed: NEITHER Mermaid JS NOR SVG were used" data-plan="Plan: 1. Exam Weights (Donut) 2. Quotas (Bar) 3. Performance (Line) 4. Architecture Flow (HTML)"></div>
-
-<header class="bg-vibrant-gradient text-white py-20 px-6 mb-12 shadow-xl">
-    <div class="max-w-5xl mx-auto text-center">
-        <div class="text-sm font-bold tracking-widest uppercase mb-4 text-pink-200">Certification Study Guide</div>
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Salesforce B2C Commerce Developer</h1>
-        <p class="text-lg md:text-xl font-light opacity-90 max-w-3xl mx-auto">A comprehensive visual analysis of the Storefront Reference Architecture (SFRA), platform quotas, and critical integration patterns required to pass the certification exam.</p>
-    </div>
-</header>
-
-<main class="max-w-6xl mx-auto px-4 sm:px-6 pb-24 space-y-16">
-
-    <section class="glass-card p-8 md:p-12">
-        <h2 class="text-3xl font-bold mb-6 text-vibrant">1. Exam Blueprint & Core Domains</h2>
-        <p class="text-slate-600 mb-10 text-lg leading-relaxed">The certification exam heavily weights Application Development, focusing deeply on SFRA, ISML, and Controllers. Understanding the distribution of these topics is crucial for prioritizing your study efforts effectively.</p>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="chart-container">
-                <canvas id="examWeightsChart"></canvas>
-            </div>
-            <div class="space-y-6">
-                <div class="flex items-start">
-                    <div class="icon-box bg-[#4C1D95] mr-4 shadow-lg shadow-purple-200">&#10003;</div>
-                    <div>
-                        <h3 class="font-bold text-xl text-slate-800">Application Development (53%)</h3>
-                        <p class="text-slate-600 mt-1">Dominates the exam. Requires deep knowledge of SFRA Controllers, middleware chains, ISML templates, and the Service Framework.</p>
-                    </div>
-                </div>
-                <div class="flex items-start">
-                    <div class="icon-box bg-[#DB2777] mr-4 shadow-lg shadow-pink-200">&#10003;</div>
-                    <div>
-                        <h3 class="font-bold text-xl text-slate-800">Data Management (24%)</h3>
-                        <p class="text-slate-600 mt-1">Focuses on Search Refinements, System Object extensions, Custom Objects, and configuring OCAPI permissions via Business Manager.</p>
-                    </div>
-                </div>
-                <div class="flex items-start">
-                    <div class="icon-box bg-[#06B6D4] mr-4 shadow-lg shadow-cyan-200">&#10003;</div>
-                    <div>
-                        <h3 class="font-bold text-xl text-slate-800">Work With a B2C Site (12%)</h3>
-                        <p class="text-slate-600 mt-1">Covers the product data model, Content Assets, Content Slots, and utilizing Page Designer.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="glass-card p-8 md:p-12">
-        <h2 class="text-3xl font-bold mb-6 text-vibrant">2. Cartridge Path & Architecture Overlay</h2>
-        <p class="text-slate-600 mb-10 text-lg leading-relaxed">B2C Commerce resolves files by scanning the configured Cartridge Path from left to right. The leftmost cartridge holds the highest priority. Developers utilize this behavior to override or extend base functionality without modifying core files.</p>
-        
-        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="bg-[#4C1D95] text-white p-6 rounded-xl w-full text-center shadow-xl transform hover:-translate-y-1 transition-transform">
-                <div class="text-xs uppercase tracking-widest opacity-70 mb-2">Highest Priority</div>
-                <div class="font-bold text-lg">plugin_wishlist</div>
-                <div class="text-sm mt-2 opacity-90">Custom Feature</div>
-            </div>
-            <div class="flow-arrow rotate-90 md:rotate-0">&#10132;</div>
-            <div class="bg-[#DB2777] text-white p-6 rounded-xl w-full text-center shadow-xl transform hover:-translate-y-1 transition-transform">
-                <div class="text-xs uppercase tracking-widest opacity-70 mb-2">Medium Priority</div>
-                <div class="font-bold text-lg">app_custom</div>
-                <div class="text-sm mt-2 opacity-90">Brand Overrides</div>
-            </div>
-            <div class="flow-arrow rotate-90 md:rotate-0">&#10132;</div>
-            <div class="bg-[#06B6D4] text-white p-6 rounded-xl w-full text-center shadow-xl transform hover:-translate-y-1 transition-transform">
-                <div class="text-xs uppercase tracking-widest opacity-70 mb-2">Lowest Priority</div>
-                <div class="font-bold text-lg">app_storefront_base</div>
-                <div class="text-sm mt-2 opacity-90">Core SFRA Logic</div>
-            </div>
-        </div>
-        <div class="mt-8 p-6 bg-amber-50 border-l-4 border-[#F59E0B] rounded-r-xl">
-            <h4 class="font-bold text-[#F59E0B] text-lg mb-2">The superModule Keyword</h4>
-            <p class="text-slate-700">To extend a controller safely, create a file with the same name in a higher-priority cartridge and use <code>server.extend(module.superModule)</code>. This initiates the middleware inheritance chain, preserving the base logic while appending your custom functionality.</p>
-        </div>
-    </section>
-
-    <section class="glass-card p-8 md:p-12">
-        <h2 class="text-3xl font-bold mb-6 text-vibrant">3. System Quotas & Platform Limits</h2>
-        <p class="text-slate-600 mb-10 text-lg leading-relaxed">Salesforce enforces hard platform limits (Quotas) to ensure multi-tenant stability. Exceeding these limits results in immediate fatal exceptions. Developers must design scripts to operate well within these constraints.</p>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <div class="p-6 border-2 border-slate-100 rounded-xl hover:border-[#06B6D4] transition-colors">
-                    <h3 class="font-bold text-xl text-slate-800 flex items-center justify-between">
-                        Script.MaxCallStackDepth
-                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Strict: 50</span>
-                    </h3>
-                    <p class="text-slate-600 mt-2">Deep recursion is strictly forbidden. The platform terminates any script execution thread that exceeds 50 nested function calls to prevent infinite loops.</p>
-                </div>
-                <div class="p-6 border-2 border-slate-100 rounded-xl hover:border-[#4C1D95] transition-colors">
-                    <h3 class="font-bold text-xl text-slate-800 flex items-center justify-between">
-                        Object.MaxCustomAttributes
-                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Schema Limit</span>
-                    </h3>
-                    <p class="text-slate-600 mt-2">Limits the number of custom attributes you can define on a single System Object type in Business Manager to prevent database schema bloat.</p>
-                </div>
-                <div class="p-6 border-2 border-slate-100 rounded-xl hover:border-[#DB2777] transition-colors">
-                    <h3 class="font-bold text-xl text-slate-800 flex items-center justify-between">
-                        api.MaxObjectCount
-                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Memory Limit</span>
-                    </h3>
-                    <p class="text-slate-600 mt-2">Restricts the total number of persistent objects (like Products or Orders) that can be instantiated into memory during a single HTTP request.</p>
-                </div>
-            </div>
-            <div class="chart-container">
-                <canvas id="quotasChart"></canvas>
-            </div>
-        </div>
-    </section>
-
-    <section class="glass-card p-8 md:p-12">
-        <h2 class="text-3xl font-bold mb-6 text-vibrant">4. Performance Optimization: Iterators vs Arrays</h2>
-        <p class="text-slate-600 mb-10 text-lg leading-relaxed">A common cause of <code>Script.MaxMemory</code> quota violations is using <code>.toArray()</code> or <code>.asList()</code> on massive database result sets. Visualized below is the memory impact of loading items into an Array versus streaming them directly from the database using a <code>SeekableIterator</code>.</p>
-        
-        <div class="chart-container mb-8" style="max-width: 800px;">
-            <canvas id="performanceChart"></canvas>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-rose-50 p-6 rounded-xl border border-rose-100">
-                <h4 class="font-bold text-rose-800 text-lg mb-2">&#10007; The Array Approach</h4>
-                <p class="text-rose-700">Loading 50,000 orders into a List forces the JVM to allocate heap space for every single object simultaneously, guaranteeing a fatal memory crash.</p>
-            </div>
-            <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-                <h4 class="font-bold text-emerald-800 text-lg mb-2">&#10003; The Iterator Approach</h4>
-                <p class="text-emerald-700">A SeekableIterator streams records one-by-one. Combined with periodic transaction commits and clearing object references, memory usage remains flat.</p>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<script>
-function wrapLabel(label) {
-    if (label.length <= 16) return label;
-    let words = label.split(' ');
-    let lines = [];
-    let currentLine = '';
-    for (let i = 0; i < words.length; i++) {
-        if ((currentLine + words[i]).length > 16) {
-            if (currentLine !== '') {
-                lines.push(currentLine.trim());
-            }
-            currentLine = words[i] + ' ';
-        } else {
-            currentLine += words[i] + ' ';
-        }
-    }
-    if (currentLine.trim() !== '') {
-        lines.push(currentLine.trim());
-    }
-    return lines;
-}
-
-const tooltipConfig = {
-    callbacks: {
-        title: function(tooltipItems) {
-            const item = tooltipItems[0];
-            let label = item.chart.data.labels[item.dataIndex];
-            if (Array.isArray(label)) {
-                return label.join(' ');
-            } else {
-                return label;
-            }
-        }
-    }
-};
-
-const ctxExam = document.getElementById('examWeightsChart').getContext('2d');
-new Chart(ctxExam, {
-    type: 'doughnut',
-    data: {
-        labels: [
-            wrapLabel('Application Development'),
-            wrapLabel('Data Management BM Usage'),
-            wrapLabel('Work With a B2C Site'),
-            wrapLabel('B2C Commerce Setup')
-        ],
-        datasets: [{
-            data: [53, 24, 12, 11],
-            backgroundColor: ['#4C1D95', '#DB2777', '#06B6D4', '#F59E0B'],
-            borderWidth: 0,
-            hoverOffset: 10
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-            legend: { position: 'bottom', labels: { font: { family: 'Inter', size: 13 } } },
-            tooltip: tooltipConfig
-        },
-        cutout: '65%'
-    }
-});
-
-const ctxQuotas = document.getElementById('quotasChart').getContext('2d');
-new Chart(ctxQuotas, {
-    type: 'bar',
-    data: {
-        labels: [
-            wrapLabel('Max Call Stack Depth'),
-            wrapLabel('Standard String Length'),
-            wrapLabel('Session Size Impact Limit')
-        ],
-        datasets: [{
-            label: 'System Quota Limit Value',
-            data: [50, 4000, 1000],
-            backgroundColor: ['#DB2777', '#06B6D4', '#F59E0B'],
-            borderRadius: 6
-        }]
-    },
-    options: {
-        indexAxis: 'y',
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-            x: { type: 'logarithmic', grid: { display: false } },
-            y: { grid: { display: false }, ticks: { font: { family: 'Inter', weight: '600' } } }
-        },
-        plugins: {
-            legend: { display: false },
-            tooltip: tooltipConfig
-        }
-    }
-});
-
-const ctxPerf = document.getElementById('performanceChart').getContext('2d');
-new Chart(ctxPerf, {
-    type: 'line',
-    data: {
-        labels: ['0', '10,000', '20,000', '30,000', '40,000', '50,000 Items'],
-        datasets: [
-            {
-                label: wrapLabel('Array Loading Memory Usage'),
-                data: [5, 25, 50, 85, 100, 100],
-                borderColor: '#DB2777',
-                backgroundColor: 'rgba(219, 39, 119, 0.1)',
-                borderWidth: 3,
-                fill: true,
-                tension: 0.4
-            },
-            {
-                label: wrapLabel('SeekableIterator Memory Usage'),
-                data: [5, 8, 7, 9, 8, 8],
-                borderColor: '#06B6D4',
-                backgroundColor: 'rgba(6, 182, 212, 0.1)',
-                borderWidth: 3,
-                fill: true,
-                tension: 0.4
-            }
-        ]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-            y: {
-                beginAtZero: true,
-                max: 110,
-                ticks: { callback: function(value) { return value + '%'; } },
-                grid: { color: '#F1F5F9' }
-            },
-            x: { grid: { display: false } }
-        },
-        plugins: {
-            legend: { position: 'top', labels: { usePointStyle: true, boxWidth: 8 } },
-            tooltip: tooltipConfig
-        }
-    }
-});
-</script>
+<body>
+<h1>B2C Commerce Developer - Practice Questions (2026-04-07 13:00)</h1>
+<ol class="question-list">
+<li>
+  <div class="question">
+    <h2>A developer needs to deploy a new cartridge to a sandbox. Which protocol and tool combination is the standard for uploading code to a specific version directory?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 1">
+      <li><label><input type="radio" name="questions_202604071300_q1" value="A">A. WebDAV via an IDE like VS Code with the Prophet Debugger extension</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q1" value="B">B. REST API calls to the Metadata resource</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q1" value="C">C. SFTP via a standard FTP client like FileZilla</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q1" value="D">D. Direct upload via the Business Manager &#x27;Import/Export&#x27; module</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>WebDAV is the standard protocol used by B2C Commerce for code deployment to versioned directories on the server.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In the cartridge path &#x27;plugin_wishlist:app_storefront_base:int_cybersource&#x27;, which cartridge&#x27;s logic will take precedence if a controller with the same name exists in all three?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 2">
+      <li><label><input type="radio" name="questions_202604071300_q2" value="A">A. plugin_wishlist</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q2" value="B">B. None, the system will throw a &#x27;Duplicate Controller&#x27; exception</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q2" value="C">C. app_storefront_base</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q2" value="D">D. int_cybersource</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>B2C Commerce searches the cartridge path from left to right; the first match found is the one executed.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When configuring a new site in Business Manager, which setting determines how taxes are calculated (e.g., Gross vs. Net)?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 3">
+      <li><label><input type="radio" name="questions_202604071300_q3" value="A">A. Default Currency</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q3" value="B">B. Price Book Preference</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q3" value="C">C. Taxation Type</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q3" value="D">D. Locale Settings</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>The Taxation Type setting (Net or Gross) defines whether prices are stored and displayed with or without tax.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to import a large catalog.xml file. What is the recommended best practice for site performance during this process?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 4">
+      <li><label><input type="radio" name="questions_202604071300_q4" value="A">A. Perform the import during peak traffic hours to monitor load</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q4" value="B">B. Disable the search index during the import</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q4" value="C">C. Use &#x27;Replace&#x27; mode to ensure data consistency</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q4" value="D">D. Use the &#x27;Merge&#x27; import mode to update only changed elements</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>Merge mode is more efficient for large datasets as it avoids deleting and recreating unchanged objects.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which B2C Commerce tool allows a developer to see real-time memory usage and script execution times on a Sandbox?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 5">
+      <li><label><input type="radio" name="questions_202604071300_q5" value="A">A. Pipeline Profiler</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q5" value="B">B. The Request Log Viewer</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q5" value="C">C. The Statistics Dashboard</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q5" value="D">D. The Code Profiler in Business Manager</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>The Code Profiler provides detailed insights into script performance, including execution time and hit counts.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To enable a custom attribute of a Product to be searchable on the storefront, which action must the developer take in Business Manager?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 6">
+      <li><label><input type="radio" name="questions_202604071300_q6" value="A">A. Set the attribute to &#x27;Searchable&#x27; in the Search Index settings and rebuild the index</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q6" value="B">B. Add the attribute to the &#x27;Default&#x27; attribute group</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q6" value="C">C. Simply create the attribute in the Product System Object</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q6" value="D">D. Enable OCAPI permissions for that attribute</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Attributes must be explicitly flagged for indexing and the index must be refreshed to become active.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In the SFRA framework, what is the purpose of a &#x27;Model&#x27;?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 7">
+      <li><label><input type="radio" name="questions_202604071300_q7" value="A">A. To define the database schema for custom objects</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q7" value="B">B. To handle the routing of HTTP requests to controllers</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q7" value="C">C. To manage the CSS and client-side JavaScript for a component</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q7" value="D">D. To wrap raw system objects and provide helper methods for templates</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>Models in SFRA act as a layer between the database (API objects) and the view (ISML), formatting data for display.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the correct way to handle a &#x27;Script.MaxMemory&#x27; quota violation in a Job that processes 10,000 orders?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 8">
+      <li><label><input type="radio" name="questions_202604071300_q8" value="A">A. Use an Iterator and clear object references within the loop</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q8" value="B">B. Increase the memory limit in the Job configuration</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q8" value="C">C. Split the job into 10 smaller jobs manually</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q8" value="D">D. Use &#x27;seekable&#x27; collections and convert them to an Array</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Iterators prevent loading all objects into memory at once, which is the primary cause of heap memory violations.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which OCAPI hook would you use to modify the response of a &#x27;Search&#x27; request before it is sent to the client?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 10">
+      <li><label><input type="radio" name="questions_202604071300_q10" value="A">A. dw.system.request.onResponse</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q10" value="B">B. dw.ocapi.shop.product_search.beforeGET</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q10" value="C">C. dw.ocapi.data.product_search.afterGET</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q10" value="D">D. dw.ocapi.shop.product_search.modifyResponse</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>The modifyResponse hook allows developers to alter the JSON output of an OCAPI call before final delivery.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When implementing a &#x27;Remote Include&#x27;, what is the impact on page caching?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 11">
+      <li><label><input type="radio" name="questions_202604071300_q11" value="A">A. The included content can have its own independent cache policy</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q11" value="B">B. It forces the parent page to revalidate with the server every time</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q11" value="C">C. The entire page becomes non-cacheable</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q11" value="D">D. The remote include inherits the cache policy of the parent page</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Remote includes (via isinclude url) trigger a separate request, allowing the main page and the component to be cached differently.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which tool should be used to troubleshoot a &#x27;Service Unavailable&#x27; error in a third-party payment integration?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 12">
+      <li><label><input type="radio" name="questions_202604071300_q12" value="A">A. Pipeline Profiler</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q12" value="B">B. Service Status in Business Manager and Communication Logs</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q12" value="C">C. The ISML Debugger</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q12" value="D">D. The storefront &#x27;Toolkit’</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>The Service Framework provides dedicated logs and a status dashboard to monitor the health of external integrations.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the primary benefit of using &#x27;Custom Objects&#x27; over &#x27;Custom Attributes&#x27; on System Objects?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 13">
+      <li><label><input type="radio" name="questions_202604071300_q13" value="A">A. They are automatically indexed for search</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q13" value="B">B. They allow for a unique data schema not tied to existing commerce entities</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q13" value="C">C. They do not count towards any platform quotas</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q13" value="D">D. They are faster to retrieve than System Objects</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Custom Objects are flexible containers for data that doesn&#x27;t naturally fit into Products, Folders, or Orders.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to protect a form submission from Cross-Site Request Forgery (CSRF). What is the first step in the SFRA controller?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 14">
+      <li><label><input type="radio" name="questions_202604071300_q14" value="A">A. Use the &#x27;csrf.validateRequest()&#x27; middleware</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q14" value="B">B. Encrypt the form data using a site-wide key</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q14" value="C">C. Manually check the session ID against a hidden field</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q14" value="D">D. Add &#x27;is-csrf=&quot;true&quot;&#x27; to the form tag in ISML</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>SFRA provides a built-in &#x27;csrf&#x27; middleware to handle the validation of tokens during a POST request.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In B2C Commerce, what is the maximum number of items allowed in a single &#x27;Set of Strings&#x27; site preference?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 15">
+      <li><label><input type="radio" name="questions_202604071300_q15" value="A">A. 1,000 items</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q15" value="B">B. 500 items</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q15" value="C">C. Exactly 100 items</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q15" value="D">D. There is no fixed count, but the total character size is limited</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>Site preferences are governed by size (bytes) rather than a specific item count, though extremely large sets should be avoided.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To implement localization for a form&#x27;s error messages, where should the developer store the translated strings?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 16">
+      <li><label><input type="radio" name="questions_202604071300_q16" value="A">A. Inside the JavaScript controller using an if/else block</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q16" value="B">B. In a Custom Object named &#x27;Translations&#x27;</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q16" value="C">C. In .properties files within the &#x27;templates/resources&#x27; folder</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q16" value="D">D. In the &#x27;Localizable&#x27; attribute of the Form definition XML</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Property files are the standard mechanism for storing localized strings for ISML, forms, and scripts.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When creating a Page Designer component, what does the &#x27;attribute_definition&#x27; in the JSON file define?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 17">
+      <li><label><input type="radio" name="questions_202604071300_q17" value="A">A. The database table where the component data is stored</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q17" value="B">B. The CSS classes applied to the component wrapper</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q17" value="C">C. The list of categories where the component can be used</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q17" value="D">D. The properties a merchant can configure in the Business Manager UI</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>The JSON metadata for a component defines the input fields (like text, images, or colors) available to the merchant.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to log an error that includes a customer&#x27;s credit card number for debugging. What is the correct approach?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 18">
+      <li><label><input type="radio" name="questions_202604071300_q18" value="A">A. Log it only to a &#x27;Custom&#x27; log level so only developers see it</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q18" value="B">B. Use &#x27;dw.system.Logger.debug()&#x27; because debug logs are deleted faster</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q18" value="C">C. Mask the sensitive data before logging to ensure PCI compliance</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q18" value="D">D. Encryption the log file using a certificate</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Logging sensitive PII or financial data (like full CC numbers) is a major security violation; only masked data or tokens should be logged.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the result of using &#x27;server.append&#x27; in an SFRA controller?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 19">
+      <li><label><input type="radio" name="questions_202604071300_q19" value="A">A. It adds a new parameter to the HTTP response header</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q19" value="B">B. It executes logic after the original controller function in the cartridge path</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q19" value="C">C. It replaces the existing controller logic completely</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q19" value="D">D. It combines two templates into one single view</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which Business Manager module is used to rebuild the product search index?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 20">
+      <li><label><input type="radio" name="questions_202604071300_q20" value="A">A. Search Preferences</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q20" value="B">B. Import/Export</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q20" value="C">C. Search Indexes</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q20" value="D">D. Site Indexing Services</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>The Search Indexes module allows you to trigger manual rebuilds or schedule them for various indexes (product, content, etc.).</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to ensure a script runs only on a production instance. Which property should they check?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 21">
+      <li><label><input type="radio" name="questions_202604071300_q21" value="A">A. request.httpHost</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q21" value="B">B. dw.system.Site.current.getProductionStatus()</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q21" value="C">C. session.custom.isProd</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q21" value="D">D. dw.system.System.getInstanceType()</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>This method returns constants like INSTANCE_TYPE_PRODUCTION or INSTANCE_TYPE_SANDBOX.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In the B2C Job framework, what is a &#x27;Step Type&#x27;?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 22">
+      <li><label><input type="radio" name="questions_202604071300_q22" value="A">A. A system-wide classification for data imports (XML vs CSV)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q22" value="B">B. A specific programming language (JavaScript vs Java)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q22" value="C">C. The priority level of a job execution</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q22" value="D">D. A definition in steptypes.json that maps a script to a job step</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>The steptypes.json file is required to register custom scripts as available steps in the Business Manager Job UI.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which ISML tag is used to create a link to a specific controller and function?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 23">
+      <li><label><input type="radio" name="questions_202604071300_q23" value="A">A. URLUtils.url(&#x27;Controller-Function&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q23" value="B">B. &lt;a href=&quot;${URLUtils.url(&#x27;Controller-Function&#x27;)}&quot;&gt;Link&lt;/a&gt;</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q23" value="C">C. &lt;isprint value=&quot;${URLUtils.url(&#x27;Controller-Function&#x27;)}&quot; /&gt;</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q23" value="D">D. &lt;isredirect location=&quot;${URLUtils.url(&#x27;Controller-Function&#x27;)}&quot; /&gt;</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>URLUtils is the standard utility class for generating SEO-friendly and session-aware URLs in B2C Commerce.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A merchant wants to show a &#x27;Low Stock&#x27; badge if inventory is below 10. How should the developer access inventory in a Product model?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 24">
+      <li><label><input type="radio" name="questions_202604071300_q24" value="A">A. Use the ProductAvailabilityModel via product.getAvailabilityModel()</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q24" value="B">B. Access product.custom.inventoryLevel</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q24" value="C">C. Query the &#x27;InventoryRecord&#x27; custom object</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q24" value="D">D. Use OCAPI to fetch the live inventory from the ERP</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>The Availability Model provides high-level information about stock levels, backorder status, and search-driven availability.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the purpose of the &#x27;break&#x27; statement in an SFRA middleware chain?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 25">
+      <li><label><input type="radio" name="questions_202604071300_q25" value="A">A. It stops the execution of subsequent middleware and immediately renders the response</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q25" value="B">B. It redirects the user to the home page</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q25" value="C">C. It throws a 404 error automatically</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q25" value="D">D. It clears the &#x27;res.viewData&#x27; object</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>The &#x27;next()&#x27; function must be called to continue; omitting it or using &#x27;res.render&#x27; and returning effectively breaks the chain.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which of the following is a &#x27;Synchronous&#x27; integration method in B2C Commerce?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 26">
+      <li><label><input type="radio" name="questions_202604071300_q26" value="A">A. A Batch Import of catalog data</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q26" value="B">B. A real-time HTTP Service call to a tax calculation API</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q26" value="C">C. A Job that exports orders to an SFTP server every hour</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q26" value="D">D. An OCAPI hook that triggers a background email send</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the consequence of not using &#x27;Transaction.wrap()&#x27; when modifying a Product&#x27;s custom attribute?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 27">
+      <li><label><input type="radio" name="questions_202604071300_q27" value="A">A. The change will be saved, but only for the current session</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q27" value="B">B. The script will run slower due to lack of optimization</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q27" value="C">C. The system will automatically create a transaction for you</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q27" value="D">D. An exception will be thrown because persistence requires an active transaction</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>Any write operation to the database in B2C Commerce must occur within a transaction block.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When debugging ISML templates, which tool provides a &#x27;call stack&#x27; showing which templates included others?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 28">
+      <li><label><input type="radio" name="questions_202604071300_q28" value="A">A. The Storefront Toolkit</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q28" value="B">B. The Git History</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q28" value="C">C. The Business Manager Error Log</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q28" value="D">D. The Chrome Developer Tools Network tab</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>The Toolkit&#x27;s &#x27;Page Info&#x27; or &#x27;Information&#x27; tools highlight the template hierarchy on the live site.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which B2C API class is used to search for Content Assets programmatically?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 29">
+      <li><label><input type="radio" name="questions_202604071300_q29" value="A">A. dw.content.ContentMgr</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q29" value="B">B. dw.content.FolderMgr</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q29" value="C">C. dw.catalog.ProductMgr</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q29" value="D">D. dw.system.SearchMgr</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>ContentMgr provides methods like getContent() or searchContent() to retrieve library assets.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to add a &#x27;Gift Wrap&#x27; option to the checkout. What is the most appropriate way to store this selection in the Cart?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 30">
+      <li><label><input type="radio" name="questions_202604071300_q30" value="A">A. As a custom attribute on the ProductLineItem object</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q30" value="B">B. In a Session Variable</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q30" value="C">C. On the Profile object of the Customer</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q30" value="D">D. In a Custom Object with the Order ID as a key</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Line-item specific data (like gift wrapping) should be stored on the ProductLineItem to ensure it stays with the specific product during checkout.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which configuration in Business Manager allows you to redirect a legacy URL to a new SFRA controller URL?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 31">
+      <li><label><input type="radio" name="questions_202604071300_q31" value="A">A. Content Assets</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q31" value="B">B. URL Redirects module</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q31" value="C">C. Aliases module</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q31" value="D">D. Dynamic Mappings in URL Rules</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>The URL Redirects module handles 301 and 302 redirects for SEO and legacy support.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What happens if a developer forgets to call &#x27;server.next()&#x27; in a middleware function?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 32">
+      <li><label><input type="radio" name="questions_202604071300_q32" value="A">A. The request hangs and eventually times out or renders nothing</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q32" value="B">B. The platform throws a &#x27;MiddlewareChainException&#x27;</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q32" value="C">C. The next cartridge in the path is checked automatically</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q32" value="D">D. A blank white page is served to the user</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Next() is the trigger to move to the next function in the chain; without it, processing stops indefinitely.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which of these is a valid way to optimize a site&#x27;s page load time (Speed Index)?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 33">
+      <li><label><input type="radio" name="questions_202604071300_q33" value="A">A. Configure &#x27;Cache Time-to-Live (TTL)&#x27; in Business Manager for controllers</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q33" value="B">B. Increase the number of cartridges in the cartridge path</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q33" value="C">C. Turn off the &#x27;Enforce Quotas&#x27; setting in Jobs</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q33" value="D">D. Use &#x27;Remote Includes&#x27; for every single ISML template</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Server-side caching reduces the need to re-execute complex JavaScript logic on every request.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you define a &#x27;Price Book&#x27; for a specific customer group?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 34">
+      <li><label><input type="radio" name="questions_202604071300_q34" value="A">A. Manually update the price in the cart using a Hook</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q34" value="B">B. Assign the Price Book to the Customer Group in the Price Book settings</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q34" value="C">C. Use an IF statement in the ISML template to check the price</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q34" value="D">D. Create a custom attribute on the Customer Group</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Price Books can be assigned to specific sites and then further restricted to specific customer groups (e.g., VIPs).</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the correct location for the &#x27;client-side&#x27; JavaScript files in an SFRA cartridge?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 35">
+      <li><label><input type="radio" name="questions_202604071300_q35" value="A">A. cartridge/templates/js</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q35" value="B">B. cartridge/scripts/js</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q35" value="C">C. cartridge/static/default/js</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q35" value="D">D. cartridge/client/default/js</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>SFRA uses a specific folder structure for assets that are compiled (via webpack/gulp) for the browser.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which Business Manager setting is required to allow &#x27;Search Refinement&#x27; by a new attribute like &#x27;Material&#x27;?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 36">
+      <li><label><input type="radio" name="questions_202604071300_q36" value="A">A. Enable &#x27;OCAPI Searchable&#x27; for the attribute</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q36" value="B">B. Add the attribute to the &#x27;Search Refinement&#x27; bucket in the Search Index module</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q36" value="C">C. Create a new ISML template for the refinement</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q36" value="D">D. The platform automatically shows all searchable attributes as refinements</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>You must explicitly define which attributes can be used as filters (refinements) in the search settings.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to perform an action when a shopper clicks &#x27;Place Order&#x27;. Which hook is appropriate?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 37">
+      <li><label><input type="radio" name="questions_202604071300_q37" value="A">A. dw.ocapi.shop.order.afterPOST</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q37" value="B">B. dw.ocapi.data.order.beforePOST</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q37" value="C">C. dw.system.order.beforeSubmit</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q37" value="D">D. app.order.placed</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>The afterPOST hook is triggered after an order is successfully created, allowing for post-processing like sending notifications.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the best practice for storing external service credentials (like an API Key)?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 38">
+      <li><label><input type="radio" name="questions_202604071300_q38" value="A">A. Inside the Service Profile or Service Credential module in Business Manager</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q38" value="B">B. Inside a Site Preference with &#x27;Password&#x27; type</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q38" value="C">C. In a .properties file</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q38" value="D">D. As a hardcoded string in the script file</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>The Service Framework provides a secure, encrypted way to store credentials without hardcoding them in scripts.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which method is used to retrieve a specific product by its ID in a script?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 39">
+      <li><label><input type="radio" name="questions_202604071300_q39" value="A">A. dw.system.Site.current.getProduct(&#x27;ID&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q39" value="B">B. new Product(&#x27;ID&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q39" value="C">C. dw.catalog.CatalogMgr.getProduct(&#x27;ID&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q39" value="D">D. dw.catalog.ProductMgr.getProduct(&#x27;ID&#x27;)</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>ProductMgr is the static manager class used for accessing the catalog&#x27;s products.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When implementing Page Designer, what is the role of the &#x27;meta&#x27; file?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 40">
+      <li><label><input type="radio" name="questions_202604071300_q40" value="A">A. It contains the SEO metadata like page title and description</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q40" value="B">B. It handles the server-side logic for the component</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q40" value="C">C. It stores the binary image data for the component</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q40" value="D">D. It defines the attributes, layout, and region rules for the component</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>The JSON meta file acts as the configuration schema for Page Designer components and page types.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to check if a specific feature is enabled via a Site Preference. What is the code snippet?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 41">
+      <li><label><input type="radio" name="questions_202604071300_q41" value="A">A. dw.system.Site.current.getCustomPreferenceValue(&#x27;myFeature&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q41" value="B">B. session.custom.myFeature</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q41" value="C">C. dw.system.System.getPreference(&#x27;myFeature&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q41" value="D">D. dw.web.Resource.msg(&#x27;myFeature&#x27;)</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>This is the standard API for accessing site-specific custom configuration.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In the SFRA framework, how do you extend an existing model without replacing the entire file?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 42">
+      <li><label><input type="radio" name="questions_202604071300_q42" value="A">A. Use &#x27;server.append&#x27; on the model</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q42" value="B">B. Create a file with the same name in a higher-priority cartridge</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q42" value="C">C. Require the base model and use module.exports to override specific properties</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q42" value="D">D. Use the &#x27;super()&#x27; keyword in a class definition</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Standard Node.js pattern of requiring the base, calling its constructor, and then adding/modifying methods is the way to extend models.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which of the following is a symptom of a &#x27;Cache Hit&#x27; on the B2C platform?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 43">
+      <li><label><input type="radio" name="questions_202604071300_q43" value="A">A. The shopper sees the same product price regardless of their customer group</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q43" value="B">B. The response header &#x27;X-Cache&#x27; is set to &#x27;MISS&#x27;</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q43" value="C">C. The controller logic is not executed for that specific request</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q43" value="D">D. The page loads in exactly 5 seconds every time</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>If a page is cached, the platform serves the HTML directly from the web server layer, bypassing the script execution entirely.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A merchant wants to offer a &#x27;Buy One Get One Free&#x27; promotion. Where is this configured?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 44">
+      <li><label><input type="radio" name="questions_202604071300_q44" value="A">A. Merchant Tools &gt; Site Preferences</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q44" value="B">B. Merchant Tools &gt; Online Marketing &gt; Promotions</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q44" value="C">C. Merchant Tools &gt; Pricing &gt; Price Books</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q44" value="D">D. Merchant Tools &gt; Products &gt; Bundles</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>The Promotions engine handles marketing rules like BOGO, percentage off, and free shipping.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>How do you log a message to a specific file named &#x27;payment-errors&#x27;?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 45">
+      <li><label><input type="radio" name="questions_202604071300_q45" value="A">A. Write to the &#x27;scripts/logs/payment-errors.log&#x27; file using File IO</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q45" value="B">B. dw.system.Logger.getLogger(&#x27;payment-errors&#x27;).error(&#x27;message&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q45" value="C">C. dw.system.System.log(&#x27;payment-errors&#x27;, &#x27;message&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q45" value="D">D. dw.system.Logger.error(&#x27;payment-errors&#x27;, &#x27;message&#x27;)</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Using getLogger(category) allows you to route logs to specific files based on the category name.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the primary function of the &#x27;Forms Framework&#x27; in B2C Commerce?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 46">
+      <li><label><input type="radio" name="questions_202604071300_q46" value="A">A. To connect the storefront to a Google Form</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q46" value="B">B. To automatically generate CSS for HTML forms</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q46" value="C">C. To handle validation, rendering, and persistence of user input</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q46" value="D">D. To manage the customer&#x27;s login session</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>The framework uses XML definitions to automate the lifecycle of storefront forms.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which tool provides a visual representation of how different cartridges override each other for a specific template?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 47">
+      <li><label><input type="radio" name="questions_202604071300_q47" value="A">A. Business Manager - Cartridges module</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q47" value="B">B. Storefront Toolkit - Information tool</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q47" value="C">C. VS Code - File Explorer</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q47" value="D">D. Chrome - Inspector</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>The Toolkit displays the full path of the template and highlights which cartridge it&#x27;s being loaded from.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which of the following is required to make an OCAPI request authenticated?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 48">
+      <li><label><input type="radio" name="questions_202604071300_q48" value="A">A. A standard session cookie from the browser</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q48" value="B">B. The &#x27;x-dw-client-id&#x27; header alone</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q48" value="C">C. A password sent in plain text</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q48" value="D">D. An OAuth JWT token in the &#x27;Authorization&#x27; header</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>OCAPI uses JWT (JSON Web Tokens) for authenticating users and applications.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In a Job, what does the &#x27;Parallel&#x27; execution mode do?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 49">
+      <li><label><input type="radio" name="questions_202604071300_q49" value="A">A. It executes multiple steps simultaneously to improve speed</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q49" value="B">B. It syncs the data to a second instance automatically</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q49" value="C">C. It ensures two users cannot edit the same product at once</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q49" value="D">D. It runs the same script twice with different parameters</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>The Job framework allows independent steps to run in parallel to reduce the total job duration.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the correct way to include a &#x27;Static&#x27; file (like a CSS file) in an ISML template?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 50">
+      <li><label><input type="radio" name="questions_202604071300_q50" value="A">A. &lt;isinclude template=&quot;/css/style.css&quot; /&gt; (Sai vì isinclude dùng cho template .isml, không dùng cho .css)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q50" value="B">B. URLUtils.url(&#x27;/style.css&#x27;) (Sai vì url() dùng cho các Controller/Pipeline hành động)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q50" value="C">C. URLUtils.staticURL(&#x27;/css/style.css&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q50" value="D">D. &lt;link rel=&quot;stylesheet&quot; href=&quot;${URLUtils.webRoot()}/css/style.css&quot; /&gt;</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>staticURL ensures that the correct path to the static folder is generated, including versioning for cache busting.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which class would you use to check if a customer is currently logged in?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 51">
+      <li><label><input type="radio" name="questions_202604071300_q51" value="A">A. session.user.isLoggedIn()</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q51" value="B">B. customer.authenticated</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q51" value="C">C. request.isAuthenticated()</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q51" value="D">D. dw.customer.CustomerMgr.isLoggedIn()</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>The global &#x27;customer&#x27; object has an &#x27;authenticated&#x27; property that returns true if the user is logged in.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the purpose of the &#x27;dw.system.HookMgr&#x27; class?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 52">
+      <li><label><input type="radio" name="questions_202604071300_q52" value="A">A. To manage the cartridge path at runtime</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q52" value="B">B. To check if a specific hook is defined and call it</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q52" value="C">C. To schedule a job to run at a specific time</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q52" value="D">D. To capture errors and send them to an external system</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>HookMgr allows developers to programmatically trigger or check for the existence of custom or system hooks.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to prevent an ISML template from being cached. What should they do?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 53">
+      <li><label><input type="radio" name="questions_202604071300_q53" value="A">A. Disable caching for the entire site in Business Manager</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q53" value="B">B. Use the &lt;isnocache&gt; tag</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q53" value="C">C. Set the response header &#x27;Pragma: no-cache&#x27; in the controller</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q53" value="D">D. Add &lt;iscache type=&quot;relative&quot; hour=&quot;0&quot; minute=&quot;0&quot; /&gt;</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>Setting the cache time to zero effectively disables caching for that specific page or component.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In the SFRA &#x27;Form Definition&#x27; XML, what does the &#x27;binding&#x27; attribute do?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 54">
+      <li><label><input type="radio" name="questions_202604071300_q54" value="A">A. It maps the form field to a specific attribute on a System or Custom Object</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q54" value="B">B. It binds a CSS class to the HTML input</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q54" value="C">C. It defines which user group can see the form</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q54" value="D">D. It links the form to an external database</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Binding allows for automatic data transfer between the UI form and the database objects.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which of the following is a reason to use a &#x27;Local Include&#x27; instead of a &#x27;Remote Include&#x27;?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 55">
+      <li><label><input type="radio" name="questions_202604071300_q55" value="A">A. The included content is provided by an external server</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q55" value="B">B. The included content must share the same variables/dictionary as the parent page</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q55" value="C">C. The parent page is dynamic but the include is static</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q55" value="D">D. The included content needs to be cached separately</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Local includes are processed in the same request thread, meaning they can access variables defined in the parent template.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the purpose of the &#x27;onSession&#x27; hook in the &#x27;hooks.json&#x27; file?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 56">
+      <li><label><input type="radio" name="questions_202604071300_q56" value="A">A. To save the cart data to a persistent database</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q56" value="B">B. To log the user out after a period of inactivity</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q56" value="C">C. To execute logic whenever a new shopper session is created</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q56" value="D">D. To check if the user&#x27;s password has expired</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>The onSession hook is ideal for initializing session data, like tracking parameters or geolocation settings.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which tool is best for finding the &#x27;Total Page Load Time&#x27; from a user&#x27;s perspective?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 57">
+      <li><label><input type="radio" name="questions_202604071300_q57" value="A">A. B2C Code Profiler</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q57" value="B">B. Request Logs in Business Manager</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q57" value="C">C. Chrome DevTools - Network/Performance tab</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q57" value="D">D. Pipeline Profiler</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Browser tools are necessary to see the impact of front-end assets, network latency, and rendering on the user&#x27;s device.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer is writing a Job to update 5,000 prices. Which approach minimizes database locking issues?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 58">
+      <li><label><input type="radio" name="questions_202604071300_q58" value="A">A. Break the work into small transactions using Transaction.begin() and commit() inside the loop</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q58" value="B">B. Disable all other jobs that might touch the catalog</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q58" value="C">C. Use the &#x27;Replace&#x27; mode in the import step</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q58" value="D">D. Run the job only when the site is in &#x27;Maintenance Mode’</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Small transactions release locks quickly, whereas one massive transaction locks all 5,000 records for the entire duration.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In OCAPI, what is the &#x27;x-dw-client-id&#x27; used for?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 59">
+      <li><label><input type="radio" name="questions_202604071300_q59" value="A">A. To bypass the site&#x27;s firewall</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q59" value="B">B. To identify the specific application making the request</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q59" value="C">C. To store the user&#x27;s password securely</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q59" value="D">D. To set the locale of the response</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>The client ID is a mandatory key that identifies the caller and is used for permission and quota management.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which of the following is true about &#x27;Master Catalogs&#x27; in B2C Commerce?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 60">
+      <li><label><input type="radio" name="questions_202604071300_q60" value="A">A. They act as the central repository for product data, but are not directly visible on the storefront</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q60" value="B">B. They cannot contain variations or product sets</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q60" value="C">C. They are only used for B2B commerce scenarios</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q60" value="D">D. They must have the same category structure as the storefront catalog</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Master Catalogs hold the source of truth; Storefront Catalogs then use &#x27;assignments&#x27; to show those products in categories.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer needs to implement a custom logging requirement where only errors from a specific third-party integration are sent to a separate log file named &#x27;custom-integration&#x27;. Which approach is correct?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 61">
+      <li><label><input type="radio" name="questions_202604071300_q61" value="A">A. dw.io.File.write(&#x27;/logs/custom-integration.log&#x27;, &#x27;message&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q61" value="B">B. dw.system.Logger.getRootLogger().addAppender(&#x27;custom-integration&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q61" value="C">C. dw.system.Logger.error(&#x27;custom-integration&#x27;, &#x27;message&#x27;)</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q61" value="D">D. dw.system.Logger.getLogger(&#x27;custom-integration&#x27;, &#x27;integration-prefix&#x27;).error(&#x27;message&#x27;)</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>The getLogger method accepts a category and a prefix, allowing for the creation of specific log files that can be filtered in Business Manager.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In SFRA, what is the best practice for passing data from a Controller to an ISML template that requires localized formatting (e.g., currency)?</h2>
+    <ol class="options" aria-label="Questions 202604071300 - Question 62">
+      <li><label><input type="radio" name="questions_202604071300_q62" value="A">A. Pass the raw object to the template and use a &#x27;local&#x27; script block for formatting</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q62" value="B">B. Use the  tag with a &#x27;formatter&#x27; attribute directly in ISML</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q62" value="C">C. Format the data within a Model and pass the formatted string to the template</label></li>
+      <li><label><input type="radio" name="questions_202604071300_q62" value="D">D. Perform the formatting inside the Controller using the &#x27;dw.util.StringUtils&#x27; class</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Models are intended to wrap raw objects and prepare data specifically for view consumption, keeping templates logic-free.</small></div>
+    </details>
+  </div>
+</li>
+</ol>
 </body>
 </html>

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2C Commerce Developer Exam - Practice Set 14</title>
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #222; }
+h1 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 8px; }
+.question-list { list-style: none; padding: 0; }
+.question-list > li { margin-bottom: 28px; }
+.question { background: #fff; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+h2 { font-size: 1em; margin: 0 0 12px 0; color: #003366; }
+.options { padding-left: 20px; margin: 0 0 12px 0; }
+.options li { margin: 6px 0; list-style: none; }
+.options label { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.options input[type=radio] { margin-top: 3px; flex-shrink: 0; }
+details { margin-top: 8px; }
+summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none; }
+.answer { padding: 8px 12px; background: #e8f5e9; border-radius: 4px; margin-top: 6px; }
+.translate { padding: 8px 12px; background: #e3f2fd; border-radius: 4px; margin-top: 6px; }
+.translate ul { margin: 6px 0; padding-left: 20px; }
+</style>
+</head>
+<body>
+<h1>B2C Commerce Developer Exam - Practice Set 14</h1>
+<ol class="question-list">
+<li>
+  <div class="question">
+    <h2>New controllers in a custom cartridge don’t resolve after upload. What should you check first?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 1">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q1" value="A">A. Search index state</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q1" value="B">B. Site cartridge path includes the cartridge and ordering before app_storefront_base</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q1" value="C">C. Page Designer components installed</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q1" value="D">D. ocapi.json</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Cartridge must be in path and ordered before base.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Correct WebDAV path for deploying a cartridge to a code version is:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 2">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q2" value="A">A. /impex/src/</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q2" value="B">B. /versioned/cartridges/&lt;code-version&gt;/cartridges</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q2" value="C">C. /static/default/</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q2" value="D">D. /impex/exports/</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Deployed code lives under /versioned/.../cartridges.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>An override ISML file is ignored. Which two are typical causes?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 3">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q3" value="A">A. File path/name doesn’t match the base template</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q3" value="B">B. Custom cartridge ordered after app_storefront_base</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q3" value="C">C. ocapi.json missing the template</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q3" value="D">D. Code version alias missing</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Match relative path and ensure priority over base.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which statement about code versions is correct?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 4">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q4" value="A">A. One global code version for all sites</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q4" value="B">B. Each site references a code version in its own settings</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q4" value="C">C. Determined only by Organization settings</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q4" value="D">D. Determined by cartridge path automatically</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Each site selects its own code version.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>After switching to a new code version, stale templates still render. Which two actions are appropriate?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 5">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q5" value="A">A. Clear application cache</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q5" value="B">B. Invalidate affected iscache fragments</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q5" value="C">C. Rebuild search for each request</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q5" value="D">D. Change the site ID</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Clear app cache and invalidate template cache.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Why does cartridge path order matter?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 6">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q6" value="A">A. It enables CSRF</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q6" value="B">B. Left-to-right precedence resolves controllers/templates/scripts</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q6" value="C">C. It configures OCAPI quotas</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q6" value="D">D. It picks the active locale</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Left-to-right precedence controls resolution.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Where is the active code version selected?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 7">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q7" value="A">A. BM &gt; Administration &gt; Site Development &gt; Code Versions</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q7" value="B">B. BM &gt; Merchant Tools &gt; Search</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q7" value="C">C. BM &gt; Content &gt; Assets</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q7" value="D">D. BM &gt; SEO</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Code Versions UI sets the active version.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>dw.json primarily configures:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 8">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q8" value="A">A. OCAPI Shop permissions</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q8" value="B">B. IDE/WebDAV connection details and target code version</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q8" value="C">C. Page Designer policy</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q8" value="D">D. Search ranking</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>dw.json configures IDE/WebDAV target and version.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A site needs different cartridge paths per locale. What is correct?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 9">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q9" value="A">A. Configure per-locale cartridge paths</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q9" value="B">B. Not supported; use one site-level path and handle locale in code/templates</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q9" value="C">C. Use ocapi.json per locale</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q9" value="D">D. Use services.json per locale</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>One site-level path; implement locale in code/templates.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What file holds cartridge metadata like id/description?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 10">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q10" value="A">A. templates/resources/*.properties</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q10" value="B">B. app_*.properties</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q10" value="C">C. ocapi.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q10" value="D">D. services.json</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>app_*.properties holds cartridge metadata.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Enforce HTTPS on selected routes by:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 11">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q11" value="A">A. server.middleware.https</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q11" value="B">B. ocapi.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q11" value="C">C. Page Designer</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q11" value="D">D. services.json</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Use server.middleware.https for secure routes.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A valid cartridge doesn’t appear in the site path picker. Likely reason?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 12">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q12" value="A">A. No synonyms configured</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q12" value="B">B. Missing cartridge/ subfolder (invalid structure)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q12" value="C">C. Wrong code version alias</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q12" value="D">D. Log categories not set</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Invalid cartridge structure prevents selection.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Where is catalog/inventory import executed?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 13">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q13" value="A">A. BM &gt; Administration &gt; Logs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q13" value="B">B. BM &gt; Merchant Tools &gt; Site Import &amp; Export</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q13" value="C">C. BM &gt; SEO</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q13" value="D">D. BM &gt; Services</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Site Import &amp; Export handles inbound data loads.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Making a product attribute searchable requires:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 14">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q14" value="A">A. Mark attribute searchable</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q14" value="B">B. Add attribute to Page Designer</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q14" value="C">C. Rebuild search index</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q14" value="D">D. Add to ocapi.json read_attributes</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Mark searchable and reindex.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Where are storefront refinements configured?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 15">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q15" value="A">A. Merchant Tools &gt; Search &gt; Search Refinements</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q15" value="B">B. Merchant Tools &gt; SEO &gt; URL Rules</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q15" value="C">C. Administration &gt; Sites</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q15" value="D">D. Content &gt; Assets</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Refinements configured under Search.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You need a one-way synonym “beanie → knit cap”. Where and how?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 16">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q16" value="A">A. SEO Redirect</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q16" value="B">B. Search &gt; Dictionaries; one-way synonym</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q16" value="C">C. Search &gt; Search Refinements</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q16" value="D">D. Site Preference</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Dictionaries support one-way synonyms.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To render a new PDP attribute, typically update:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 17">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q17" value="A">A. Product model decorators/factory</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q17" value="B">B. PDP ISML template</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q17" value="C">C. ocapi.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q17" value="D">D. services.json</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Extend model and update templates.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Where are log categories and appenders configured?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 18">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q18" value="A">A. BM &gt; Administration &gt; Operations &gt; Logging</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q18" value="B">B. ocapi.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q18" value="C">C. services.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q18" value="D">D. templates/resources</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Logging configured under Admin &gt; Operations.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A merchandiser wants component-based pages. Use:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 19">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q19" value="A">A. Page Designer</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q19" value="B">B. Content Assets only</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q19" value="C">C. URL Rules</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q19" value="D">D. OCAPI Data</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Page Designer supports componentized pages.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>After enabling a new locale, search recall drops. Likely two causes:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 20">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q20" value="A">A. Missing localized values for searchable attributes</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q20" value="B">B. Forgot to reindex</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q20" value="C">C. Missing dw.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q20" value="D">D. Missing cspTrustedSite</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Missing localized values or reindexing lowers recall.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To expose a custom object via Data API, you must:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 21">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q21" value="A">A. Update ocapi.json with read/write and attribute lists</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q21" value="B">B. Create and map OCAPI client credentials</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q21" value="C">C. Create a new code version</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q21" value="D">D. Create a new cartridge</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>ocapi.json permissions and client mapping required.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Production logging best practice:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 22">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q22" value="A">A. Use Logger categories with INFO/WARN/ERROR; DEBUG only for targeted troubleshooting</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q22" value="B">B. Use System.out.println</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q22" value="C">C. Log everything at DEBUG</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q22" value="D">D. Disable logs</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Use Logger with proper levels; DEBUG sparingly.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Configure default currency/taxation at:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 23">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q23" value="A">A. Administration &gt; Sites &gt; Manage Sites &gt; [Site] &gt; Settings</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q23" value="B">B. Merchant Tools &gt; Search</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q23" value="C">C. Merchant Tools &gt; SEO</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q23" value="D">D. Services &gt; Profiles</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Site Settings store currency/taxation.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To change availability label text, edit:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 24">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q24" value="A">A. templates/resources/*.properties</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q24" value="B">B. ISML templates</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q24" value="C">C. ocapi.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q24" value="D">D. Code Versions page</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Properties and ISML define labels.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Maintainable controller pattern:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 25">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q25" value="A">A. Thin controllers; logic in helpers/decorators/factories</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q25" value="B">B. Put core logic in ISML</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q25" value="C">C. Keep all logic in controllers</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q25" value="D">D. Avoid services</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Keep controllers thin and move logic to helpers/decorators/factories.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Directive for cacheable fragments:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 26">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q26" value="A">A. iscache</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q26" value="B">B. isif</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q26" value="C">C. isloop</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q26" value="D">D. isdecorate</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>iscache caches fragments for performance.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Proper CSRF for forms requires:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 27">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q27" value="A">A. Generate token on GET; validate on POST using csrfProtection</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q27" value="B">B. HTTPS only</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q27" value="C">C. Not needed in SFRA</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q27" value="D">D. Site preference only</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Generate on GET; validate on POST.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>For a JSON route, which two are correct?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 28">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q28" value="A">A. Set Content-Type to application/json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q28" value="B">B. Use res.json or write JSON to response</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q28" value="C">C. Render ISML then convert to JSON</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q28" value="D">D. Disable caching globally</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Proper content type and JSON response.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Change pricing behavior without editing base controllers by:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 29">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q29" value="A">A. Pricing/tax hook extension points</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q29" value="B">B. Page Designer</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q29" value="C">C. URL Rules</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q29" value="D">D. Site Preference</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Use pricing/tax hooks for extensibility.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A PLP makes synchronous HTTP calls per item. Which two actions help?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 30">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q30" value="A">A. Use Service Framework with timeouts and circuit breaker</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q30" value="B">B. Batch/cache to avoid N+1</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q30" value="C">C. Move calls to ISML</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q30" value="D">D. Use System.out.println for timing</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Service framework + batching/caching avoid N+1.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To localize UI text, use:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 31">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q31" value="A">A. templates/resources/*.properties</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q31" value="B">B. Resource.msg/Resource.msgf</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q31" value="C">C. ocapi.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q31" value="D">D. services.json</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Properties bundles and Resource helpers for i18n.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A remote include shows stale promotion data. Correct fix:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 32">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q32" value="A">A. Add vary keys (basket/promo/customer) or disable include cache</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q32" value="B">B. Disable all caching</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q32" value="C">C. Change code version</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q32" value="D">D. Rebuild search</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Add appropriate vary keys or disable include cache.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>For personalized Shop API responses, safe caching is:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 33">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q33" value="A">A. No cache, or cache with vary (customer group/locale/currency)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q33" value="B">B. Global cache only</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q33" value="C">C. CDN cache with no vary</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q33" value="D">D. Response cache blindly</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>No cache or use vary for personalization.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>HTTP 200 with error in body from a service should be handled by:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 34">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q34" value="A">A. Treating as success</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q34" value="B">B. Parsing domain status fields and failing appropriately</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q34" value="C">C. Timing out</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q34" value="D">D. Retrying forever</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Parse business-level status to detect failures.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>PII form submissions should:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 35">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q35" value="A">A. Minimize/encrypt sensitive fields</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q35" value="B">B. Restrict OCAPI Data access with least privilege</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q35" value="C">C. Log raw payloads for support</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q35" value="D">D. Use GET instead of POST</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Minimize/encrypt PII and lock down access.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A controller streams a large CSV. Correct approach:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 36">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q36" value="A">A. Stream incrementally with proper headers</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q36" value="B">B. Build fully in memory then send</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q36" value="C">C. Use ISML to render CSV</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q36" value="D">D. Print to System.out</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Stream CSV with headers.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To allow baskets via OCAPI Shop, do which two?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 37">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q37" value="A">A. Configure ocapi.json Shop permissions with allowed attributes</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q37" value="B">B. Map client ID/secret to that setting</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q37" value="C">C. Create new code version</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q37" value="D">D. Add PD component</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>OCAPI Shop and client mapping.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Nightly job: import inventory then reindex. Typical steps:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 38">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q38" value="A">A. Script step for import</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q38" value="B">B. System step for delta/full index</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q38" value="C">C. Disable CSRF</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q38" value="D">D. Restart code version</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Import then index via system step.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Common inbound file locations:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 39">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q39" value="A">A. /impex/src/</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q39" value="B">B. /impex/src/instance/</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q39" value="C">C. /versioned/cartridges/</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q39" value="D">D. /static/default/</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>impex src and src/instance are standard inbound folders.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Jobs intermittently collide on same records. Which two mitigations help?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 40">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q40" value="A">A. Retry with exponential backoff</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q40" value="B">B. Coordinate schedules/locks to serialize</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q40" value="C">C. Add TRACE logs only</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q40" value="D">D. Run imports from controllers</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Backoff and serialized scheduling/locking.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Least-privilege Data API for orders should:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 41">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q41" value="A">A. Restrict read_attributes to necessary fields</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q41" value="B">B. Use dedicated client credentials per integration</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q41" value="C">C. Share one global client</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q41" value="D">D. Expose all attributes</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Restrict attributes; dedicated credentials.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Zero-downtime credential rotation should:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 42">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q42" value="A">A. Introduce a new credential/profile and cut over</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q42" value="B">B. Hardcode the secret in code</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q42" value="C">C. Support overlapping keys if upstream allows</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q42" value="D">D. Stop traffic</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>New credential; overlap keys if allowed.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Robust synchronous integration includes:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 43">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q43" value="A">A. Short timeouts and circuit breaker</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q43" value="B">B. Retries with backoff for transient errors</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q43" value="C">C. Always log full payloads</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q43" value="D">D. Never cache</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Fail fast, retry transients, and circuit-break failures.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Frequent product delta imports. Best indexing:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 44">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q44" value="A">A. Delta index after each import</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q44" value="B">B. Full index each hour</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q44" value="C">C. Weekly index</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q44" value="D">D. No index</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Delta indexing fits frequent updates.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To write to a custom object via Data API, you need:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 45">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q45" value="A">A. ocapi.json write with write_attributes</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q45" value="B">B. Client credentials mapped to that ocapi.json setting</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q45" value="C">C. A new code version</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q45" value="D">D. Search refinements</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Write permissions/attributes + mapped client.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Two job steps update the same set; remedy is:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 46">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q46" value="A">A. Locking/serialization or exclusive windows</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q46" value="B">B. Disable logs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q46" value="C">C. Use remote includes</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q46" value="D">D. Global cache</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Serialize or exclusive windows prevent collisions.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Prevent token leakage in logs by:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 47">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q47" value="A">A. Redacting/masking tokens in parser; avoid logging bodies unless masked</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q47" value="B">B. Printing to System.out</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q47" value="C">C. Logging all bodies at DEBUG</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q47" value="D">D. Disabling services</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Redact tokens and avoid logging bodies.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Shop API varies by price group and locale. Safe caching:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 48">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q48" value="A">A. No cache or cache with appropriate vary keys</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q48" value="B">B. Global cache only</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q48" value="C">C. CDN no-vary</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q48" value="D">D. Response cache blindly</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>No cache or vary by price group/locale.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Reduce PDP TTFB:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 49">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q49" value="A">A. Precompute heavy fields in decorators</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q49" value="B">B. Cache static fragments (iscache) with proper vary</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q49" value="C">C. Disable cache</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q49" value="D">D. Use OCAPI only</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Precompute and cache static fragments.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Profiler shows heavy per-tile service calls. Improve by:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 50">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q50" value="A">A. Batch/cache calls</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q50" value="B">B. Precompute via jobs and decorate from storage</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q50" value="C">C. Add TRACE logs globally</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q50" value="D">D. Use remote includes per tile</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Batch/cache or precompute with jobs.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Stale content persists after deploy. Which two are typical fixes?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 51">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q51" value="A">A. Clear application cache</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q51" value="B">B. Invalidate iscache fragments</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q51" value="C">C. Rebuild search on every request</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q51" value="D">D. Rename code version</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Clear app and template caches.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Large JSON export OOMs. Appropriate fix:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 52">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q52" value="A">A. Stream JSON chunks to response</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q52" value="B">B. Build JSON fully in memory</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q52" value="C">C. Render via ISML</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q52" value="D">D. Disable HTTPS</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Stream JSON to avoid memory spikes.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Cache correctness issues usually stem from:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 53">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q53" value="A">A. Missing vary-by-locale/currency</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q53" value="B">B. Using global cache with no vary</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q53" value="C">C. Using decorators</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q53" value="D">D. Using properties bundles</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Missing vary or global cache often causes leakage.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>New locale shows English strings. Fix:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 54">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q54" value="A">A. Add locale-specific templates/resources/*.properties</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q54" value="B">B. Use Resource.msg/Resource.msgf</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q54" value="C">C. Update ocapi.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q54" value="D">D. Switch code version</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Add locale bundles and use Resource helpers.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A route times out on a downstream dependency. Best practices:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 55">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q55" value="A">A. Short timeouts (fail fast)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q55" value="B">B. Retries with exponential backoff</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q55" value="C">C. Circuit breaker</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q55" value="D">D. Increase synchronous calls</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>Short timeouts, backoff retries, circuit breaker.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>After release, PDP is slower by ~220ms. Which three diagnostics help?</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 56">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q56" value="A">A. Compare profiler traces before/after</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q56" value="B">B. Add targeted timing logs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q56" value="C">C. Diff changes in services/decorators/hooks</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q56" value="D">D. Disable logs permanently</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>Profiling, timers, and diffs isolate regressions.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Reduce ISML CPU cost by:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 57">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q57" value="A">A. Move logic to helpers/decorators</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q57" value="B">B. Cache static fragments with iscache</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q57" value="C">C. Add blocking HTTP calls in templates</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q57" value="D">D. Heavy loops in ISML</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Move logic out of ISML; cache fragments.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A PD component shows wrong currency under cache. Fix:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 58">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q58" value="A">A. Add vary-by-currency</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q58" value="B">B. Use ocapi.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q58" value="C">C. Disable CSRF</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q58" value="D">D. Rebuild catalog</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Vary by currency to ensure correctness.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Prevent duplicate POST effects:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 59">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q59" value="A">A. Idempotency keys with server-side dedupe</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q59" value="B">B. Disable submit button after click on client</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q59" value="C">C. Use GET</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q59" value="D">D. Disable CSRF</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Idempotency and UI prevention stop duplicates.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Catalog import conflicts with delta indexing occasionally. Best remedy:</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set14 - Question 60">
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q60" value="A">A. Coordinate schedules, lock shared resources, and add retries/backoff</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q60" value="B">B. Disable indexing</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q60" value="C">C. Add DEBUG logs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set14_q60" value="D">D. Change code version</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Orchestrate schedules, lock, and backoff for robustness.</small></div>
+    </details>
+  </div>
+</li>
+</ol>
+</body>
+</html>

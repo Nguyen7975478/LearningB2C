@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2C Commerce Developer Exam - Practice Set 1</title>
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #222; }
+h1 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 8px; }
+.question-list { list-style: none; padding: 0; }
+.question-list > li { margin-bottom: 28px; }
+.question { background: #fff; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+h2 { font-size: 1em; margin: 0 0 12px 0; color: #003366; }
+.options { padding-left: 20px; margin: 0 0 12px 0; }
+.options li { margin: 6px 0; list-style: none; }
+.options label { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.options input[type=radio] { margin-top: 3px; flex-shrink: 0; }
+details { margin-top: 8px; }
+summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none; }
+.answer { padding: 8px 12px; background: #e8f5e9; border-radius: 4px; margin-top: 6px; }
+.translate { padding: 8px 12px; background: #e3f2fd; border-radius: 4px; margin-top: 6px; }
+.translate ul { margin: 6px 0; padding-left: 20px; }
+</style>
+</head>
+<body>
+<h1>B2C Commerce Developer Exam - Practice Set 1</h1>
+<ol class="question-list">
+<li>
+  <div class="question">
+    <h2>In a sandbox, where should you deploy a custom cartridge via WebDAV so it becomes available to add to a site’s cartridge path? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 1">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="A">A. /cartridges/current</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="B">B. /versioned/cartridges/&lt;code-version&gt;/cartridges</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="C">C. /static/default/cartridges</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="D">D. /on-demand/&lt;code-version&gt;/cartridges</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Code is deployed under the active code version folder. Business Manager exposes code versions from /versioned/cartridges/&lt;code-version&gt;.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>After uploading a cartridge to the active code version, what must happen before storefront requests can execute controllers in that cartridge? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 2">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="A">A. Restart the application server</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="B">B. Add the cartridge to the site’s cartridge path and clear caches</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="C">C. Rebuild ISML to HTML artifacts manually</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="D">D. Assign the cartridge to a replication target</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Controllers resolve by traversing the cartridge path. Clearing cache ensures fresh resolution.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When installing SFRA locally, which statement is accurate about its structure? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 3">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="A">A. SFRA stores all server-side logic in ISML templates</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="B">B. SFRA separates controllers, models, and views with routing via server.js</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="C">C. SFRA requires no middleware for CSRF protection</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="D">D. SFRA disallows decorators on product models</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>SFRA is MVC-like with controllers, models/decorators, and ISML templates; routing is in server code.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A business requires a new country-specific taxation setting for a new site. Where do you configure the taxation and currency defaults? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 4">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="A">A. Merchant Tools &gt; Ordering &gt; Taxation</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="B">B. Administration &gt; Sites &gt; Manage Sites &gt; [Site] &gt; Settings</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="C">C. Administration &gt; Global Preferences &gt; Currency</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="D">D. Merchant Tools &gt; Site Preferences &gt; Localization</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Site-level settings define taxation and default currency.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You need to expose a new cartridge’s JavaScript controllers. Which is the correct order in the site cartridge path? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 5">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="A">A. app_storefront_base before custom cartridges</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="B">B. Custom cartridges first; app_storefront_base last</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="C">C. app_storefront_base only; custom cartridges added in BM modules</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="D">D. The order doesn’t matter</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Put custom cartridges before app_storefront_base so overrides and extensions resolve first.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When adding a new site to an instance, which two tasks are required for storefront availability? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 6">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="A">A. Configure hostname aliases/DNS mapping</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="B">B. Assign a code version to the site</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="C">C. Create a dedicated replication process</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="D">D. Add a valid cartridge path</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B, D</strong><br><small>The site must reference a code version and cartridge path; DNS/aliases occur outside initial BM steps.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the recommended approach to extending the product model in SFRA? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 7">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="A">A. Modify the base Product model directly</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="B">B. Use decorators to add computed properties to the product object</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="C">C. Add properties in the ISML layer</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="D">D. Add custom fields to the product price book</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>SFRA promotes decorators to extend models in a maintainable way.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which two tools are typically used together to upload and version code to a B2C sandbox? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 8">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="A">A. WebDAV client</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="B">B. OCAPI Shop API</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="C">C. Git</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="D">D. Page Designer</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>You typically manage source with Git and deploy to sandboxes via WebDAV.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the purpose of the dw.json file when using UX Studio or compatible IDEs? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 9">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="A">A. Configure OCAPI permissions</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="B">B. Define Business Manager locales</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="C">C. Define server connection (hostname, code version) for upload</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="D">D. Toggle log levels</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>dw.json tells the IDE where and how to upload to the sandbox.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which statement about SFRA updates is correct? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 10">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="A">A. Updates are auto-merged into custom cartridges</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="B">B. Updates can affect templates and controllers; maintain extensions through composition/decorators</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="C">C. Updates never change CSS structure</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="D">D. Updates are backward compatible for all hooks</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Maintain customizations via extension points and decorators to tolerate updates.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To test that a cartridge was added correctly to the cartridge path, which is the most direct method? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 11">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="A">A. Trigger a BM cache warmup</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="B">B. Hit a controller route unique to that cartridge and observe response</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="C">C. Recompile ISML files</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="D">D. Re-index the product catalog</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Exercise a known route exposed solely by the cartridge to validate path precedence.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which three items are typical in an SFRA cartridge’s folder structure? (Select three)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 12">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="A">A. cartridge/scripts</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="B">B. cartridge/controllers</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="C">C. cartridge/models (or decorators/factories)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="D">D. cartridge/sfcc-logs</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>Scripts, controllers, and models/decorators are common; there’s no sfcc-logs folder in cartridges.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Where do you import site data such as catalogs or inventory lists? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 1">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="A">A. Administration &gt; Code Versions</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="B">B. Merchant Tools &gt; Site Import &amp; Export</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="C">C. Merchant Tools &gt; SEO</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="D">D. Administration &gt; Roles &amp; Permissions</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>BM provides Site Import &amp; Export for data XML/CSV.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A business wants to enable a new payment processor. Where is this configured? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 2">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="A">A. Merchant Tools &gt; Ordering &gt; Payment Methods/Processors</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="B">B. Administration &gt; Global Preferences &gt; Payment</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="C">C. Merchant Tools &gt; Services &gt; Payment</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="D">D. Merchant Tools &gt; Site Preferences &gt; Payments</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Payment methods and processors are configured under Ordering.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To make a new attribute searchable, you must do which two actions? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 3">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="A">A. Add it to searchable fields in site search preferences</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="B">B. Mark the attribute as searchable in attribute settings</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="C">C. Rebuild the search index</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="D">D. Update the Page Designer component</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B, C</strong><br><small>Mark attribute searchable and rebuild indexes to include it.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Where do you create a search refinement definition for the storefront? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 4">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="A">A. Merchant Tools &gt; SEO &gt; URL Rules</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="B">B. Merchant Tools &gt; Search &gt; Refine Settings</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="C">C. Merchant Tools &gt; Search &gt; Search Refinements</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="D">D. Merchant Tools &gt; Products and Catalogs &gt; Catalogs</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Search refinements are configured under Search.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A performance issue is suspected around a custom controller. Which two tools help diagnose this? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 5">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="A">A. Request Logs and custom log categories</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="B">B. Profilers in BM</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="C">C. OCAPI Data API</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="D">D. URL Rules</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Use log categories and profilers to measure controller performance.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To log only non-sensitive data at INFO level to a custom log file, what must be configured? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 6">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="A">A. Log rotation in WebDAV</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="B">B. Log categories and appenders in BM</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="C">C. CSRF token in server middleware</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="D">D. Cache inheritance</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>BM log settings control categories, levels, and custom appenders.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A new custom object is needed to store external mapping IDs. What two steps are necessary? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 7">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="A">A. Create the custom object type and its attributes in BM</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="B">B. Add the object to the cartridge path</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="C">C. Configure permissions and ensure OCAPI/Data API access if needed</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="D">D. Add the object to the search index refinements</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Define the type/attributes, and if accessed externally, configure permissions.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To expose a new attribute on Product in the storefront, which locations are typically touched? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 8">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="A">A. ISML templates rendering product details</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="B">B. Model decorators/factories</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="C">C. The replication configuration</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="D">D. Code version folder name</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Extend the model and update templates to display values.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When adjusting site search synonyms for better recall of terms, where do you configure this? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 9">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="A">A. Merchant Tools &gt; Search &gt; Dictionaries</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="B">B. Merchant Tools &gt; SEO &gt; Redirects</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="C">C. Administration &gt; Site Preferences</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="D">D. Merchant Tools &gt; Content &gt; Assets</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Dictionaries manage synonyms, stop words, etc.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A data import is failing due to a malformed XML. What is the first best step? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 10">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="A">A. Clear site caches</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="B">B. Validate the XML against the schema expected by BM Import</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="C">C. Re-upload to a different directory</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="D">D. Trigger replication</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Validate input file structure against the expected XSD.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You need to allow an external integration to access a custom object via OCAPI Data. What two actions are required? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 11">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="A">A. Update ocapi.json to permit read/write on the custom object</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="B">B. Add the integration host to cspTrustedSites</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="C">C. Configure client ID with appropriate API settings in BM</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="D">D. Add a custom URL rule</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>OCAPI permissions are defined in ocapi.json and tied to client credentials.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which three Business Manager areas are most relevant to merchandising teams rather than developers? (Select three)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 12">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="A">A. Products and Catalogs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="B">B. Search and Search Refinements</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="C">C. Services Framework</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="D">D. Content (Assets, Slots, Page Designer)</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Merchandisers work with products, content, and search tools.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>In SFRA, which middleware should wrap routes that accept form submissions? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 1">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="A">A. server.middleware.https only</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="B">B. csrfProtection.validateRequest paired with csrfProtection.generateToken</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="C">C. consentTracking.consent</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="D">D. cache.applyCache</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>CSRF protection is required for POSTs and form handling in SFRA.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which ISML tag is used to include a component that can render in a separate pipeline and cache independently? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 2">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="A">A. isinclude</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="B">B. isdecorate</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="C">C. iscomponent</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="D">D. iscache</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>iscomponent supports modular, independently cachable render units.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To pass server-side data to an ISML template from a controller, what method is typically used? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 3">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="A">A. res.redirect(URLUtils.url(…))</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="B">B. res.render(template, viewDataObject)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="C">C. next()</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="D">D. res.json(viewDataObject)</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>res.render accepts a template path and a view-data hash.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A route should return JSON instead of rendering a template. Which two steps are correct? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 4">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="A">A. Set response content type to application/json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="B">B. Call res.render with a JSON template</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="C">C. Use res.json or write JSON string and set status</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="D">D. Override site preference DisableJSON to false</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Return JSON via res.json (preferred) and ensure proper content type.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You must decorate the product with a computed boolean flag “isClearance” based on price book. Where should this logic live? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 5">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="A">A. In the ISML template using script tags</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="B">B. In a product decorator module applied by the model factory</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="C">C. In the OCAPI configuration</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="D">D. In Page Designer component JSON</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Use decorators/factories to keep business logic out of templates.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Given a requirement to validate and persist a custom form, which three pieces are typical? (Select three)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 6">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="A">A. forms XML definition under forms/</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="B">B. Controller route using server.post with CSRF middleware</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="C">C. Client-side JS only, no server validation</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="D">D. Form handler that binds and validates fields via Form API</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Define forms XML, secure POST route, and use SFCC Form bindings/validation server-side.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which hook would you use to intercept basket calculation logic without modifying core controller behavior? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 7">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="A">A. dw.web.HttpParameterMap</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="B">B. app_*.properties</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="C">C. Hook dw.ocapi.shop.basket.beforeGET</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="D">D. Hook implementations such as app.calculateLineItem or similar extension points</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>D</strong><br><small>Use documented hook extension points for pricing, taxes, or calculations.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>For a new marketing landing page in Page Designer, what two artifacts must you create? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 8">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="A">A. A page type definition</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="B">B. A job to publish the page nightly</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="C">C. Components (and placements) used within that page type</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="D">D. ocapi.json entry to authorize render</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Page types and components define marketer-editable structures.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Where do you define localized resources used in templates? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 9">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="A">A. cartridge/templates/resources/*.properties per locale</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="B">B. cartridge/scripts/i18n.js</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="C">C. Global BM preferences</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="D">D. services.json</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>ISML uses properties files under templates/resources for i18n.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>What is the best practice for logging from a controller? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 10">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="A">A. Use System.out.println</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="B">B. Use dw.system.Logger.getLogger(category, file).info/debug/error</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="C">C. Write to a custom text file via WebDAV</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="D">D. Log only in production</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Use Logger with configured categories and levels.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A controller violates best practices by doing synchronous HTTP calls on every product detail view. Which two changes improve scalability? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 11">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="A">A. Cache results where possible via response or application cache</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="B">B. Move calls into decorators executed for each request</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="C">C. Use Service Framework with proper timeouts and circuit breakers and cache at model layer</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="D">D. Increase Business Manager log levels to FATAL</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Use the Service Framework with caching and resiliency patterns; avoid per-request blocking calls when possible.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>For a route that renders cached content varying by locale and currency, which approach is recommended? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 12">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="A">A. Disable cache</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="B">B. Use res.cachePeriod with varyBy parameters, or use iscache with vary attributes</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="C">C. Use only CDN-level caching</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="D">D. Use OCAPI caching only</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Use platform cache directives (iscache or res.cachePeriod) to vary content by keys.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To create a robust integration to an external REST API, which three Service Framework configurations are key? (Select three)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 1">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="A">A. Connection and socket timeouts</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="B">B. Circuit breaker/retry policies and error handling</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="C">C. OCAPI Data credential reuse</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="D">D. Caching policy/response parsing</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Timeouts, resiliency, and parsing/caching are core Service Framework concerns.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Where are service credentials (username/password/API keys) securely stored for services? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 2">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="A">A. In cartridge scripts</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="B">B. In dw.json</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="C">C. In BM service profiles/credentials</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="D">D. In site preferences resources.properties</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Store secrets in BM service credentials, not code.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>You must expose baskets to an external OMS via OCAPI Shop. Which two actions are required? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 3">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="A">A. Update OCAPI Shop permissions in ocapi.json to allow basket read/write</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="B">B. Create a custom cartridge to simulate OCAPI</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="C">C. Configure client ID/secret and assign to the OCAPI setting</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="D">D. Enable cartridge-level setting shop.ocapi.enabled=true</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>OCAPI access requires client credentials and appropriate permissions.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A nightly job must import inventory and reindex search. What two job steps are typical? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 4">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="A">A. A script step to call import API for inventory list</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="B">B. Disable all caches for the duration</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="C">C. A system step to trigger search index rebuild</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="D">D. A replication immediately after</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>A script/system step pair often imports data then rebuilds search indexes.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which two directories are commonly used for job import files? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 5">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="A">A. /on/demand/tmp/</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="B">B. /impex/src/</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="C">C. /versioned/imports/</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="D">D. /impex/src/instance/</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B, D</strong><br><small>impex is the import/export directory; instance or org-level subfolders are typical.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To process large catalogs efficiently, which two techniques help? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 6">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="A">A. Streamed CSV/XML parsing in scripts</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="B">B. Break imports into chunks and use delta updates</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="C">C. Increase log level to DEBUG globally</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="D">D. Run imports through ISML templates</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Streaming and delta/chunked imports scale better.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>For OCAPI Data permissions, the “read_attributes” and “write_attributes” sections should include which kinds of fields? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 7">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="A">A. Only system attributes</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="B">B. Only custom attributes</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="C">C. Both system and custom attributes you intend to expose</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="D">D. No attributes; OCAPI infers them</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>C</strong><br><small>Explicitly list fields to read/write—principle of least privilege.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which three are strong indicators an integration should be asynchronous? (Select three)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 8">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="A">A. Non-blocking to storefront request path</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="B">B. Long-running processing or batch-oriented data</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="C">C. Requires immediate shopper feedback at checkout</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="D">D. Can be queued and retried independently</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Async improves UX and resilience when work is long-running or not needed immediately.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To mask sensitive tokens in logs from a service response, which approach is best? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 9">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="A">A. Disable logs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="B">B. Use a response parser that removes/redacts sensitive fields before logging</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="C">C. Print full payloads but store logs only for one day</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="D">D. Rely on DEBUG-only logs</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Redact at parse/log time to prevent sensitive data leakage.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When building an OCAPI customization involving hooks, where is hook code implemented? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 10">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="A">A. In ocapi.json directly</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="B">B. In a cartridge implementing the documented hook scripts and registered in cartridge path</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="C">C. In Business Manager’s Log Settings</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="D">D. In Page Designer page types</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>OCAPI hooks are implemented in cartridges on the server side.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A job fails intermittently due to a locked resource. What two steps improve robustness? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 11">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="A">A. Introduce retry with backoff in the job script</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="B">B. Switch job to run synchronously on storefront requests</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="C">C. Add job parameterization and pre-checks for locks</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="D">D. Increase code version</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Retries/backoff and pre-checks mitigate contention issues.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>An external PIM pushes product updates every hour. What is the most efficient search indexing strategy? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 12">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="A">A. Full reindex every hour</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="B">B. Delta indexing after each import</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="C">C. No indexing; search auto-detects</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="D">D. Reindex once daily</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Delta reindexing is efficient for frequent updates.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which two caching layers are commonly used for storefront rendering in B2C Commerce? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 1">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="A">A. iscache directive at template level</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="B">B. CDN edge cache only</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="C">C. Application response cache (res.cachePeriod/varyBy)</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q1" value="D">D. Database row cache</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Platform supports template caching and response cache; CDN is external; DB row cache is not a storefront concept.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A template fragment must vary by currency and promotions. Which approach is best? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 2">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="A">A. No cache; always dynamic</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="B">B. iscache with vary-by-currency and a custom vary key for promo state</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="C">C. Cache globally for all users</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q2" value="D">D. Use OCAPI cache exclusively</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Use iscache with appropriate vary keys to maintain correctness.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which two coding issues most often cause scalability problems? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 3">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="A">A. Duplicated service calls per request without caching</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="B">B. Excessive synchronous I/O inside the request thread</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="C">C. Moving logic to decorators</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q3" value="D">D. Using Logger at INFO for checkpoints</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Avoid redundant service calls and blocking I/O paths.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To localize UI strings, what are two best practices? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 4">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="A">A. Place strings in properties files under templates/resources</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="B">B. Hardcode English in ISML and translate later</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="C">C. Use Resource.msg/Resource.msgf helpers</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q4" value="D">D. Store strings in services.json</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Use properties and Resource helpers for localization.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A page still shows stale data after code deploy. Which two actions help? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 5">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="A">A. Clear application cache</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="B">B. Force re-index of search every time</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="C">C. Invalidate iscache entries if template cache was used</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q5" value="D">D. Change code version name</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Clear app cache and template cache as appropriate.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which is a correct approach for logging performance metrics? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 6">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="A">A. Use Logger with a dedicated category, log timings, and analyze in BM logs</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="B">B. Print timings in templates to the page footer</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="C">C. Log all data at ERROR level</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q6" value="D">D. Rely only on Request Logs default</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Structured logging with categories and levels aids analysis.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>To minimize controller complexity, where should most business logic live? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 7">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="A">A. Controllers only</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="B">B. Decorators, helpers, factories, and services</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="C">C. ISML templates</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q7" value="D">D. ocapi.json</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Keep controllers thin; move logic to reusable layers.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When adding a new language, which two areas are typically updated? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 8">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="A">A. templates/resources/*.properties for the new locale</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="B">B. Page Designer components JSON only</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="C">C. Static assets localized per locale where needed</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q8" value="D">D. dw.json locales</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Provide localized properties and assets for the new locale.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A site experiences timeouts calling an external API. Which three mitigations are best practice? (Select three)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 9">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="A">A. Reduce timeouts to fail fast</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="B">B. Add caching of responses where feasible</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="C">C. Add retries with exponential backoff and circuit breakers</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q9" value="D">D. Increase the number of synchronous calls per page</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>Fail fast, cache, and add resiliency patterns. Avoid multiplying calls.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>A developer adds custom pricing within the PDP controller and skips the pricing hook. What is the issue? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 10">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="A">A. None; controller is the best place for pricing</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="B">B. Violates extensibility; use pricing hooks/decorators to centralize logic</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="C">C. Pricing must live in ISML</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q10" value="D">D. OCAPI enforces this automatically</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>B</strong><br><small>Centralize domain logic in hooks/decorators for reuse and consistency.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>Which two strategies reduce template render time? (Select two)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 11">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="A">A. Minimize logic in ISML; precompute in models</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="B">B. Use remote includes for every snippet</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="C">C. Cache static fragments with iscache</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q11" value="D">D. Render JSON then transform client-side</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Precompute data and cache static fragments to accelerate rendering.</small></div>
+    </details>
+  </div>
+</li>
+<li>
+  <div class="question">
+    <h2>When should you use remote includes over local includes? (Select one)</h2>
+    <ol class="options" aria-label="B2C Dev Exam Set1 - Question 12">
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="A">A. When the included content must execute in a separate pipeline and be independently cached</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="B">B. Always, because remote includes are faster</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="C">C. Only for JSON responses</label></li>
+      <li><label><input type="radio" name="b2c_dev_exam_set1_q12" value="D">D. Never; they are deprecated</label></li>
+    </ol>
+    <details>
+      <summary>Answer</summary>
+      <div class="answer">✅ Correct: <strong>A</strong><br><small>Remote includes are used for separate pipeline execution and caching behavior.</small></div>
+    </details>
+  </div>
+</li>
+</ol>
+</body>
+</html>
