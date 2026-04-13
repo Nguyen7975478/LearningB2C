@@ -38,6 +38,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>This initiates the middleware inheritance chain, preserving the base logic while allowing extensions.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Copy the base controller into your cartridge and modify it.</li>
+          <li>B: Create a controller with the same name and use server.extend(module.superModule).</li>
+          <li>C: Use the server.replace() method to overwrite the base route.</li>
+          <li>D: Use require('app_storefront_base/cartridge/controllers/...') directly.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -52,6 +64,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Once a response is rendered or sent, the request lifecycle is closed; calling next() afterward throws an exception.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: The template renders twice.</li>
+          <li>B: An error occurs, and the request fails.</li>
+          <li>C: The template renders, and the next middleware executes normally.</li>
+          <li>D: The next() call is silently ignored.</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -68,6 +92,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>The GET route needs to generate the token for the view, and the POST route needs to validate the submitted token.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: csrfProtection.validateAjaxRequest on all routes.</li>
+          <li>B: csrfProtection.generateToken for GET and csrfProtection.validateRequest for POST.</li>
+          <li>C: server.middleware.csrf on both GET and POST routes.</li>
+          <li>D: security.enableCSRF() on the POST route.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -82,6 +118,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>D</strong><br><small>Setting the expiration to zero explicitly tells the platform&#x27;s page cache not to store this response.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Use cache.applyDefaultCache.</li>
+          <li>B: Return false from the middleware.</li>
+          <li>C: Use iscacheable in the controller.</li>
+          <li>D: Use res.cacheExpiration(0).</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -98,6 +146,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>The platform resolves file lookups from left to right; the leftmost cartridge always has the highest priority.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: All three are merged automatically.</li>
+          <li>B: The one in app_storefront_base.</li>
+          <li>C: The one in plugin_wishlist.</li>
+          <li>D: The one in app_custom.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -112,6 +172,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>The properties of this object become accessible via the pdict variable in the ISML template.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Pass a JSON object as the second argument to res.render('templateName', { data: value }).</li>
+          <li>B: Return the data from the controller module.</li>
+          <li>C: Use the pdict.set() method in the controller.</li>
+          <li>D: Assign the data to session.custom.</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -128,6 +200,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>Get initializes the endpoint, while append modifies a route inherited via superModule.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: server.get defines a new route; server.append adds middleware to the end of an existing route.</li>
+          <li>B: server.get handles data retrieval; server.append handles database writes.</li>
+          <li>C: server.get is for AJAX; server.append is for page loads.</li>
+          <li>D: server.append replaces the original route completely.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -142,6 +226,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>The request object provides a dedicated property to access incoming client cookies safely.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Via response.cookies.</li>
+          <li>B: Via session.getCookies().</li>
+          <li>C: Via request.httpCookies.</li>
+          <li>D: Using document.cookie.</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -158,6 +254,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>The entire session object must be saved and loaded across the application servers for every single request.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It exposes the data to cross-site scripting (XSS) attacks.</li>
+          <li>B: It automatically disables the page cache.</li>
+          <li>C: It increases the session size, degrading performance due to serialization overhead.</li>
+          <li>D: It violates the Object.MaxCustomAttributes quota.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -172,6 +280,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>Setting the status code explicitly on the response object informs search engines the product is permanently removed.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Use  in the ISML.</li>
+          <li>B: Throw a new Error(410).</li>
+          <li>C: res.setStatusCode(410).</li>
+          <li>D: res.redirect('410').</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -188,6 +308,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>Passing massive datasets (like full API responses) to the template engine consumes significant CPU and memory quotas.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It is a standard JS object, but it must be kept lean to avoid memory overhead during template rendering.</li>
+          <li>B: It is read-only and cannot be modified by middleware.</li>
+          <li>C: It can only hold strings and numbers, not objects.</li>
+          <li>D: It automatically persists data to the database.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -202,6 +334,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>The Resource class safely fetches the correct localized string based on the user&#x27;s current session locale.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Use dw.web.Resource.msg('error.key', 'bundle', null).</li>
+          <li>B: Create separate controller files for each language.</li>
+          <li>C: Use session.getLocale().translate('error.key').</li>
+          <li>D: Hardcode the translations in a JSON object in the script.</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -218,6 +362,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Models analyze the category hierarchy of the current product or search term to build the breadcrumb data structure.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: The Site Preferences.</li>
+          <li>B: The Product or Search model/decorator.</li>
+          <li>C: The URLUtils class.</li>
+          <li>D: The session.custom object.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -232,6 +388,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>The User-Agent string identifies the browser or crawler making the request (e.g., Googlebot).</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Check session.isBot.</li>
+          <li>B: Check request.httpUserAgent.</li>
+          <li>C: Check request.httpMethod === 'BOT'.</li>
+          <li>D: Use dw.system.Site.isCrawler().</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -248,6 +416,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>This uses the URL utility to safely construct the path and issues a 302 redirect via the response object.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: server.route('Home-Show').</li>
+          <li>B: res.redirect(URLUtils.url('Home-Show')).</li>
+          <li>C: res.render('Home-Show').</li>
+          <li>D: window.location.href = '/'.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -262,6 +442,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Salesforce restricts the call stack depth to 50 to prevent infinite recursion from crashing application threads.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: 500</li>
+          <li>B: 50</li>
+          <li>C: 100</li>
+          <li>D: Unlimited</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -278,6 +470,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>Using indexed attributes allows the database to filter results efficiently without loading all objects into memory.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Use CustomObjectMgr.queryCustomObjects with a specific indexed attribute in the query string.</li>
+          <li>B: Use CustomObjectMgr.getAllCustomObjects() and filter via a JavaScript loop.</li>
+          <li>C: Export all Custom Objects to XML and parse them.</li>
+          <li>D: Use direct SQL queries.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -292,6 +496,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>D</strong><br><small>This is a hard schema limit imposed by Salesforce to protect database performance.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: The cartridge will fail to upload.</li>
+          <li>B: Old attributes are automatically deleted to make room.</li>
+          <li>C: The storefront will throw a 500 Error for all users.</li>
+          <li>D: They cannot create new attribute definitions in Business Manager for that object type.</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -308,6 +524,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>B2C Commerce does not support &#x27;Arrays of Objects&#x27; natively, so JSON serialization into a text field is the standard workaround.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Create a 'Set of Objects' custom attribute.</li>
+          <li>B: Stringify the array to JSON and store it in a 'Text' or 'Long String' attribute.</li>
+          <li>C: Store the data in the session.custom object permanently.</li>
+          <li>D: Create hundreds of individual custom attributes (e.g., item1, item2).</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -322,6 +550,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>While Transaction.wrap() is preferred for safety, begin() allows manual start of atomic database operations.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: To begin rendering the ISML template.</li>
+          <li>B: To start a new HTTP request.</li>
+          <li>C: To manually start a database transaction when explicit control is needed.</li>
+          <li>D: To initialize a Service Framework call.</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -338,6 +578,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>Sites often use multiple active price books (e.g., standard, sale, clearance) stacked via priority.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: A maximum of two: one regular and one sale.</li>
+          <li>B: Only one active price book is allowed globally.</li>
+          <li>C: Multiple, and they are evaluated based on the assigned priority in Business Manager.</li>
+          <li>D: Only one per currency.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -352,6 +604,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>D</strong><br><small>Quotas protect the shared JVM and cannot be overridden, whereas service limits manage integration rules.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: They are identical terms for the same concept.</li>
+          <li>B: Quotas restrict database size; Limits restrict code length.</li>
+          <li>C: Quotas apply to Sandbox; Limits apply to Production.</li>
+          <li>D: Quotas are hard platform-enforced limits; Service Limits (like API timeouts) can sometimes be configured.</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -368,6 +632,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>D</strong><br><small>This is the secure, standard API method to access developer-defined custom preferences.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: session.custom.myConfig</li>
+          <li>B: request.getPreference('myConfig')</li>
+          <li>C: Site.preferences.myConfig</li>
+          <li>D: dw.system.Site.current.getCustomPreferenceValue('myConfig')</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -382,6 +658,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>This is the database column limit for standard String types; longer data requires the &#x27;Text&#x27; type.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: 255 characters.</li>
+          <li>B: 100,000 characters.</li>
+          <li>C: 4,000 characters.</li>
+          <li>D: Unlimited.</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -398,6 +686,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>D</strong><br><small>Browsers delete cookies when they receive an update instructing them that the cookie has expired (age 0).</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Use dw.system.Session.clearCookies().</li>
+          <li>B: Set the cookie value to null.</li>
+          <li>C: Call request.removeCookie('name').</li>
+          <li>D: Set its max age to 0 and add it to the response object.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -412,6 +712,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>The Service Framework adds enterprise-grade resilience and analytics that raw HTTP clients lack.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: HTTPClient is blocked on Production environments.</li>
+          <li>B: LocalServiceRegistry provides integrated logging, rate monitoring, and circuit breakers.</li>
+          <li>C: HTTPClient cannot make HTTPS requests.</li>
+          <li>D: LocalServiceRegistry executes significantly faster.</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -428,6 +740,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Creating massive amounts of persistent objects in memory threatens the heap space of the JVM.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It limits the total number of items a customer can have in their cart.</li>
+          <li>B: It limits the number of persistent objects (like products or orders) instantiated in a single request.</li>
+          <li>C: It limits the number of products returned in a search result.</li>
+          <li>D: It limits how many Custom Object definitions you can create in Business Manager.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -439,6 +763,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q28" value="C">C. Ensure all scripts access and lock objects in the same order and keep transactions as short as possible.</label></li>
       <li><label><input type="radio" name="questions_20260403_q28" value="D">D. Use the transaction.rollback() method after every query.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Disable the database locking mechanism in Site Preferences.</li>
+          <li>B: Wrap the entire Job in a single massive Transaction.</li>
+          <li>C: Ensure all scripts access and lock objects in the same order and keep transactions as short as possible.</li>
+          <li>D: Use the transaction.rollback() method after every query.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -450,6 +786,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q29" value="C">C. No, Maps and Sets cause memory leaks in the JVM.</label></li>
       <li><label><input type="radio" name="questions_20260403_q29" value="D">D. No, developers must exclusively use dw.util.Map and dw.util.Set.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Yes, they are fully ES2022 compliant.</li>
+          <li>B: Yes, but they are the versions provided by the Rhino engine, which may lack some modern ES6 methods.</li>
+          <li>C: No, Maps and Sets cause memory leaks in the JVM.</li>
+          <li>D: No, developers must exclusively use dw.util.Map and dw.util.Set.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -461,6 +809,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q30" value="C">C. Call the OCAPI Search API with a POST command.</label></li>
       <li><label><input type="radio" name="questions_20260403_q30" value="D">D. You cannot trigger a full rebuild directly from a Script; you must use a Job with the Search-Index step.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Set the search index status to 'Stale' in session.custom.</li>
+          <li>B: Use dw.catalog.SearchIndexMgr.rebuildAll().</li>
+          <li>C: Call the OCAPI Search API with a POST command.</li>
+          <li>D: You cannot trigger a full rebuild directly from a Script; you must use a Job with the Search-Index step.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -472,6 +832,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q31" value="C">C. It handles the retry logic if the API returns a 500 error.</label></li>
       <li><label><input type="radio" name="questions_20260403_q31" value="D">D. It maps the raw JSON response back into a script object.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It is where you define the URL path, headers, and request body for the outgoing call.</li>
+          <li>B: It bypasses the Circuit Breaker for testing.</li>
+          <li>C: It handles the retry logic if the API returns a 500 error.</li>
+          <li>D: It maps the raw JSON response back into a script object.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -483,6 +855,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q32" value="C">C. Use service.setMock(true) in the createRequest method.</label></li>
       <li><label><input type="radio" name="questions_20260403_q32" value="D">D. Administration &gt; Operations &gt; Services &gt; Select Service &gt; Check the &#x27;Mocked&#x27; box.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Delete the Service Credentials.</li>
+          <li>B: Add a mock:true property to the package.json.</li>
+          <li>C: Use service.setMock(true) in the createRequest method.</li>
+          <li>D: Administration > Operations > Services > Select Service > Check the 'Mocked' box.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -494,6 +878,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q33" value="C">C. POST allows bypassing the allowed_origins CORS settings.</label></li>
       <li><label><input type="radio" name="questions_20260403_q33" value="D">D. GET cannot handle JSON responses.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: POST is faster than GET for large product catalogs.</li>
+          <li>B: GET is strictly for retrieving data safely; POST creates resources or performs complex actions like authentication.</li>
+          <li>C: POST allows bypassing the allowed_origins CORS settings.</li>
+          <li>D: GET cannot handle JSON responses.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -505,6 +901,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q34" value="C">C. Disable the client_id requirement in OCAPI settings.</label></li>
       <li><label><input type="radio" name="questions_20260403_q34" value="D">D. Use a JWT (JSON Web Token) via the Auth API and verify the Client ID.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Use a hidden input field on the mobile screen.</li>
+          <li>B: Pass the Business Manager admin password in the request header.</li>
+          <li>C: Disable the client_id requirement in OCAPI settings.</li>
+          <li>D: Use a JWT (JSON Web Token) via the Auth API and verify the Client ID.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -516,6 +924,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q35" value="C">C. A tool to convert XML to JSON.</label></li>
       <li><label><input type="radio" name="questions_20260403_q35" value="D">D. A way to connect two different Business Manager instances.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: A mechanism to intercept and steal user passwords.</li>
+          <li>B: A custom script execution point that fires before or after a standard OCAPI resource call.</li>
+          <li>C: A tool to convert XML to JSON.</li>
+          <li>D: A way to connect two different Business Manager instances.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -527,6 +947,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q36" value="C">C. Store it in the &#x27;Service Credentials&#x27; password field in Business Manager.</label></li>
       <li><label><input type="radio" name="questions_20260403_q36" value="D">D. Pass it as a URL parameter generated by ISML.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Hardcode it as a constant at the top of the Service script.</li>
+          <li>B: Save it in a Custom Object named 'Secrets'.</li>
+          <li>C: Store it in the 'Service Credentials' password field in Business Manager.</li>
+          <li>D: Pass it as a URL parameter generated by ISML.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -538,6 +970,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q37" value="C">C. Increase the timeout to 60 seconds to guarantee it finishes.</label></li>
       <li><label><input type="radio" name="questions_20260403_q37" value="D">D. Ensure the Service timeout is configured lower (e.g., 2 seconds) to fail fast.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Change the service from POST to GET.</li>
+          <li>B: Wrap the service call in a Job.</li>
+          <li>C: Increase the timeout to 60 seconds to guarantee it finishes.</li>
+          <li>D: Ensure the Service timeout is configured lower (e.g., 2 seconds) to fail fast.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -549,6 +993,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q38" value="C">C. Ignore the error and return an empty object.</label></li>
       <li><label><input type="radio" name="questions_20260403_q38" value="D">D. Send an email to the customer.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Implement a retry logic with an exponential backoff strategy.</li>
+          <li>B: Trip the circuit breaker permanently.</li>
+          <li>C: Ignore the error and return an empty object.</li>
+          <li>D: Send an email to the customer.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -560,6 +1016,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q39" value="C">C. No, preferences can only be changed via WebDAV.</label></li>
       <li><label><input type="radio" name="questions_20260403_q39" value="D">D. Yes, but strictly through the Data API, as preferences are administrative configurations.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: No, OCAPI only handles catalog and order data.</li>
+          <li>B: Yes, they are available in the Shop API under /site.</li>
+          <li>C: No, preferences can only be changed via WebDAV.</li>
+          <li>D: Yes, but strictly through the Data API, as preferences are administrative configurations.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -571,6 +1039,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q40" value="C">C. To convert the raw HTTP string or JSON payload into a clean Data Transfer Object (DTO) for the script.</label></li>
       <li><label><input type="radio" name="questions_20260403_q40" value="D">D. To serialize the outgoing request payload.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: To write the response to the service log file.</li>
+          <li>B: To determine if the Circuit Breaker should trip.</li>
+          <li>C: To convert the raw HTTP string or JSON payload into a clean Data Transfer Object (DTO) for the script.</li>
+          <li>D: To serialize the outgoing request payload.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -582,6 +1062,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q41" value="C">C. Use the Code Profiler.</label></li>
       <li><label><input type="radio" name="questions_20260403_q41" value="D">D. Look in the custom-error.log file.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Check the WebDAV IMPEX folder.</li>
+          <li>B: Check the service-*.log files in the Log Center, assuming 'Communication Log' is enabled.</li>
+          <li>C: Use the Code Profiler.</li>
+          <li>D: Look in the custom-error.log file.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -593,6 +1085,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q42" value="C">C. It requires a separate HTTP request to the application server.</label></li>
       <li><label><input type="radio" name="questions_20260403_q42" value="D">D. It executes in the same thread and shares the cache policy of the parent template.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It executes asynchronously after the page loads.</li>
+          <li>B: It bypasses the controller and accesses the database directly.</li>
+          <li>C: It requires a separate HTTP request to the application server.</li>
+          <li>D: It executes in the same thread and shares the cache policy of the parent template.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -604,6 +1108,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q43" value="C">C. It prevents XSS attacks.</label></li>
       <li><label><input type="radio" name="questions_20260403_q43" value="D">D. It reduces the load on the application server.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It allows ISML to call third-party APIs directly.</li>
+          <li>B: It initiates a new internal request, allowing the specific component to have an independent cache policy.</li>
+          <li>C: It prevents XSS attacks.</li>
+          <li>D: It reduces the load on the application server.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -615,6 +1131,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q44" value="C">C. Configure a Webhook URL in Site Preferences.</label></li>
       <li><label><input type="radio" name="questions_20260403_q44" value="D">D. Use the dw.net.Webhook class.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Register a new Hook in hooks.json pointing to an external URL.</li>
+          <li>B: Create a public Controller route that parses the incoming JSON payload and trigger logic based on the data.</li>
+          <li>C: Configure a Webhook URL in Site Preferences.</li>
+          <li>D: Use the dw.net.Webhook class.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -626,6 +1154,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q45" value="C">C. It prevents the MaxCallStackDepth error.</label></li>
       <li><label><input type="radio" name="questions_20260403_q45" value="D">D. It analyzes the memory usage of Custom Objects.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It helps identify which external API integrations are introducing latency and slowing down the site flow.</li>
+          <li>B: It tracks how fast the ISML templates compile.</li>
+          <li>C: It prevents the MaxCallStackDepth error.</li>
+          <li>D: It analyzes the memory usage of Custom Objects.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -637,6 +1177,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q46" value="C">C. Select the &#x27;LegacyPipelet&#x27; step.</label></li>
       <li><label><input type="radio" name="questions_20260403_q46" value="D">D. Select the &#x27;RunController&#x27; step and point to a route.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Use the 'EvaluateString' step and type the code in the UI.</li>
+          <li>B: Select the 'ExecuteScriptModule' step type and provide the module path and exported function name.</li>
+          <li>C: Select the 'LegacyPipelet' step.</li>
+          <li>D: Select the 'RunController' step and point to a route.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -648,6 +1200,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q47" value="C">C. It is called before every single item is processed.</label></li>
       <li><label><input type="radio" name="questions_20260403_q47" value="D">D. It forces the job to wait for another job to finish.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It clears the database cache.</li>
+          <li>B: It is called exactly once before any chunks are processed to initialize resources like file streams or iterators.</li>
+          <li>C: It is called before every single item is processed.</li>
+          <li>D: It forces the job to wait for another job to finish.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -659,6 +1223,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q48" value="C">C. Hardcode them as constants in the script.</label></li>
       <li><label><input type="radio" name="questions_20260403_q48" value="D">D. Pass them via the query string in the job execution URL.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Define them in the package.json file.</li>
+          <li>B: Define the parameters in the steptypes.json file of the cartridge.</li>
+          <li>C: Hardcode them as constants in the script.</li>
+          <li>D: Pass them via the query string in the job execution URL.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -670,6 +1246,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q49" value="C">C. To automatically encrypt the data.</label></li>
       <li><label><input type="radio" name="questions_20260403_q49" value="D">D. To stream the data directly to the file system, avoiding memory quotas that string concatenation would trigger.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Because standard strings cannot contain XML tags.</li>
+          <li>B: To ensure the XML is minified.</li>
+          <li>C: To automatically encrypt the data.</li>
+          <li>D: To stream the data directly to the file system, avoiding memory quotas that string concatenation would trigger.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -681,6 +1269,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q50" value="C">C. Locked objects or invalid category assignments disrupting the data integrity constraints.</label></li>
       <li><label><input type="radio" name="questions_20260403_q50" value="D">D. The OCAPI client ID was incorrect.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: A developer forgot to clear the cache.</li>
+          <li>B: The Production instance ran out of disk space.</li>
+          <li>C: Locked objects or invalid category assignments disrupting the data integrity constraints.</li>
+          <li>D: The OCAPI client ID was incorrect.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -692,6 +1292,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q51" value="C">C. To test different content, layouts, or promotions simultaneously on segmented traffic to measure conversion rates.</label></li>
       <li><label><input type="radio" name="questions_20260403_q51" value="D">D. To compare Sandbox code with Production code.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: To test API endpoint performance.</li>
+          <li>B: To automatically fix JavaScript bugs on the frontend.</li>
+          <li>C: To test different content, layouts, or promotions simultaneously on segmented traffic to measure conversion rates.</li>
+          <li>D: To compare Sandbox code with Production code.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -703,6 +1315,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q52" value="C">C. Check the session.custom.promo object.</label></li>
       <li><label><input type="radio" name="questions_20260403_q52" value="D">D. Iterate through lineItem.priceAdjustments and inspect the applied promotion ID.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Query the PromotionMgr for the lowest price.</li>
+          <li>B: Use product.getPromotions().</li>
+          <li>C: Check the session.custom.promo object.</li>
+          <li>D: Iterate through lineItem.priceAdjustments and inspect the applied promotion ID.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -714,6 +1338,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q53" value="C">C. It is uploaded manually by the merchant via WebDAV.</label></li>
       <li><label><input type="radio" name="questions_20260403_q53" value="D">D. It is generated dynamically via a Controller every time a bot requests it.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: A developer must write a custom script using XMLStreamWriter.</li>
+          <li>B: It is generated automatically on a schedule via the Sitemap Job configuration in Merchant Tools.</li>
+          <li>C: It is uploaded manually by the merchant via WebDAV.</li>
+          <li>D: It is generated dynamically via a Controller every time a bot requests it.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -725,6 +1361,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q54" value="C">C. Use an OCAPI call to fetch JSON and render the tiles using React.</label></li>
       <li><label><input type="radio" name="questions_20260403_q54" value="D">D. Use an AJAX call to a Controller that renders only the HTML for the new product tiles and appends them to the DOM.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Fetch all products on the first load and hide them using CSS.</li>
+          <li>B: Redirect the user to page 2, page 3, etc., automatically via JavaScript.</li>
+          <li>C: Use an OCAPI call to fetch JSON and render the tiles using React.</li>
+          <li>D: Use an AJAX call to a Controller that renders only the HTML for the new product tiles and appends them to the DOM.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -736,6 +1384,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q55" value="C">C. It acts as a mock object to simulate a user profile without hitting the database.</label></li>
       <li><label><input type="radio" name="questions_20260403_q55" value="D">D. It generates a temporary session for testing.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It encrypts the customer's password before saving.</li>
+          <li>B: It connects to the Staging instance to download test data.</li>
+          <li>C: It acts as a mock object to simulate a user profile without hitting the database.</li>
+          <li>D: It generates a temporary session for testing.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -747,6 +1407,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q56" value="C">C. Use the session object to store variables instead.</label></li>
       <li><label><input type="radio" name="questions_20260403_q56" value="D">D. Always use single-thread execution in Job Framework 2.0.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Wrap all code in a single transaction.</li>
+          <li>B: Avoid using globally scoped variables that might be read or modified unpredictably by parallel executing threads.</li>
+          <li>C: Use the session object to store variables instead.</li>
+          <li>D: Always use single-thread execution in Job Framework 2.0.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -758,6 +1430,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q57" value="C">C. dw.util.SearchCriteria</label></li>
       <li><label><input type="radio" name="questions_20260403_q57" value="D">D. dw.catalog.ProductSearchModel</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: dw.system.IndexMgr</li>
+          <li>B: dw.catalog.ProductMgr</li>
+          <li>C: dw.util.SearchCriteria</li>
+          <li>D: dw.catalog.ProductSearchModel</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -769,6 +1453,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q58" value="C">C. product.custom.largeImageURL</label></li>
       <li><label><input type="radio" name="questions_20260403_q58" value="D">D. product.getLargeImage()</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: product.getImage('large', 0).getURL()</li>
+          <li>B: URLUtils.staticURL('/images/large/' + product.ID + '.jpg')</li>
+          <li>C: product.custom.largeImageURL</li>
+          <li>D: product.getLargeImage()</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -780,6 +1476,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q59" value="C">C. It is a URL parameter added to ensure different contextual versions of a component are cached separately (e.g., ?currency=EUR).</label></li>
       <li><label><input type="radio" name="questions_20260403_q59" value="D">D. It links the remote include to a specific Custom Object.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It forces the browser to ignore the local cache.</li>
+          <li>B: It encrypts the cache file on the server.</li>
+          <li>C: It is a URL parameter added to ensure different contextual versions of a component are cached separately (e.g., ?currency=EUR).</li>
+          <li>D: It links the remote include to a specific Custom Object.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -791,6 +1499,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q60" value="C">C. Customize the Error.js controller to catch exceptions and safely render a friendly maintenance or &#x27;Oops&#x27; template.</label></li>
       <li><label><input type="radio" name="questions_20260403_q60" value="D">D. Disable error logging to prevent the server from crashing.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Redirect all errors to the Homepage via Business Manager.</li>
+          <li>B: Wrap every single line of code in try/catch blocks.</li>
+          <li>C: Customize the Error.js controller to catch exceptions and safely render a friendly maintenance or 'Oops' template.</li>
+          <li>D: Disable error logging to prevent the server from crashing.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -802,6 +1522,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q61" value="C">C. Use session.custom to track the reservation temporarily.</label></li>
       <li><label><input type="radio" name="questions_20260403_q61" value="D">D. Use a try-catch block to handle the &#x27;OptimisticLockingException&#x27;.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Wrap the update in a Transaction and use the 'locking' parameter in the query.</li>
+          <li>B: Perform the update within a Job instead of a Storefront Controller.</li>
+          <li>C: Use session.custom to track the reservation temporarily.</li>
+          <li>D: Use a try-catch block to handle the 'OptimisticLockingException'.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -813,6 +1545,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q62" value="C">C. The item is passed to &#x27;write&#x27; as an empty object.</label></li>
       <li><label><input type="radio" name="questions_20260403_q62" value="D">D. The item is filtered out and will not be passed to the &#x27;write&#x27; function.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: The entire Job fails with a 'NullPointerException'.</li>
+          <li>B: The Job stops immediately and moves to the 'afterStep' phase.</li>
+          <li>C: The item is passed to 'write' as an empty object.</li>
+          <li>D: The item is filtered out and will not be passed to the 'write' function.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -824,6 +1568,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q63" value="C">C. Use request.setHttpBody() within the hook script.</label></li>
       <li><label><input type="radio" name="questions_20260403_q63" value="D">D. Modify the script argument object passed to the hook function.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Use a 'Remote Include' to transform the data.</li>
+          <li>B: It is impossible to modify the body; you can only validate it and return an error.</li>
+          <li>C: Use request.setHttpBody() within the hook script.</li>
+          <li>D: Modify the script argument object passed to the hook function.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -835,6 +1591,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q64" value="C">C. The &#x27;queryAllSiteProducts&#x27; method is deprecated and returns an empty list.</label></li>
       <li><label><input type="radio" name="questions_20260403_q64" value="D">D. Product queries are restricted to 10,000 results by the database layer.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It violates the 'Script.MaxMemory' quota by loading all objects into the JVM heap.</li>
+          <li>B: It violates the 'api.MaxObjectCount' quota for persistent objects.</li>
+          <li>C: The 'queryAllSiteProducts' method is deprecated and returns an empty list.</li>
+          <li>D: Product queries are restricted to 10,000 results by the database layer.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -846,6 +1614,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q65" value="C">C. The &#x27;UrlUtils.js&#x27; or the URL request mapping configuration in Business Manager.</label></li>
       <li><label><input type="radio" name="questions_20260403_q65" value="D">D. The &#x27;sitemap.xml&#x27; generator.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: The 'Search.js' controller.</li>
+          <li>B: The 'Product.isml' template.</li>
+          <li>C: The 'UrlUtils.js' or the URL request mapping configuration in Business Manager.</li>
+          <li>D: The 'sitemap.xml' generator.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -857,6 +1637,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q66" value="C">C. It causes a &#x27;Script.MaxCallStackDepth&#x27; violation.</label></li>
       <li><label><input type="radio" name="questions_20260403_q66" value="D">D. It creates significant overhead due to constant database &#x27;commit&#x27; and &#x27;begin&#x27; operations.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It automatically triggers a Site Maintenance mode.</li>
+          <li>B: It results in an 'IllegalStateException' because nested transactions are required.</li>
+          <li>C: It causes a 'Script.MaxCallStackDepth' violation.</li>
+          <li>D: It creates significant overhead due to constant database 'commit' and 'begin' operations.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -868,6 +1660,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q67" value="C">C. Store the Wishlist in the Customer Profile custom attributes.</label></li>
       <li><label><input type="radio" name="questions_20260403_q67" value="D">D. Copy the data via a Job that runs every 5 minutes.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It is impossible as sites have strictly isolated databases.</li>
+          <li>B: Use a Custom Object with the 'site-wide' scope instead of the 'site' scope.</li>
+          <li>C: Store the Wishlist in the Customer Profile custom attributes.</li>
+          <li>D: Copy the data via a Job that runs every 5 minutes.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -879,6 +1683,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q68" value="C">C. getMockData</label></li>
       <li><label><input type="radio" name="questions_20260403_q68" value="D">D. createMockRequest</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: mockFull</li>
+          <li>B: bypassCall</li>
+          <li>C: getMockData</li>
+          <li>D: createMockRequest</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -890,6 +1706,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q69" value="C">C. To bypass the log file size limits.</label></li>
       <li><label><input type="radio" name="questions_20260403_q69" value="D">D. Because categorized loggers are deprecated.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: To ensure logs are sent to an external syslog server automatically.</li>
+          <li>B: To capture all log statements across the entire system regardless of the category.</li>
+          <li>C: To bypass the log file size limits.</li>
+          <li>D: Because categorized loggers are deprecated.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -901,6 +1729,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q70" value="C">C. It is not a standard SFRA feature; caching is controlled via the &#x27;res&#x27; object.</label></li>
       <li><label><input type="radio" name="questions_20260403_q70" value="D">D. It enables page-level caching for the next 24 hours.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: It invalidates the cache for all users globally.</li>
+          <li>B: It automatically adds the product ID to the cache key.</li>
+          <li>C: It is not a standard SFRA feature; caching is controlled via the 'res' object.</li>
+          <li>D: It enables page-level caching for the next 24 hours.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -912,6 +1752,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q71" value="C">C. To register the custom step and define its input/output parameters for Business Manager.</label></li>
       <li><label><input type="radio" name="questions_20260403_q71" value="D">D. To store the database credentials for the job&#x27;s external integrations.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: To compile the JavaScript code into optimized machine code.</li>
+          <li>B: To define the sequence in which different jobs are executed.</li>
+          <li>C: To register the custom step and define its input/output parameters for Business Manager.</li>
+          <li>D: To store the database credentials for the job's external integrations.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -923,234 +1775,512 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <li><label><input type="radio" name="questions_20260403_q72" value="C">C. Only when the cartridge containing the asset is uploaded with a new version string.</label></li>
       <li><label><input type="radio" name="questions_20260403_q72" value="D">D. Automatically every 60 minutes.</label></li>
     </ol>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Every time the user clears their browser cookies.</li>
+          <li>B: When the Search Index is rebuilt.</li>
+          <li>C: Only when the cartridge containing the asset is uploaded with a new version string.</li>
+          <li>D: Automatically every 60 minutes.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>A developer needs to implement a custom &#x27;Sort Order&#x27; for a Search Results page. Which object should they modify?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>What is the outcome of attempting to call &#x27;dw.system.Transaction.commit()&#x27; when no transaction was actually started?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>In OCAPI, what is the purpose of the &#x27;x-dw-client-id&#x27; header?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>Which method should be used to securely compare a user-provided password against the &#x27;Password&#x27; attribute of a Custom Object (assuming it was hashed)?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>In SFRA, how can a developer ensure that a specific variable in &#x27;res.viewData&#x27; is available to all templates rendered in a single request, including nested ones?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>What is the primary technical limitation of &#x27;dw.util.SortedMap&#x27; when compared to a standard JavaScript &#x27;Object&#x27;?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>A developer wants to use &#x27;ISML expressions&#x27; inside a JavaScript file. Why is this not possible?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>When using &#x27;dw.svc.LocalServiceRegistry&#x27;, which status code indicates that the &#x27;Circuit Breaker&#x27; has tripped and blocked the request?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>An SFRA controller needs to render a different template based on the user&#x27;s &#x27;Device Type&#x27; (Mobile vs Desktop). What is the best practice?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>What is the purpose of &#x27;dw.system.System.getPreferences()&#x27;?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>How can a developer effectively debug a Job that only fails on the &#x27;Production&#x27; instance due to data-specific issues?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>When defining a Custom Object, what does the &#x27;Key Attribute&#x27; represent?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>Which B2C Commerce tool allows a developer to see a &#x27;live&#x27; breakdown of which pipeline steps or scripts are consuming the most execution time?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>What is the maximum number of &#x27;Price Books&#x27; that can be assigned to a single Site?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>If an ISML template uses , why might it fail to render correctly if &#x27;myValue&#x27; contains HTML tags?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>When implementing &#x27;Apple Pay&#x27; for a B2C storefront, where is the &#x27;Merchant ID&#x27; primarily configured?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>Why would a developer use &#x27;dw.util.UUIDUtils.createUUID()&#x27; instead of a standard counter for a unique transaction ID?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>What is the primary architectural benefit of &#x27;Page Designer&#x27; for a developer?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>An ISML template needs to format a currency value correctly for the current locale. Which tag is most appropriate?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>In Account Manager, what does the &#x27;API Client&#x27; record define?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>What happens if a developer tries to access &#x27;request.geolocation&#x27; on a Sandbox instance?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>Which of the following describes the &#x27;OCAPI Data API&#x27; primarily?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>In a &#x27;Remote Include&#x27; call, which variables from the parent request are automatically available in the included controller?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>How do you implement &#x27;Rate Limiting&#x27; for a custom Service integration to prevent overwhelming a third-party API?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>What is the primary risk of using &#x27;dw.system.Transaction.rollback()&#x27; in a catch block?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>A developer needs to fetch a list of all Orders placed in the last 24 hours. Which class is best suited for this?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>Why is &#x27;dw.crypto.MessageDigest&#x27; preferred over simple string manipulation for generating a hash?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>In Business Manager, what does the &#x27;Replication&#x27; feature do between Staging and Production?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>What is the purpose of the &#x27;dw.catalog.CatalogMgr.getSiteCatalog()&#x27; method?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>A developer needs to check if a specific &#x27;Promotion&#x27; is currently active for the current shopper. Which object should they use?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>In ISML, what is the impact of using ?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>Which of the following is a &#x27;Hard Quota&#x27; that cannot be increased even by Salesforce Support?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>Why is it important to use &#x27;dw.web.URLUtils.continueURL()&#x27; inside an ISML form action?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>What is the primary purpose of &#x27;dw.util.Locale.getLocale(request.locale)&#x27;?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>How do you define a &#x27;Shared&#x27; cartridge that can be used by all sites in a Realm?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>In the Job Framework, what happens if the &#x27;read&#x27; function returns &#x27;null&#x27;?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>What is the specific purpose of the &#x27;dw.catalog.SearchModel.setSearchPhrase()&#x27; method?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
   <div class="question">
     <h2>A developer needs to check if a Customer has already &#x27;Used&#x27; a specific one-time-use coupon. Which class should they inspect?</h2>
-
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 </ol>

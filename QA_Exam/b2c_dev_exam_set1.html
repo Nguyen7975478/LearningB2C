@@ -38,6 +38,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Code is deployed under the active code version folder. Business Manager exposes code versions from /versioned/cartridges/&lt;code-version&gt;.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: /cartridges/current</li>
+          <li>B: /versioned/cartridges/<code-version>/cartridges</li>
+          <li>C: /static/default/cartridges</li>
+          <li>D: /on-demand/<code-version>/cartridges</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -52,6 +64,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Controllers resolve by traversing the cartridge path. Clearing cache ensures fresh resolution.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Restart the application server</li>
+          <li>B: Add the cartridge to the site’s cartridge path and clear caches</li>
+          <li>C: Rebuild ISML to HTML artifacts manually</li>
+          <li>D: Assign the cartridge to a replication target</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -68,6 +92,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>SFRA is MVC-like with controllers, models/decorators, and ISML templates; routing is in server code.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: SFRA stores all server-side logic in ISML templates</li>
+          <li>B: SFRA separates controllers, models, and views with routing via server.js</li>
+          <li>C: SFRA requires no middleware for CSRF protection</li>
+          <li>D: SFRA disallows decorators on product models</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -82,6 +118,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Site-level settings define taxation and default currency.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Merchant Tools > Ordering > Taxation</li>
+          <li>B: Administration > Sites > Manage Sites > [Site] > Settings</li>
+          <li>C: Administration > Global Preferences > Currency</li>
+          <li>D: Merchant Tools > Site Preferences > Localization</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -98,6 +146,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Put custom cartridges before app_storefront_base so overrides and extensions resolve first.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: app_storefront_base before custom cartridges</li>
+          <li>B: Custom cartridges first; app_storefront_base last</li>
+          <li>C: app_storefront_base only; custom cartridges added in BM modules</li>
+          <li>D: The order doesn’t matter</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -112,6 +172,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B, D</strong><br><small>The site must reference a code version and cartridge path; DNS/aliases occur outside initial BM steps.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Configure hostname aliases/DNS mapping</li>
+          <li>B: Assign a code version to the site</li>
+          <li>C: Create a dedicated replication process</li>
+          <li>D: Add a valid cartridge path</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -128,6 +200,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>SFRA promotes decorators to extend models in a maintainable way.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Modify the base Product model directly</li>
+          <li>B: Use decorators to add computed properties to the product object</li>
+          <li>C: Add properties in the ISML layer</li>
+          <li>D: Add custom fields to the product price book</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -142,6 +226,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>You typically manage source with Git and deploy to sandboxes via WebDAV.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: WebDAV client</li>
+          <li>B: OCAPI Shop API</li>
+          <li>C: Git</li>
+          <li>D: Page Designer</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -158,6 +254,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>dw.json tells the IDE where and how to upload to the sandbox.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Configure OCAPI permissions</li>
+          <li>B: Define Business Manager locales</li>
+          <li>C: Define server connection (hostname, code version) for upload</li>
+          <li>D: Toggle log levels</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -172,6 +280,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Maintain customizations via extension points and decorators to tolerate updates.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Updates are auto-merged into custom cartridges</li>
+          <li>B: Updates can affect templates and controllers; maintain extensions through composition/decorators</li>
+          <li>C: Updates never change CSS structure</li>
+          <li>D: Updates are backward compatible for all hooks</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -188,6 +308,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Exercise a known route exposed solely by the cartridge to validate path precedence.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Trigger a BM cache warmup</li>
+          <li>B: Hit a controller route unique to that cartridge and observe response</li>
+          <li>C: Recompile ISML files</li>
+          <li>D: Re-index the product catalog</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -202,6 +334,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>Scripts, controllers, and models/decorators are common; there’s no sfcc-logs folder in cartridges.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: cartridge/scripts</li>
+          <li>B: cartridge/controllers</li>
+          <li>C: cartridge/models (or decorators/factories)</li>
+          <li>D: cartridge/sfcc-logs</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -218,6 +362,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>BM provides Site Import &amp; Export for data XML/CSV.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Administration > Code Versions</li>
+          <li>B: Merchant Tools > Site Import & Export</li>
+          <li>C: Merchant Tools > SEO</li>
+          <li>D: Administration > Roles & Permissions</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -232,6 +388,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>Payment methods and processors are configured under Ordering.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Merchant Tools > Ordering > Payment Methods/Processors</li>
+          <li>B: Administration > Global Preferences > Payment</li>
+          <li>C: Merchant Tools > Services > Payment</li>
+          <li>D: Merchant Tools > Site Preferences > Payments</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -248,6 +416,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B, C</strong><br><small>Mark attribute searchable and rebuild indexes to include it.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Add it to searchable fields in site search preferences</li>
+          <li>B: Mark the attribute as searchable in attribute settings</li>
+          <li>C: Rebuild the search index</li>
+          <li>D: Update the Page Designer component</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -262,6 +442,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>Search refinements are configured under Search.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Merchant Tools > SEO > URL Rules</li>
+          <li>B: Merchant Tools > Search > Refine Settings</li>
+          <li>C: Merchant Tools > Search > Search Refinements</li>
+          <li>D: Merchant Tools > Products and Catalogs > Catalogs</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -278,6 +470,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Use log categories and profilers to measure controller performance.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Request Logs and custom log categories</li>
+          <li>B: Profilers in BM</li>
+          <li>C: OCAPI Data API</li>
+          <li>D: URL Rules</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -292,6 +496,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>BM log settings control categories, levels, and custom appenders.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Log rotation in WebDAV</li>
+          <li>B: Log categories and appenders in BM</li>
+          <li>C: CSRF token in server middleware</li>
+          <li>D: Cache inheritance</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -308,6 +524,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Define the type/attributes, and if accessed externally, configure permissions.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Create the custom object type and its attributes in BM</li>
+          <li>B: Add the object to the cartridge path</li>
+          <li>C: Configure permissions and ensure OCAPI/Data API access if needed</li>
+          <li>D: Add the object to the search index refinements</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -322,6 +550,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Extend the model and update templates to display values.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: ISML templates rendering product details</li>
+          <li>B: Model decorators/factories</li>
+          <li>C: The replication configuration</li>
+          <li>D: Code version folder name</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -338,6 +578,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>Dictionaries manage synonyms, stop words, etc.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Merchant Tools > Search > Dictionaries</li>
+          <li>B: Merchant Tools > SEO > Redirects</li>
+          <li>C: Administration > Site Preferences</li>
+          <li>D: Merchant Tools > Content > Assets</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -352,6 +604,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Validate input file structure against the expected XSD.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Clear site caches</li>
+          <li>B: Validate the XML against the schema expected by BM Import</li>
+          <li>C: Re-upload to a different directory</li>
+          <li>D: Trigger replication</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -368,6 +632,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>OCAPI permissions are defined in ocapi.json and tied to client credentials.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Update ocapi.json to permit read/write on the custom object</li>
+          <li>B: Add the integration host to cspTrustedSites</li>
+          <li>C: Configure client ID with appropriate API settings in BM</li>
+          <li>D: Add a custom URL rule</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -382,6 +658,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Merchandisers work with products, content, and search tools.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Products and Catalogs</li>
+          <li>B: Search and Search Refinements</li>
+          <li>C: Services Framework</li>
+          <li>D: Content (Assets, Slots, Page Designer)</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -398,6 +686,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>CSRF protection is required for POSTs and form handling in SFRA.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: server.middleware.https only</li>
+          <li>B: csrfProtection.validateRequest paired with csrfProtection.generateToken</li>
+          <li>C: consentTracking.consent</li>
+          <li>D: cache.applyCache</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -412,6 +712,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>iscomponent supports modular, independently cachable render units.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: isinclude</li>
+          <li>B: isdecorate</li>
+          <li>C: iscomponent</li>
+          <li>D: iscache</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -428,6 +740,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>res.render accepts a template path and a view-data hash.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: res.redirect(URLUtils.url(…))</li>
+          <li>B: res.render(template, viewDataObject)</li>
+          <li>C: next()</li>
+          <li>D: res.json(viewDataObject)</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -442,6 +766,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Return JSON via res.json (preferred) and ensure proper content type.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Set response content type to application/json</li>
+          <li>B: Call res.render with a JSON template</li>
+          <li>C: Use res.json or write JSON string and set status</li>
+          <li>D: Override site preference DisableJSON to false</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -458,6 +794,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Use decorators/factories to keep business logic out of templates.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: In the ISML template using script tags</li>
+          <li>B: In a product decorator module applied by the model factory</li>
+          <li>C: In the OCAPI configuration</li>
+          <li>D: In Page Designer component JSON</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -472,6 +820,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Define forms XML, secure POST route, and use SFCC Form bindings/validation server-side.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: forms XML definition under forms/</li>
+          <li>B: Controller route using server.post with CSRF middleware</li>
+          <li>C: Client-side JS only, no server validation</li>
+          <li>D: Form handler that binds and validates fields via Form API</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -488,6 +848,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>D</strong><br><small>Use documented hook extension points for pricing, taxes, or calculations.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: dw.web.HttpParameterMap</li>
+          <li>B: app_*.properties</li>
+          <li>C: Hook dw.ocapi.shop.basket.beforeGET</li>
+          <li>D: Hook implementations such as app.calculateLineItem or similar extension points</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -502,6 +874,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Page types and components define marketer-editable structures.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: A page type definition</li>
+          <li>B: A job to publish the page nightly</li>
+          <li>C: Components (and placements) used within that page type</li>
+          <li>D: ocapi.json entry to authorize render</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -518,6 +902,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>ISML uses properties files under templates/resources for i18n.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: cartridge/templates/resources/*.properties per locale</li>
+          <li>B: cartridge/scripts/i18n.js</li>
+          <li>C: Global BM preferences</li>
+          <li>D: services.json</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -532,6 +928,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Use Logger with configured categories and levels.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Use System.out.println</li>
+          <li>B: Use dw.system.Logger.getLogger(category, file).info/debug/error</li>
+          <li>C: Write to a custom text file via WebDAV</li>
+          <li>D: Log only in production</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -548,6 +956,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Use the Service Framework with caching and resiliency patterns; avoid per-request blocking calls when possible.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Cache results where possible via response or application cache</li>
+          <li>B: Move calls into decorators executed for each request</li>
+          <li>C: Use Service Framework with proper timeouts and circuit breakers and cache at model layer</li>
+          <li>D: Increase Business Manager log levels to FATAL</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -562,6 +982,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Use platform cache directives (iscache or res.cachePeriod) to vary content by keys.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Disable cache</li>
+          <li>B: Use res.cachePeriod with varyBy parameters, or use iscache with vary attributes</li>
+          <li>C: Use only CDN-level caching</li>
+          <li>D: Use OCAPI caching only</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -578,6 +1010,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Timeouts, resiliency, and parsing/caching are core Service Framework concerns.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Connection and socket timeouts</li>
+          <li>B: Circuit breaker/retry policies and error handling</li>
+          <li>C: OCAPI Data credential reuse</li>
+          <li>D: Caching policy/response parsing</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -592,6 +1036,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>Store secrets in BM service credentials, not code.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: In cartridge scripts</li>
+          <li>B: In dw.json</li>
+          <li>C: In BM service profiles/credentials</li>
+          <li>D: In site preferences resources.properties</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -608,6 +1064,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>OCAPI access requires client credentials and appropriate permissions.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Update OCAPI Shop permissions in ocapi.json to allow basket read/write</li>
+          <li>B: Create a custom cartridge to simulate OCAPI</li>
+          <li>C: Configure client ID/secret and assign to the OCAPI setting</li>
+          <li>D: Enable cartridge-level setting shop.ocapi.enabled=true</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -622,6 +1090,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>A script/system step pair often imports data then rebuilds search indexes.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: A script step to call import API for inventory list</li>
+          <li>B: Disable all caches for the duration</li>
+          <li>C: A system step to trigger search index rebuild</li>
+          <li>D: A replication immediately after</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -638,6 +1118,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B, D</strong><br><small>impex is the import/export directory; instance or org-level subfolders are typical.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: /on/demand/tmp/</li>
+          <li>B: /impex/src/</li>
+          <li>C: /versioned/imports/</li>
+          <li>D: /impex/src/instance/</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -652,6 +1144,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Streaming and delta/chunked imports scale better.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Streamed CSV/XML parsing in scripts</li>
+          <li>B: Break imports into chunks and use delta updates</li>
+          <li>C: Increase log level to DEBUG globally</li>
+          <li>D: Run imports through ISML templates</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -668,6 +1172,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>Explicitly list fields to read/write—principle of least privilege.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Only system attributes</li>
+          <li>B: Only custom attributes</li>
+          <li>C: Both system and custom attributes you intend to expose</li>
+          <li>D: No attributes; OCAPI infers them</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -682,6 +1198,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Async improves UX and resilience when work is long-running or not needed immediately.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Non-blocking to storefront request path</li>
+          <li>B: Long-running processing or batch-oriented data</li>
+          <li>C: Requires immediate shopper feedback at checkout</li>
+          <li>D: Can be queued and retried independently</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -698,6 +1226,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Redact at parse/log time to prevent sensitive data leakage.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Disable logs</li>
+          <li>B: Use a response parser that removes/redacts sensitive fields before logging</li>
+          <li>C: Print full payloads but store logs only for one day</li>
+          <li>D: Rely on DEBUG-only logs</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -712,6 +1252,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>OCAPI hooks are implemented in cartridges on the server side.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: In ocapi.json directly</li>
+          <li>B: In a cartridge implementing the documented hook scripts and registered in cartridge path</li>
+          <li>C: In Business Manager’s Log Settings</li>
+          <li>D: In Page Designer page types</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -728,6 +1280,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Retries/backoff and pre-checks mitigate contention issues.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Introduce retry with backoff in the job script</li>
+          <li>B: Switch job to run synchronously on storefront requests</li>
+          <li>C: Add job parameterization and pre-checks for locks</li>
+          <li>D: Increase code version</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -742,6 +1306,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Delta reindexing is efficient for frequent updates.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Full reindex every hour</li>
+          <li>B: Delta indexing after each import</li>
+          <li>C: No indexing; search auto-detects</li>
+          <li>D: Reindex once daily</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -758,6 +1334,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Platform supports template caching and response cache; CDN is external; DB row cache is not a storefront concept.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: iscache directive at template level</li>
+          <li>B: CDN edge cache only</li>
+          <li>C: Application response cache (res.cachePeriod/varyBy)</li>
+          <li>D: Database row cache</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -772,6 +1360,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Use iscache with appropriate vary keys to maintain correctness.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: No cache; always dynamic</li>
+          <li>B: iscache with vary-by-currency and a custom vary key for promo state</li>
+          <li>C: Cache globally for all users</li>
+          <li>D: Use OCAPI cache exclusively</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -788,6 +1388,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Avoid redundant service calls and blocking I/O paths.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Duplicated service calls per request without caching</li>
+          <li>B: Excessive synchronous I/O inside the request thread</li>
+          <li>C: Moving logic to decorators</li>
+          <li>D: Using Logger at INFO for checkpoints</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -802,6 +1414,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Use properties and Resource helpers for localization.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Place strings in properties files under templates/resources</li>
+          <li>B: Hardcode English in ISML and translate later</li>
+          <li>C: Use Resource.msg/Resource.msgf helpers</li>
+          <li>D: Store strings in services.json</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -818,6 +1442,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Clear app cache and template cache as appropriate.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Clear application cache</li>
+          <li>B: Force re-index of search every time</li>
+          <li>C: Invalidate iscache entries if template cache was used</li>
+          <li>D: Change code version name</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -832,6 +1468,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>Structured logging with categories and levels aids analysis.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Use Logger with a dedicated category, log timings, and analyze in BM logs</li>
+          <li>B: Print timings in templates to the page footer</li>
+          <li>C: Log all data at ERROR level</li>
+          <li>D: Rely only on Request Logs default</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -848,6 +1496,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Keep controllers thin; move logic to reusable layers.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Controllers only</li>
+          <li>B: Decorators, helpers, factories, and services</li>
+          <li>C: ISML templates</li>
+          <li>D: ocapi.json</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -862,6 +1522,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Provide localized properties and assets for the new locale.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: templates/resources/*.properties for the new locale</li>
+          <li>B: Page Designer components JSON only</li>
+          <li>C: Static assets localized per locale where needed</li>
+          <li>D: dw.json locales</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -878,6 +1550,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>Fail fast, cache, and add resiliency patterns. Avoid multiplying calls.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Reduce timeouts to fail fast</li>
+          <li>B: Add caching of responses where feasible</li>
+          <li>C: Add retries with exponential backoff and circuit breakers</li>
+          <li>D: Increase the number of synchronous calls per page</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -892,6 +1576,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Centralize domain logic in hooks/decorators for reuse and consistency.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: None; controller is the best place for pricing</li>
+          <li>B: Violates extensibility; use pricing hooks/decorators to centralize logic</li>
+          <li>C: Pricing must live in ISML</li>
+          <li>D: OCAPI enforces this automatically</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -908,6 +1604,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Precompute data and cache static fragments to accelerate rendering.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Minimize logic in ISML; precompute in models</li>
+          <li>B: Use remote includes for every snippet</li>
+          <li>C: Cache static fragments with iscache</li>
+          <li>D: Render JSON then transform client-side</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -922,6 +1630,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>Remote includes are used for separate pipeline execution and caching behavior.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: When the included content must execute in a separate pipeline and be independently cached</li>
+          <li>B: Always, because remote includes are faster</li>
+          <li>C: Only for JSON responses</li>
+          <li>D: Never; they are deprecated</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>

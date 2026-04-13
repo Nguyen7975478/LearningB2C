@@ -38,6 +38,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>C</strong><br><small>Cartridge path is resolved left-to-right; first match wins (custom extA).</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: The route from app_storefront_base</li>
+          <li>B: The route from app_custom_extB</li>
+          <li>C: The route from app_custom_extA</li>
+          <li>D: The platform throws an ambiguity error</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -52,6 +64,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Clear caches; ensure the new version’s cartridges are referenced in the site path.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Clear application cache and any relevant template caches</li>
+          <li>B: Rebuild search indexes</li>
+          <li>C: Update cartridge path under the site to include new cartridges</li>
+          <li>D: Restart the application servers</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -68,6 +92,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Tag each template candidate with a unique marker to observe which renders.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Inspect server logs for a template load line</li>
+          <li>B: Temporarily add a unique comment/string to each candidate template and reload the page</li>
+          <li>C: Change the template name in the base to force an error</li>
+          <li>D: Enable global DEBUG and check BM Profiler</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -82,6 +118,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Middleware runs in registered order; earlier middleware can short-circuit.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Middleware order doesn’t matter; all are parallelized</li>
+          <li>B: Middleware executes in the order registered on the route; earlier middleware can short-circuit</li>
+          <li>C: All middleware executes after the main route function</li>
+          <li>D: Middleware is defined only in server.js, not per-route</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -98,6 +146,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Caching without proper vary keys can surface stale/other-product data.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Route-level cache not varying by product ID</li>
+          <li>B: iscache fragment without vary keys including product ID</li>
+          <li>C: Product attributes not persisted yet</li>
+          <li>D: Missing CSRF token</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -112,6 +172,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Running custom decorator before base can access missing fields; order matters.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Decorator not executed due to hook conflicts</li>
+          <li>B: Decorator operates on incomplete base model, missing fields it expects</li>
+          <li>C: Infinite recursion in factory</li>
+          <li>D: No impact; decorator order is irrelevant</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -128,6 +200,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Missing vary on remote include or parent response cache causes stale totals.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Remote include cached without vary-by-promotion state</li>
+          <li>B: Response cache on parent route not varying by basket UUID</li>
+          <li>C: Missing ocapi.json Shop settings</li>
+          <li>D: Logger mis-level (INFO vs DEBUG)</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -142,6 +226,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Paths merge; Site-level ordering takes precedence.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Only Organization-level path is used</li>
+          <li>B: The two are merged; Site-level entries take precedence order-wise</li>
+          <li>C: The platform alternates between them per request</li>
+          <li>D: Site-level path is ignored if Organization-level exists</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -158,6 +254,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Verify identical structure and presence of the script in the target version.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Clear logs</li>
+          <li>B: Compare directory structures and ensure the script exists in the same cartridge location</li>
+          <li>C: Rebuild caches</li>
+          <li>D: Change code version label</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -172,6 +280,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Keep controllers thin; push business logic to helpers/decorators.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Controllers should hold all business logic; helpers handle I/O only</li>
+          <li>B: Helpers/decorators encapsulate business rules; controllers orchestrate request handling and rendering</li>
+          <li>C: Decorators are for CSS; helpers are for translations</li>
+          <li>D: Controllers must return JSON only; helpers render ISML</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -188,6 +308,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Cached JSON without vary risks data leakage and stale personalization.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Leaking shopper-specific data across users</li>
+          <li>B: Increased server CPU per request</li>
+          <li>C: Serving outdated or mismatched personalization</li>
+          <li>D: Breaking OCAPI rate-limits</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -202,6 +334,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>Higher-priority cartridge may shadow PD component templates/scripts.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: The new cartridge shadows template or script names expected by PD components</li>
+          <li>B: CDN disabled</li>
+          <li>C: Missing ocapi.data write permission</li>
+          <li>D: Log level is too low</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -218,6 +362,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Non-indexable type or attribute not attached to product type block search.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: The attribute type is non-indexable (e.g., binary)</li>
+          <li>B: The attribute wasn’t added to the product type assigned to the SKUs</li>
+          <li>C: The attribute is localized, but values were uploaded only for the default locale while search uses another</li>
+          <li>D: Log appenders weren’t configured</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -232,6 +388,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Use curated synonyms + tuned fuzzy thresholds to balance recall/precision.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Add broad wildcard rules on all keywords</li>
+          <li>B: Use Dictionaries for synonyms and tune fuzzy matching thresholds</li>
+          <li>C: Disable stemming and rely on exact match</li>
+          <li>D: Rebuild the catalog nightly</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -248,6 +416,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Assign to menu and reindex so values are available.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Assigning the refinement to the relevant search refinement menu</li>
+          <li>B: Rebuilding the search index to include the attribute</li>
+          <li>C: Adding the component to Page Designer</li>
+          <li>D: Creating a custom object</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -262,6 +442,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Use mapping rules to bucket values into a refinement dimension.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Create a classification catalog</li>
+          <li>B: Use search mapping rules to bucket attribute values into refinement groups</li>
+          <li>C: Add a new product attribute and backfill data manually</li>
+          <li>D: Use URL rules</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -278,6 +470,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Missing delta trigger or attribute not searchable prevents prompt appearance.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Missing trigger for delta indexing job step post-import</li>
+          <li>B: Attribute not marked searchable</li>
+          <li>C: CDN not purged</li>
+          <li>D: Remote include disabled</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -292,6 +496,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Variant attributes can be indexed and mapped to facets with proper config.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Variant attributes cannot be used in refinements</li>
+          <li>B: Use search configuration that indexes variant attributes and map to refinements appropriately</li>
+          <li>C: Only master-level attributes are indexable</li>
+          <li>D: Requires OCAPI Data POST per product</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -308,6 +524,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Precompute margin and define a sort using that field.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Precompute and store margin in an indexable attribute updated by jobs</li>
+          <li>B: Compute margin in-template during render for each product in results</li>
+          <li>C: Implement a custom sort definition using the precomputed field</li>
+          <li>D: Use client-side JavaScript to reorder results after page load</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -322,6 +550,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Missing localized values or tokenizer differences reduce results.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Missing localized attribute values for that locale</li>
+          <li>B: The site runs older SFRA</li>
+          <li>C: The tokenizer for that locale differs, resulting in stricter matching</li>
+          <li>D: Too many Page Designer components</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -338,6 +578,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Taper stemming and validate via A/B and logs.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Disable stemming entirely and push to production immediately</li>
+          <li>B: Reduce stemming to a moderate level and re-evaluate with A/B testing and logs</li>
+          <li>C: Switch to wildcard-only search</li>
+          <li>D: Rebuild the catalog every hour</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -352,6 +604,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>One-way, precise expansions prevent over-broad matching.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Convert the synonym set to one-way synonyms limited to high-precision expansions</li>
+          <li>B: Increase fuzzy distance</li>
+          <li>C: Delete all synonyms</li>
+          <li>D: Add redirect rules</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -368,6 +632,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Enable attribute flags and include it in refinements/sort config.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Enable both searchable and sortable flags on the attribute definition</li>
+          <li>B: Add the attribute to “refinements” and to the sort definition</li>
+          <li>C: Add it to ocapi.json write_attributes</li>
+          <li>D: Replace the catalog</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -382,6 +658,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Reduce precision and store normalized tokens to shrink the index.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Reduce precision (e.g., truncate decimals) if exact precision is unnecessary</li>
+          <li>B: Store normalized values, not verbose text, if text is not required</li>
+          <li>C: Duplicate fields for safety</li>
+          <li>D: Increase log levels</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -398,6 +686,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Protect POSTs and validate inputs/size to prevent abuse.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: CSRF protection on POST routes when relevant</li>
+          <li>B: Input validation and size limits; reject overly large or malformed payloads</li>
+          <li>C: Disable HTTPS to reduce latency</li>
+          <li>D: Write directly to logs for auditing PII</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -412,6 +712,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>Timeouts, CB, and backoff retries protect storefront under stress.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Connection timeout and socket timeout</li>
+          <li>B: Circuit breaker thresholds and open-state duration</li>
+          <li>C: Retry count with exponential backoff</li>
+          <li>D: Disable all logging globally</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -428,6 +740,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>For personalized endpoints, either avoid caching or vary appropriately.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Do not cache or include vary keys (customer, locale, currency) where needed</li>
+          <li>B: If caching, include appropriate vary keys (customer group, locale, currency) or disable cache</li>
+          <li>C: Always set max-age=86400</li>
+          <li>D: Force CDN to ignore all headers</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -442,6 +766,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Logic diverges from hooks; duplication across outputs becomes fragile.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: JSON cannot carry prices</li>
+          <li>B: Duplication and divergence from the platform pricing hooks/decorators</li>
+          <li>C: Increased log size</li>
+          <li>D: Page Designer breaks</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -458,6 +794,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Ensure hook order executes before totals; deterministic placement.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Move logic into ISML</li>
+          <li>B: Ensure hook is invoked in the calculation pipeline before totals are read; add deterministic ordering</li>
+          <li>C: Switch to remote include</li>
+          <li>D: Disable CSRF</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -472,6 +820,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B, C</strong><br><small>Minimize/secure PII; lock down OCAPI permissions.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Log the raw PII payload for support</li>
+          <li>B: Validate and minimize PII storage; encrypt or avoid storing sensitive fields</li>
+          <li>C: Restrict OCAPI Data read/write to least privilege</li>
+          <li>D: Use GET for submissions to ease caching</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -488,6 +848,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Parse payload-level status and schema to detect logical failures.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Assume 200 is always success</li>
+          <li>B: Implement a response parser that reads application-level status codes and validates schema</li>
+          <li>C: Rely only on timeouts</li>
+          <li>D: Switch to SOAP</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -502,6 +874,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>403 often indicates auth or ocapi.json attribute permission issues.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Missing or expired client credentials</li>
+          <li>B: Incorrect ocapi.json write_attributes for the payload fields</li>
+          <li>C: CDN cache is stale</li>
+          <li>D: Log category disabled</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -518,6 +902,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Use request-scoped context; avoid globals and persistent writes.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Write to a global variable in the cartridge</li>
+          <li>B: Attach needed metadata to the request object or a scoped object the framework passes</li>
+          <li>C: Use ISML to pass hidden fields</li>
+          <li>D: Save to a custom object on each call</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -532,6 +928,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Idempotency and UI disable prevent duplicate effects.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Idempotency key in payload and server-side dedupe</li>
+          <li>B: Client-side JS to disable the submit button after click</li>
+          <li>C: Increase cache time</li>
+          <li>D: Replace POST with GET</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -548,6 +956,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Stream chunks to the response; avoid building huge in-memory JSON.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Build a giant object and stringify at end</li>
+          <li>B: Stream chunks to the response writer incrementally and set appropriate headers</li>
+          <li>C: Write to ISML then convert to JSON</li>
+          <li>D: Use Logger to buffer chunks</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -562,6 +982,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Coordinate schedules/locks and implement backoff.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Ignore; failures are fine</li>
+          <li>B: Introduce locking strategy or run jobs in mutually exclusive windows; add retries/backoff</li>
+          <li>C: Increase log verbosity</li>
+          <li>D: Use templates/resources to coordinate</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -578,6 +1010,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Least privilege and separate credentials are core; never hardcode secrets.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Expose only required resources and attributes in read/write sections</li>
+          <li>B: Grant global read/write to speed development</li>
+          <li>C: Separate client credentials for distinct integrations</li>
+          <li>D: Put secrets in cartridge constants.js</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -592,6 +1036,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Credentials, ocapi.json, and PII minimization.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Create client ID/secret in BM and map to OCAPI settings</li>
+          <li>B: Allow order resources with explicit read_attributes in ocapi.json</li>
+          <li>C: Enable Shop API basket read/write</li>
+          <li>D: Restrict fields to non-PII where possible</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -608,6 +1064,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, D</strong><br><small>Redact/mask and avoid logging bodies unless essential.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Redact tokens and PII in service response parser before logging</li>
+          <li>B: Log entire payloads at DEBUG only</li>
+          <li>C: Disable logs entirely</li>
+          <li>D: Avoid logging request/response bodies unless masked or essential</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -622,6 +1090,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Generate token on GET, validate on POST for CSRF protection.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Switch POST to GET</li>
+          <li>B: Ensure csrfProtection.generateToken on GET render and csrfProtection.validateRequest on POST handlers</li>
+          <li>C: Add HTTPS and keep POSTs as-is</li>
+          <li>D: Disable caching</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -638,6 +1118,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Distinct creds/roles per environment; controlled replication.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Different OCAPI credentials and permissions per environment</li>
+          <li>B: Shared code versions across all environments</li>
+          <li>C: Restricted BM roles per environment and replication controls</li>
+          <li>D: Merge all logs into one bucket</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -652,6 +1144,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, D</strong><br><small>Blue/green credentials or dual-key transition when supported.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Create a new credential/profile, deploy code to reference it, cut over, then remove the old one</li>
+          <li>B: Change the password in code and redeploy</li>
+          <li>C: Schedule a maintenance window to stop traffic</li>
+          <li>D: Support both old and new keys for a transition period if the upstream allows it</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -668,6 +1172,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>No cache or vary by customer/locale/currency for personalization.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Global cache with no vary</li>
+          <li>B: No cache or vary by customer (and locale/currency)</li>
+          <li>C: Cache at CDN for one day</li>
+          <li>D: Only rely on application cache</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -682,6 +1198,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Grant only what’s needed, scoped and time-bound.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Approve to accelerate go-live</li>
+          <li>B: Grant least privilege with scoped resources/attributes and time-bound credentials</li>
+          <li>C: Deny all OCAPI</li>
+          <li>D: Ask them to use Page Designer</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -698,6 +1226,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Wrong creds or IP allow-lists often cause 401 in prod.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Wrong credentials or environment-specific key</li>
+          <li>B: Sandbox IP allow-lists applied to prod</li>
+          <li>C: Missing locale files</li>
+          <li>D: Incorrect HTTP method</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -712,6 +1252,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Tokenize; redact/mask; never store full PANs.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Do not store PANs; rely on tokenization via the PSP</li>
+          <li>B: Redact PANs in all logs and prevent them from being written by parsers</li>
+          <li>C: Save the last 8 digits in custom objects for analytics</li>
+          <li>D: Include full PAN in DEBUG for reconciliation</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -728,6 +1280,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Incremental migration with isolation and tests is safest.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Rewrite entire site at once</li>
+          <li>B: Incrementally port flows to SFRA controllers/templates; keep legacy isolated; maintain feature parity with tests</li>
+          <li>C: Mix pipeline calls inside SFRA controllers</li>
+          <li>D: Use ISML to call pipelines</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -742,6 +1306,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>OCAPI validation logic is in hook implementations in a cartridge.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: ocapi.json</li>
+          <li>B: A cartridge hook implementation registered in the path (e.g., beforePOST/validate)</li>
+          <li>C: services.json</li>
+          <li>D: Page Designer component</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -758,6 +1334,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Response caching, precompute, and batched/cached lookups help.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Introduce response cache with vary keys (locale, currency, page, filters)</li>
+          <li>B: Precompute expensive fields in decorators and avoid per-item service calls</li>
+          <li>C: Move all logic into ISML</li>
+          <li>D: Use batched lookups or cached services to avoid N+1 patterns</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -772,6 +1360,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Avoid double-stringify; let res.json serialize once.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Keep as-is; browsers parse twice</li>
+          <li>B: Ensure the controller passes a JS object to res.json once; avoid pre-stringifying</li>
+          <li>C: Render ISML instead</li>
+          <li>D: Cache longer</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -788,6 +1388,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Batch/cache or precompute via jobs; remove per-item calls.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Aggregate calls: one request for many items or cache results</li>
+          <li>B: Increase log level to TRACE</li>
+          <li>C: Remove the call or precompute data offline via jobs and decorate from storage</li>
+          <li>D: Use more remote includes</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -802,6 +1414,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B</strong><br><small>Remote include cache and CDN can serve stale content independently.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: A remote include has its own cache not invalidated</li>
+          <li>B: CDN edge cache still serving old variant</li>
+          <li>C: Wrong ocapi.json client name</li>
+          <li>D: Logger buffering</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -818,6 +1442,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Coordinate schedules and locking to avoid overlaps.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Disable delta indexing</li>
+          <li>B: Introduce job schedule coordination and lock mechanism; ensure order of operations</li>
+          <li>C: Increase retries to 100</li>
+          <li>D: Turn off logs</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -832,6 +1468,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Use profiler/log correlation; platform doesn’t provide heap dumps.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Analyze BM Profiler data and request logs for allocation hotspots</li>
+          <li>B: Add heap dumps via platform APIs</li>
+          <li>C: Add targeted logging and correlate with service latencies</li>
+          <li>D: Use ISML to render diagnostics to shoppers</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -848,6 +1496,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B, C</strong><br><small>CB, retries with backoff, and graceful fallbacks; never retry in ISML.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Circuit breaker to shed failing dependency</li>
+          <li>B: Exponential backoff retries with jitter for transient failures</li>
+          <li>C: Graceful degradation (serve cached/placeholder content)</li>
+          <li>D: Add synchronous retries inside ISML</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -862,6 +1522,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Scope/authorize per tenant and stream CSV with correct headers.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Tenant scoping on queries and authorization checks</li>
+          <li>B: Caching without vary to increase speed</li>
+          <li>C: Content-Disposition and CSV headers; stream output</li>
+          <li>D: Use GET to skip CSRF</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -878,6 +1550,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A</strong><br><small>Add vary-by-currency for correct cache partitioning.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Missing vary-by-currency on the cached fragment</li>
+          <li>B: Wrong ocapi.data permissions</li>
+          <li>C: Controller name collision</li>
+          <li>D: No CDN</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -892,6 +1576,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>B</strong><br><small>Queue with IDs and dedupe for at-least-once semantics.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Fire-and-forget synchronous POSTs</li>
+          <li>B: Queue events with IDs, retry on failure with dedupe on consumer side</li>
+          <li>C: Log-only and reprocess manually</li>
+          <li>D: Use templates/resources</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
@@ -908,6 +1604,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, C</strong><br><small>Rate-limit and cache negatives to absorb bursts.</small></div>
     </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Rate-limit/throttle at the Service Framework or edge</li>
+          <li>B: Increase timeouts</li>
+          <li>C: Cache negative responses appropriately (with short TTL)</li>
+          <li>D: Disable logs</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </li>
 <li>
@@ -922,6 +1630,18 @@ summary { cursor: pointer; font-weight: bold; color: #003366; user-select: none;
     <details>
       <summary>Answer</summary>
       <div class="answer">✅ Correct: <strong>A, B, D</strong><br><small>Profiling deltas, code diff, and targeted timings isolate regressions.</small></div>
+    </details>
+    <details>
+      <summary>Translate</summary>
+      <div class="translate">
+        <div><!-- TODO: translation --></div>
+        <ul>
+          <li>A: Compare profiler traces before/after by route</li>
+          <li>B: Diff code between versions and examine changed services/decorators</li>
+          <li>C: Clear all caches and assume it’s fixed</li>
+          <li>D: Add targeted timers/logs around suspect blocks to measure deltas</li>
+        </ul>
+      </div>
     </details>
   </div>
 </li>
